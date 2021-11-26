@@ -4,8 +4,8 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "fdc869e22fd96340cc209692051c1562",
-"index.html": "ac1fb07a540e26ab314c45dccebe524c",
-"/": "ac1fb07a540e26ab314c45dccebe524c",
+"index.html": "03dab4241ba1f2df03ff542e0819acfc",
+"/": "03dab4241ba1f2df03ff542e0819acfc",
 "main.dart.js": "99aebf52b62c53ff3b30b47ae79e3820",
 "favicon.png": "fbfc8b7b550d78360a3d33e4ee15f548",
 "icons/Icon-192.png": "2d94fda8813225dfeba73b474c41adfb",
@@ -13,7 +13,7 @@ const RESOURCES = {
 "icons/Icon-maskable-512.png": "af97e0426ce10af6c6efe32eb92f0887",
 "icons/Icon-512.png": "af97e0426ce10af6c6efe32eb92f0887",
 "manifest.json": "ac21c27e45b9033e6a42729772bd429a",
-"assets/AssetManifest.json": "e0cf722b60d05831a234117258f3d6cc",
+"assets/AssetManifest.json": "5cdc06bfb8d115394d5c737fc8f4b045",
 "assets/NOTICES": "9dc69bee956e6048fdb28b9894174e9c",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
@@ -41,7 +41,7 @@ const RESOURCES = {
 "assets/assets/images/projects/led_wall_decor/thumbnail.png": "03b1ff4d670936d0acf865f1c1ac4c6a",
 "assets/assets/images/projects/f1_sim_engineer/MobileProjectReportPabloViktor.pdf": "92de123ab287f05d0ddbd3f8dbbaf88e",
 "assets/assets/images/projects/f1_sim_engineer/thumbnail.png": "f8e3102753d8890c4add4dca7a5d02c9",
-"assets/assets/images/projects/f1_sim_engineer/video_1.mp4": "f801488eb5abc1576e331098d4463ce6",
+"assets/assets/images/projects/f1_sim_engineer/video_1.mp4": "c0c2de57b37041fcdd5a6a08e6d19495",
 "assets/assets/images/projects/safedrive_mk1/image_8.png": "0fbfd6da30fb8b462c0cf9bb459eefeb",
 "assets/assets/images/projects/safedrive_mk1/image_9.png": "0f9dbc57fa8a9f5b4dfe85bc78aa79d8",
 "assets/assets/images/projects/safedrive_mk1/image_2.png": "6372bbc5a3309c76450387f75334cb85",
@@ -64,7 +64,7 @@ const RESOURCES = {
 "assets/assets/images/projects/xbox_head_tracking/thumbnail.png": "1937eb7b3d3297af0b9acf40b3c79b89",
 "assets/assets/images/projects/xbox_head_tracking/video_2.mp4": "837e370232d5418620d789aba1baf8b0",
 "assets/assets/images/projects/xbox_head_tracking/video_3.mp4": "cb038b15c811fb00afee760a17a152cd",
-"assets/assets/images/projects/xbox_head_tracking/video_1.mp4": "9211809735411b82ffe492b80bab7955",
+"assets/assets/images/projects/xbox_head_tracking/video_1.mp4": "f21365d9503174f30d115cbfb573219a",
 "assets/assets/images/projects/handroid/image_12.png": "d8e002a0a8cfa20a42c7c534c5d15a89",
 "assets/assets/images/projects/handroid/image_10.png": "89909f5f6cd28d8c80d779b9dcbe94cd",
 "assets/assets/images/projects/handroid/image_11.png": "b732efab042dbc547e5957cfa66da7f2",
@@ -123,11 +123,11 @@ const RESOURCES = {
 "assets/assets/images/projects/project_lemans/image_23.png": "624555ac78ac60247dfde6f8853fab2c",
 "assets/assets/images/projects/project_lemans/image_22.png": "b4170f9a287643cc306e2c0877a8e3e6",
 "assets/assets/images/projects/project_lemans/image_26.png": "be7bdc433d4a0bcdc53222275900e976",
-"assets/assets/images/projects/project_lemans/video_2.mp4": "1369d486a0cc49bc799fb6bca88d59dd",
-"assets/assets/images/projects/project_lemans/video_3.mp4": "c06d948137f4026705fbc3b61f56f786",
+"assets/assets/images/projects/project_lemans/video_2.mp4": "590c93712f8a8fd4f8195b05f29ab6ae",
+"assets/assets/images/projects/project_lemans/video_3.mp4": "160bc3a601598e2454ec91801f708ac4",
 "assets/assets/images/projects/project_lemans/image_19.png": "eb196681dcea7566754572a8014f8744",
 "assets/assets/images/projects/project_lemans/image_25.png": "080b88f44f625d2e02aead668ab7d0bd",
-"assets/assets/images/projects/project_lemans/video_1.mp4": "0fe85f1526cef99067aeabf87c4a90f1",
+"assets/assets/images/projects/project_lemans/video_1.mp4": "74aefefed85314d9ca4953b1bcab457e",
 "assets/assets/images/projects/project_lemans/image_24.png": "d24031c759106911185c20ac315fbf77",
 "assets/assets/images/projects/project_lemans/image_18.png": "d095f5bdde0a82aa5a178d0017c77c8d",
 "assets/assets/images/projects/apple_charging_station/image_2.png": "a2d2a200f8e01578df35d0b909b233e6",
@@ -138,9 +138,7 @@ const RESOURCES = {
 "assets/assets/images/projects/apple_charging_station/image_7.png": "8bedbd45de308a9b10f879cca2652251",
 "assets/assets/images/projects/apple_charging_station/thumbnail.png": "2b9e7dbfca9d0c46c755500d1ea2f73c",
 "assets/assets/images/projects/apple_charging_station/image_6.png": "999d0a5a9a64acb4fc1d4ff37cc04ec8",
-"assets/assets/project_details/projects.json": "f592ff6b61ccbdb51082f4999f47ecc5",
-"assets/assets/project_details/switch_speaker.md": "4863159a186455e7adc74cbceea77f87",
-"assets/assets/project_details/amg_gt3_wheel.md": "0132f6113eacb54baacd7c10d76ff5e9"
+"assets/assets/project_details/projects.json": "f592ff6b61ccbdb51082f4999f47ecc5"
 };
 
 // The application shell files that are downloaded before a service worker can
