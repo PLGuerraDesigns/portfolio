@@ -4,17 +4,17 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "version.json": "fdc869e22fd96340cc209692051c1562",
-"index.html": "18fa64af54e963dac279071089c858d1",
-"/": "18fa64af54e963dac279071089c858d1",
-"main.dart.js": "251db6c0d53a2f0dca34323a2528e6b0",
+"index.html": "85b72f236f937b32048a601634e1e37c",
+"/": "85b72f236f937b32048a601634e1e37c",
+"main.dart.js": "c924277e87e0c14a427bd3b1de70f8ab",
 "favicon.png": "fbfc8b7b550d78360a3d33e4ee15f548",
 "icons/Icon-192.png": "2d94fda8813225dfeba73b474c41adfb",
 "icons/Icon-maskable-192.png": "2d94fda8813225dfeba73b474c41adfb",
 "icons/Icon-maskable-512.png": "af97e0426ce10af6c6efe32eb92f0887",
 "icons/Icon-512.png": "af97e0426ce10af6c6efe32eb92f0887",
 "manifest.json": "ac21c27e45b9033e6a42729772bd429a",
-"assets/AssetManifest.json": "33c444b13a14811ea3628887472978b2",
-"assets/NOTICES": "9dc69bee956e6048fdb28b9894174e9c",
+"assets/AssetManifest.json": "15b452e0918b47ae801099054385ba19",
+"assets/NOTICES": "c4f4daa3feeb9a5fc76e119e026aa217",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/packages/wakelock_web/assets/no_sleep.js": "7748a45cd593f33280669b29c2c8919a",
@@ -54,7 +54,6 @@ const RESOURCES = {
 "assets/assets/images/projects/led_wall_decor/image_2.png": "97f8b0d4f8d20c62fa56fb497c0131d5",
 "assets/assets/images/projects/led_wall_decor/image_1.png": "a407c9314cd0ca1499d6fe191540d13c",
 "assets/assets/images/projects/led_wall_decor/thumbnail.png": "03b1ff4d670936d0acf865f1c1ac4c6a",
-"assets/assets/images/projects/f1_sim_engineer/MobileProjectReportPabloViktor.pdf": "92de123ab287f05d0ddbd3f8dbbaf88e",
 "assets/assets/images/projects/f1_sim_engineer/thumbnail.png": "f8e3102753d8890c4add4dca7a5d02c9",
 "assets/assets/images/projects/f1_sim_engineer/video_1.mp4": "c0c2de57b37041fcdd5a6a08e6d19495",
 "assets/assets/images/projects/safedrive_mk1/image_8.png": "0fbfd6da30fb8b462c0cf9bb459eefeb",
@@ -110,7 +109,6 @@ const RESOURCES = {
 "assets/assets/images/projects/amg_gt3_wheel/image_6.png": "ebf34bc190ec381ec3a94be9dfdb3134",
 "assets/assets/images/projects/amg_gt3_wheel/video_2.mp4": "e7fcc06502cfe260e9ad61bc8e0aa92d",
 "assets/assets/images/projects/amg_gt3_wheel/video_1.mp4": "f84478726d3705be2c325edd1feba0a3",
-"assets/assets/images/projects/android_calculator/PLGuerra_Assignment%25201.pdf": "3bf84721b5c4c0e116ffc25eb90e497a",
 "assets/assets/images/projects/android_calculator/image_1.png": "ef0d51a52f5e5e2ce12c65b68fe6ee27",
 "assets/assets/images/projects/android_calculator/thumbnail.png": "a2460f3198bc3f8d07b1ccd197ae7671",
 "assets/assets/images/projects/android_calculator/video_1.mp4": "73d5e457e796629991cc0854dd3d0030",
@@ -153,6 +151,9 @@ const RESOURCES = {
 "assets/assets/images/projects/apple_charging_station/image_7.png": "8bedbd45de308a9b10f879cca2652251",
 "assets/assets/images/projects/apple_charging_station/thumbnail.png": "2b9e7dbfca9d0c46c755500d1ea2f73c",
 "assets/assets/images/projects/apple_charging_station/image_6.png": "999d0a5a9a64acb4fc1d4ff37cc04ec8",
+"assets/assets/other/f1se_report.pdf": "92de123ab287f05d0ddbd3f8dbbaf88e",
+"assets/assets/other/android_calculator_report.pdf": "3bf84721b5c4c0e116ffc25eb90e497a",
+"assets/assets/other/plg_contact_card.vcf": "177915ef409693d5723ed47237442dac",
 "assets/assets/project_details/projects.json": "f592ff6b61ccbdb51082f4999f47ecc5"
 };
 
