@@ -17,6 +17,8 @@ class ProfessionalPage extends StatelessWidget {
       'assets/images/professional_page/flutter_background.png';
   final CarouselController buttonCarouselController = CarouselController();
 
+  ProfessionalPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final control = Provider.of<ControlModel>(context);
@@ -27,7 +29,8 @@ class ProfessionalPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            CustomWidgets().pageTitle(context, Strings.professionalPageTitle),
+            CustomWidgets().pageTitle(context, Strings.professionalPageTitle,
+                control.mobileScreenSize),
             Expanded(
               child: Padding(
                 padding:
@@ -41,14 +44,14 @@ class ProfessionalPage extends StatelessWidget {
                               _ambBackgroundImage,
                               Strings.ambotsInc,
                               Strings.leadRoboticsEngineer,
-                              control.mobileScreenSize),
+                              control),
                           _professionCard(
                               context,
                               _flutterFloatingImage,
                               _flutterBackgroundImage,
                               Strings.flutterDeveloper,
                               Strings.publishedApps,
-                              control.mobileScreenSize),
+                              control),
                         ],
                       )
                     : Row(
@@ -59,7 +62,7 @@ class ProfessionalPage extends StatelessWidget {
                               _ambBackgroundImage,
                               Strings.ambotsInc,
                               Strings.leadRoboticsEngineer,
-                              control.mobileScreenSize),
+                              control),
                           const SizedBox(
                             width: 20,
                           ),
@@ -69,7 +72,7 @@ class ProfessionalPage extends StatelessWidget {
                               _flutterBackgroundImage,
                               Strings.flutterDeveloper,
                               Strings.publishedApps,
-                              control.mobileScreenSize),
+                              control),
                         ],
                       ),
               ),
@@ -84,21 +87,21 @@ class ProfessionalPage extends StatelessWidget {
       String backgroundImagePath,
       String title,
       String subtitle,
-      bool mobileScreenSize) {
+      ControlModel control) {
     return Expanded(
         child: GestureDetector(
       onTap: () {
-        print('Exp tapped: $title');
+        control.unavailableSnackBar();
       },
       child: AspectRatio(
-        aspectRatio: mobileScreenSize ? 2 / 1.6 : 1 / 1,
+        aspectRatio: control.mobileScreenSize ? 2 / 1.6 : 1 / 1,
         child: SizedBox(
           height: MediaQuery.of(context).size.width / 2,
           child: Stack(
             children: [
               // Background image
               Align(
-                alignment: mobileScreenSize
+                alignment: control.mobileScreenSize
                     ? Alignment.bottomCenter
                     : Alignment.center,
                 child: ClipRRect(
@@ -115,13 +118,13 @@ class ProfessionalPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Spacer(flex: mobileScreenSize ? 5 : 3),
+                  Spacer(flex: control.mobileScreenSize ? 5 : 3),
                   const SizedBox(height: 20),
                   Text(
                     title,
                     textAlign: TextAlign.center,
-                    style: mobileScreenSize
-                        ? Theme.of(context).textTheme.headline4
+                    style: control.mobileScreenSize
+                        ? Theme.of(context).textTheme.headline5
                         : Theme.of(context).textTheme.headline3,
                   ),
                   const Divider(
@@ -136,22 +139,22 @@ class ProfessionalPage extends StatelessWidget {
                   Text(
                     subtitle,
                     textAlign: TextAlign.center,
-                    style: mobileScreenSize
-                        ? Theme.of(context).textTheme.headline5
+                    style: control.mobileScreenSize
+                        ? Theme.of(context).textTheme.headline6
                         : Theme.of(context).textTheme.headline4,
                   ),
-                  Spacer(flex: mobileScreenSize ? 2 : 1),
+                  Spacer(flex: control.mobileScreenSize ? 2 : 1),
                   Text(
                     'Click for more info',
                     textAlign: TextAlign.center,
-                    style: mobileScreenSize
-                        ? Theme.of(context).textTheme.bodyText1
+                    style: control.mobileScreenSize
+                        ? Theme.of(context).textTheme.bodyText2
                         : Theme.of(context)
                             .textTheme
                             .headline6!
                             .copyWith(color: Colors.white38),
                   ),
-                  Spacer(flex: mobileScreenSize ? 1 : 2),
+                  Spacer(flex: control.mobileScreenSize ? 1 : 2),
                 ],
               ),
               // Floating image
@@ -163,7 +166,7 @@ class ProfessionalPage extends StatelessWidget {
                       (BuildContext context, BoxConstraints constraints) {
                     return Image.asset(
                       floatingImagePath,
-                      height: mobileScreenSize
+                      height: control.mobileScreenSize
                           ? constraints.maxWidth * 0.32
                           : constraints.maxWidth * 0.4,
                     );

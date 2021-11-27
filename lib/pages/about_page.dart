@@ -27,7 +27,8 @@ class AboutPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            CustomWidgets().pageTitle(context, Strings.aboutPageTitle),
+            CustomWidgets().pageTitle(
+                context, Strings.aboutPageTitle, control.mobileScreenSize),
             Padding(
                 padding: const EdgeInsets.symmetric(
                     horizontal: 40.0, vertical: 20.0),

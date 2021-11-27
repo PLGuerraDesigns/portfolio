@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:plg_portfolio/constants/globals.dart';
 import 'package:plg_portfolio/constants/project_list.dart';
 import 'package:plg_portfolio/models/project.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -49,8 +50,16 @@ class ControlModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  // Future<String> getAppVersion() async {
-  //   PackageInfo packageInfo = await PackageInfo.fromPlatform();
-  //   return 'V${packageInfo.version} (${packageInfo.buildNumber})';
-  // }
+  unavailableSnackBar() {
+    snackbarKey.currentState?.showSnackBar(SnackBar(
+      behavior: SnackBarBehavior.fixed,
+      backgroundColor: Colors.orange[900],
+      content: const Text(
+        'UNAVAILABLE',
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 18),
+      ),
+    ));
+    notifyListeners();
+  }
 }

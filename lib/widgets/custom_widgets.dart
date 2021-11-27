@@ -11,13 +11,18 @@ import 'package:video_player/video_player.dart';
 /// that are used throughout the application.
 class CustomWidgets {
   /// Returns an [Column] containing a [Text] widget and a [Divider].
-  Widget pageTitle(BuildContext context, String title) {
+  Widget pageTitle(BuildContext context, String title, bool mobileScreenSize) {
     return Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
       Padding(
         padding: const EdgeInsets.only(top: 20, left: 20),
         child: Text(
           title,
-          style: Theme.of(context).textTheme.headline3,
+          style: mobileScreenSize
+              ? Theme.of(context)
+                  .textTheme
+                  .headline4!
+                  .copyWith(color: Colors.white)
+              : Theme.of(context).textTheme.headline3,
         ),
       ),
       const Divider(

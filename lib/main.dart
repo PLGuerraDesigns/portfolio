@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:plg_portfolio/constants/globals.dart';
 import 'package:plg_portfolio/constants/strings.dart';
 import 'package:plg_portfolio/constants/theme.dart';
 import 'package:plg_portfolio/models/inline_page.dart';
@@ -18,7 +19,7 @@ import 'package:universal_html/html.dart' as html;
 import 'dart:ui' as ui;
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 final List<InlinePage> _pageList = [
@@ -38,6 +39,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => ControlModel(context),
       child: MaterialApp(
+          scaffoldMessengerKey: snackbarKey,
           debugShowCheckedModeBanner: false,
           title: Strings.applicationName,
           theme: AppTheme.darkTheme,
@@ -47,7 +49,7 @@ class MyApp extends StatelessWidget {
 }
 
 class PortfolioMainPage extends StatefulWidget {
-  const PortfolioMainPage() : super();
+  const PortfolioMainPage({Key? key}) : super(key: key);
 
   @override
   _PortfolioMainPageState createState() => _PortfolioMainPageState();
@@ -71,95 +73,103 @@ class _PortfolioMainPageState extends State<PortfolioMainPage> {
     final control = Provider.of<ControlModel>(context);
     control.windowHeight = MediaQuery.of(context).size.height;
     control.windowWidth = MediaQuery.of(context).size.width;
-    return Scaffold(
-      backgroundColor: Colors.black,
-      appBar: AppBar(
+
+    return SafeArea(
+      child: Scaffold(
         backgroundColor: Colors.black,
-        title: Text(
-          Strings.applicationName,
-          style: Theme.of(context)
-              .textTheme
-              .headline5!
-              .copyWith(color: Colors.white),
+        appBar: AppBar(
+          backgroundColor: Colors.black,
+          title: Text(
+            Strings.applicationName,
+            style: control.mobileScreenSize
+                ? Theme.of(context)
+                    .textTheme
+                    .headline6!
+                    .copyWith(color: Colors.white)
+                : Theme.of(context)
+                    .textTheme
+                    .headline5!
+                    .copyWith(color: Colors.white),
+          ),
+          actions: control.mobileScreenSize
+              ? []
+              : [
+                  for (int i = 0; i < _pageList.length; i++)
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 8.0),
+                      child: TextButton(
+                        onPressed: () {
+                          buttonCarouselController.animateToPage(i);
+                        },
+                        child: Text(
+                          _pageList[i].title,
+                          style: Theme.of(context).textTheme.bodyText2,
+                        ),
+                      ),
+                    ),
+                ],
         ),
-        actions: control.mobileScreenSize
-            ? []
-            : [
-                for (int i = 0; i < _pageList.length; i++)
-                  Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 8.0),
-                    child: TextButton(
-                      onPressed: () {
-                        buttonCarouselController.animateToPage(i);
-                      },
-                      child: Text(
-                        _pageList[i].title,
-                        style: Theme.of(context).textTheme.bodyText2,
+        drawer: control.mobileScreenSize
+            ? Drawer(
+                child: Container(
+                  color: Colors.black45,
+                  child: ListView(
+                    padding: EdgeInsets.zero,
+                    children: [
+                      DrawerHeader(
+                        child: Padding(
+                          padding: const EdgeInsets.all(10.0),
+                          child: Container(
+                            decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                            ),
+                            child: const CircleAvatar(
+                              backgroundImage: AssetImage(_profilePicture),
+                            ),
+                          ),
+                        ),
                       ),
-                    ),
+                      for (int i = 0; i < _pageList.length; i++)
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 8.0),
+                          child: TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                              buttonCarouselController.animateToPage(i);
+                            },
+                            child: ListTile(
+                              leading: Icon(
+                                _pageList[i].icon,
+                                color: Colors.white,
+                              ),
+                              title: Text(
+                                _pageList[i].title,
+                                style: Theme.of(context).textTheme.bodyText2,
+                              ),
+                            ),
+                          ),
+                        ),
+                    ],
                   ),
-              ],
-      ),
-      drawer: control.mobileScreenSize
-          ? Drawer(
-              child: Container(
-                color: Colors.black45,
-                child: ListView(
-                  padding: EdgeInsets.zero,
-                  children: [
-                    DrawerHeader(
-                      child: Padding(
-                        padding: const EdgeInsets.all(10.0),
-                        child: Container(
-                          decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                          ),
-                          child: const CircleAvatar(
-                            backgroundImage: AssetImage(_profilePicture),
-                          ),
-                        ),
-                      ),
-                    ),
-                    for (int i = 0; i < _pageList.length; i++)
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 8.0),
-                        child: TextButton(
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                            buttonCarouselController.animateToPage(i);
-                          },
-                          child: ListTile(
-                            leading: Icon(
-                              _pageList[i].icon,
-                              color: Colors.white,
-                            ),
-                            title: Text(
-                              _pageList[i].title,
-                              style: Theme.of(context).textTheme.bodyText2,
-                            ),
-                          ),
-                        ),
-                      ),
-                  ],
                 ),
-              ),
-            )
-          : null,
-      body: CarouselSlider(
-        items: [
-          for (int iterator = 0; iterator < _pageList.length; iterator++)
-            Container(
-                alignment: Alignment.center, child: _pageList[iterator].page),
-        ],
-        carouselController: buttonCarouselController,
-        options: CarouselOptions(
-            initialPage: 4,
-            viewportFraction: 1,
-            aspectRatio: MediaQuery.of(context).size.width /
-                (MediaQuery.of(context).size.height - 55),
-            autoPlay: false,
-            enableInfiniteScroll: false,
-            scrollDirection: Axis.vertical),
+              )
+            : null,
+        body: CarouselSlider(
+          items: [
+            for (int iterator = 0; iterator < _pageList.length; iterator++)
+              Container(
+                  alignment: Alignment.center, child: _pageList[iterator].page),
+          ],
+          carouselController: buttonCarouselController,
+          options: CarouselOptions(
+              initialPage: 2,
+              viewportFraction: 1,
+              aspectRatio: MediaQuery.of(context).size.width /
+                  (MediaQuery.of(context).size.height - 55),
+              autoPlay: false,
+              enableInfiniteScroll: false,
+              scrollDirection: Axis.vertical),
+        ),
       ),
     );
   }

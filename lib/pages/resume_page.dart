@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:plg_portfolio/constants/globals.dart';
 import 'package:plg_portfolio/constants/strings.dart';
 import 'package:plg_portfolio/view_models/control_model.dart';
 import 'package:plg_portfolio/widgets/custom_widgets.dart';
@@ -16,23 +17,28 @@ class ResumePage extends StatelessWidget {
         width: control.windowWidth,
         child: Column(
           children: [
-            CustomWidgets().pageTitle(context, Strings.resumePageTitle),
-            Expanded(child: _downloadButton(context, control.mobileScreenSize))
+            CustomWidgets().pageTitle(
+                context, Strings.resumePageTitle, control.mobileScreenSize),
+            Expanded(child: _downloadButton(context, control))
           ],
         ));
   }
 
-  Widget _downloadButton(BuildContext context, bool mobileScreenSize) {
-    return Padding(
-      padding: EdgeInsets.symmetric(horizontal: mobileScreenSize ? 50 : 100),
-      child: Center(
+  Widget _downloadButton(BuildContext context, ControlModel control) {
+    return Center(
+      child: Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: control.mobileScreenSize ? 20 : 200.0,
+        ),
         child: OutlinedButton(
-          onPressed: () {},
+          onPressed: () {
+            control.unavailableSnackBar();
+          },
           style: OutlinedButton.styleFrom(
             side: const BorderSide(width: 1.0, color: Colors.white54),
           ),
           child: Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(10.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -44,8 +50,11 @@ class ResumePage extends StatelessWidget {
                   width: 10,
                 ),
                 Text(
-                  'Download Resume',
-                  style: Theme.of(context).textTheme.headline4,
+                  'DOWNLOAD RESUME',
+                  style: Theme.of(context)
+                      .textTheme
+                      .button!
+                      .copyWith(color: Colors.white70),
                 ),
               ],
             ),

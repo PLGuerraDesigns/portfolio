@@ -97,10 +97,12 @@ class HomePage extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset(
-              filepath,
-              height: 25,
-              color: Colors.white54,
+            Opacity(
+              opacity: 0.54,
+              child: Image.asset(
+                filepath,
+                height: 25,
+              ),
             ),
             const SizedBox(width: 5),
             Text(

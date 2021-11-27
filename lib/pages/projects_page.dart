@@ -28,7 +28,8 @@ class ProjectsPage extends StatelessWidget {
         width: control.windowWidth,
         child: Column(
           children: [
-            CustomWidgets().pageTitle(context, Strings.projectsPageTitle),
+            CustomWidgets().pageTitle(
+                context, Strings.projectsPageTitle, control.mobileScreenSize),
             Expanded(
               child: GridView.builder(
                 padding: const EdgeInsets.all(40),

@@ -22,7 +22,8 @@ class ContactPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            CustomWidgets().pageTitle(context, Strings.contactPageTitle),
+            CustomWidgets().pageTitle(
+                context, Strings.contactPageTitle, control.mobileScreenSize),
             Expanded(
               child:
                   _contactSection(context, Icons.phone, Strings.phoneNumber, [
@@ -41,8 +42,9 @@ class ContactPage extends StatelessWidget {
               ]),
             ),
             Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 40.0, vertical: 10),
+              padding: EdgeInsets.symmetric(
+                  horizontal: control.mobileScreenSize ? 20 : 40.0,
+                  vertical: 10),
               child: OutlinedButton(
                 onPressed: () async {
                   if (await canLaunch(_contactCardURL)) {
@@ -85,8 +87,11 @@ class ContactPage extends StatelessWidget {
   Widget _contactSection(
       BuildContext context, IconData icon, String title, List<Widget> widgets) {
     return Padding(
-      padding: const EdgeInsets.only(
-          left: 40.0, right: 40.0, bottom: 10.0, top: 10.0),
+      padding: EdgeInsets.only(
+          left: control.mobileScreenSize ? 20 : 40.0,
+          right: control.mobileScreenSize ? 20 : 40.0,
+          bottom: 10.0,
+          top: 10.0),
       child: Container(
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -152,8 +157,8 @@ class ContactPage extends StatelessWidget {
           child: Text(
             '$label $details',
             style: control.mobileScreenSize
-                ? Theme.of(context).textTheme.caption
-                : Theme.of(context).textTheme.subtitle2,
+                ? Theme.of(context).textTheme.bodyText2
+                : Theme.of(context).textTheme.subtitle1,
           ),
         ),
       ),
