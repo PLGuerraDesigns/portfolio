@@ -68,13 +68,19 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
-          const Align(
+          Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
-                padding: EdgeInsets.all(20.0),
-                child: Icon(
-                  Icons.expand_more,
-                  color: Colors.white24,
+                padding: const EdgeInsets.all(20.0),
+                child: GestureDetector(
+                  onTap: () {
+                    control.buttonCarouselController.animateToPage(1);
+                    control.scrollSnackBar();
+                  },
+                  child: const Icon(
+                    Icons.expand_more,
+                    color: Colors.white24,
+                  ),
                 ),
               ))
         ],

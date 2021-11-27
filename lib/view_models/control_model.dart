@@ -1,7 +1,9 @@
+import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:plg_portfolio/constants/globals.dart';
 import 'package:plg_portfolio/constants/project_list.dart';
+import 'package:plg_portfolio/constants/strings.dart';
 import 'package:plg_portfolio/models/project.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:universal_html/html.dart' as html;
@@ -12,6 +14,7 @@ class ControlModel extends ChangeNotifier {
   late double windowHeight;
   late double windowWidth;
   List<Project> projectList = [];
+  CarouselController buttonCarouselController = CarouselController();
 
   ControlModel(BuildContext context) {
     _determineScreenType();
@@ -53,11 +56,24 @@ class ControlModel extends ChangeNotifier {
   unavailableSnackBar() {
     snackbarKey.currentState?.showSnackBar(SnackBar(
       behavior: SnackBarBehavior.fixed,
-      backgroundColor: Colors.orange[900],
+      backgroundColor: Colors.orange.withOpacity(0.7),
       content: const Text(
-        'UNAVAILABLE',
+        Strings.unavailable,
         textAlign: TextAlign.center,
-        style: TextStyle(fontSize: 18),
+        style: TextStyle(fontSize: 16, color: Colors.white),
+      ),
+    ));
+    notifyListeners();
+  }
+
+  scrollSnackBar() {
+    snackbarKey.currentState?.showSnackBar(SnackBar(
+      behavior: SnackBarBehavior.fixed,
+      backgroundColor: Colors.white.withOpacity(0.5),
+      content: const Text(
+        Strings.scrollOrUseMenu,
+        textAlign: TextAlign.center,
+        style: TextStyle(fontSize: 16, color: Colors.black),
       ),
     ));
     notifyListeners();

@@ -4,11 +4,12 @@ import 'package:plg_portfolio/constants/strings.dart';
 import 'package:plg_portfolio/view_models/control_model.dart';
 import 'package:plg_portfolio/widgets/custom_widgets.dart';
 import 'package:provider/provider.dart';
+import 'package:share_plus/share_plus.dart';
+import 'package:universal_html/html.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ContactPage extends StatelessWidget {
-  static const String _contactCardURL =
-      'https://drive.google.com/file/d/1n1SDtqUshRtOuDdikA6Zx1LUAAj1sAK3/view';
+  static const String _contactCardPath = 'assets/other/plg_contact_card.vcf';
 
   ContactPage({Key? key}) : super(key: key);
   late ControlModel control;
@@ -47,11 +48,9 @@ class ContactPage extends StatelessWidget {
                   vertical: 10),
               child: OutlinedButton(
                 onPressed: () async {
-                  if (await canLaunch(_contactCardURL)) {
-                    await launch(_contactCardURL);
-                  } else {
-                    throw "Could not launch $_contactCardURL";
-                  }
+                  AnchorElement anchorElement =
+                      AnchorElement(href: _contactCardPath);
+                  anchorElement.click();
                 },
                 style: OutlinedButton.styleFrom(
                   side: const BorderSide(width: 1.0, color: Colors.white54),

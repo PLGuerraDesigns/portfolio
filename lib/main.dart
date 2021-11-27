@@ -65,8 +65,8 @@ class MyCustomScrollBehavior extends MaterialScrollBehavior {
 
 class _PortfolioMainPageState extends State<PortfolioMainPage> {
   final ScrollController controller = ScrollController();
-  CarouselController buttonCarouselController = CarouselController();
-  static const String _profilePicture = 'images/home_page/profile_picture.png';
+  static const String _profilePicture =
+      'assets/images/home_page/profile_picture.png';
 
   @override
   Widget build(BuildContext context) {
@@ -99,7 +99,7 @@ class _PortfolioMainPageState extends State<PortfolioMainPage> {
                       padding: const EdgeInsets.symmetric(vertical: 8.0),
                       child: TextButton(
                         onPressed: () {
-                          buttonCarouselController.animateToPage(i);
+                          control.buttonCarouselController.animateToPage(i);
                         },
                         child: Text(
                           _pageList[i].title,
@@ -131,11 +131,11 @@ class _PortfolioMainPageState extends State<PortfolioMainPage> {
                       ),
                       for (int i = 0; i < _pageList.length; i++)
                         Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 8.0),
+                          padding: const EdgeInsets.symmetric(vertical: 4.0),
                           child: TextButton(
                             onPressed: () {
                               Navigator.of(context).pop();
-                              buttonCarouselController.animateToPage(i);
+                              control.buttonCarouselController.animateToPage(i);
                             },
                             child: ListTile(
                               leading: Icon(
@@ -149,6 +149,7 @@ class _PortfolioMainPageState extends State<PortfolioMainPage> {
                             ),
                           ),
                         ),
+                      const Spacer(),
                     ],
                   ),
                 ),
@@ -160,9 +161,9 @@ class _PortfolioMainPageState extends State<PortfolioMainPage> {
               Container(
                   alignment: Alignment.center, child: _pageList[iterator].page),
           ],
-          carouselController: buttonCarouselController,
+          carouselController: control.buttonCarouselController,
           options: CarouselOptions(
-              initialPage: 2,
+              initialPage: 0,
               viewportFraction: 1,
               aspectRatio: MediaQuery.of(context).size.width /
                   (MediaQuery.of(context).size.height - 55),

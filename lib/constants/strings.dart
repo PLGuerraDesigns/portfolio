@@ -10,6 +10,8 @@ class Strings {
   static const String projects = "Projects";
   static const String contact = "Contact";
   static const String resume = "Resume";
+  static const String unavailable = "UNAVAILABLE";
+  static const String scrollOrUseMenu = "SCROLL OR USE TOP MENU";
 
   // Home Page
   static const String gitHub = "GitHub";
