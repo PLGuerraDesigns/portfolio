@@ -41,6 +41,8 @@ class ControlModel extends ChangeNotifier {
       mobileScreenSize = false;
     } else if (devicePixelRatio == 2 && (width >= 1920 || height >= 1920)) {
       mobileScreenSize = false;
+    } else if (height < width) {
+      mobileScreenSize = false;
     } else {
       mobileScreenSize = true;
     }

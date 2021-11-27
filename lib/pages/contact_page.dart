@@ -10,11 +10,11 @@ class ContactPage extends StatelessWidget {
   static const String _contactCardURL =
       'https://drive.google.com/file/d/1n1SDtqUshRtOuDdikA6Zx1LUAAj1sAK3/view';
 
-  const ContactPage({Key? key}) : super(key: key);
-
+  ContactPage({Key? key}) : super(key: key);
+  late ControlModel control;
   @override
   Widget build(BuildContext context) {
-    final control = Provider.of<ControlModel>(context);
+    control = Provider.of<ControlModel>(context);
 
     return SizedBox(
         height: control.windowHeight - 60,
@@ -101,12 +101,14 @@ class ContactPage extends StatelessWidget {
                   ),
                   Text(
                     title,
-                    style: Theme.of(context).textTheme.headline4,
+                    style: control.mobileScreenSize
+                        ? Theme.of(context).textTheme.headline6
+                        : Theme.of(context).textTheme.headline4,
                   ),
                 ],
               ),
               const Divider(
-                color: Colors.white30,
+                color: Colors.white38,
               ),
               Expanded(
                 child: Wrap(
@@ -133,7 +135,7 @@ class ContactPage extends StatelessWidget {
       url = 'mailto:$details';
     }
     return Padding(
-      padding: const EdgeInsets.all(20.0),
+      padding: const EdgeInsets.all(10.0),
       child: OutlinedButton(
         onPressed: () async {
           if (await canLaunch(url)) {
@@ -149,7 +151,9 @@ class ContactPage extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Text(
             '$label $details',
-            style: Theme.of(context).textTheme.subtitle2,
+            style: control.mobileScreenSize
+                ? Theme.of(context).textTheme.caption
+                : Theme.of(context).textTheme.subtitle2,
           ),
         ),
       ),

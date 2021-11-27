@@ -23,7 +23,8 @@ class CustomWidgets {
       const Divider(
         indent: 20,
         endIndent: 20,
-        color: Colors.white30,
+        color: Colors.white38,
+        thickness: 2,
       )
     ]);
   }

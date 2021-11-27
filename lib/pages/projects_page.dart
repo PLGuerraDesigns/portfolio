@@ -115,8 +115,9 @@ class ProjectsPage extends StatelessWidget {
         ),
         project.moreInfo.isNotEmpty
             ? const Divider(
-                color: Colors.white30,
+                color: Colors.white38,
                 height: 40,
+                thickness: 3,
               )
             : Container(),
         project.moreInfo.isNotEmpty
@@ -126,8 +127,9 @@ class ProjectsPage extends StatelessWidget {
           width: 20,
         ),
         const Divider(
-          color: Colors.white30,
+          color: Colors.white38,
           height: 40,
+          thickness: 3,
         ),
         CustomWidgets().tagSection(context, project),
       ]);
@@ -165,8 +167,9 @@ class ProjectsPage extends StatelessWidget {
                   ),
                   project.moreInfo.isNotEmpty
                       ? const Divider(
-                          color: Colors.white30,
+                          color: Colors.white38,
                           height: 40,
+                          thickness: 3,
                         )
                       : Container(),
                   project.moreInfo.isNotEmpty

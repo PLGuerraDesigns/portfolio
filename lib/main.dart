@@ -26,7 +26,7 @@ final List<InlinePage> _pageList = [
   InlinePage(Strings.about, const AboutPage(), Icons.emoji_people),
   InlinePage(Strings.professional, ProfessionalPage(), Icons.engineering),
   InlinePage(Strings.projects, ProjectsPage(), Icons.construction),
-  InlinePage(Strings.contact, const ContactPage(), Icons.contacts),
+  InlinePage(Strings.contact, ContactPage(), Icons.contacts),
   InlinePage(Strings.resume, const ResumePage(), Icons.description),
 ];
 
@@ -153,7 +153,7 @@ class _PortfolioMainPageState extends State<PortfolioMainPage> {
         ],
         carouselController: buttonCarouselController,
         options: CarouselOptions(
-            initialPage: 0,
+            initialPage: 4,
             viewportFraction: 1,
             aspectRatio: MediaQuery.of(context).size.width /
                 (MediaQuery.of(context).size.height - 55),
