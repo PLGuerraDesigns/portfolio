@@ -5,13 +5,16 @@ import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatelessWidget {
-  static const String _backgroundImage = 'images/home_page/background.png';
-  static const String _profilePicture = 'images/home_page/profile_picture.png';
+  static const String _backgroundImage =
+      'assets/images/home_page/background.png';
+  static const String _profilePicture =
+      'assets/images/home_page/profile_picture.png';
 
-  static const String _gitHubIcon = 'images/home_page/gitHub_icon.png';
-  static const String _linkedInIcon = 'images/home_page/linkedIn_icon.png';
+  static const String _gitHubIcon = 'assets/images/home_page/gitHub_icon.png';
+  static const String _linkedInIcon =
+      'assets/images/home_page/linkedIn_icon.png';
   static const String _thingiverseIcon =
-      'images/home_page/thingiverse_icon.png';
+      'assets/images/home_page/thingiverse_icon.png';
 
   static const String _gitHubURL = 'https://github.com/PLGuerraDesigns';
   static const String _linkedInURL = 'https://www.linkedin.com/in/plguerra/';

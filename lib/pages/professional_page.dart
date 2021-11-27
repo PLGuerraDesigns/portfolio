@@ -8,13 +8,13 @@ import 'package:provider/provider.dart';
 
 class ProfessionalPage extends StatelessWidget {
   static const String _ambFloatingImage =
-      'images/professional_page/ambots_floating.png';
+      'assets/images/professional_page/ambots_floating.png';
   static const String _flutterFloatingImage =
-      'images/professional_page/flutter_floating.png';
+      'assets/images/professional_page/flutter_floating.png';
   static const String _ambBackgroundImage =
-      'images/professional_page/ambots_background.png';
+      'assets/images/professional_page/ambots_background.png';
   static const String _flutterBackgroundImage =
-      'images/professional_page/flutter_background.png';
+      'assets/images/professional_page/flutter_background.png';
   final CarouselController buttonCarouselController = CarouselController();
 
   @override

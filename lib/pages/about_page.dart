@@ -5,13 +5,15 @@ import 'package:plg_portfolio/widgets/custom_widgets.dart';
 import 'package:provider/provider.dart';
 
 class AboutPage extends StatelessWidget {
-  static const String _belizeFlag = 'images/about_page/belize_flag.png';
-  static const String _uOfALogo = 'images/about_page/ua_logo.png';
-  static const String _ambLogo = 'images/about_page/amb_logo.png';
-  static const String _flutterLogo = 'images/about_page/flutter_logo.png';
-  static const String _selfPortrait = 'images/about_page/self_portrait.png';
+  static const String _belizeFlag = 'assets/images/about_page/belize_flag.png';
+  static const String _uOfALogo = 'assets/images/about_page/ua_logo.png';
+  static const String _ambLogo = 'assets/images/about_page/amb_logo.png';
+  static const String _flutterLogo =
+      'assets/images/about_page/flutter_logo.png';
+  static const String _selfPortrait =
+      'assets/images/about_page/self_portrait.png';
   static const String _selfPortraitHorizontal =
-      'images/about_page/self_portrait_horizontal.png';
+      'assets/images/about_page/self_portrait_horizontal.png';
 
   const AboutPage({Key? key}) : super(key: key);
 
