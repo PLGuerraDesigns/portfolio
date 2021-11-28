@@ -3,18 +3,18 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "version.json": "fdc869e22fd96340cc209692051c1562",
-"index.html": "d0cd37625ad30a4420e889471995cc8c",
-"/": "d0cd37625ad30a4420e889471995cc8c",
-"main.dart.js": "c390220c57d1dacd7816875000b3296b",
+  "version.json": "1556fb546e84cc56c59cf8a0f2ad5992",
+"index.html": "efb53924c90d8da66b1cfde5506f0860",
+"/": "efb53924c90d8da66b1cfde5506f0860",
+"main.dart.js": "58611410621dc060692112541ed2ec73",
 "favicon.png": "fbfc8b7b550d78360a3d33e4ee15f548",
 "icons/Icon-192.png": "2d94fda8813225dfeba73b474c41adfb",
 "icons/Icon-maskable-192.png": "2d94fda8813225dfeba73b474c41adfb",
 "icons/Icon-maskable-512.png": "af97e0426ce10af6c6efe32eb92f0887",
 "icons/Icon-512.png": "af97e0426ce10af6c6efe32eb92f0887",
 "manifest.json": "ac21c27e45b9033e6a42729772bd429a",
-"assets/AssetManifest.json": "ff7cd341707c78032377e226ff9d98b0",
-"assets/NOTICES": "c4f4daa3feeb9a5fc76e119e026aa217",
+"assets/AssetManifest.json": "8e84d9f1b07fd7c2a046c1d1d6822059",
+"assets/NOTICES": "4f379aab099a41a0f3164a7a50960b68",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/packages/wakelock_web/assets/no_sleep.js": "7748a45cd593f33280669b29c2c8919a",
@@ -79,11 +79,12 @@ const RESOURCES = {
 "assets/assets/images/projects/xbox_head_tracking/video_2.mp4": "837e370232d5418620d789aba1baf8b0",
 "assets/assets/images/projects/xbox_head_tracking/video_3.mp4": "cb038b15c811fb00afee760a17a152cd",
 "assets/assets/images/projects/xbox_head_tracking/video_1.mp4": "f21365d9503174f30d115cbfb573219a",
+"assets/assets/images/projects/handroid/image_13.png": "939305f1d65c86cf199eb792e3225e85",
 "assets/assets/images/projects/handroid/image_12.png": "d8e002a0a8cfa20a42c7c534c5d15a89",
 "assets/assets/images/projects/handroid/image_10.png": "89909f5f6cd28d8c80d779b9dcbe94cd",
 "assets/assets/images/projects/handroid/image_11.png": "b732efab042dbc547e5957cfa66da7f2",
 "assets/assets/images/projects/handroid/image_8.png": "d89513c829fac4fab3f36fa7aac6f805",
-"assets/assets/images/projects/handroid/image_9.png": "a10097a26cf1f3735684e636e91fdc41",
+"assets/assets/images/projects/handroid/image_9.png": "f1b18f27d86314b70a088a41bc5c6561",
 "assets/assets/images/projects/handroid/image_2.png": "2f856d27a4f780cce71f5080fdd86e36",
 "assets/assets/images/projects/handroid/image_3.png": "263a9ad39c61672b8d0b22823cb6d1d0",
 "assets/assets/images/projects/handroid/image_1.png": "e0d0c01fd406bf18024640be73d7d1bd",
@@ -92,6 +93,7 @@ const RESOURCES = {
 "assets/assets/images/projects/handroid/image_7.png": "b0713487620b8b7ab277d8bd1bf477f6",
 "assets/assets/images/projects/handroid/thumbnail.png": "54c99eb16f234ab3d6256e178ed03588",
 "assets/assets/images/projects/handroid/image_6.png": "3a6218582579cf3fda9e4f62a7791e8f",
+"assets/assets/images/projects/handroid/video_1.mp4": "4b87d0241051f1935e669afba8607fcd",
 "assets/assets/images/projects/amg_gt3_wheel/image_14.png": "cece316ed0c28ffc3abb357cff0c889c",
 "assets/assets/images/projects/amg_gt3_wheel/image_13.png": "22f95591d8ddc4ae2fc567ad287541f1",
 "assets/assets/images/projects/amg_gt3_wheel/image_12.png": "aa033487654a91047185d0c828b30d72",
@@ -153,8 +155,7 @@ const RESOURCES = {
 "assets/assets/images/projects/apple_charging_station/image_6.png": "999d0a5a9a64acb4fc1d4ff37cc04ec8",
 "assets/assets/other/f1se_report.pdf": "92de123ab287f05d0ddbd3f8dbbaf88e",
 "assets/assets/other/android_calculator_report.pdf": "3bf84721b5c4c0e116ffc25eb90e497a",
-"assets/assets/other/plg_contact_card.vcf": "07e6eb801fbe32fdced3989602b10e47",
-"assets/assets/project_details/projects.json": "f592ff6b61ccbdb51082f4999f47ecc5"
+"assets/assets/other/plg_contact_card.vcf": "07e6eb801fbe32fdced3989602b10e47"
 };
 
 // The application shell files that are downloaded before a service worker can
