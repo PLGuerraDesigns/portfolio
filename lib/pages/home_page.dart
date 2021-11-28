@@ -82,6 +82,25 @@ class HomePage extends StatelessWidget {
                     color: Colors.white24,
                   ),
                 ),
+              )),
+          Align(
+              alignment: Alignment.bottomRight,
+              child: Padding(
+                padding: EdgeInsets.only(
+                    bottom: 20.0, right: control.mobileScreenSize ? 20.0 : 8.0),
+                child: FutureBuilder<Object>(
+                    future: control.getAppVersion(),
+                    initialData: '-',
+                    builder: (context, snapshot) {
+                      return Text(
+                        'Build ${snapshot.data}',
+                        textAlign: TextAlign.center,
+                        style: Theme.of(context)
+                            .textTheme
+                            .caption!
+                            .copyWith(color: Colors.white38),
+                      );
+                    }),
               ))
         ],
       ),

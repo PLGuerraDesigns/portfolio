@@ -328,12 +328,35 @@ List<Map<String, dynamic>> projectMapList = [
   {
     "title": "Handroid",
     "date": "January 2013",
-    "description": "",
-    "photoCount": 12,
-    "photoCaptions": [""],
-    "videoCount": 0,
+    "description":
+        "The Handroid project was a science fair submission for Junior year of highschool. It was inspired by arms developed in medical fields, where the mechanical arms mimic the user's finger movements. Made using rubber tubing as the fingers with incisions for bending points. The tip of the finger is attached to a fishing line, routed internally through the finger and arm and connects to servo motors. The arm was shaped using foam, cardboard, pieces of wood and fiberglass. The servo motors are controlled by and Arduino microcontroller. A input glove was made by attaching flex sensors to each of the fingers. When worn, the flex sensors record the amount of bending when the user clenches their fist. This data is used by the microcontroller to determine the degree of rotation for each of the servo motors. The rotation of the servo motor controls the finger's curling motion, thus mimicking the user's finger movements.",
+    "photoCount": 13,
+    "photoCaptions": [
+      "Hand made using foam, rubber tubing, and fishing line.",
+      "Forearm skeleton made using foam and wood.",
+      "Hand attached to forearm",
+      "Applying fiberglass and securing servo motors",
+      "Forearm wrapped with bristol board",
+      "Cut-out made to access servo motors",
+      "Applying fiberglass to entire arm",
+      "Input glove made by attaching flex sensors to the fingers",
+      "Finished hand",
+      "Finished hand with Arduino and input glove",
+      "School science fair display",
+      "Demonstration for local news",
+      "Glove melted 3 years later"
+    ],
+    "videoCount": 1,
     "demoVideo": false,
     "moreInfo": [],
-    "tags": [""]
+    "tags": [
+      "Highschool Science Fair",
+      "Input glove",
+      "Mechanical Arm",
+      "Fiberglass",
+      "Flex Sensors",
+      "Arduino",
+      "C++"
+    ]
   },
 ];
