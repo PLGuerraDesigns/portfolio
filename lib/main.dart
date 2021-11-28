@@ -15,8 +15,6 @@ import 'package:plg_portfolio/pages/projects_page.dart';
 import 'package:plg_portfolio/pages/resume_page.dart';
 import 'package:plg_portfolio/view_models/control_model.dart';
 import 'package:provider/provider.dart';
-import 'package:universal_html/html.dart' as html;
-import 'dart:ui' as ui;
 
 void main() {
   runApp(const MyApp());
@@ -112,6 +110,7 @@ class _PortfolioMainPageState extends State<PortfolioMainPage> {
         drawer: control.mobileScreenSize
             ? Drawer(
                 child: Container(
+                  height: control.windowHeight,
                   color: Colors.black45,
                   child: ListView(
                     padding: EdgeInsets.zero,
@@ -149,7 +148,6 @@ class _PortfolioMainPageState extends State<PortfolioMainPage> {
                             ),
                           ),
                         ),
-                      const Spacer(),
                     ],
                   ),
                 ),

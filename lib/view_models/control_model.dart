@@ -57,6 +57,7 @@ class ControlModel extends ChangeNotifier {
     snackbarKey.currentState?.showSnackBar(SnackBar(
       behavior: SnackBarBehavior.fixed,
       backgroundColor: Colors.orange.withOpacity(0.7),
+      duration: const Duration(milliseconds: 750),
       content: const Text(
         Strings.unavailable,
         textAlign: TextAlign.center,
@@ -70,6 +71,7 @@ class ControlModel extends ChangeNotifier {
     snackbarKey.currentState?.showSnackBar(SnackBar(
       behavior: SnackBarBehavior.fixed,
       backgroundColor: Colors.white.withOpacity(0.5),
+      duration: const Duration(milliseconds: 2000),
       content: const Text(
         Strings.scrollOrUseMenu,
         textAlign: TextAlign.center,

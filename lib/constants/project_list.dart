@@ -1,5 +1,3 @@
-import 'package:plg_portfolio/models/project.dart';
-
 List<Map<String, dynamic>> projectMapList = [
   {
     "title": "AMG GT3 Wheel",

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:plg_portfolio/constants/globals.dart';
 import 'package:plg_portfolio/constants/strings.dart';
 import 'package:plg_portfolio/view_models/control_model.dart';
 import 'package:plg_portfolio/widgets/custom_widgets.dart';
@@ -33,6 +32,7 @@ class ResumePage extends StatelessWidget {
         child: OutlinedButton(
           onPressed: () {
             control.unavailableSnackBar();
+            // TODO: ADD DOWNLOAD LINK FOR RESUME
           },
           style: OutlinedButton.styleFrom(
             side: const BorderSide(width: 1.0, color: Colors.white54),

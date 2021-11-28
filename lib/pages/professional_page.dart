@@ -92,6 +92,7 @@ class ProfessionalPage extends StatelessWidget {
         child: GestureDetector(
       onTap: () {
         control.unavailableSnackBar();
+        // TODO: DISPLAY JOB INFO
       },
       child: AspectRatio(
         aspectRatio: control.mobileScreenSize ? 2 / 1.6 : 1 / 1,

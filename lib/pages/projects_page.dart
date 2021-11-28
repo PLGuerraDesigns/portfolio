@@ -1,18 +1,12 @@
 import 'package:carousel_slider/carousel_controller.dart';
-import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:chewie/chewie.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:plg_portfolio/constants/colors.dart';
 import 'package:plg_portfolio/constants/strings.dart';
 import 'package:plg_portfolio/models/project.dart';
 import 'package:plg_portfolio/view_models/control_model.dart';
 import 'package:plg_portfolio/widgets/custom_widgets.dart';
 import 'package:provider/provider.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:video_player/video_player.dart';
 
 class ProjectsPage extends StatelessWidget {
   ProjectsPage({Key? key}) : super(key: key);

@@ -4,12 +4,10 @@ import 'package:plg_portfolio/constants/strings.dart';
 import 'package:plg_portfolio/view_models/control_model.dart';
 import 'package:plg_portfolio/widgets/custom_widgets.dart';
 import 'package:provider/provider.dart';
-import 'package:share_plus/share_plus.dart';
-import 'package:universal_html/html.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ContactPage extends StatelessWidget {
-  static const String _contactCardPath = 'assets/other/plg_contact_card.vcf';
+  // static const String _contactCardPath = 'assets/other/plg_contact_card.vcf';
 
   ContactPage({Key? key}) : super(key: key);
   late ControlModel control;
@@ -48,9 +46,11 @@ class ContactPage extends StatelessWidget {
                   vertical: 10),
               child: OutlinedButton(
                 onPressed: () async {
-                  AnchorElement anchorElement =
-                      AnchorElement(href: _contactCardPath);
-                  anchorElement.click();
+                  control.unavailableSnackBar();
+                  // TODO: ADD DOWNLOAD LINK FOR CONTACT CARD
+                  // AnchorElement anchorElement =
+                  //     AnchorElement(href: _contactCardPath);
+                  // anchorElement.click();
                 },
                 style: OutlinedButton.styleFrom(
                   side: const BorderSide(width: 1.0, color: Colors.white54),
@@ -139,7 +139,7 @@ class ContactPage extends StatelessWidget {
       url = 'mailto:$details';
     }
     return Padding(
-      padding: const EdgeInsets.all(10.0),
+      padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 0.0),
       child: OutlinedButton(
         onPressed: () async {
           if (await canLaunch(url)) {
@@ -152,7 +152,7 @@ class ContactPage extends StatelessWidget {
           side: const BorderSide(width: 1.0, color: Colors.white54),
         ),
         child: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
           child: Text(
             '$label $details',
             style: control.mobileScreenSize
