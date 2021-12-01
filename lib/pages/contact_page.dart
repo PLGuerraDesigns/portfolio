@@ -139,7 +139,8 @@ class ContactPage extends StatelessWidget {
       url = 'mailto:$details';
     }
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 0.0),
+      padding: EdgeInsets.symmetric(
+          vertical: 10.0, horizontal: control.mobileScreenSize ? 4.0 : 10.0),
       child: OutlinedButton(
         onPressed: () async {
           if (await canLaunch(url)) {

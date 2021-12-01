@@ -93,7 +93,9 @@ class HomePage extends StatelessWidget {
                     initialData: '-',
                     builder: (context, snapshot) {
                       return Text(
-                        'Build ${snapshot.data}',
+                        snapshot.data.toString().isEmpty
+                            ? ''
+                            : 'Build ${snapshot.data}',
                         textAlign: TextAlign.center,
                         style: Theme.of(context)
                             .textTheme

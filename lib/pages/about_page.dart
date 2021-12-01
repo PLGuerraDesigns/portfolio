@@ -15,12 +15,12 @@ class AboutPage extends StatelessWidget {
   static const String _selfPortraitHorizontal =
       'assets/images/about_page/self_portrait_horizontal.png';
 
-  const AboutPage({Key? key}) : super(key: key);
+  AboutPage({Key? key}) : super(key: key);
+  late ControlModel control;
 
   @override
   Widget build(BuildContext context) {
-    final control = Provider.of<ControlModel>(context);
-
+    control = Provider.of<ControlModel>(context);
     return SizedBox(
         height: control.windowHeight - 60,
         width: control.windowWidth,
@@ -52,14 +52,14 @@ class AboutPage extends StatelessWidget {
                           const SizedBox(
                             height: 10,
                           ),
-                          _bulletedText(context, _belizeFlag,
-                              Strings.descriptionLine1, true),
-                          _bulletedText(context, _uOfALogo,
-                              Strings.descriptionLine2, true),
-                          _bulletedText(context, _ambLogo,
-                              Strings.descriptionLine3, true),
-                          _bulletedText(context, _flutterLogo,
-                              Strings.descriptionLine4, true),
+                          _bulletedText(
+                              context, _belizeFlag, Strings.descriptionLine1),
+                          _bulletedText(
+                              context, _uOfALogo, Strings.descriptionLine2),
+                          _bulletedText(
+                              context, _ambLogo, Strings.descriptionLine3),
+                          _bulletedText(
+                              context, _flutterLogo, Strings.descriptionLine4),
                         ],
                       )
                     : Row(
@@ -79,13 +79,13 @@ class AboutPage extends StatelessWidget {
                               child: Column(
                                 children: [
                                   _bulletedText(context, _belizeFlag,
-                                      Strings.descriptionLine1, false),
+                                      Strings.descriptionLine1),
                                   _bulletedText(context, _uOfALogo,
-                                      Strings.descriptionLine2, false),
+                                      Strings.descriptionLine2),
                                   _bulletedText(context, _ambLogo,
-                                      Strings.descriptionLine3, false),
+                                      Strings.descriptionLine3),
                                   _bulletedText(context, _flutterLogo,
-                                      Strings.descriptionLine4, false),
+                                      Strings.descriptionLine4),
                                 ],
                               )),
                         ],
@@ -94,16 +94,15 @@ class AboutPage extends StatelessWidget {
         ));
   }
 
-  Widget _bulletedText(BuildContext context, String imagePath, String text,
-      bool mobileScreenSize) {
+  Widget _bulletedText(BuildContext context, String imagePath, String text) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 10.0),
       child: Row(
         children: [
           Image.asset(
             imagePath,
-            height: mobileScreenSize ? 50 : 75,
-            width: mobileScreenSize ? 75 : 100,
+            height: control.mobileScreenSize ? 50 : 75,
+            width: control.mobileScreenSize ? 75 : 100,
           ),
           const SizedBox(
             width: 18,
@@ -111,10 +110,12 @@ class AboutPage extends StatelessWidget {
           Flexible(
             child: Text(
               text,
-              style: Theme.of(context)
-                  .textTheme
-                  .bodyText2!
-                  .copyWith(color: Colors.white60),
+              style: control.mobileScreenSize
+                  ? Theme.of(context)
+                      .textTheme
+                      .bodyText2!
+                      .copyWith(color: Colors.white60)
+                  : Theme.of(context).textTheme.headline6,
               softWrap: true,
             ),
           )

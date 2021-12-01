@@ -88,6 +88,10 @@ class ProjectsPage extends StatelessWidget {
       return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         CustomWidgets().carouselMediaViewer(
             context, buttonCarouselController, project, mobileScreenSize),
+        const Divider(
+          color: Colors.white10,
+          thickness: 2,
+        ),
         const SizedBox(height: 10),
         Text(
           project.title,
@@ -111,8 +115,7 @@ class ProjectsPage extends StatelessWidget {
         project.moreInfo.isNotEmpty
             ? const Divider(
                 color: Colors.white38,
-                height: 40,
-                thickness: 3,
+                thickness: 2,
               )
             : Container(),
         project.moreInfo.isNotEmpty
@@ -123,8 +126,7 @@ class ProjectsPage extends StatelessWidget {
         ),
         const Divider(
           color: Colors.white38,
-          height: 40,
-          thickness: 3,
+          thickness: 2,
         ),
         CustomWidgets().tagSection(context, project),
       ]);

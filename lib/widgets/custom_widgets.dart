@@ -103,18 +103,22 @@ class CustomWidgets {
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
             insetPadding: EdgeInsets.symmetric(
-              vertical: 40,
-              horizontal: mobileScreenSize ? 20 : 100,
+              vertical: mobileScreenSize ? 8 : 40,
+              horizontal: mobileScreenSize ? 8 : 100,
             ),
             elevation: 5,
-            contentPadding: EdgeInsets.symmetric(
-                vertical: 10, horizontal: mobileScreenSize ? 20 : 40),
+            contentPadding:
+                const EdgeInsets.symmetric(vertical: 10, horizontal: 0),
             content: Stack(
               children: [
-                SingleChildScrollView(
-                  child: SizedBox(
-                    width: double.infinity,
-                    child: child,
+                Padding(
+                  padding: EdgeInsets.symmetric(
+                      horizontal: mobileScreenSize ? 20 : 40),
+                  child: SingleChildScrollView(
+                    child: SizedBox(
+                      width: double.infinity,
+                      child: child,
+                    ),
                   ),
                 ),
                 // Exit Button
@@ -143,68 +147,79 @@ class CustomWidgets {
       Project project,
       bool mobileScreenSize) {
     return AspectRatio(
-      aspectRatio: 2 / 1.2,
+      aspectRatio: mobileScreenSize ? 1.5 / 1.2 : 1.5 / 0.7,
       child: SizedBox(
         height: MediaQuery.of(context).size.height * 0.7,
         child: Stack(
           children: [
-            CarouselSlider(
-              carouselController: buttonCarouselController,
-              options: CarouselOptions(
-                  autoPlay: false,
-                  enableInfiniteScroll: false,
-                  pauseAutoPlayOnTouch: true,
-                  enlargeCenterPage: true,
-                  aspectRatio: 1.8,
-                  viewportFraction: 0.82),
-              items: [
-                project.demoVideo
-                    ? Chewie(
-                        controller: ChewieController(
-                          videoPlayerController: VideoPlayerController.asset(
-                            project.videoPathList[0],
-                          ),
-                          autoInitialize: true,
-                        ),
-                      )
-                    : Image.asset(
-                        project.thumbnailPath,
-                        fit: BoxFit.contain,
-                        alignment: Alignment.bottomCenter,
-                      ),
-                for (int iterator = 0;
-                    iterator < project.photoCount;
-                    iterator++)
+            Center(
+              child: CarouselSlider(
+                carouselController: buttonCarouselController,
+                options: CarouselOptions(
+                    autoPlay: false,
+                    enableInfiniteScroll: false,
+                    pauseAutoPlayOnTouch: true,
+                    enlargeCenterPage: true,
+                    aspectRatio: 2,
+                    viewportFraction: 0.82),
+                items: [
                   Stack(
                     fit: StackFit.expand,
                     children: [
                       Container(
                         color: Colors.black12,
                       ),
-                      Image.asset(
-                        project.imagePathList[iterator],
-                        fit: BoxFit.contain,
-                        alignment: Alignment.bottomCenter,
-                      ),
-                      CustomWidgets().imageCaption(
-                        mobileScreenSize: mobileScreenSize,
-                        caption: project.photoCaptionList[iterator],
-                      )
+                      project.demoVideo
+                          ? Chewie(
+                              controller: ChewieController(
+                                videoPlayerController:
+                                    VideoPlayerController.asset(
+                                  project.videoPathList[0],
+                                ),
+                                autoInitialize: true,
+                              ),
+                            )
+                          : Image.asset(
+                              project.thumbnailPath,
+                              fit: BoxFit.contain,
+                              alignment: Alignment.bottomCenter,
+                            ),
                     ],
                   ),
-                for (int iterator = project.demoVideo ? 1 : 0;
-                    iterator < project.videoCount;
-                    iterator++)
-                  Chewie(
-                    controller: ChewieController(
-                      videoPlayerController: VideoPlayerController.asset(
-                        project.videoPathList[iterator],
-                      ),
-                      autoInitialize: true,
-                      autoPlay: false,
+                  for (int iterator = 0;
+                      iterator < project.photoCount;
+                      iterator++)
+                    Stack(
+                      fit: StackFit.expand,
+                      children: [
+                        Container(
+                          color: Colors.black12,
+                        ),
+                        Image.asset(
+                          project.imagePathList[iterator],
+                          fit: BoxFit.contain,
+                          alignment: Alignment.bottomCenter,
+                        ),
+                        CustomWidgets().imageCaption(
+                          mobileScreenSize: mobileScreenSize,
+                          caption: project.photoCaptionList[iterator],
+                        )
+                      ],
                     ),
-                  ),
-              ],
+                  for (int iterator = project.demoVideo ? 1 : 0;
+                      iterator < project.videoCount;
+                      iterator++)
+                    Chewie(
+                      controller: ChewieController(
+                        videoPlayerController: VideoPlayerController.asset(
+                          project.videoPathList[iterator],
+                        ),
+                        autoInitialize: true,
+                        autoPlay: false,
+                      ),
+                    ),
+                ],
+              ),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 0.0),

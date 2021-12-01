@@ -3,24 +3,23 @@ List<Map<String, dynamic>> projectMapList = [
     "title": "AMG GT3 Wheel",
     "date": "October 2018",
     "description":
-        "The purpose of the AMG GT3 Wheel project was to design and build a functional, 3D printed replica of the Mercedes Benz AMG GT3 steering wheel compatible with the Thrustmaster TX Servo Base.",
+        "The goal of the AMG GT3 Wheel project was to design and build a functional, 3D-printed replica of the Mercedes Benz AMG GT3 steering wheel for use in Sim Racing.\n\nAn Arduino Nano powers the wheel and features a thumb-slide joystick, eight pushbuttons, and a pair of paddle shifters. The wheel is directly compatible with the Thrustmaster ecosystem.\n\nYou can find the 3D-printable files on Thingiverse along with an assembly manual, circuit files, and Arduino code.",
     "photoCount": 14,
     "photoCaptions": [
       "Original Photoshop design.",
       "Fusion 360 CAD Rendering.",
       "Fusion 360 CAD Rendering.",
-      "Wheel plate printed to test size, button fit and handle thickness.",
-      "Back casing assembled and wired.",
-      "Wheel mounted on servo base to test material strength and feel.",
-      "Applying vinyl and decals.",
-      "Wheel assembled and wired up.",
-      "Bicycle handle tape wrapped around handles for improved grip and comfort.",
-      "Final wheel design mounted on custom display stand.",
-      "Preparing to wire up an Arduino on a proto-board.",
-      "Proto-board design vs custom manufactured PCB board.",
+      "Wheel plate printed to test size, button fit, and handle thickness.",
+      "Back casing wired and paddle shifters wired.",
+      "Testing material strength and feel.",
+      "Application of vinyl and decals.",
+      "Wheel wired and assembled.",
+      "Comfort and grip improved, using bicycle handle tape.",
+      "Finished wheel mounted on a custom display stand.",
+      "ProtoBoard circuit design in progress.",
+      "ProtoBoard design vs. final custom manufactured PCB board.",
       "PCB assembled and mounted in wheel.",
       "Sim Racing Rig",
-      "Custom PCB designed, populated and connected."
     ],
     "videoCount": 2,
     "demoVideo": true,
@@ -39,29 +38,31 @@ List<Map<String, dynamic>> projectMapList = [
       "Adobe Illustrator",
       "Autodesk Fusion 360",
       "Arduino",
+      "Graphic Design",
       "CAD Design",
       "PCB Design",
       "3D Printing",
-      "Ender 3",
       "Wiring & Soldering",
-      "C++",
+      "C++ Programming",
       "Sim Racing",
+      "Ender 3",
       "Thrustmaster",
-      "Mercedes Benz AMG GT3"
+      "Mercedes Benz AMG GT3",
+      "Published"
     ]
   },
   {
     "title": "Apple Charging Station",
     "date": "January 2019",
     "description":
-        "The Apple Charging Station, originally designed in 2016, was made as a gift to a friend. Designed in Autodesk Fusion 360, printed in wood infused PLA and finished with wood stain. Charges iPhone, Apple Watch, and original AirPods. Modules are designed to be interchangeable to support different product dimensions.",
+        "The Apple Charging Station, initially sketched in 2016, was later revived and given as a gift to a friend.\n\nRedesigned in Autodesk Fusion 360, printed using wood-infused PLA, and finished with a wood stain. Supports charging of an iPhone, Apple Watch, and the original AirPods. The charging modules are interchangeable to support different product dimensions.",
     "photoCount": 7,
     "photoCaptions": [
       "Original 2016 design.",
       "Original 2016 design.",
       "Printed base with phone holder module inserted.",
-      "Printed base with phone holder module, name sign and stained watch charger holder inserted.",
-      "Wood staining in progress.",
+      "Base with phone holder module, name sign, and stained watch charger holder inserted.",
+      "Application of wood stain.",
       "Wood staining completed.",
       "Partially assembled charging station (missing Apple Watch charging puck)."
     ],
@@ -73,25 +74,30 @@ List<Map<String, dynamic>> projectMapList = [
       "Autodesk Fusion 360",
       "CAD Design",
       "3D Printing",
-      "Ender 3",
-      "Wood Infused PLA",
+      "Wood-infused PLA",
       "Wood Staining",
       "Apple Watch",
       "Apple AirPods",
       "Apple iPhone"
+          "Ender 3",
     ]
   },
   {
     "title": "F1 Sim Engineer",
     "date": "October 2019 - December 2019",
     "description":
-        "F1 Sim Engineer, co-developed with Viktor Soendergaard for a mobile programming class, is a companion app for the F1 2019 sim racing game. The game was written in Java and uses the HTTP protocol to communicate with the gaming device, an Xbox console in our case, to receive and display live telemetry data that can be saved and reviewed later.",
+        "F1 Sim Engineer, co-developed with Viktor Soendergaard for a mobile programming class at the University of Arkansas, is a companion app for the F1 2019 sim racing game.\n\nThe app is written in Java and uses the UDP protocol to communicate with the gaming device to receive and display live telemetry data sent from the F1 2019 game. The app obtains various data from the game, including event information, race details, number of laps, number of participants, weather conditions, vehicle setup, vehicle status, and telemetry. This information is displayed live during the race is saved to the local database for later review.",
     "photoCount": 0,
     "photoCaptions": [],
     "demoVideo": true,
     "videoCount": 1,
     "moreInfo": [
-      {"text": "Project final report:", "link": ""}
+      {"text": "Project report:", "link": ""},
+      {
+        "text": "F1 2019 UDP Specification",
+        "link":
+            "https://forums.codemasters.com/topic/44592-f1-2019-udp-specification/"
+      },
     ],
     "tags": [
       "Adobe Photoshop",
@@ -108,89 +114,125 @@ List<Map<String, dynamic>> projectMapList = [
     "title": "Nintendo Switch Speaker",
     "date": "February 2019",
     "description":
-        "The Nintendo Switch speaker attachment was designed to enhance the handheld gaming and media consumption experience. The attachment allows for a louder audio playback than the Switch's built in speakers, while maintaining a small, light and portable form factor. Features a 3.5mm audio jack, double speakers, rechargeable LiPo battery, micro USB charging port, sliding power switch, power LED, and charging status LED.",
+        "The goal of the Nintendo Switch speaker project was to design and build a speaker attachment that would be louder than the Switch's built-in speakers.\n\nThe attachment features a 3.5mm audio plug, dual mini oval speakers, a rechargeable LiPo battery, a micro USB charging port, sliding power switch, power LED, and charging status LED.",
     "photoCount": 6,
     "photoCaptions": [
-      "CAD design vs physical model",
-      "CAD design vs partially assembled components",
+      "CAD design vs. physical model",
+      "CAD design vs. partial assembly",
       "Printed prototypes",
-      "Speaker attached to Nintendo Switch (Front View)",
-      "Speaker attached to Nintendo Switch (Left Side View)",
-      "Speaker attached to Nintendo Switch (Right Side View)"
+      "Speaker connected to Nintendo Switch (Front View)",
+      "Speaker connected to Nintendo Switch (Left Side View)",
+      "Speaker connected to Nintendo Switch (Right Side View)"
     ],
     "videoCount": 0,
     "demoVideo": false,
-    "moreInfo": [],
+    "moreInfo": [
+      {
+        "text": "Mini Oval Speaker",
+        "link": "https://www.adafruit.com/product/3923"
+      },
+      {
+        "text": "Stereo 2.1W Class D Audio Amplifier",
+        "link": "https://www.adafruit.com/product/1552"
+      },
+      {
+        "text": "Adafruit LiIon/LiPoly Backpack Add-On",
+        "link": "https://www.adafruit.com/product/2124"
+      },
+      {
+        "text": "Lithium Ion Polymer Battery",
+        "link": "https://www.adafruit.com/product/1578"
+      },
+      {
+        "text": '3.5mm (1/8") Stereo DIY Plug',
+        "link": "https://www.adafruit.com/product/1800"
+      },
+    ],
     "tags": [
       "Autodesk Fusion 360",
       "CAD Design",
       "3D Printing",
-      "Adafruit components",
       "Wiring & Soldering",
       "Ender 3",
-      "Nintendo Switch"
+      "Nintendo Switch",
+      "Adafruit Components"
     ]
   },
   {
     "title": "Project LeMans",
     "date": "June 2015 - January 2018",
     "description":
-        "The goal of Project LeMans was to build a relatively low budget sim racing rig out of easy to access parts and materials. It features a Teensy for emulating a gaming controller, a steering wheel with paddle shifters and button inputs, pedal base with throttle, brake, and clutch.",
+        "The goal of Project LeMans was to build a relatively low-budget sim racing rig out of easy-to-access parts and materials. It needed to have the basic functionality of a sim racing wheel and pedal set.\n\nIt features a Teensy for the brains, emulating a gaming controller and supporting input from the steering wheel's rotation, its two buttons, pair of paddle shifters, as well as the throttle, brakes, and clutch located on the pedal base.",
     "photoCount": 26,
     "photoCaptions": [
       "Pedals carved from foam, reinforced in the rear with popsicle sticks",
-      "Applying fiber glass to foam pedals wrapped in foil and masking tape",
-      "Pedal finished with body filler, primed and painted. Door hinge used for pedal attachment.",
-      "Pedal base carved from foam, reinforced with wood and wrapped in foil and masking tape.",
+      "Applying fiberglass to foam pedals, wrapped in foil and masking tape",
+      "Pedal finished with body filler, primed and painted; door hinge used for pedal attachment.",
+      "Foam pedal base reinforced with wood and wrapped in foil and masking tape.",
       "Applying fiberglass to pedal base",
       "Spray painting pedal base",
-      "Fitment test with mounted springs",
-      "Potentiometers added to pedals for determining pedal position.",
-      "Steering wheel shape drawn on foam",
+      "Fitment test with pedal springs",
+      "Potentiometers added to the pedals for determining their position.",
+      "Steering wheel shape outlined on foam",
       "Wheel carved from foam",
       "Foam wheel reinforced with wood and wrapped in foil and masking tape.",
-      "Applying fiberglass to steering wheel",
-      "Fiberglass wheel finished with body filler and vinyl spackling",
-      "Wheel sanded smooth and button holes drilled",
-      "Wheel primed and mounted to wheel base using PCB pipes",
-      "A potentiometer attached to a set of pulleys connected to the wheel shaft using rubber bands, was added to determine wheel position.",
-      "Wheel base painted by a friend",
+      "Applying fiberglass to the steering wheel",
+      "Fiberglass wheel finished with body filler and vinyl spackling.",
+      "Wheel sanded smooth, and the buttonholes drilled.",
+      "Wheel primed and mounted to wheelbase using PCB pipes.",
+      "A potentiometer attached to the wheel shaft mechanism was added to determine wheel position.",
+      "Wheelbase painted by a friend",
       "Steering wheel painted",
-      "Paddle shifters cut from pieces of acrylic and attached to cabinet door hinges.",
-      "Paddle shifters mounted to wheel",
-      "Endstop switches added for input",
+      "Paddle shifters cut from pieces of acrylic and attached to cabinet door hinges",
+      "Paddle shifters mounted to the wheel",
+      "Endstop switches added for paddle shifter input",
       "Finished wheel",
-      "Custom rig built for steering wheel and pedal base",
-      "Bungee cord added onto steering wheel shaft for auto-centering",
+      "Custom rig built for the steering wheel and pedal base",
+      "Bungee cord added to the steering wheel shaft for auto-centering",
       "Finished pedal base",
-      "Rear view of rig"
+      "Rear side view of the rig"
     ],
     "demoVideo": true,
     "videoCount": 4,
     "moreInfo": [],
-    "tags": ["Fiberglass", "Painting", "DIY", "Teensy", "C++", "Sim Racing"]
+    "tags": [
+      "Fiberglass",
+      "Painting",
+      "DIY",
+      "Teensy",
+      "C++ Programming",
+      "Sim Racing"
+    ]
   },
   {
     "title": "SafeDrive MK1",
     "date": "April 2018 - May 2018",
     "description":
-        "The goal of the SafeDrive MK1 project was to design a secure, self-destructing storage device. It features an Arduino micro-controller, RGB LCD Panel, TFT fingerprint scanner, USB flash drive, and a USBKill device. If a fingerprint is recognized by the device, it will provide access to the USB flash drive. However, if after 10 failed attempts, the device then enables the USBKill device, releasing around 200 volts in the reverse direction, destroying not only the internal drive but also any connected devices with unprotected data lines.",
+        "The goal of the SafeDrive MK1 project was to design a secure storage device that unlocked using biometric authentication and is capable of self-destructing.\n\nIt features an Arduino micro-controller, an RGB backlight LCD Panel, a TTL fingerprint scanner, an interchangeable USB flash drive slot, and a USBKill device. If the device recognizes a fingerprint, it will provide access to the internal USB flash drive. However, after ten failed attempts, the Arduino enables the USBKill device, releasing close to 200 negative volts (in the reverse direction), destroying the internal drive's data lines and any unprotected connected devices.",
     "photoCount": 9,
     "photoCaptions": [
-      "Initial prototype.",
+      "Initial breadboard prototype",
       "Fusion 360 CAD Rendering",
       "Fusion 360 CAD Rendering",
-      "Printed casing",
+      "3D-Printed case",
       "Wiring and assembly in progress",
-      "SafeDrive assembled",
-      "Case sanded, filled, primed and painted.",
-      "Decals added",
+      "Unpainted case assembled",
+      "Case sanded, filled, primed, and painted",
+      "Decals added to the case",
       ""
     ],
     "demoVideo": true,
     "videoCount": 4,
     "moreInfo": [
-      {"text": "USBKill Device:", "link": "https://usbkill.com/"}
+      {"text": "USBKill Device:", "link": "https://usbkill.com/"},
+      {
+        "text": "Fingerprint Scanner:",
+        "link": "https://www.sparkfun.com/products/14585"
+      },
+      {
+        "text": "RGB backlight positive LCD 16x2:",
+        "link": "https://www.adafruit.com/product/398"
+      }
     ],
     "tags": [
       "Autodesk Fusion 360",
@@ -200,21 +242,23 @@ List<Map<String, dynamic>> projectMapList = [
       "C++",
       "Arduino",
       "USBKill",
-      "Ender 3"
+      "Ender 3",
+      "Adafruit Components",
+      "SparkFun Components"
     ]
   },
   {
     "title": "Xbox Head Tracking",
     "date": "February 2018 - April 2018",
     "description":
-        "The Xbox Head Tracking project was designed to improve the sim racing experience by tracking the users head movements and mimicking it in game. This project also supports potential handicap use cases.",
+        "The goal of the Xbox Head Tracking project was to design an Xbox compatible head tracking device to track the user's head movements and move the in-game camera.\n\nThe circuit comprises an Arduino microcontroller that reads incoming data from an MPU-6050 (three-axis accelerometer) to track the user's head movements and then controls a digital potentiometer. The output of the digital potentiometer connects to wires added on a modified after-market Xbox controller. The added wires lead directly to the game controller's internal circuit board input for the analog thumbsticks.\n\nYou can find the build guide on Instructables.com.",
     "photoCount": 5,
     "photoCaptions": [
-      "Modded aftermarket Xbox controller. Wires added to bypass the right analog thumb stick, while still functioning as normal.",
-      "Wires soldered to thumb stick input. Power, voltage and signal tapped for X and Y axis.",
-      "Initial head tracking circuit, featuring a battery, accelerometer and arduino.",
-      "Circuit mounted to hat",
-      "Power, ground and signal wire from digital potentiometer runs to the back of the hat and connects to the X-axis wires on the controller."
+      "Modded after-market Xbox controller",
+      "Wires soldered to thumbstick input",
+      "Initial head tracking circuit.",
+      "Breadboard circuit mounted to a hat.",
+      "Output wire runs to the back of the hat and connects to the controller."
     ],
     "demoVideo": true,
     "videoCount": 3,
@@ -225,52 +269,55 @@ List<Map<String, dynamic>> projectMapList = [
       }
     ],
     "tags": [
-      "Arduino",
-      "MPU6050",
-      "Digital Potentiometer",
       "Head Tracking",
-      "Xbox",
-      "Sim Racing",
       "Handicap",
-      "C++"
+      "MPU 6050",
+      "Digital Potentiometer",
+      "C++ Programming",
+      "Arduino",
+      "Sim Racing",
+      "Xbox"
     ]
   },
   {
     "title": "Android Calculator",
     "date": "September 2018",
     "description":
-        "Android Calculator is a calculator app developed for a mobile programming class assignment. Designed first in Photoshop, then programmed in Java.",
+        "Android Calculator is a calculator app developed for a mobile programming class assignment at the University of Arkansas.\n\nThe app was designed in Photoshop using popular calculator apps for design reference, then programmed in Java using Android Studio.",
     "photoCount": 1,
-    "photoCaptions": ["Screenshot of app development in progress."],
+    "photoCaptions": [
+      "Development and testing using an emulated Android device."
+    ],
     "demoVideo": false,
     "videoCount": 1,
     "moreInfo": [],
     "tags": [
       "Adobe Photoshop",
-      "Android",
       "Calculator",
       "Mobile Programming UARK",
-      "Java"
+      "Java Programming",
+      "Android"
     ]
   },
   {
     "title": "Macro Pad",
     "date": "April 2019",
     "description":
-        "Macro Pad is a programmable interface used for executing custom macros. This can allow for extended control and execution of complex commands with single button presses. It also features a large rotatable knob that can be pressed.",
+        "Macro Pad is a programmable interface used for executing custom macros (button combinations or input sequences). It allows for extended control and execution of complex commands with a single button press.\n\nThe device features an Arduino Micro, 16 Cherry MX switches, a rotatable and pressable knob, and a micro USB port for connecting.",
     "photoCount": 2,
     "photoCaptions": [
-      "Top half switches are generic switches, bottom half switches are modifiers.",
-      "Device plugs in using a micro USB to USB A cable."
+      "Macro Scripting Software (Computer Side):",
+      "https://www.orderedbytes.com/controllermate/"
     ],
     "videoCount": 0,
     "demoVideo": false,
     "moreInfo": [],
     "tags": [
-      "Arduino",
-      "Cherry MX Switches",
       "Autodesk Fusion 360",
+      "Cherry MX Switches",
       "3D Printing",
+      "C++ Programming",
+      "Arduino",
       "Ender 3"
     ]
   },
@@ -278,11 +325,11 @@ List<Map<String, dynamic>> projectMapList = [
     "title": "LED Wall Decor",
     "date": "February 2019",
     "description":
-        "The LED Wall Decor was made as a gift to a friend. It features an Arduino MKR1000 controlling 8 RGB LED's and can be controlled wirelessly using the Blynk App. Allows for changing of colors and patterns.",
+        "The LED wall decor was made as a gift to a friend. The signs' colors and patterns are controllable using a mobile app.\n\nIt features an Arduino MKR1000 controlling eight RGB LEDs and connects to the internet using its onboard WiFi module. Access to the internet allows us to use the Blynk IoT service, which provides control of the Arduino using their mobile app. ",
     "photoCount": 2,
     "photoCaptions": [
-      "Cover plate can be swapped and is held using magnets. Battery later removed for power cord.",
-      "USB micro port on the side"
+      "Interchangeable cover plate using magnets. (Battery removed for direct power)",
+      "USB micro port for continuous power"
     ],
     "videoCount": 0,
     "demoVideo": false,
@@ -292,71 +339,46 @@ List<Map<String, dynamic>> projectMapList = [
     "tags": [
       "Autodesk Fusion 360",
       "3D Printing",
-      "Ender 3",
-      "Arduino",
       "Internet of Things",
-      "RGB LED",
       "Wall Art",
-      "C++"
+      "RGB LED",
+      "C++ Programming",
+      "Arduino",
+      "Ender 3"
     ]
-  },
-  {
-    "title": "Amiibo Cartridges",
-    "date": "February 2019",
-    "description":
-        "Amiibo Cartridges are a smaller form factor of Nintendo's Amiibo Figurines that have the same shape and dimension of the Nintendo Switch cartridges. The equivalent Amiibo figurine can be seen as the image on the cartridge. The cartridges contain an NFC tag inside with the Amiibo data.",
-    "photoCount": 6,
-    "photoCaptions": [
-      "Fusion 360 rendering of Amiibo cartridge and cartridge case",
-      "Amiibo Cartridges printed and assembled",
-      "Amiibo Cartridges inside Switch Cartridge case",
-      "Labels Design",
-      "Amiibo actions",
-      "Amiibo actions"
-    ],
-    "videoCount": 0,
-    "demoVideo": false,
-    "moreInfo": [
-      {
-        "text": "Nintendo Amiibo",
-        "link": "https://www.nintendo.com/amiibo/what-is-amiibo/"
-      },
-      {"text": "TagMo", "link": "https://github.com/HiddenRamblings/TagMo"}
-    ],
-    "tags": ["Autodesk Fusion 360", "3D Printing", "NFC", "Ender 3", "Nintendo"]
   },
   {
     "title": "Handroid",
     "date": "January 2013",
     "description":
-        "The Handroid project was a science fair submission for Junior year of highschool. It was inspired by arms developed in medical fields, where the mechanical arms mimic the user's finger movements. Made using rubber tubing as the fingers with incisions for bending points. The tip of the finger is attached to a fishing line, routed internally through the finger and arm and connects to servo motors. The arm was shaped using foam, cardboard, pieces of wood and fiberglass. The servo motors are controlled by and Arduino microcontroller. A input glove was made by attaching flex sensors to each of the fingers. When worn, the flex sensors record the amount of bending when the user clenches their fist. This data is used by the microcontroller to determine the degree of rotation for each of the servo motors. The rotation of the servo motor controls the finger's curling motion, thus mimicking the user's finger movements.",
+        "The Handroid project was a science fair submission for my junior year of high school. The idea was inspired by arms developed in medical fields, where mechanical arms can mimic finger movements.\n\nThe shape of the arm was made using foam, cardboard, pieces of wood, and fiberglass. Rubber tubes are used for the fingers with incisions made at the bending points. The fingertips are each connected to a fishing line, which routes internally through the finger and arm, then attaches to the horn of a servo motor. An Arduino microcontroller controls the servo motors and receives input from a modified glove with flex sensors attached to each finger. When the input glove is worn, the flex sensors record the amount of bending of each finger which the Arduino uses to determine the degree of rotation for each servo motor to replicate the users' finger movements.",
     "photoCount": 13,
     "photoCaptions": [
-      "Hand made using foam, rubber tubing, and fishing line.",
+      "Hand made with foam, rubber tubing, and some fishing line.",
       "Forearm skeleton made using foam and wood.",
-      "Hand attached to forearm",
-      "Applying fiberglass and securing servo motors",
+      "Hand attached to the forearm",
+      "Securing servo motors",
       "Forearm wrapped with bristol board",
       "Cut-out made to access servo motors",
-      "Applying fiberglass to entire arm",
-      "Input glove made by attaching flex sensors to the fingers",
+      "Applying fiberglass to the entire arm",
+      "Input glove with flex sensors on fingers",
       "Finished hand",
       "Finished hand with Arduino and input glove",
       "School science fair display",
       "Demonstration for local news",
-      "Glove melted 3 years later"
+      "Glove melted three years later"
     ],
     "videoCount": 1,
     "demoVideo": false,
     "moreInfo": [],
     "tags": [
       "Highschool Science Fair",
-      "Input glove",
-      "Mechanical Arm",
       "Fiberglass",
+      "Mechanical Arm",
+      "Input glove",
       "Flex Sensors",
       "Arduino",
-      "C++"
+      "C++ Programming"
     ]
   },
 ];

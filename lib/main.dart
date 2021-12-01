@@ -14,6 +14,7 @@ import 'package:plg_portfolio/pages/professional_page.dart';
 import 'package:plg_portfolio/pages/projects_page.dart';
 import 'package:plg_portfolio/pages/resume_page.dart';
 import 'package:plg_portfolio/view_models/control_model.dart';
+import 'package:flutter/foundation.dart' as foundation;
 import 'package:provider/provider.dart';
 
 void main() {
@@ -22,7 +23,7 @@ void main() {
 
 final List<InlinePage> _pageList = [
   InlinePage(Strings.home, const HomePage(), Icons.home),
-  InlinePage(Strings.about, const AboutPage(), Icons.emoji_people),
+  InlinePage(Strings.about, AboutPage(), Icons.emoji_people),
   InlinePage(Strings.professional, ProfessionalPage(), Icons.engineering),
   InlinePage(Strings.projects, ProjectsPage(), Icons.construction),
   InlinePage(Strings.contact, ContactPage(), Icons.contacts),
@@ -65,6 +66,8 @@ class _PortfolioMainPageState extends State<PortfolioMainPage> {
   final ScrollController controller = ScrollController();
   static const String _profilePicture =
       'assets/images/home_page/profile_picture.png';
+
+  static const int developmentStartPageIndex = 3;
 
   @override
   Widget build(BuildContext context) {
@@ -161,7 +164,8 @@ class _PortfolioMainPageState extends State<PortfolioMainPage> {
           ],
           carouselController: control.buttonCarouselController,
           options: CarouselOptions(
-              initialPage: 0,
+              initialPage:
+                  foundation.kReleaseMode ? 0 : developmentStartPageIndex,
               viewportFraction: 1,
               aspectRatio: MediaQuery.of(context).size.width /
                   (MediaQuery.of(context).size.height - 55),
