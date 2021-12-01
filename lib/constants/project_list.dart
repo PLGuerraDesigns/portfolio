@@ -92,7 +92,11 @@ List<Map<String, dynamic>> projectMapList = [
     "demoVideo": true,
     "videoCount": 1,
     "moreInfo": [
-      {"text": "Project report:", "link": ""},
+      {
+        "text": "Project report:",
+        "link":
+            "https://github.com/PLGuerraDesigns/portfolio/blob/published/assets/assets/other/f1se_report.pdf"
+      },
       {
         "text": "F1 2019 UDP Specification",
         "link":
@@ -311,7 +315,13 @@ List<Map<String, dynamic>> projectMapList = [
     ],
     "videoCount": 0,
     "demoVideo": false,
-    "moreInfo": [],
+    "moreInfo": [
+      {
+        "text": "Project report:",
+        "link":
+            "https://github.com/PLGuerraDesigns/portfolio/blob/published/assets/assets/other/android_calculator_report.pdf"
+      },
+    ],
     "tags": [
       "Autodesk Fusion 360",
       "Cherry MX Switches",

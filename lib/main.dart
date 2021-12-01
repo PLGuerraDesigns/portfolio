@@ -67,7 +67,7 @@ class _PortfolioMainPageState extends State<PortfolioMainPage> {
   static const String _profilePicture =
       'assets/images/home_page/profile_picture.png';
 
-  static const int developmentStartPageIndex = 3;
+  static const int developmentStartPageIndex = 4;
 
   @override
   Widget build(BuildContext context) {

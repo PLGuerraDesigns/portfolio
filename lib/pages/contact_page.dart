@@ -4,10 +4,12 @@ import 'package:plg_portfolio/constants/strings.dart';
 import 'package:plg_portfolio/view_models/control_model.dart';
 import 'package:plg_portfolio/widgets/custom_widgets.dart';
 import 'package:provider/provider.dart';
+import 'package:universal_html/html.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ContactPage extends StatelessWidget {
-  // static const String _contactCardPath = 'assets/other/plg_contact_card.vcf';
+  static const String _contactCardURL =
+      'https://mega.nz/file/N04lQA6K#_fH4QUJatExJJBouIs4EIw3dy9fKIMad9n6gaPRdh8Y';
 
   ContactPage({Key? key}) : super(key: key);
   late ControlModel control;
@@ -45,12 +47,8 @@ class ContactPage extends StatelessWidget {
                   horizontal: control.mobileScreenSize ? 20 : 40.0,
                   vertical: 10),
               child: OutlinedButton(
-                onPressed: () async {
-                  control.unavailableSnackBar();
-                  // TODO: ADD DOWNLOAD LINK FOR CONTACT CARD
-                  // AnchorElement anchorElement =
-                  //     AnchorElement(href: _contactCardPath);
-                  // anchorElement.click();
+                onPressed: () {
+                  launch(_contactCardURL);
                 },
                 style: OutlinedButton.styleFrom(
                   side: const BorderSide(width: 1.0, color: Colors.white54),

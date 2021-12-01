@@ -263,6 +263,7 @@ class CustomWidgets {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: RichText(
+              overflow: TextOverflow.ellipsis,
               text: TextSpan(
                 children: [
                   TextSpan(
@@ -294,6 +295,7 @@ class CustomWidgets {
   Widget tagSection(BuildContext context, Project project) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Text(
           'Tags',
