@@ -333,7 +333,6 @@ class CustomWidgets {
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: RichText(
-              overflow: TextOverflow.ellipsis,
               text: TextSpan(
                 children: [
                   TextSpan(
