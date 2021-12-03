@@ -6,6 +6,7 @@ import 'package:plg_portfolio/constants/colors.dart';
 import 'package:plg_portfolio/models/project.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:video_player/video_player.dart';
+import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 /// The CustomWidgets class contains general customs widgets
 /// that are used throughout the application.
@@ -94,8 +95,7 @@ class CustomWidgets {
     );
   }
 
-  projectDetailsDialog(BuildContext context, Project project,
-      bool mobileScreenSize, Widget child) {
+  detailsDialog(BuildContext context, bool mobileScreenSize, Widget content) {
     showDialog(
         context: context,
         builder: (BuildContext context) {
@@ -117,7 +117,7 @@ class CustomWidgets {
                   child: SingleChildScrollView(
                     child: SizedBox(
                       width: double.infinity,
-                      child: child,
+                      child: content,
                     ),
                   ),
                 ),
@@ -139,6 +139,76 @@ class CustomWidgets {
             backgroundColor: themeGrey,
           );
         });
+  }
+
+  Widget carouselVideoViewer(
+      BuildContext context,
+      CarouselController buttonCarouselController,
+      List<String> videoList,
+      bool mobileScreenSize) {
+    return AspectRatio(
+      aspectRatio: mobileScreenSize ? 1.5 / 1.2 : 1.5 / 0.7,
+      child: SizedBox(
+        height: MediaQuery.of(context).size.height * 0.7,
+        child: Stack(
+          children: [
+            Center(
+              child: CarouselSlider(
+                carouselController: buttonCarouselController,
+                options: CarouselOptions(
+                    autoPlay: false,
+                    enableInfiniteScroll: false,
+                    pauseAutoPlayOnTouch: true,
+                    enlargeCenterPage: true,
+                    aspectRatio: 2,
+                    viewportFraction: 0.82),
+                items: [
+                  for (int iterator = 0;
+                      iterator < videoList.length;
+                      iterator++)
+                    YoutubePlayerControllerProvider(
+                      controller: YoutubePlayerController(
+                        initialVideoId: videoList[iterator],
+                        params: const YoutubePlayerParams(
+                          showControls: true,
+                          showFullscreenButton: true,
+                        ),
+                      ),
+                      child: const YoutubePlayerIFrame(
+                        aspectRatio: 16 / 9,
+                      ),
+                    )
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 0.0),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButton(
+                    icon: const Icon(
+                      Icons.chevron_left,
+                      size: 20,
+                    ),
+                    onPressed: () => buttonCarouselController.previousPage(
+                        duration: const Duration(milliseconds: 500),
+                        curve: Curves.linear),
+                  ),
+                  IconButton(
+                    icon: const Icon(Icons.chevron_right),
+                    onPressed: () => buttonCarouselController.nextPage(
+                        duration: const Duration(milliseconds: 500),
+                        curve: Curves.linear),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   Widget carouselMediaViewer(
@@ -251,7 +321,7 @@ class CustomWidgets {
     );
   }
 
-  Widget moreInfoSection(BuildContext context, Project project) {
+  Widget moreInfoSection(BuildContext context, List<dynamic> moreInfoList) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -259,7 +329,7 @@ class CustomWidgets {
           'More Info',
           style: Theme.of(context).textTheme.headline6,
         ),
-        for (var moreInfoList in project.moreInfo)
+        for (var moreInfoList in moreInfoList)
           Padding(
             padding: const EdgeInsets.all(10.0),
             child: RichText(

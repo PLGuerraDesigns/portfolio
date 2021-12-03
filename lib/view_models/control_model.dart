@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:plg_portfolio/constants/globals.dart';
+import 'package:plg_portfolio/constants/professional_experience_list.dart';
 import 'package:plg_portfolio/constants/project_list.dart';
 import 'package:plg_portfolio/constants/strings.dart';
+import 'package:plg_portfolio/models/professional_experience.dart';
 import 'package:plg_portfolio/models/project.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:universal_html/html.dart' as html;
@@ -15,6 +17,7 @@ class ControlModel extends ChangeNotifier {
   late double windowHeight;
   late double windowWidth;
   List<Project> projectList = [];
+  List<ProfessionalExperience> professionalExperienceList = [];
   CarouselController buttonCarouselController = CarouselController();
 
   ControlModel(BuildContext context) {
@@ -25,6 +28,11 @@ class ControlModel extends ChangeNotifier {
     for (var eachJsonProject in projectMapList) {
       Project project = Project.fromJson(eachJsonProject);
       projectList.add(project);
+    }
+    for (var eachJsonProfessionalExp in professionalExperienceMapList) {
+      ProfessionalExperience professionalExperience =
+          ProfessionalExperience.fromJson(eachJsonProfessionalExp);
+      professionalExperienceList.add(professionalExperience);
     }
   }
 

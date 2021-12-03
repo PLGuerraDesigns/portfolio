@@ -52,7 +52,7 @@ class ProjectsPage extends StatelessWidget {
       BuildContext context, int index, bool mobileScreenSize, Project project) {
     return GestureDetector(
       onTap: () {
-        CustomWidgets().projectDetailsDialog(context, project, mobileScreenSize,
+        CustomWidgets().detailsDialog(context, mobileScreenSize,
             _projectDetails(context, project, mobileScreenSize));
       },
       child: ClipRRect(
@@ -119,7 +119,7 @@ class ProjectsPage extends StatelessWidget {
               )
             : Container(),
         project.moreInfo.isNotEmpty
-            ? CustomWidgets().moreInfoSection(context, project)
+            ? CustomWidgets().moreInfoSection(context, project.moreInfo)
             : Container(),
         const SizedBox(
           width: 20,
@@ -170,7 +170,8 @@ class ProjectsPage extends StatelessWidget {
                         )
                       : Container(),
                   project.moreInfo.isNotEmpty
-                      ? CustomWidgets().moreInfoSection(context, project)
+                      ? CustomWidgets()
+                          .moreInfoSection(context, project.moreInfo)
                       : Container(),
                 ],
               ),

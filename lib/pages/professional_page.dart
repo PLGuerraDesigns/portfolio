@@ -1,20 +1,12 @@
 import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:plg_portfolio/constants/strings.dart';
-import 'package:plg_portfolio/models/project.dart';
+import 'package:plg_portfolio/models/professional_experience.dart';
 import 'package:plg_portfolio/view_models/control_model.dart';
 import 'package:plg_portfolio/widgets/custom_widgets.dart';
 import 'package:provider/provider.dart';
 
 class ProfessionalPage extends StatelessWidget {
-  static const String _ambFloatingImage =
-      'assets/images/professional_page/ambots_floating.png';
-  static const String _flutterFloatingImage =
-      'assets/images/professional_page/flutter_floating.png';
-  static const String _ambBackgroundImage =
-      'assets/images/professional_page/ambots_background.png';
-  static const String _flutterBackgroundImage =
-      'assets/images/professional_page/flutter_background.png';
   final CarouselController buttonCarouselController = CarouselController();
 
   ProfessionalPage({Key? key}) : super(key: key);
@@ -38,41 +30,21 @@ class ProfessionalPage extends StatelessWidget {
                 child: control.mobileScreenSize
                     ? Column(
                         children: [
-                          _professionCard(
-                              context,
-                              _ambFloatingImage,
-                              _ambBackgroundImage,
-                              Strings.ambotsInc,
-                              Strings.leadRoboticsEngineer,
-                              control),
-                          _professionCard(
-                              context,
-                              _flutterFloatingImage,
-                              _flutterBackgroundImage,
-                              Strings.flutterDeveloper,
-                              Strings.publishedApps,
-                              control),
+                          _professionCard(context,
+                              control.professionalExperienceList[0], control),
+                          _professionCard(context,
+                              control.professionalExperienceList[1], control),
                         ],
                       )
                     : Row(
                         children: [
-                          _professionCard(
-                              context,
-                              _ambFloatingImage,
-                              _ambBackgroundImage,
-                              Strings.ambotsInc,
-                              Strings.leadRoboticsEngineer,
-                              control),
+                          _professionCard(context,
+                              control.professionalExperienceList[0], control),
                           const SizedBox(
                             width: 20,
                           ),
-                          _professionCard(
-                              context,
-                              _flutterFloatingImage,
-                              _flutterBackgroundImage,
-                              Strings.flutterDeveloper,
-                              Strings.publishedApps,
-                              control),
+                          _professionCard(context,
+                              control.professionalExperienceList[1], control),
                         ],
                       ),
               ),
@@ -81,18 +53,16 @@ class ProfessionalPage extends StatelessWidget {
         ));
   }
 
-  Widget _professionCard(
-      BuildContext context,
-      String floatingImagePath,
-      String backgroundImagePath,
-      String title,
-      String subtitle,
-      ControlModel control) {
+  Widget _professionCard(BuildContext context,
+      ProfessionalExperience professionalExperience, ControlModel control) {
     return Expanded(
         child: GestureDetector(
       onTap: () {
-        control.unavailableSnackBar();
-        // TODO: DISPLAY JOB INFO
+        CustomWidgets().detailsDialog(
+            context,
+            control.mobileScreenSize,
+            _experienceDetails(
+                context, professionalExperience, control.mobileScreenSize));
       },
       child: AspectRatio(
         aspectRatio: control.mobileScreenSize ? 2 / 1.6 : 1 / 1,
@@ -108,7 +78,7 @@ class ProfessionalPage extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10.0),
                   child: Image.asset(
-                    backgroundImagePath,
+                    professionalExperience.backgroundImagePath,
                     color: Colors.black38,
                     colorBlendMode: BlendMode.darken,
                   ),
@@ -122,15 +92,15 @@ class ProfessionalPage extends StatelessWidget {
                   Spacer(flex: control.mobileScreenSize ? 5 : 3),
                   const SizedBox(height: 20),
                   Text(
-                    title,
+                    professionalExperience.title,
                     textAlign: TextAlign.center,
                     style: control.mobileScreenSize
                         ? Theme.of(context).textTheme.headline5
                         : Theme.of(context).textTheme.headline3,
                   ),
                   const Divider(
-                    indent: 50,
-                    endIndent: 50,
+                    indent: 100,
+                    endIndent: 100,
                     color: Colors.grey,
                     thickness: 1,
                   ),
@@ -138,7 +108,7 @@ class ProfessionalPage extends StatelessWidget {
                     height: 10,
                   ),
                   Text(
-                    subtitle,
+                    professionalExperience.subtitle,
                     textAlign: TextAlign.center,
                     style: control.mobileScreenSize
                         ? Theme.of(context).textTheme.headline6
@@ -166,10 +136,10 @@ class ProfessionalPage extends StatelessWidget {
                   child: LayoutBuilder(builder:
                       (BuildContext context, BoxConstraints constraints) {
                     return Image.asset(
-                      floatingImagePath,
+                      professionalExperience.floatingImagePath,
                       height: control.mobileScreenSize
                           ? constraints.maxWidth * 0.32
-                          : constraints.maxWidth * 0.4,
+                          : constraints.maxWidth * 0.36,
                     );
                   }),
                 ),
@@ -181,19 +151,19 @@ class ProfessionalPage extends StatelessWidget {
     ));
   }
 
-  Widget _experienceDetails(
-      BuildContext context, Project project, bool mobileScreenSize) {
+  Widget _experienceDetails(BuildContext context,
+      ProfessionalExperience professionalExperience, bool mobileScreenSize) {
     if (mobileScreenSize) {
       return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        CustomWidgets().carouselMediaViewer(
-            context, buttonCarouselController, project, mobileScreenSize),
+        CustomWidgets().carouselVideoViewer(context, buttonCarouselController,
+            professionalExperience.videoList, mobileScreenSize),
         const SizedBox(height: 10),
         Text(
-          project.title,
+          professionalExperience.title,
           style: Theme.of(context).textTheme.headline4,
         ),
         Text(
-          project.date,
+          professionalExperience.date,
           style: Theme.of(context).textTheme.headline6,
           textAlign: TextAlign.center,
         ),
@@ -201,39 +171,35 @@ class ProfessionalPage extends StatelessWidget {
           height: 20,
         ),
         Text(
-          project.description,
+          professionalExperience.description,
           style: Theme.of(context)
               .textTheme
               .bodyText1!
               .copyWith(color: Colors.white60),
         ),
-        project.moreInfo.isNotEmpty
+        professionalExperience.moreInfo.isNotEmpty
             ? const Divider(
                 color: Colors.white30,
                 height: 40,
               )
             : Container(),
-        project.moreInfo.isNotEmpty
-            ? CustomWidgets().moreInfoSection(context, project)
+        professionalExperience.moreInfo.isNotEmpty
+            ? CustomWidgets()
+                .moreInfoSection(context, professionalExperience.moreInfo)
             : Container(),
         const SizedBox(
           width: 20,
         ),
-        const Divider(
-          color: Colors.white30,
-          height: 40,
-        ),
-        CustomWidgets().tagSection(context, project),
       ]);
     } else {
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomWidgets().carouselMediaViewer(
-              context, buttonCarouselController, project, mobileScreenSize),
+          CustomWidgets().carouselVideoViewer(context, buttonCarouselController,
+              professionalExperience.videoList, mobileScreenSize),
           const SizedBox(height: 10),
           Text(
-            project.title,
+            professionalExperience.title,
             style: Theme.of(context).textTheme.headline4,
           ),
           Row(children: [
@@ -243,7 +209,7 @@ class ProfessionalPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    project.date,
+                    professionalExperience.date,
                     style: Theme.of(context).textTheme.headline6,
                     textAlign: TextAlign.center,
                   ),
@@ -251,28 +217,25 @@ class ProfessionalPage extends StatelessWidget {
                     height: 20,
                   ),
                   Text(
-                    project.description,
+                    professionalExperience.description,
                     style: Theme.of(context)
                         .textTheme
                         .bodyText1!
                         .copyWith(color: Colors.white60),
                   ),
-                  project.moreInfo.isNotEmpty
+                  professionalExperience.moreInfo.isNotEmpty
                       ? const Divider(
                           color: Colors.white30,
                           height: 40,
                         )
                       : Container(),
-                  project.moreInfo.isNotEmpty
-                      ? CustomWidgets().moreInfoSection(context, project)
+                  professionalExperience.moreInfo.isNotEmpty
+                      ? CustomWidgets().moreInfoSection(
+                          context, professionalExperience.moreInfo)
                       : Container(),
                 ],
               ),
             ),
-            const SizedBox(
-              width: 20,
-            ),
-            Expanded(child: CustomWidgets().tagSection(context, project)),
           ])
         ],
       );
