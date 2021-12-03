@@ -37,7 +37,7 @@ List<Map<String, dynamic>> professionalExperienceMapList = [
     "subtitle": "Published Apps: AIC Mobile App",
     "date": "June 2020 - Present",
     "description":
-        "Lead the planning, development, and launch of a mobile app for Atlantic Insurance Company Limited. Located in the country of Belize, Atlantic Insurance is missioned to become the preferred insurer in the industry as measured by customer confidence and to establish a successful partnership with clients, staff, and shareholders, that respect the interests and goals of all parties involved.\n\nWritten using Google's Flutter framework, the app is available to download for both Android and iOS. It was designed with the client in mind to enhance their interaction with the company, offering a platform for existing and potential clients. Some features include viewing items insured, effective and expiration dates of coverage, certificate of insurance, renewal notifications, filing claims, requesting quotes, and obtaining directions to the nearest office.",
+        "Lead the planning, development, and launch of the AIC Mobile App for Atlantic Insurance Company Limited. Located in the country of Belize, Atlantic Insurance is missioned to become the preferred insurer in the industry as measured by customer confidence and to establish a successful partnership with clients, staff, and shareholders, that respect the interests and goals of all parties involved.\n\nWritten using Google's Flutter framework, the app is available to download for both Android and iOS. It was designed with the client in mind to enhance their interaction with the company, offering a platform for existing and potential clients. Some features include viewing items insured, effective and expiration dates of coverage, certificate of insurance, renewal notifications, filing claims, requesting quotes, and obtaining directions to the nearest office.",
     "floatingImagePath": "assets/images/professional_page/flutter_floating.png",
     "backgroundImagePath":
         "assets/images/professional_page/flutter_background.png",
@@ -46,6 +46,15 @@ List<Map<String, dynamic>> professionalExperienceMapList = [
       {
         "text": "Atlantic Insurance Company Ltd.",
         "link": "https://aicbelize.azurewebsites.net/"
+      },
+      {
+        "text": "View app in Apple App Store",
+        "link": "https://apps.apple.com/us/app/aic-mobile-app/id1534979546"
+      },
+      {
+        "text": "View app in Google Play Store",
+        "link":
+            "https://play.google.com/store/apps/details?id=com.aicbelize.AIMobile"
       },
     ],
   },
