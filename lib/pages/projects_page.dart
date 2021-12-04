@@ -141,7 +141,7 @@ class ProjectsPage extends StatelessWidget {
             project.title,
             style: Theme.of(context).textTheme.headline4,
           ),
-          Row(children: [
+          Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
             Expanded(
               flex: 2,
               child: Column(
