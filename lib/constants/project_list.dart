@@ -294,7 +294,13 @@ List<Map<String, dynamic>> projectMapList = [
     ],
     "demoVideo": false,
     "videoCount": 1,
-    "moreInfo": [],
+    "moreInfo": [
+      {
+        "text": "Project report:",
+        "link":
+            "https://github.com/PLGuerraDesigns/portfolio/blob/published/assets/assets/other/android_calculator_report.pdf"
+      },
+    ],
     "tags": [
       "Adobe Photoshop",
       "Calculator",
@@ -309,17 +315,13 @@ List<Map<String, dynamic>> projectMapList = [
     "description":
         "Macro Pad is a programmable interface used for executing custom macros (button combinations or input sequences). It allows for extended control and execution of complex commands with a single button press.\n\nThe device features an Arduino Micro, 16 Cherry MX switches, a rotatable and pressable knob, and a micro USB port for connecting.",
     "photoCount": 2,
-    "photoCaptions": [
-      "Macro Scripting Software (Computer Side):",
-      "https://www.orderedbytes.com/controllermate/"
-    ],
+    "photoCaptions": ["", ""],
     "videoCount": 0,
     "demoVideo": false,
     "moreInfo": [
       {
-        "text": "Project report:",
-        "link":
-            "https://github.com/PLGuerraDesigns/portfolio/blob/published/assets/assets/other/android_calculator_report.pdf"
+        "text": "Macro Scripting Software (Computer Side):",
+        "link": "https://www.orderedbytes.com/controllermate/"
       },
     ],
     "tags": [
