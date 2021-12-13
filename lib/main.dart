@@ -64,8 +64,7 @@ class MyCustomScrollBehavior extends MaterialScrollBehavior {
 
 class _PortfolioMainPageState extends State<PortfolioMainPage> {
   final ScrollController controller = ScrollController();
-  static const String _profilePicture =
-      'assets/images/home_page/profile_picture.png';
+  static const String _avatarPicture = 'assets/images/home_page/avatar.png';
 
   static const int developmentStartPageIndex = 2;
 
@@ -126,7 +125,7 @@ class _PortfolioMainPageState extends State<PortfolioMainPage> {
                               shape: BoxShape.circle,
                             ),
                             child: const CircleAvatar(
-                              backgroundImage: AssetImage(_profilePicture),
+                              backgroundImage: AssetImage(_avatarPicture),
                             ),
                           ),
                         ),
