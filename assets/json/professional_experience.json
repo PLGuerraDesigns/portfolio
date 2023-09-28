@@ -1,0 +1,78 @@
+[
+  {
+    "company": "Atlantic Insurance Company Ltd.",
+    "role": "Contract Software Engineer",
+    "location": "(Remote) Belize City, Belize",
+    "startDate": "2020-06-01T00:00:00Z",
+    "endDate": null,
+    "description": "Lead the planning, development, and launch of the AIC Mobile App for Atlantic Insurance Company Limited. Located in the country of Belize, Atlantic Insurance is missioned to become the preferred insurer in the industry as measured by customer confidence and to establish a successful partnership with clients, staff, and shareholders, that respect the interests and goals of all parties involved.\n\nWritten using Google's Flutter framework, the app is available to download for both Android and iOS. It was designed with the client in mind to enhance their interaction with the company, offering a platform for existing and potential clients. Some features include viewing items insured, effective and expiration dates of coverage, certificate of insurance, renewal notifications, filing claims, requesting quotes, and obtaining directions to the nearest office.",
+    "youtubeVideoIds": [
+      "TcdKbZmju5I"
+    ],
+    "externalLinks": [
+      {
+        "title": "Atlantic Insurance Company Ltd.",
+        "url": "https://aicbelize.azurewebsites.net/"
+      },
+      {
+        "title": "View app in Apple App Store",
+        "url": "https://apps.apple.com/us/app/aic-mobile-app/id1534979546"
+      },
+      {
+        "title": "View app in Google Play Store",
+        "url": "https://play.google.com/store/apps/details?id=com.aicbelize.AIMobile"
+      }
+    ]
+  },
+  {
+    "company": "AMBOTS Inc.",
+    "role": "Lead Robotics Engineer",
+    "location": "Fayetteville, AR",
+    "startDate": "2019-08-01T00:00:00Z",
+    "endDate": "2021-10-01T00:00:00Z",
+    "description": "AMBOTS is missioned to accelerate the transition to a civilization with fully autonomous and on-demand manufacturing. Their focus is to commercialize the patent-pending swarm 3D printing and assembly technologies invented by the AM3 Lab in the Department of Mechanical Engineering at the University of Arkansas.\\n\\nAs Lead Robotics Engineer, my primary responsibility was to direct the research and development of AMBOTS' first commercial product. During my time there, our team developed specialized modular robotics hardware to support an automated swarm manufacturing process. The team and I were also able to secure the Phase II SBIR grant for $1M and landed the company's first customer.",
+    "youtubeVideoIds": [
+      "uTrtARdG20E",
+      "xMMauLmHcwk"
+    ],
+    "externalLinks": [
+      {
+        "title": "AMBOTS Inc.",
+        "url": "https://ambots.net/"
+      },
+      {
+        "title": "ASBTDC: AMBOTS Gets $1M Phase II Grant from National Science Foundation for Large-Scale 3D Printing",
+        "url": "https://asbtdc.org/ambots-wins-nsf-sbir-grant-to-develop-solution-for-large-scale-3d-printing/"
+      },
+      {
+        "title": "CBS, The Henry Ford's Innovation Nation Feature",
+        "url": "https://www.youtube.com/watch?v=uTrtARdG20E"
+      },
+      {
+        "title": "3D STARTUP OF THE YEAR BY 3D NATIVES",
+        "url": "https://www.3dnatives.com/en/ambots-startup-2019-030120204/#!"
+      },
+      {
+        "title": "GE Reports: The 5 Coolest Things On Earth This Week",
+        "url": "https://www.ge.com/news/reports/the-5-coolest-things-on-earth-this-week-4"
+      }
+    ]
+  },
+  {
+    "company": "AM3 Lab",
+    "role": "Graduate Research Assistant",
+    "location": "Fayetteville, AR",
+    "startDate": "2017-08-01T00:00:00Z",
+    "endDate": "2019-08-01T00:00:00Z",
+    "description": "The AM3 Lab is a research group in the Department of Mechanical Engineering at the University of Arkansas. The lab is focused on developing novel additive manufacturing technologies and processes.\\n\\nAs a Graduate Research Assistant, I was responsible for the development of a novel swarm 3D printing process. The process was developed to enable the manufacturing of large-scale structures by a swarm of mobile robots. The process was developed using a combination of hardware and software. The hardware consisted of a custom-built mobile robot, a custom-built 3D printer, and a custom-built robotic arm. The software consisted of a custom-built path planning algorithm and a custom-built control system.",
+    "youtubeVideoIds": [
+      "xMMauLmHcwk"
+    ],
+    "externalLinks": [
+      {
+        "title": "AM³ Lab",
+        "url": "https://wordpressua.uark.edu/am3/"
+      }
+    ]
+  }
+]
