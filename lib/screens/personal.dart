@@ -40,66 +40,96 @@ class _PersonalScreenState extends State<PersonalScreen> {
   }
 
   /// Navigates to the details screen for the given project.
-  void _navigateToPersonalProject(
-      {required BuildContext context,
-      required Project project,
-      required int index}) {
-    Navigator.of(context).push(
-      MaterialPageRoute<void>(
-        builder: (BuildContext context) => DetailsScreen(
-          appBarTitle: Strings.personalProjects,
-          title: project.title,
-          description: project.description,
-          imagePaths: project.imagePaths,
-          imageCaptions: project.imageCaptions,
-          videoPaths: project.videoPaths,
-          startDate: project.startDateString,
-          finalDate: project.finalDateString,
-          tags: project.tags,
-          youtubeVideoIds: const <String>[],
-          externalLinks: project.externalLinks,
-          actions: <Widget>[
-            OutlinedButton(
-              style: OutlinedButton.styleFrom(
-                foregroundColor: Theme.of(context).colorScheme.onSurface,
+  void _navigateToPersonalProject({
+    required BuildContext context,
+    required Project project,
+    required int index,
+    required bool compact,
+    required bool replace,
+  }) {
+    final Widget detailScreen = DetailsScreen(
+      appBarTitle: Strings.personalProjects,
+      title: project.title,
+      description: project.description,
+      imagePaths: project.imagePaths,
+      imageCaptions: project.imageCaptions,
+      videoPaths: project.videoPaths,
+      startDate: project.startDateString,
+      finalDate: project.finalDateString,
+      tags: project.tags,
+      youtubeVideoIds: const <String>[],
+      externalLinks: project.externalLinks,
+      actions: <Widget>[
+        OutlinedButton(
+          style: OutlinedButton.styleFrom(
+            foregroundColor: Theme.of(context).colorScheme.onSurface,
+          ),
+          onPressed: index > 0
+              ? () => _navigateToPersonalProject(
+                    context: context,
+                    project: _projects[index - 1],
+                    index: index - 1,
+                    compact: compact,
+                    replace: true,
+                  )
+              : null,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              const Icon(Icons.chevron_left),
+              Text(
+                compact
+                    ? Strings.previous.toUpperCase()
+                    : Strings.previousProject.toUpperCase(),
               ),
-              onPressed: index > 0
-                  ? () => _navigateToPersonalProject(
-                        context: context,
-                        project: _projects[index - 1],
-                        index: index - 1,
-                      )
-                  : null,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  const Icon(Icons.chevron_left),
-                  Text(Strings.previousProject.toUpperCase())
-                ],
-              ),
-            ),
-            const SizedBox(width: 12),
-            OutlinedButton(
-              onPressed: index < _projects.length - 1
-                  ? () => _navigateToPersonalProject(
-                        context: context,
-                        project: _projects[index + 1],
-                        index: index + 1,
-                      )
-                  : null,
-              style: OutlinedButton.styleFrom(
-                foregroundColor: Theme.of(context).colorScheme.onSurface,
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Text(Strings.nextProject.toUpperCase()),
-                  const Icon(Icons.chevron_right)
-                ],
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
+        const SizedBox(width: 12),
+        OutlinedButton(
+          onPressed: index < _projects.length - 1
+              ? () => _navigateToPersonalProject(
+                    context: context,
+                    project: _projects[index + 1],
+                    index: index + 1,
+                    compact: compact,
+                    replace: true,
+                  )
+              : null,
+          style: OutlinedButton.styleFrom(
+            foregroundColor: Theme.of(context).colorScheme.onSurface,
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                compact
+                    ? Strings.next.toUpperCase()
+                    : Strings.nextProject.toUpperCase(),
+              ),
+              const Icon(Icons.chevron_right)
+            ],
+          ),
+        ),
+      ],
+    );
+    if (replace) {
+      Navigator.pushReplacement(
+        context,
+        PageRouteBuilder<Widget>(
+          pageBuilder: (BuildContext context, Animation<double> animation1,
+                  Animation<double> animation2) =>
+              detailScreen,
+          transitionDuration: Duration.zero,
+          reverseTransitionDuration: Duration.zero,
+        ),
+      );
+      return;
+    }
+    Navigator.push(
+      context,
+      MaterialPageRoute<dynamic>(
+        builder: (BuildContext context) => detailScreen,
       ),
     );
   }
@@ -134,13 +164,7 @@ class _PersonalScreenState extends State<PersonalScreen> {
                                   SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount:
                                     orientation == Orientation.portrait ? 1 : 5,
-                                mainAxisSpacing:
-                                    orientation == Orientation.portrait ? 0 : 8,
                                 crossAxisSpacing: 8,
-                                childAspectRatio:
-                                    orientation == Orientation.portrait
-                                        ? 1.2
-                                        : 1.1,
                               ),
                               shrinkWrap: true,
                               physics: const NeverScrollableScrollPhysics(),
@@ -154,6 +178,9 @@ class _PersonalScreenState extends State<PersonalScreen> {
                                       context: context,
                                       project: _projects[index],
                                       index: index,
+                                      compact:
+                                          orientation == Orientation.portrait,
+                                      replace: false,
                                     ),
                                   );
                                 },

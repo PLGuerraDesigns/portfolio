@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../common/color_schemes.g.dart';
 import 'frosted_container.dart';
 import 'hover_scale_handler.dart';
 
@@ -47,7 +48,7 @@ class _FloatingThumbnailState extends State<FloatingThumbnail> {
         Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
-            Flexible(
+            Expanded(
               child: Image.asset(
                 widget.image,
                 fit: BoxFit.contain,
@@ -72,14 +73,19 @@ class _FloatingThumbnailState extends State<FloatingThumbnail> {
           Positioned(
             left: 0,
             top: 0,
-            child: FrostedContainer(
-              padding: const EdgeInsets.all(8),
-              borderRadiusAmount: 100,
-              child: Image.asset(
-                widget.logoPath!,
-                fit: BoxFit.contain,
-                height: 50,
-                width: 50,
+            child: Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: lightColorScheme.surface,
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.asset(
+                  widget.logoPath!,
+                  fit: BoxFit.contain,
+                  height: 50,
+                  width: 50,
+                ),
               ),
             ),
           ),

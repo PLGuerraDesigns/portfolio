@@ -45,24 +45,39 @@ class _ProfessionalScreenState extends State<ProfessionalScreen> {
   /// Navigates to the details screen for the given professional experience.
   void _navigateToExperienceDetails(
       {required BuildContext context,
-      required ProfessionalExperience professionalExperience}) {
+      required ProfessionalExperience professionalExperience,
+      required bool replace}) {
+    final Widget detailScreen = DetailsScreen(
+      appBarTitle: Strings.professionalExperiences,
+      logoPath: professionalExperience.logoPath,
+      title: professionalExperience.company,
+      description: professionalExperience.description,
+      imagePaths: <String>[professionalExperience.thumbnailPath],
+      videoPaths: const <String>[],
+      youtubeVideoIds: professionalExperience.youtubeVideoIds,
+      imageCaptions: const <String>[],
+      externalLinks: professionalExperience.externalLinks,
+      startDate: professionalExperience.startDateString,
+      finalDate: professionalExperience.finalDateString,
+      tags: const <String>[],
+    );
+    if (replace) {
+      Navigator.pushReplacement(
+        context,
+        PageRouteBuilder<Widget>(
+          pageBuilder: (BuildContext context, Animation<double> animation1,
+                  Animation<double> animation2) =>
+              detailScreen,
+          transitionDuration: Duration.zero,
+          reverseTransitionDuration: Duration.zero,
+        ),
+      );
+      return;
+    }
     Navigator.push(
       context,
-      MaterialPageRoute<DetailsScreen>(
-        builder: (BuildContext context) => DetailsScreen(
-          appBarTitle: Strings.professionalExperiences,
-          logoPath: professionalExperience.logoPath,
-          title: professionalExperience.company,
-          description: professionalExperience.description,
-          imagePaths: <String>[professionalExperience.thumbnailPath],
-          videoPaths: const <String>[],
-          youtubeVideoIds: professionalExperience.youtubeVideoIds,
-          imageCaptions: const <String>[],
-          externalLinks: professionalExperience.externalLinks,
-          startDate: professionalExperience.startDateString,
-          finalDate: professionalExperience.finalDateString,
-          tags: const <String>[],
-        ),
+      MaterialPageRoute<dynamic>(
+        builder: (BuildContext context) => detailScreen,
       ),
     );
   }
@@ -92,20 +107,16 @@ class _ProfessionalScreenState extends State<ProfessionalScreen> {
                           AsyncSnapshot<dynamic> snapshot) {
                         if (snapshot.connectionState == ConnectionState.done) {
                           return GridView.custom(
-                              padding: const EdgeInsets.all(8),
+                              padding: const EdgeInsets.all(10),
                               gridDelegate:
                                   SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount:
                                     orientation == Orientation.portrait ? 1 : 3,
+                                crossAxisSpacing: 16,
                                 mainAxisSpacing:
                                     orientation == Orientation.portrait
-                                        ? 0
-                                        : 16,
-                                crossAxisSpacing: 16,
-                                childAspectRatio:
-                                    orientation == Orientation.portrait
-                                        ? 1.2
-                                        : 1.1,
+                                        ? 16
+                                        : 0,
                               ),
                               shrinkWrap: true,
                               physics: const NeverScrollableScrollPhysics(),
@@ -125,6 +136,7 @@ class _ProfessionalScreenState extends State<ProfessionalScreen> {
                                       context: context,
                                       professionalExperience:
                                           _professionalExperience[index],
+                                      replace: false,
                                     ),
                                   );
                                 },

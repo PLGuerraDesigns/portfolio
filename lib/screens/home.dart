@@ -39,37 +39,9 @@ class HomeScreen extends StatelessWidget {
   /// A header banner with a profile photo, name, subtitle, and social media
   /// buttons.
   Widget _header(BuildContext context, {bool compact = false}) {
-    return HeaderBanner(
-      leading: CircleAvatar(
-        radius: compact ? 38 : 55,
-        backgroundColor: Theme.of(context).colorScheme.surfaceVariant,
-        backgroundImage: const AssetImage(
-          Strings.profilePhotoPath,
-        ),
-      ),
-      title: Row(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: <Widget>[
-          Text(
-            Strings.name,
-            style: compact
-                ? Theme.of(context).textTheme.titleLarge
-                : Theme.of(context).textTheme.headlineLarge,
-          ),
-          const Spacer(),
-          if (!compact) _socialMediaButtons(context),
-          const SizedBox(width: 8.0),
-        ],
-      ),
-      subtitle: Row(
-        children: <Widget>[
-          Text(
-            Strings.subtitle,
-            style: compact
-                ? Theme.of(context).textTheme.labelSmall
-                : Theme.of(context).textTheme.titleMedium,
-          ),
-          const Spacer(),
+    Widget location() {
+      return Row(
+        children: [
           Icon(
             Icons.pin_drop,
             size: compact ? 14 : 18,
@@ -83,6 +55,46 @@ class HomeScreen extends StatelessWidget {
                 : Theme.of(context).textTheme.labelLarge,
           ),
           const SizedBox(width: 18.0),
+        ],
+      );
+    }
+
+    return HeaderBanner(
+      leading: CircleAvatar(
+        radius: compact ? 38 : 55,
+        backgroundColor: Theme.of(context).colorScheme.surfaceVariant,
+        backgroundImage: const AssetImage(
+          Strings.profilePhotoPath,
+        ),
+      ),
+      title: Row(
+        crossAxisAlignment:
+            compact ? CrossAxisAlignment.center : CrossAxisAlignment.end,
+        children: <Widget>[
+          Text(
+            Strings.name,
+            style: compact
+                ? Theme.of(context).textTheme.titleLarge
+                : Theme.of(context).textTheme.headlineLarge,
+          ),
+          const Spacer(),
+          if (!compact) _socialMediaButtons(context),
+          if (compact) location(),
+          const SizedBox(width: 8.0),
+        ],
+      ),
+      subtitle: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          Flexible(
+            child: Text(
+              Strings.subtitle,
+              style: compact
+                  ? Theme.of(context).textTheme.labelSmall
+                  : Theme.of(context).textTheme.titleMedium,
+            ),
+          ),
+          if (!compact) location(),
         ],
       ),
     );
@@ -190,6 +202,7 @@ class HomeScreen extends StatelessWidget {
     return FrostedContainer(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Expanded(
             child: FloatingThumbnail(

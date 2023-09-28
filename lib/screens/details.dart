@@ -239,7 +239,7 @@ class DetailsScreenState extends State<DetailsScreen> {
         for (final Map<String, String> link in widget.externalLinks)
           Padding(
             padding: const EdgeInsets.only(bottom: 8.0),
-            child: Row(
+            child: Wrap(
               children: <Widget>[
                 Text(
                   '${link['title']}:',
@@ -285,6 +285,365 @@ class DetailsScreenState extends State<DetailsScreen> {
     );
   }
 
+  /// Arranges the widgets in a column for portrait orientation.
+  Widget _portraitView(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        Stack(
+          alignment: Alignment.bottomCenter,
+          children: <Widget>[
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.5,
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 64.0),
+                child: _currentMediaIndex < youtubeCount
+                    ? ColoredBox(
+                        color: darkColorScheme.surface.withOpacity(0.9),
+                        child: Center(
+                          child: YoutubePlayer(
+                            key: Key('yt$_currentMediaIndex'),
+                            controller: YoutubePlayerController.fromVideoId(
+                                videoId:
+                                    widget.youtubeVideoIds[_currentMediaIndex]),
+                          ),
+                        ),
+                      )
+                    : _currentMediaIndex < imageCount + youtubeCount
+                        ? PhotoViewGallery.builder(
+                            scrollPhysics: const ClampingScrollPhysics(),
+                            builder: _galleryImageItem,
+                            pageController: _imagePageController,
+                            itemCount: imageCount,
+                            backgroundDecoration: BoxDecoration(
+                              color: darkColorScheme.surface.withOpacity(0.9),
+                            ),
+                            onPageChanged: (_) {},
+                          )
+                        : Chewie(
+                            controller: ChewieController(
+                              autoPlay: true,
+                              videoPlayerController: _videoPlayerControllers[
+                                  _currentMediaIndex - imageCount],
+                            ),
+                          ),
+              ),
+            ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: SizedBox(
+                width: double.infinity,
+                child: FrostedContainer(
+                  borderRadiusAmount: 0,
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      if (widget.imageCaptions.isNotEmpty &&
+                          _currentMediaIndex <= imageCount - 1)
+                        Flexible(
+                          child: Text(
+                            widget.imageCaptions[_currentMediaIndex],
+                            style: Theme.of(context).textTheme.bodyLarge,
+                          ),
+                        ),
+                      if (widget.imageCaptions.isEmpty ||
+                          _currentMediaIndex > imageCount - 1)
+                        Container(),
+                      GalleryControls(
+                        currentIndex: _currentMediaIndex,
+                        totalMediaCount: totalMediaCount,
+                        onPrevious: _previousMedia,
+                        onNext: _nextMedia,
+                        onMediaBrowser: () {
+                          setState(() {
+                            _mediaBrowserVisible = !_mediaBrowserVisible;
+                          });
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            )
+          ],
+        ),
+        if (_mediaBrowserVisible)
+          SizedBox(
+            width: MediaQuery.of(context).size.width * 0.3,
+            child: MediaBrowser(
+              youtubeVideoIds: widget.youtubeVideoIds,
+              imagePaths: widget.imagePaths,
+              playerControllers: _videoPlayerControllers,
+              onTapped: (int index) {
+                if (index >= imageCount) {
+                  setState(() {
+                    _currentMediaIndex = index;
+                  });
+                  return;
+                }
+                if (_currentMediaIndex >= imageCount) {
+                  setState(() {
+                    _currentMediaIndex = index;
+                  });
+                  _setupImagePageController();
+                  return;
+                }
+                _imagePageController.jumpToPage(
+                  index,
+                );
+              },
+            ),
+          ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Row(
+                children: <Widget>[
+                  if (widget.logoPath != null)
+                    Padding(
+                      padding: const EdgeInsets.only(right: 16.0),
+                      child: FrostedContainer(
+                        padding: const EdgeInsets.all(4),
+                        borderRadiusAmount: 100,
+                        child: Image.asset(
+                          widget.logoPath!,
+                          fit: BoxFit.contain,
+                          height: 40,
+                          width: 40,
+                        ),
+                      ),
+                    ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        widget.title,
+                        style:
+                            Theme.of(context).textTheme.titleMedium!.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                ),
+                      ),
+                      Text(
+                        dateRangeText,
+                        style: Theme.of(context).textTheme.bodyMedium,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              const Divider(height: 32),
+              Text(
+                widget.description,
+                style: Theme.of(context).textTheme.bodyLarge,
+              ),
+              if (widget.externalLinks.isNotEmpty) _moreInfo(context),
+              const Divider(height: 32),
+              if (widget.tags.isNotEmpty)
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.2,
+                  child: _tagChips(context),
+                ),
+              const SizedBox(height: 100.00),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  /// Arranges the widgets in a row for landscape orientation.
+  Widget _landscapeView(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: <Widget>[
+        SizedBox(
+          height: MediaQuery.of(context).size.height * 0.8,
+          width: MediaQuery.of(context).size.width,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Expanded(
+                child: Stack(
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 56.0),
+                      child: _currentMediaIndex < youtubeCount
+                          ? ColoredBox(
+                              color: darkColorScheme.surface.withOpacity(0.9),
+                              child: Center(
+                                child: YoutubePlayer(
+                                  key: Key('yt$_currentMediaIndex'),
+                                  controller:
+                                      YoutubePlayerController.fromVideoId(
+                                          videoId: widget.youtubeVideoIds[
+                                              _currentMediaIndex]),
+                                ),
+                              ),
+                            )
+                          : _currentMediaIndex < imageCount + youtubeCount
+                              ? PhotoViewGallery.builder(
+                                  scrollPhysics: const ClampingScrollPhysics(),
+                                  builder: _galleryImageItem,
+                                  pageController: _imagePageController,
+                                  itemCount: imageCount,
+                                  backgroundDecoration: BoxDecoration(
+                                    color: darkColorScheme.surface
+                                        .withOpacity(0.9),
+                                  ),
+                                  onPageChanged: (_) {},
+                                )
+                              : Chewie(
+                                  controller: ChewieController(
+                                    autoPlay: true,
+                                    videoPlayerController:
+                                        _videoPlayerControllers[
+                                            _currentMediaIndex - imageCount],
+                                  ),
+                                ),
+                    ),
+                    Align(
+                      alignment: Alignment.bottomCenter,
+                      child: SizedBox(
+                        width: double.infinity,
+                        child: FrostedContainer(
+                          borderRadiusAmount: 0,
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            children: <Widget>[
+                              if (widget.imageCaptions.isNotEmpty &&
+                                  _currentMediaIndex <= imageCount - 1)
+                                Text(
+                                  widget.imageCaptions[_currentMediaIndex],
+                                  style: Theme.of(context).textTheme.bodyLarge,
+                                ),
+                              const Spacer(),
+                              GalleryControls(
+                                currentIndex: _currentMediaIndex,
+                                totalMediaCount: totalMediaCount,
+                                onPrevious: _previousMedia,
+                                onNext: _nextMedia,
+                                onMediaBrowser: () {
+                                  setState(() {
+                                    _mediaBrowserVisible =
+                                        !_mediaBrowserVisible;
+                                  });
+                                },
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              if (_mediaBrowserVisible)
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.3,
+                  child: MediaBrowser(
+                    youtubeVideoIds: widget.youtubeVideoIds,
+                    imagePaths: widget.imagePaths,
+                    playerControllers: _videoPlayerControllers,
+                    onTapped: (int index) {
+                      if (index >= imageCount) {
+                        setState(() {
+                          _currentMediaIndex = index;
+                        });
+                        return;
+                      }
+                      if (_currentMediaIndex >= imageCount) {
+                        setState(() {
+                          _currentMediaIndex = index;
+                        });
+                        _setupImagePageController();
+                        return;
+                      }
+                      _imagePageController.jumpToPage(
+                        index,
+                      );
+                    },
+                  ),
+                ),
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Row(
+                children: <Widget>[
+                  if (widget.logoPath != null)
+                    Padding(
+                      padding: const EdgeInsets.only(right: 16.0),
+                      child: FrostedContainer(
+                        padding: const EdgeInsets.all(4),
+                        borderRadiusAmount: 100,
+                        child: Image.asset(
+                          widget.logoPath!,
+                          fit: BoxFit.contain,
+                          height: 40,
+                          width: 40,
+                        ),
+                      ),
+                    ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        widget.title,
+                        style: Theme.of(context).textTheme.titleLarge!.copyWith(
+                              fontWeight: FontWeight.bold,
+                            ),
+                      ),
+                      Text(
+                        dateRangeText,
+                        style: Theme.of(context).textTheme.titleSmall,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              const Divider(height: 32),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: <Widget>[
+                        Text(
+                          widget.description,
+                          style: Theme.of(context).textTheme.bodyLarge,
+                        ),
+                        if (widget.externalLinks.isNotEmpty) _moreInfo(context),
+                        const SizedBox(height: 100.00),
+                      ],
+                    ),
+                  ),
+                  if (widget.tags.isNotEmpty)
+                    Padding(
+                      padding: const EdgeInsets.only(left: 32.0),
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.2,
+                        child: _tagChips(context),
+                      ),
+                    ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
   @override
   void initState() {
     super.initState();
@@ -303,222 +662,30 @@ class DetailsScreenState extends State<DetailsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: CustomAppBars.genericAppBar(
-        context: context,
-        title: widget.appBarTitle,
-        actions: widget.actions,
-      ),
-      body: FrostedContainer(
-        padding: EdgeInsets.zero,
-        borderRadiusAmount: 0,
-        child: Scrollbar(
-          thumbVisibility: true,
-          controller: _scrollController,
-          child: SingleChildScrollView(
+    return OrientationBuilder(
+        builder: (BuildContext context, Orientation orientation) {
+      return Scaffold(
+        appBar: CustomAppBars.genericAppBar(
+          context: context,
+          title: widget.appBarTitle,
+          actions: widget.actions,
+        ),
+        body: FrostedContainer(
+          padding: EdgeInsets.zero,
+          borderRadiusAmount: 0,
+          child: Scrollbar(
+            thumbVisibility: true,
             controller: _scrollController,
-            padding: const EdgeInsets.only(right: 12.0),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.8,
-                  width: MediaQuery.of(context).size.width,
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: <Widget>[
-                      Expanded(
-                        child: Stack(
-                          children: <Widget>[
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 56.0),
-                              child: _currentMediaIndex < youtubeCount
-                                  ? ColoredBox(
-                                      color: darkColorScheme.surface
-                                          .withOpacity(0.9),
-                                      child: Center(
-                                        child: YoutubePlayer(
-                                          key: Key('yt$_currentMediaIndex'),
-                                          controller: YoutubePlayerController
-                                              .fromVideoId(
-                                                  videoId:
-                                                      widget.youtubeVideoIds[
-                                                          _currentMediaIndex]),
-                                        ),
-                                      ),
-                                    )
-                                  : _currentMediaIndex <
-                                          imageCount + youtubeCount
-                                      ? PhotoViewGallery.builder(
-                                          scrollPhysics:
-                                              const ClampingScrollPhysics(),
-                                          builder: _galleryImageItem,
-                                          pageController: _imagePageController,
-                                          itemCount: imageCount,
-                                          backgroundDecoration: BoxDecoration(
-                                            color: darkColorScheme.surface
-                                                .withOpacity(0.9),
-                                          ),
-                                          onPageChanged: (_) {},
-                                        )
-                                      : Chewie(
-                                          controller: ChewieController(
-                                            autoPlay: true,
-                                            videoPlayerController:
-                                                _videoPlayerControllers[
-                                                    _currentMediaIndex -
-                                                        imageCount],
-                                          ),
-                                        ),
-                            ),
-                            Align(
-                              alignment: Alignment.bottomCenter,
-                              child: SizedBox(
-                                width: double.infinity,
-                                child: FrostedContainer(
-                                  borderRadiusAmount: 0,
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Row(
-                                    children: <Widget>[
-                                      if (widget.imageCaptions.isNotEmpty &&
-                                          _currentMediaIndex <= imageCount - 1)
-                                        Text(
-                                          widget.imageCaptions[
-                                              _currentMediaIndex],
-                                          style: Theme.of(context)
-                                              .textTheme
-                                              .bodyLarge,
-                                        ),
-                                      const Spacer(),
-                                      GalleryControls(
-                                        currentIndex: _currentMediaIndex,
-                                        totalMediaCount: totalMediaCount,
-                                        onPrevious: _previousMedia,
-                                        onNext: _nextMedia,
-                                        onMediaBrowser: () {
-                                          setState(() {
-                                            _mediaBrowserVisible =
-                                                !_mediaBrowserVisible;
-                                          });
-                                        },
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                      if (_mediaBrowserVisible)
-                        SizedBox(
-                          width: MediaQuery.of(context).size.width * 0.3,
-                          child: MediaBrowser(
-                            youtubeVideoIds: widget.youtubeVideoIds,
-                            imagePaths: widget.imagePaths,
-                            playerControllers: _videoPlayerControllers,
-                            onTapped: (int index) {
-                              if (index >= imageCount) {
-                                setState(() {
-                                  _currentMediaIndex = index;
-                                });
-                                return;
-                              }
-                              if (_currentMediaIndex >= imageCount) {
-                                setState(() {
-                                  _currentMediaIndex = index;
-                                });
-                                _setupImagePageController();
-                                return;
-                              }
-                              _imagePageController.jumpToPage(
-                                index,
-                              );
-                            },
-                          ),
-                        ),
-                    ],
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 16.0, vertical: 8.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          if (widget.logoPath != null)
-                            Padding(
-                              padding: const EdgeInsets.only(right: 16.0),
-                              child: FrostedContainer(
-                                padding: const EdgeInsets.all(4),
-                                borderRadiusAmount: 100,
-                                child: Image.asset(
-                                  widget.logoPath!,
-                                  fit: BoxFit.contain,
-                                  height: 40,
-                                  width: 40,
-                                ),
-                              ),
-                            ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text(
-                                widget.title,
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .titleLarge!
-                                    .copyWith(
-                                      fontWeight: FontWeight.bold,
-                                    ),
-                              ),
-                              Text(
-                                dateRangeText,
-                                style: Theme.of(context).textTheme.titleSmall,
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      const Divider(height: 32),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.stretch,
-                              children: <Widget>[
-                                Text(
-                                  widget.description,
-                                  style: Theme.of(context).textTheme.bodyLarge,
-                                ),
-                                if (widget.externalLinks.isNotEmpty)
-                                  _moreInfo(context),
-                                const SizedBox(height: 100.00),
-                              ],
-                            ),
-                          ),
-                          if (widget.tags.isNotEmpty)
-                            Padding(
-                              padding: const EdgeInsets.only(left: 32.0),
-                              child: SizedBox(
-                                width: MediaQuery.of(context).size.width * 0.2,
-                                child: _tagChips(context),
-                              ),
-                            ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ],
+            child: SingleChildScrollView(
+              controller: _scrollController,
+              padding: const EdgeInsets.only(right: 12.0),
+              child: orientation == Orientation.portrait
+                  ? _portraitView(context)
+                  : _landscapeView(context),
             ),
           ),
         ),
-      ),
-    );
+      );
+    });
   }
 }

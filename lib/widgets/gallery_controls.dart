@@ -45,6 +45,7 @@ class GalleryControls extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.end,
       children: <Widget>[
         _iconButton(
           iconData: Icons.chevron_left,

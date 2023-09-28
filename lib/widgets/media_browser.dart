@@ -98,11 +98,6 @@ class MediaBrowser extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        const SizedBox(height: 8.0),
-        const Divider(
-          indent: 8.0,
-          endIndent: 8.0,
-        ),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Text(
@@ -158,6 +153,11 @@ class MediaBrowser extends StatelessWidget {
             );
           },
         ),
+        const SizedBox(height: 8.0),
+        const Divider(
+          indent: 8.0,
+          endIndent: 8.0,
+        ),
       ],
     );
   }
@@ -207,6 +207,11 @@ class MediaBrowser extends StatelessWidget {
                   ),
                 );
               },
+            ),
+            const SizedBox(height: 8.0),
+            const Divider(
+              indent: 8.0,
+              endIndent: 8.0,
             ),
             if (playerControllers.isNotEmpty) _videoGallery(context),
             const SizedBox(height: 16.0),

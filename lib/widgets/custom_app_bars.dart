@@ -59,7 +59,7 @@ class CustomAppBars {
     List<Widget>? actions,
   }) {
     return AppBar(
-      title: Text(title),
+      title: actions == null ? Text(title) : null,
       centerTitle: false,
       actions: <Widget>[...?actions, ..._defaultActions(context)],
     );
