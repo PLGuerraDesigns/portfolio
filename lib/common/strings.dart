@@ -4,6 +4,13 @@ class Strings {
   static const String currentLocation = 'VA, USA';
   static const String lastUpdated = 'Last Updated 9/23';
 
+  // Routes
+  static const String loadingRoute = '/loading';
+  static const String homeRoute = '/home';
+  static const String professionalSubRoute = 'professional';
+  static const String personalSubRoute = 'personal';
+  static const String detailsSubRoute = 'details';
+
   // URLs
   static const String flutterUrl = 'https://flutter.dev/';
   static const String githubUrl = 'https://github.com/PLGuerraDesigns';
@@ -53,14 +60,14 @@ class Strings {
   static const String personal = 'Personal';
   static const String projects = 'Projects';
   static const String or = 'or';
-  static const String toggleBrightness = 'Toggle Brightness';
+  static const String toggleBrightness = 'Toggle the Brightness';
   static const String youTubeVideos = 'YouTube Videos';
   static const String videos = 'Videos';
   static const String images = 'Images';
   static const String previous = 'Previous';
   static const String next = 'Next';
-  static const String viewAllMedia = 'View All Media';
-  static const String sourceCode = 'Source Code';
+  static const String viewAllMedia = 'View all Media';
+  static const String viewSourceCode = 'View the Source Code';
   static const String professionalExperiences = 'Professional Experiences';
   static const String previousProject = 'Previous Project';
   static const String nextProject = 'Next Project';

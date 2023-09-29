@@ -27,6 +27,7 @@ class FrostedIconButton extends StatelessWidget {
     return HoverScaleHandler(
       onTap: onTap,
       child: FrostedContainer(
+        padding: EdgeInsets.zero,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.center,

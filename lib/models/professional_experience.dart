@@ -39,6 +39,10 @@ class ProfessionalExperience {
   /// The name of the company.
   final String company;
 
+  /// The name of the company and role as a path.
+  String get titleAsPath =>
+      '${company.toLowerCase().replaceAll(' ', '_')}_${role.toLowerCase().replaceAll(' ', '_')}';
+
   /// The role in the company.
   final String role;
 

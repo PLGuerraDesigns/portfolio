@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 import 'common/color_schemes.g.dart';
 import 'common/strings.dart';
 import 'common/theme.dart';
-import 'screens/home.dart';
+import 'models/app_state.dart';
+import 'routes/app_router.dart';
 
 void main() {
+  setPathUrlStrategy();
   runApp(const PortfolioApp());
 }
 
@@ -21,6 +24,7 @@ class PortfolioApp extends StatefulWidget {
 class _PortfolioAppState extends State<PortfolioApp> {
   /// The theme notifier to listen to theme changes.
   late final ThemeNotifier themeNotifier = ThemeNotifier();
+  final AppState _appState = AppState();
 
   @override
   void initState() {
@@ -39,9 +43,12 @@ class _PortfolioAppState extends State<PortfolioApp> {
       themeNotifier.loadInitialTheme(context);
     }
 
-    return ChangeNotifierProvider<ThemeNotifier>.value(
-      value: themeNotifier,
-      child: MaterialApp(
+    return MultiProvider(
+      providers: <ChangeNotifierProvider<dynamic>>[
+        ChangeNotifierProvider<ThemeNotifier>.value(value: themeNotifier),
+        ChangeNotifierProvider<AppState>.value(value: _appState),
+      ],
+      child: MaterialApp.router(
         title: Strings.appName,
         themeMode: themeNotifier.isDarkMode ? ThemeMode.dark : ThemeMode.light,
         theme: ThemeData(
@@ -54,7 +61,10 @@ class _PortfolioAppState extends State<PortfolioApp> {
           colorScheme: darkColorScheme,
           textTheme: darkTextTheme,
         ),
-        home: const HomeScreen(),
+        builder: (BuildContext context, Widget? child) {
+          return child!;
+        },
+        routerConfig: AppRouter(_appState).configureRouter(),
       ),
     );
   }

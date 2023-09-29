@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../common/strings.dart';
@@ -10,8 +11,6 @@ import '../widgets/frosted_container.dart';
 import '../widgets/header_banner.dart';
 import '../widgets/social_icon_button.dart';
 import '../widgets/time_line_entry.dart';
-import 'personal.dart';
-import 'professional.dart';
 
 /// A screen that displays the home page.
 class HomeScreen extends StatelessWidget {
@@ -20,20 +19,18 @@ class HomeScreen extends StatelessWidget {
   /// A button that redirects to the Flutter website.
   Widget _poweredByFlutterButton(BuildContext context) {
     return TextButton(
-      onPressed: () async {
-        if (await canLaunchUrl(Uri.parse(Strings.flutterUrl))) {
-          launchUrl(
-            Uri.parse(Strings.flutterUrl),
-          );
-        }
-      },
-      child: Text(
-        Strings.poweredByFlutter,
-        style: Theme.of(context).textTheme.labelMedium!.copyWith(
-              color: Theme.of(context).colorScheme.onSurface.withOpacity(0.5),
-            ),
-      ),
-    );
+        onPressed: () async {
+          if (await canLaunchUrl(Uri.parse(Strings.flutterUrl))) {
+            launchUrl(
+              Uri.parse(Strings.flutterUrl),
+            );
+          }
+        },
+        child: Text(Strings.poweredByFlutter.toUpperCase(),
+            style: Theme.of(context).textTheme.labelSmall!.copyWith(
+                  color:
+                      Theme.of(context).colorScheme.onSurface.withOpacity(0.5),
+                )));
   }
 
   /// A header banner with a profile photo, name, subtitle, and social media
@@ -41,7 +38,7 @@ class HomeScreen extends StatelessWidget {
   Widget _header(BuildContext context, {bool compact = false}) {
     Widget location() {
       return Row(
-        children: [
+        children: <Widget>[
           Icon(
             Icons.pin_drop,
             size: compact ? 14 : 18,
@@ -209,12 +206,8 @@ class HomeScreen extends StatelessWidget {
               title: Strings.professional,
               image: Strings.professionalExperiencePhotoPath,
               onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute<void>(
-                    builder: (BuildContext context) =>
-                        const ProfessionalScreen(),
-                  ),
-                );
+                context
+                    .go('${Strings.homeRoute}/${Strings.professionalSubRoute}');
               },
             ),
           ),
@@ -227,11 +220,7 @@ class HomeScreen extends StatelessWidget {
               title: Strings.personal,
               image: Strings.personalExperiencePhotoPath,
               onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const PersonalScreen(),
-                  ),
-                );
+                context.go('${Strings.homeRoute}/${Strings.personalSubRoute}');
               },
             ),
           ),
@@ -325,10 +314,19 @@ class HomeScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  const SizedBox(height: 8),
-                  Center(child: _socialMediaButtons(context)),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      IconButton(
+                        onPressed: () =>
+                            RedirectHandler.openUrl(Strings.sourceCodeUrl),
+                        icon: const Icon(Icons.code),
+                        tooltip: Strings.viewSourceCode,
+                      ),
+                      _socialMediaButtons(context),
+                    ],
+                  ),
                   _poweredByFlutterButton(context),
-                  const SizedBox(height: 8),
                   Text(
                     Strings.lastUpdated,
                     textAlign: TextAlign.center,
@@ -339,7 +337,6 @@ class HomeScreen extends StatelessWidget {
                               .withOpacity(0.5),
                         ),
                   ),
-                  const SizedBox(height: 8),
                 ],
               ),
             ),

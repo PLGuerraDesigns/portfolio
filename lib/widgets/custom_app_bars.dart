@@ -16,11 +16,12 @@ class CustomAppBars {
   }
 
   /// The app bar to display on the home page.
-  static PreferredSizeWidget homeAppBar(
-      {required BuildContext context,
-      required Widget poweredByFlutterButton,
-      required String lastUpdated,
-      bool compact = false}) {
+  static PreferredSizeWidget homeAppBar({
+    required BuildContext context,
+    required Widget poweredByFlutterButton,
+    required String lastUpdated,
+    bool compact = false,
+  }) {
     return AppBar(
       title: Row(
         children: <Widget>[
@@ -42,11 +43,12 @@ class CustomAppBars {
                 ),
           ),
         const SizedBox(width: 12),
-        IconButton(
-          onPressed: () => RedirectHandler.openUrl(Strings.sourceCodeUrl),
-          icon: const Icon(Icons.code),
-          tooltip: Strings.sourceCode,
-        ),
+        if (!compact)
+          IconButton(
+            onPressed: () => RedirectHandler.openUrl(Strings.sourceCodeUrl),
+            icon: const Icon(Icons.code),
+            tooltip: Strings.viewSourceCode,
+          ),
         ..._defaultActions(context)
       ],
     );

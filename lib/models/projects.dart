@@ -40,6 +40,9 @@ class Project {
   /// The title of the project.
   final String title;
 
+  /// The title of the project as a path.
+  String get titleAsPath => title.toLowerCase().replaceAll(' ', '_');
+
   /// The start date of the project.
   final DateTime? startDate;
 

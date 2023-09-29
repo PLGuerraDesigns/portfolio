@@ -10,7 +10,7 @@ class MediaBrowser extends StatelessWidget {
   MediaBrowser({
     super.key,
     required this.imagePaths,
-    required this.playerControllers,
+    required this.videoPaths,
     required this.onTapped,
     required this.youtubeVideoIds,
   });
@@ -21,8 +21,8 @@ class MediaBrowser extends StatelessWidget {
   /// A list of local image paths.
   final List<String> imagePaths;
 
-  /// A list of video player controllers.
-  final List<VideoPlayerController> playerControllers;
+  /// A list of local video paths.
+  final List<String> videoPaths;
 
   /// The function to call when an image, video, or YouTube video is tapped.
   final Function(int)? onTapped;
@@ -56,7 +56,7 @@ class MediaBrowser extends StatelessWidget {
                 if (onTapped == null) {
                   return;
                 }
-                onTapped!(imagePaths.length + playerControllers.length + index);
+                onTapped!(index);
               },
               child: Stack(
                 fit: StackFit.expand,
@@ -107,7 +107,7 @@ class MediaBrowser extends StatelessWidget {
         ),
         GridView.builder(
           physics: const NeverScrollableScrollPhysics(),
-          itemCount: playerControllers.length,
+          itemCount: videoPaths.length,
           shrinkWrap: true,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 3,
@@ -128,7 +128,9 @@ class MediaBrowser extends StatelessWidget {
                   children: <Widget>[
                     Chewie(
                       controller: ChewieController(
-                        videoPlayerController: playerControllers[index],
+                        videoPlayerController: VideoPlayerController.asset(
+                          videoPaths[index],
+                        )..initialize(),
                         showControls: false,
                         allowFullScreen: false,
                         allowMuting: false,
@@ -213,7 +215,7 @@ class MediaBrowser extends StatelessWidget {
               indent: 8.0,
               endIndent: 8.0,
             ),
-            if (playerControllers.isNotEmpty) _videoGallery(context),
+            if (videoPaths.isNotEmpty) _videoGallery(context),
             const SizedBox(height: 16.0),
           ],
         ),
