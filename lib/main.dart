@@ -1,177 +1,70 @@
-import 'dart:ui';
-
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:plg_portfolio/constants/globals.dart';
-import 'package:plg_portfolio/constants/strings.dart';
-import 'package:plg_portfolio/constants/theme.dart';
-import 'package:plg_portfolio/models/inline_page.dart';
-import 'package:plg_portfolio/pages/about_page.dart';
-import 'package:plg_portfolio/pages/contact_page.dart';
-import 'package:plg_portfolio/pages/home_page.dart';
-import 'package:plg_portfolio/pages/professional_page.dart';
-import 'package:plg_portfolio/pages/projects_page.dart';
-import 'package:plg_portfolio/pages/resume_page.dart';
-import 'package:plg_portfolio/view_models/control_model.dart';
-import 'package:flutter/foundation.dart' as foundation;
 import 'package:provider/provider.dart';
+import 'package:url_strategy/url_strategy.dart';
+
+import 'common/color_schemes.g.dart';
+import 'common/strings.dart';
+import 'common/theme.dart';
+import 'models/app_state.dart';
+import 'routes/app_router.dart';
 
 void main() {
-  runApp(const MyApp());
+  setPathUrlStrategy();
+  runApp(const PortfolioApp());
 }
 
-final List<InlinePage> _pageList = [
-  InlinePage(Strings.home, const HomePage(), Icons.home),
-  InlinePage(Strings.about, AboutPage(), Icons.emoji_people),
-  InlinePage(Strings.professional, ProfessionalPage(), Icons.engineering),
-  InlinePage(Strings.projects, ProjectsPage(), Icons.construction),
-  InlinePage(Strings.contact, ContactPage(), Icons.contacts),
-  InlinePage(Strings.resume, const ResumePage(), Icons.description),
-];
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+/// The entry point of the application.
+class PortfolioApp extends StatefulWidget {
+  const PortfolioApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => ControlModel(context),
-      child: MaterialApp(
-          scaffoldMessengerKey: snackbarKey,
-          debugShowCheckedModeBanner: false,
-          title: Strings.applicationName,
-          theme: AppTheme.darkTheme,
-          home: const PortfolioMainPage()),
-    );
+  State<PortfolioApp> createState() => _PortfolioAppState();
+}
+
+class _PortfolioAppState extends State<PortfolioApp> {
+  /// The theme notifier to listen to theme changes.
+  late final ThemeNotifier themeNotifier = ThemeNotifier();
+  final AppState _appState = AppState();
+
+  @override
+  void initState() {
+    super.initState();
+
+    // Listen to theme changes and rebuild the application.
+    themeNotifier.addListener(() {
+      setState(() {});
+    });
   }
-}
-
-class PortfolioMainPage extends StatefulWidget {
-  const PortfolioMainPage({Key? key}) : super(key: key);
-
-  @override
-  _PortfolioMainPageState createState() => _PortfolioMainPageState();
-}
-
-class MyCustomScrollBehavior extends MaterialScrollBehavior {
-  @override
-  Set<PointerDeviceKind> get dragDevices => {
-        PointerDeviceKind.touch,
-        PointerDeviceKind.mouse,
-      };
-}
-
-class _PortfolioMainPageState extends State<PortfolioMainPage> {
-  final ScrollController controller = ScrollController();
-  static const String _avatarPicture = 'assets/images/home_page/avatar.png';
-
-  static const int developmentStartPageIndex = 2;
 
   @override
   Widget build(BuildContext context) {
-    final control = Provider.of<ControlModel>(context);
-    control.windowHeight = MediaQuery.of(context).size.height;
-    control.windowWidth = MediaQuery.of(context).size.width;
+    // Load the initial theme (based on the system theme)
+    if (!themeNotifier.themeLoaded) {
+      themeNotifier.loadInitialTheme(context);
+    }
 
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Colors.black,
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          title: Text(
-            Strings.applicationName,
-            style: control.mobileScreenSize
-                ? Theme.of(context)
-                    .textTheme
-                    .headline6!
-                    .copyWith(color: Colors.white)
-                : Theme.of(context)
-                    .textTheme
-                    .headline5!
-                    .copyWith(color: Colors.white),
-          ),
-          actions: control.mobileScreenSize
-              ? []
-              : [
-                  for (int i = 0; i < _pageList.length; i++)
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 8.0),
-                      child: TextButton(
-                        onPressed: () {
-                          control.buttonCarouselController.animateToPage(i);
-                        },
-                        child: Text(
-                          _pageList[i].title,
-                          style: Theme.of(context).textTheme.bodyText2,
-                        ),
-                      ),
-                    ),
-                ],
+    return MultiProvider(
+      providers: <ChangeNotifierProvider<dynamic>>[
+        ChangeNotifierProvider<ThemeNotifier>.value(value: themeNotifier),
+        ChangeNotifierProvider<AppState>.value(value: _appState),
+      ],
+      child: MaterialApp.router(
+        title: Strings.appName,
+        themeMode: themeNotifier.isDarkMode ? ThemeMode.dark : ThemeMode.light,
+        theme: ThemeData(
+          useMaterial3: true,
+          colorScheme: lightColorScheme,
+          textTheme: lightTextTheme,
         ),
-        drawer: control.mobileScreenSize
-            ? Drawer(
-                child: Container(
-                  height: control.windowHeight,
-                  color: Colors.black45,
-                  child: ListView(
-                    padding: EdgeInsets.zero,
-                    children: [
-                      DrawerHeader(
-                        child: Padding(
-                          padding: const EdgeInsets.all(10.0),
-                          child: Container(
-                            decoration: const BoxDecoration(
-                              shape: BoxShape.circle,
-                            ),
-                            child: const CircleAvatar(
-                              backgroundImage: AssetImage(_avatarPicture),
-                            ),
-                          ),
-                        ),
-                      ),
-                      for (int i = 0; i < _pageList.length; i++)
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 4.0),
-                          child: TextButton(
-                            onPressed: () {
-                              Navigator.of(context).pop();
-                              control.buttonCarouselController.animateToPage(i);
-                            },
-                            child: ListTile(
-                              leading: Icon(
-                                _pageList[i].icon,
-                                color: Colors.white,
-                              ),
-                              title: Text(
-                                _pageList[i].title,
-                                style: Theme.of(context).textTheme.bodyText2,
-                              ),
-                            ),
-                          ),
-                        ),
-                    ],
-                  ),
-                ),
-              )
-            : null,
-        body: CarouselSlider(
-          items: [
-            for (int iterator = 0; iterator < _pageList.length; iterator++)
-              Container(
-                  alignment: Alignment.center, child: _pageList[iterator].page),
-          ],
-          carouselController: control.buttonCarouselController,
-          options: CarouselOptions(
-              initialPage:
-                  foundation.kReleaseMode ? 0 : developmentStartPageIndex,
-              viewportFraction: 1,
-              aspectRatio: MediaQuery.of(context).size.width /
-                  (MediaQuery.of(context).size.height - 55),
-              autoPlay: false,
-              enableInfiniteScroll: false,
-              scrollDirection: Axis.vertical),
+        darkTheme: ThemeData(
+          useMaterial3: true,
+          colorScheme: darkColorScheme,
+          textTheme: darkTextTheme,
         ),
+        builder: (BuildContext context, Widget? child) {
+          return child!;
+        },
+        routerConfig: AppRouter(_appState).configureRouter(),
       ),
     );
   }
