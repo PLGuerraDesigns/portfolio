@@ -2,167 +2,98 @@
 const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
-const RESOURCES = {
-  "version.json": "45d484f9add872e359d355c914f810b8",
-"index.html": "07a692c2e55843e3815be60bab9862ea",
-"/": "07a692c2e55843e3815be60bab9862ea",
-"main.dart.js": "0c766a807ccdc87366650f5c91775cfa",
-"favicon.png": "fbfc8b7b550d78360a3d33e4ee15f548",
-"icons/Icon-192.png": "2d94fda8813225dfeba73b474c41adfb",
-"icons/Icon-maskable-192.png": "2d94fda8813225dfeba73b474c41adfb",
-"icons/Icon-maskable-512.png": "af97e0426ce10af6c6efe32eb92f0887",
-"icons/Icon-512.png": "af97e0426ce10af6c6efe32eb92f0887",
-"manifest.json": "ac21c27e45b9033e6a42729772bd429a",
-"assets/AssetManifest.json": "8873e5b217f49964e57f411737884113",
-"assets/NOTICES": "4c11fde67c8069c9233f27e610807400",
-"assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
-"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
-"assets/packages/flutter_inappwebview/t_rex_runner/t-rex.css": "5a8d0222407e388155d7d1395a75d5b9",
-"assets/packages/flutter_inappwebview/t_rex_runner/t-rex.html": "16911fcc170c8af1c5457940bd0bf055",
-"assets/packages/wakelock_web/assets/no_sleep.js": "7748a45cd593f33280669b29c2c8919a",
-"assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
-"assets/assets/images/home_page/thingiverse_icon.png": "9092b42103f22239610c63df0c5cc9c0",
-"assets/assets/images/home_page/linkedIn_icon.png": "2e88efdd4a48a1f2a3d096768fa5cdd0",
-"assets/assets/images/home_page/profile_picture.png": "cd35e0cbd3ae44fb29052c01eb493ed2",
-"assets/assets/images/home_page/background.png": "5e341040aa47ba974225190b5ecaa4dd",
-"assets/assets/images/home_page/avatar.png": "52c7046cf0ccdfe25e3031da52f75e0f",
-"assets/assets/images/home_page/gitHub_icon.png": "3e88a0de8cc52551201808266651cfaa",
-"assets/assets/images/professional_page/ambots_floating.png": "31dbf2aa4533d9de35e2085064a09447",
-"assets/assets/images/professional_page/flutter_background.png": "9634ecd93c6c3f25971abc897f257f88",
-"assets/assets/images/professional_page/flutter_floating.png": "1a925e94e95e28f24bea33d324a53aa6",
-"assets/assets/images/professional_page/ambots_background.png": "2158f50bfa31ca7449605bfd4e902abf",
-"assets/assets/images/about_page/flutter_logo.png": "9f24c18209c23007d22df0a6497134cf",
-"assets/assets/images/about_page/amb_logo.png": "d6c325ed11cea70feb0923fd52be4e0f",
-"assets/assets/images/about_page/self_portrait.png": "797b7b69da1e637818cb587200654682",
-"assets/assets/images/about_page/ua_logo.png": "bf7bfe9e2766b0388b9dfce36f8af6d8",
-"assets/assets/images/about_page/self_portrait_horizontal.png": "40483dc01cad492d57b7f5e83bda6f5d",
-"assets/assets/images/about_page/belize_flag.png": "bb2b511ced9cc498a57021856ae699b2",
-"assets/assets/images/projects/macro_pad/image_2.png": "95e8d789c3bc6b6d6c35fea793c2b989",
-"assets/assets/images/projects/macro_pad/image_1.png": "82af770b2c3782f4e8472687c6575028",
-"assets/assets/images/projects/macro_pad/thumbnail.png": "388eecb266436d3ef019bbbcc80fbde3",
-"assets/assets/images/projects/nintendo_switch_speaker/image_2.png": "9e7bea33532686f640a4df608f4a52ba",
-"assets/assets/images/projects/nintendo_switch_speaker/image_3.png": "ccc5bd5880b71ff7aae5561bce6ec84b",
-"assets/assets/images/projects/nintendo_switch_speaker/image_1.png": "58f0c81898da64a28727e994e4e457ed",
-"assets/assets/images/projects/nintendo_switch_speaker/image_4.png": "6e9f6112c33d34db7cf24074bedb8ae5",
-"assets/assets/images/projects/nintendo_switch_speaker/image_5.png": "68df731be638dfe7478f9552dd954f94",
-"assets/assets/images/projects/nintendo_switch_speaker/thumbnail.png": "dd6b931620a1df40d45a0b89b806ee71",
-"assets/assets/images/projects/nintendo_switch_speaker/image_6.png": "939cd0fbd3dfbb56378dc94ad2483568",
-"assets/assets/images/projects/led_wall_decor/image_2.png": "97f8b0d4f8d20c62fa56fb497c0131d5",
-"assets/assets/images/projects/led_wall_decor/image_1.png": "a407c9314cd0ca1499d6fe191540d13c",
-"assets/assets/images/projects/led_wall_decor/thumbnail.png": "03b1ff4d670936d0acf865f1c1ac4c6a",
-"assets/assets/images/projects/f1_sim_engineer/thumbnail.png": "f8e3102753d8890c4add4dca7a5d02c9",
-"assets/assets/images/projects/f1_sim_engineer/video_1.mp4": "c0c2de57b37041fcdd5a6a08e6d19495",
-"assets/assets/images/projects/safedrive_mk1/image_8.png": "0fbfd6da30fb8b462c0cf9bb459eefeb",
-"assets/assets/images/projects/safedrive_mk1/image_9.png": "0f9dbc57fa8a9f5b4dfe85bc78aa79d8",
-"assets/assets/images/projects/safedrive_mk1/image_2.png": "6372bbc5a3309c76450387f75334cb85",
-"assets/assets/images/projects/safedrive_mk1/image_3.png": "73aec2e66270ef3856d4dd044a9d0abb",
-"assets/assets/images/projects/safedrive_mk1/image_1.png": "2213e6893f4ce27be0b9cb5fe5884643",
-"assets/assets/images/projects/safedrive_mk1/image_4.png": "88f4e5d643cfa18ca64ff621f09f5569",
-"assets/assets/images/projects/safedrive_mk1/image_5.png": "5953b7b84eb890ae9f829c641b0abeaf",
-"assets/assets/images/projects/safedrive_mk1/image_7.png": "463270dc49481364ecb4715219db2807",
-"assets/assets/images/projects/safedrive_mk1/thumbnail.png": "378b2c1a5b061271f4ca8557691d228d",
-"assets/assets/images/projects/safedrive_mk1/image_6.png": "70c19949ac83b04b85dc57297a6f0266",
-"assets/assets/images/projects/safedrive_mk1/video_4.mp4": "61e565fd54f84f32bcb276f347cbf69c",
-"assets/assets/images/projects/safedrive_mk1/video_2.mp4": "cee454902c23d32dcef8b06fcdb82892",
-"assets/assets/images/projects/safedrive_mk1/video_3.mp4": "4b6a4a6ce34ca4f8449a3b404c2c2f60",
-"assets/assets/images/projects/safedrive_mk1/video_1.mp4": "94d8b6e747c6ed60489368aeac680eea",
-"assets/assets/images/projects/xbox_head_tracking/image_2.png": "423a26525af0e859f1e9de8a902a6293",
-"assets/assets/images/projects/xbox_head_tracking/image_3.png": "b1eacb9eb98c32e5d444f4e434c850a0",
-"assets/assets/images/projects/xbox_head_tracking/image_1.png": "514b361a94ce3573271c3785be27aaf1",
-"assets/assets/images/projects/xbox_head_tracking/image_4.png": "572744157df30faa52263a2015262953",
-"assets/assets/images/projects/xbox_head_tracking/image_5.png": "652b2ddc33eed34c9b4f00e3c761a2a9",
-"assets/assets/images/projects/xbox_head_tracking/thumbnail.png": "1937eb7b3d3297af0b9acf40b3c79b89",
-"assets/assets/images/projects/xbox_head_tracking/video_2.mp4": "837e370232d5418620d789aba1baf8b0",
-"assets/assets/images/projects/xbox_head_tracking/video_3.mp4": "cb038b15c811fb00afee760a17a152cd",
-"assets/assets/images/projects/xbox_head_tracking/video_1.mp4": "f21365d9503174f30d115cbfb573219a",
-"assets/assets/images/projects/handroid/image_13.png": "939305f1d65c86cf199eb792e3225e85",
-"assets/assets/images/projects/handroid/image_12.png": "d8e002a0a8cfa20a42c7c534c5d15a89",
-"assets/assets/images/projects/handroid/image_10.png": "89909f5f6cd28d8c80d779b9dcbe94cd",
-"assets/assets/images/projects/handroid/image_11.png": "b732efab042dbc547e5957cfa66da7f2",
-"assets/assets/images/projects/handroid/image_8.png": "d89513c829fac4fab3f36fa7aac6f805",
-"assets/assets/images/projects/handroid/image_9.png": "f1b18f27d86314b70a088a41bc5c6561",
-"assets/assets/images/projects/handroid/image_2.png": "2f856d27a4f780cce71f5080fdd86e36",
-"assets/assets/images/projects/handroid/image_3.png": "263a9ad39c61672b8d0b22823cb6d1d0",
-"assets/assets/images/projects/handroid/image_1.png": "e0d0c01fd406bf18024640be73d7d1bd",
-"assets/assets/images/projects/handroid/image_4.png": "50f3cdeaa26dcb9bd66714c809c13789",
-"assets/assets/images/projects/handroid/image_5.png": "31f8b2146e275b2f10046adbfb59ab30",
-"assets/assets/images/projects/handroid/image_7.png": "b0713487620b8b7ab277d8bd1bf477f6",
-"assets/assets/images/projects/handroid/thumbnail.png": "54c99eb16f234ab3d6256e178ed03588",
-"assets/assets/images/projects/handroid/image_6.png": "3a6218582579cf3fda9e4f62a7791e8f",
-"assets/assets/images/projects/handroid/video_1.mp4": "4b87d0241051f1935e669afba8607fcd",
-"assets/assets/images/projects/amg_gt3_wheel/image_14.png": "cece316ed0c28ffc3abb357cff0c889c",
-"assets/assets/images/projects/amg_gt3_wheel/image_13.png": "22f95591d8ddc4ae2fc567ad287541f1",
-"assets/assets/images/projects/amg_gt3_wheel/image_12.png": "aa033487654a91047185d0c828b30d72",
-"assets/assets/images/projects/amg_gt3_wheel/image_10.png": "4def5f4c15fbf03e205fc0d64a456dbb",
-"assets/assets/images/projects/amg_gt3_wheel/image_11.png": "d49d3f6686da7f2a12e1d94e31179f11",
-"assets/assets/images/projects/amg_gt3_wheel/image_8.png": "57eeb8bee568842e28be18637d7151a9",
-"assets/assets/images/projects/amg_gt3_wheel/image_9.png": "713cab84a42380c7313705a6f3c1f829",
-"assets/assets/images/projects/amg_gt3_wheel/image_2.png": "932c708de831f9d165daa6bdf053ea10",
-"assets/assets/images/projects/amg_gt3_wheel/image_3.png": "6e94a00e38616b2e165480a728a7e524",
-"assets/assets/images/projects/amg_gt3_wheel/image_1.png": "eb22d20cdf48d4acfb65915cc562aa4f",
-"assets/assets/images/projects/amg_gt3_wheel/image_4.png": "3cfb5316abe4d40de312d9b467864412",
-"assets/assets/images/projects/amg_gt3_wheel/image_5.png": "169215fa5b8ee9c433d9669055871209",
-"assets/assets/images/projects/amg_gt3_wheel/image_7.png": "67a144e0b94e99d4908b65dd7ed58528",
-"assets/assets/images/projects/amg_gt3_wheel/thumbnail.png": "69afbb633f09ed67ec7f21b70a9b88fc",
-"assets/assets/images/projects/amg_gt3_wheel/image_6.png": "ebf34bc190ec381ec3a94be9dfdb3134",
-"assets/assets/images/projects/amg_gt3_wheel/video_2.mp4": "e7fcc06502cfe260e9ad61bc8e0aa92d",
-"assets/assets/images/projects/amg_gt3_wheel/video_1.mp4": "f84478726d3705be2c325edd1feba0a3",
-"assets/assets/images/projects/android_calculator/image_1.png": "ef0d51a52f5e5e2ce12c65b68fe6ee27",
-"assets/assets/images/projects/android_calculator/thumbnail.png": "a2460f3198bc3f8d07b1ccd197ae7671",
-"assets/assets/images/projects/android_calculator/video_1.mp4": "73d5e457e796629991cc0854dd3d0030",
-"assets/assets/images/projects/project_lemans/image_15.png": "8fa47f5b5464f789159f9d91754d4c80",
-"assets/assets/images/projects/project_lemans/image_14.png": "c7fc1ecd35b7ab119e19c5ebd410ddbd",
-"assets/assets/images/projects/project_lemans/image_16.png": "bab019e0a434a2069adca112b89f1718",
-"assets/assets/images/projects/project_lemans/image_17.png": "fd5313faebae2696588b60dfe6244f4d",
-"assets/assets/images/projects/project_lemans/image_13.png": "b7285c16066949b922a0a2caa72a98b5",
-"assets/assets/images/projects/project_lemans/image_12.png": "d21c7dcef0dda9a8d179b88fdd8014e1",
-"assets/assets/images/projects/project_lemans/image_10.png": "3c9a3a77f0dc169713de6b5f37f5273d",
-"assets/assets/images/projects/project_lemans/image_11.png": "3bdc1a7a0106a80d9365adc607fe8141",
-"assets/assets/images/projects/project_lemans/image_8.png": "7cbfa3c4b2c15102ac95f5e50535588e",
-"assets/assets/images/projects/project_lemans/image_9.png": "cc1c6c2d23cfb6e11813708e5093ac8a",
-"assets/assets/images/projects/project_lemans/image_2.png": "ec1e7a46a7be599a8621090afd7805eb",
-"assets/assets/images/projects/project_lemans/image_3.png": "a86fb53ea8f8cd3547f000cb6be128df",
-"assets/assets/images/projects/project_lemans/image_1.png": "d5517ae35d036751fbcf0ce1813b2b06",
-"assets/assets/images/projects/project_lemans/image_4.png": "937eb8e4f165ec31b1b57dcad84ed75e",
-"assets/assets/images/projects/project_lemans/image_5.png": "1ba94bfb903da87f998852116f91f971",
-"assets/assets/images/projects/project_lemans/image_7.png": "7cd6385c19e73aacf6f13b4037fa0c9e",
-"assets/assets/images/projects/project_lemans/thumbnail.png": "d682b5f28176bc51a48473d9ee9282de",
-"assets/assets/images/projects/project_lemans/image_6.png": "d8c8dd7d630c3aae84ef7d01b25a2b34",
-"assets/assets/images/projects/project_lemans/image_20.png": "f5b124b668aa52115cc10ed3cf7039e8",
-"assets/assets/images/projects/project_lemans/video_4.mp4": "a8702e3c05aae7b2a344307a9ef31219",
-"assets/assets/images/projects/project_lemans/image_21.png": "2ebc310977024ff8acd5e25714c88905",
-"assets/assets/images/projects/project_lemans/image_23.png": "624555ac78ac60247dfde6f8853fab2c",
-"assets/assets/images/projects/project_lemans/image_22.png": "b4170f9a287643cc306e2c0877a8e3e6",
-"assets/assets/images/projects/project_lemans/image_26.png": "be7bdc433d4a0bcdc53222275900e976",
-"assets/assets/images/projects/project_lemans/video_2.mp4": "590c93712f8a8fd4f8195b05f29ab6ae",
-"assets/assets/images/projects/project_lemans/video_3.mp4": "160bc3a601598e2454ec91801f708ac4",
-"assets/assets/images/projects/project_lemans/image_19.png": "eb196681dcea7566754572a8014f8744",
-"assets/assets/images/projects/project_lemans/image_25.png": "080b88f44f625d2e02aead668ab7d0bd",
-"assets/assets/images/projects/project_lemans/video_1.mp4": "74aefefed85314d9ca4953b1bcab457e",
-"assets/assets/images/projects/project_lemans/image_24.png": "d24031c759106911185c20ac315fbf77",
-"assets/assets/images/projects/project_lemans/image_18.png": "d095f5bdde0a82aa5a178d0017c77c8d",
-"assets/assets/images/projects/apple_charging_station/image_2.png": "a2d2a200f8e01578df35d0b909b233e6",
-"assets/assets/images/projects/apple_charging_station/image_3.png": "0d498dfd4f7e2580a0dad8e673ce8bfe",
-"assets/assets/images/projects/apple_charging_station/image_1.png": "bad7543ed70910fd01dbb50e466026aa",
-"assets/assets/images/projects/apple_charging_station/image_4.png": "689903d5aba7f7e1c941e16a6f8d205f",
-"assets/assets/images/projects/apple_charging_station/image_5.png": "a7f75a245787e9ec85ffb2c4ec441132",
-"assets/assets/images/projects/apple_charging_station/image_7.png": "8bedbd45de308a9b10f879cca2652251",
-"assets/assets/images/projects/apple_charging_station/thumbnail.png": "2b9e7dbfca9d0c46c755500d1ea2f73c",
-"assets/assets/images/projects/apple_charging_station/image_6.png": "999d0a5a9a64acb4fc1d4ff37cc04ec8",
-"assets/assets/other/f1se_report.pdf": "92de123ab287f05d0ddbd3f8dbbaf88e",
-"assets/assets/other/android_calculator_report.pdf": "3bf84721b5c4c0e116ffc25eb90e497a",
-"assets/assets/other/plg_contact_card.vcf": "07e6eb801fbe32fdced3989602b10e47"
-};
 
+const RESOURCES = {"version.json": "5bb9b4fe5e058acb664786d1680d7c20",
+"index.html": "12b3cbf68a8473e393c4039b0ed67f72",
+"/": "12b3cbf68a8473e393c4039b0ed67f72",
+"main.dart.js": "f0960f7dc9502b86ce8843de7ef95948",
+"flutter.js": "6fef97aeca90b426343ba6c5c9dc5d4a",
+"favicon.png": "baf227a07cf56a61f1a579027a3ab7ed",
+"icons/Icon-192.png": "8403e61d84a145213b51a74f6a04f488",
+"icons/Icon-maskable-192.png": "8403e61d84a145213b51a74f6a04f488",
+"icons/Icon-maskable-512.png": "c6e9e9241cba806f198521f77ebf1446",
+"icons/Icon-512.png": "c6e9e9241cba806f198521f77ebf1446",
+"manifest.json": "b8bb80c94c29e93bf4dec35ebffe4a15",
+"assets/AssetManifest.json": "688bd285d1507210e6d520249f402006",
+"assets/NOTICES": "d3f34c13c7acbf2b0db421a68a738c8b",
+"assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
+"assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "f2163b9d4e6f1ea52063f498c8878bb9",
+"assets/packages/youtube_player_iframe/assets/player.html": "dc7a0426386dc6fd0e4187079900aea8",
+"assets/packages/wakelock_plus/assets/no_sleep.js": "7748a45cd593f33280669b29c2c8919a",
+"assets/shaders/ink_sparkle.frag": "f8b80e740d33eb157090be4e995febdf",
+"assets/AssetManifest.bin": "94f6a6c66c682a45f8b990b5dfffe394",
+"assets/fonts/MaterialIcons-Regular.otf": "d6051ea68b7c7332308f18a8db93dff6",
+"assets/assets/images/home/profile_photo.jpg": "f10b9322f41374e62f96748bad0c4b13",
+"assets/assets/images/home/uark_logo.png": "bf7bfe9e2766b0388b9dfce36f8af6d8",
+"assets/assets/images/home/gmu_logo.png": "8add7dc6220f1eab3f36fa985a387239",
+"assets/assets/images/home/professional.png": "1a925e94e95e28f24bea33d324a53aa6",
+"assets/assets/images/home/personal.png": "1d4cb269a4df5468910fb31005909475",
+"assets/assets/images/professional/am3_lab/video_10.mp4": "2bbb6471d76c091e076eb3ebee7ef825",
+"assets/assets/images/professional/am3_lab/video_11.mp4": "3ba7e77370dae7347388ff39057a3138",
+"assets/assets/images/professional/am3_lab/video_8.mp4": "5fdb39bb0bc68030ddf24cad485cf3d5",
+"assets/assets/images/professional/am3_lab/video_9.mp4": "ef94275f2b159205aa4cd4c8be20ae40",
+"assets/assets/images/professional/am3_lab/image_2.png": "7530c325766da32e5796f1cd40d51aec",
+"assets/assets/images/professional/am3_lab/image_3.png": "81927072ffc2aa49e1780e81392be16a",
+"assets/assets/images/professional/am3_lab/image_1.png": "bad273dd664f0dc8a2dfc9d7f21b5fe4",
+"assets/assets/images/professional/am3_lab/logo.png": "bf7bfe9e2766b0388b9dfce36f8af6d8",
+"assets/assets/images/professional/am3_lab/image_4.png": "f3ae05892a39b8a58bc1adf428067296",
+"assets/assets/images/professional/am3_lab/image_5.png": "baafab7c3689b23e06bf3720dd148856",
+"assets/assets/images/professional/am3_lab/image_7.png": "f6fe30a0d8fa121a2d37a70f46f60cc1",
+"assets/assets/images/professional/am3_lab/thumbnail.png": "c59b79a881da1cf7714df5e87ea25195",
+"assets/assets/images/professional/am3_lab/image_6.png": "ec3ff95577da75496865253336b538a2",
+"assets/assets/images/professional/am3_lab/video_4.mp4": "19e56665afa1e76d6d2faa2613a95e2e",
+"assets/assets/images/professional/am3_lab/video_5.mp4": "3a3ff2537839b6a311332f9631c5cc4e",
+"assets/assets/images/professional/am3_lab/video_7.mp4": "1cafb465e1adcedd9417db3e0dd3ae37",
+"assets/assets/images/professional/am3_lab/video_6.mp4": "b83d1d7b0891e6892e72b2adac436e2f",
+"assets/assets/images/professional/am3_lab/video_2.mp4": "05d518bde2965aa641775a2828721a6f",
+"assets/assets/images/professional/am3_lab/video_3.mp4": "3f4b7568b8b91299ab042b522cf6bec5",
+"assets/assets/images/professional/am3_lab/video_1.mp4": "1ede8af5ab8f9e17caf3bbf01de83c2b",
+"assets/assets/images/professional/ambots/video_10.mp4": "ddee026980cc5b014cc8835d01867aa3",
+"assets/assets/images/professional/ambots/image_12.png": "0d1422fa7c85e2a1dc0150ee9f5d0154",
+"assets/assets/images/professional/ambots/image_10.png": "b4e899f94159886acba62837a0661340",
+"assets/assets/images/professional/ambots/video_8.mp4": "6e04575882b8ce15a737201fd17faa34",
+"assets/assets/images/professional/ambots/video_9.mp4": "118f31dd3490e813b19f85618e29ad01",
+"assets/assets/images/professional/ambots/image_11.png": "dfa9deb9f16734af959f51b9642fd7e3",
+"assets/assets/images/professional/ambots/image_8.png": "708f436c7abdc3fd804c5fe622d50193",
+"assets/assets/images/professional/ambots/image_9.png": "cd3c985096a69179afdce2077ca8e0a6",
+"assets/assets/images/professional/ambots/image_2.png": "2eb4203c2cda7056450c4bc8885b6d9f",
+"assets/assets/images/professional/ambots/image_3.png": "7c55d3441c1fcf478b990d62b7da65cb",
+"assets/assets/images/professional/ambots/image_1.png": "a00ab587c0f195bb28e8655d49284ca7",
+"assets/assets/images/professional/ambots/logo.png": "d6c325ed11cea70feb0923fd52be4e0f",
+"assets/assets/images/professional/ambots/image_4.png": "5f9d166ab6aa972408bfdaeb2a020b8c",
+"assets/assets/images/professional/ambots/image_5.png": "771ea63f832e42e98fd1dd4f8affeb00",
+"assets/assets/images/professional/ambots/image_7.png": "7d418118a30cd0d3e2e9daceefba950d",
+"assets/assets/images/professional/ambots/thumbnail.png": "31dbf2aa4533d9de35e2085064a09447",
+"assets/assets/images/professional/ambots/image_6.png": "00930e20c85eb343c5458cec4cedbcc5",
+"assets/assets/images/professional/ambots/video_4.mp4": "8ca91c51536da23d7de92b4e7d9a35cb",
+"assets/assets/images/professional/ambots/video_5.mp4": "cbf3b0e214808331f5b803aefe22be83",
+"assets/assets/images/professional/ambots/video_7.mp4": "0a52553dfd8342250a4aaa447c818632",
+"assets/assets/images/professional/ambots/video_6.mp4": "3314acbfa1aac3e6383179043acbac0f",
+"assets/assets/images/professional/ambots/video_2.mp4": "73e0d2f2e11c7146d933dd8c317deeb1",
+"assets/assets/images/professional/ambots/video_3.mp4": "4713879b66ee29d3dfef9a058348037d",
+"assets/assets/images/professional/ambots/video_1.mp4": "0ebb82492534d22723d5d994a9a9c8c0",
+"assets/assets/images/professional/atlantic_insurance/image_1.png": "5f07f56cec8e846458ff556bf4275df3",
+"assets/assets/images/professional/atlantic_insurance/logo.png": "e95fe8aed40f6ad7a9ad0874ca34f4f7",
+"assets/assets/images/professional/atlantic_insurance/thumbnail.png": "1a925e94e95e28f24bea33d324a53aa6",
+"assets/assets/images/social/github_logo.png": "3e88a0de8cc52551201808266651cfaa",
+"assets/assets/images/social/thingiverse_logo.png": "9092b42103f22239610c63df0c5cc9c0",
+"assets/assets/images/social/linkedin_logo.png": "2e88efdd4a48a1f2a3d096768fa5cdd0",
+"assets/assets/json/projects.json": "7d5b9c0c0a1c60fc672e91c36fb76bd4",
+"assets/assets/json/professional_experience.json": "bc0938585780aefae7c96476d2b4b86b",
+"canvaskit/skwasm.js": "95f16c6690f955a45b2317496983dbe9",
+"canvaskit/skwasm.wasm": "d1fde2560be92c0b07ad9cf9acb10d05",
+"canvaskit/chromium/canvaskit.js": "ffb2bb6484d5689d91f393b60664d530",
+"canvaskit/chromium/canvaskit.wasm": "393ec8fb05d94036734f8104fa550a67",
+"canvaskit/canvaskit.js": "5caccb235fad20e9b72ea6da5a0094e6",
+"canvaskit/canvaskit.wasm": "d9f69e0f428f695dc3d66b3a83a4aa8e",
+"canvaskit/skwasm.worker.js": "51253d3321b11ddb8d73fa8aa87d3b15"};
 // The application shell files that are downloaded before a service worker can
 // start.
-const CORE = [
-  "/",
-"main.dart.js",
+const CORE = ["main.dart.js",
 "index.html",
-"assets/NOTICES",
 "assets/AssetManifest.json",
 "assets/FontManifest.json"];
+
 // During install, the TEMP cache is populated with the application shell files.
 self.addEventListener("install", (event) => {
   self.skipWaiting();
@@ -173,7 +104,6 @@ self.addEventListener("install", (event) => {
     })
   );
 });
-
 // During activate, the cache is populated with the temp files downloaded in
 // install. If this service worker is upgrading from one with a saved
 // MANIFEST, then use this to retain unchanged resource files.
@@ -195,6 +125,8 @@ self.addEventListener("activate", function(event) {
         await caches.delete(TEMP);
         // Save the manifest to make future upgrades efficient.
         await manifestCache.put('manifest', new Response(JSON.stringify(RESOURCES)));
+        // Claim client to enable caching on first launch
+        self.clients.claim();
         return;
       }
       var oldManifest = await manifest.json();
@@ -220,6 +152,8 @@ self.addEventListener("activate", function(event) {
       await caches.delete(TEMP);
       // Save the manifest to make future upgrades efficient.
       await manifestCache.put('manifest', new Response(JSON.stringify(RESOURCES)));
+      // Claim client to enable caching on first launch
+      self.clients.claim();
       return;
     } catch (err) {
       // On an unhandled exception the state of the cache cannot be guaranteed.
@@ -230,7 +164,6 @@ self.addEventListener("activate", function(event) {
     }
   }());
 });
-
 // The fetch handler redirects requests for RESOURCE files to the service
 // worker cache.
 self.addEventListener("fetch", (event) => {
@@ -259,16 +192,17 @@ self.addEventListener("fetch", (event) => {
     .then((cache) =>  {
       return cache.match(event.request).then((response) => {
         // Either respond with the cached resource, or perform a fetch and
-        // lazily populate the cache.
+        // lazily populate the cache only if the resource was successfully fetched.
         return response || fetch(event.request).then((response) => {
-          cache.put(event.request, response.clone());
+          if (response && Boolean(response.ok)) {
+            cache.put(event.request, response.clone());
+          }
           return response;
         });
       })
     })
   );
 });
-
 self.addEventListener('message', (event) => {
   // SkipWaiting can be used to immediately activate a waiting service worker.
   // This will also require a page refresh triggered by the main worker.
@@ -281,7 +215,6 @@ self.addEventListener('message', (event) => {
     return;
   }
 });
-
 // Download offline will check the RESOURCES for all files not in the cache
 // and populate them.
 async function downloadOffline() {
@@ -302,7 +235,6 @@ async function downloadOffline() {
   }
   return contentCache.addAll(resources);
 }
-
 // Attempt to download the resource online before falling back to
 // the offline cache.
 function onlineFirst(event) {
