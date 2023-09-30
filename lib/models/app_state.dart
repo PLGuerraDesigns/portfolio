@@ -22,7 +22,7 @@ class AppState extends ChangeNotifier {
 
   /// The list of projects.
   List<Project> get projects => _projects;
-  final List<Project> _projects = <Project>[];
+  List<Project> _projects = <Project>[];
 
   /// Returns the project with the given title as a path.
   Project getProjectByTitlePath(String titleAsPath) {
@@ -37,7 +37,7 @@ class AppState extends ChangeNotifier {
   /// The list of professional experiences.
   List<ProfessionalExperience> get professionalExperiences =>
       _professionalExperiences;
-  final List<ProfessionalExperience> _professionalExperiences =
+  List<ProfessionalExperience> _professionalExperiences =
       <ProfessionalExperience>[];
 
   /// Returns the professional experience with the given title as a path.
@@ -57,6 +57,7 @@ class AppState extends ChangeNotifier {
     if (projectsLoaded) {
       return;
     }
+    _projects = <Project>[];
     await DefaultAssetBundle.of(context)
         .loadString(Strings.projectsJsonPath)
         .then(
@@ -75,6 +76,7 @@ class AppState extends ChangeNotifier {
     if (professionalExperiencesLoaded) {
       return;
     }
+    _professionalExperiences = <ProfessionalExperience>[];
     await DefaultAssetBundle.of(context)
         .loadString(Strings.professionalExperienceJsonPath)
         .then(
@@ -88,5 +90,11 @@ class AppState extends ChangeNotifier {
       },
     );
     professionalExperiencesLoaded = true;
+  }
+
+  /// Toggles the visibility of the media browser.
+  void toggleMediaBrowserVisibility() {
+    mediaBrowserVisible = !mediaBrowserVisible;
+    notifyListeners();
   }
 }

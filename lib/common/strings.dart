@@ -42,9 +42,9 @@ class Strings {
       'assets/images/home/personal.png';
   static const String gmuLogoPath = 'assets/images/home/gmu_logo.png';
   static const String aicLogoPath =
-      'assets/images/professional/atlantic_insurance_company_ltd/logo.png';
+      'assets/images/professional/atlantic_insurance/logo.png';
   static const String ambotsLogoPath =
-      'assets/images/professional/ambots_inc/logo.png';
+      'assets/images/professional/ambots/logo.png';
   static const String uarkLogoPath = 'assets/images/home/uark_logo.png';
 
   // General

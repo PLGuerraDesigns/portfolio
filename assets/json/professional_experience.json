@@ -1,13 +1,17 @@
 [
   {
     "company": "Atlantic Insurance Company Ltd.",
+    "folderName": "atlantic_insurance",
     "role": "Contract Software Engineer",
     "location": "(Remote) Belize City, Belize",
     "startDate": "2020-06-01T00:00:00Z",
     "endDate": null,
-    "description": "Lead the planning, development, and launch of the AIC Mobile App for Atlantic Insurance Company Limited. Located in the country of Belize, Atlantic Insurance is missioned to become the preferred insurer in the industry as measured by customer confidence and to establish a successful partnership with clients, staff, and shareholders, that respect the interests and goals of all parties involved.\n\nWritten using Google's Flutter framework, the app is available to download for both Android and iOS. It was designed with the client in mind to enhance their interaction with the company, offering a platform for existing and potential clients. Some features include viewing items insured, effective and expiration dates of coverage, certificate of insurance, renewal notifications, filing claims, requesting quotes, and obtaining directions to the nearest office.",
+    "description": "As a contract software engineer, I led the strategic planning, development, and successful launch of the AIC Mobile App and Management Portal for Atlantic Insurance Company Limited.\n\nThis innovative app, available for Android and iOS, was meticulously designed with a customer-centric approach to enrich interactions with the company.\n\nIts features includes access to insured item details, a digital certificate of insurance, timely renewal notifications, claims filing, quote requests, office location guidance, and more.\n\nThis endeavor reflects AIC's commitment to delivering unsurpassed customer service, upholding integrity, demonstrating professionalism, and fostering teamwork in line with Atlantic Insurance Company Limited's values.",
+    "videoCount": 0,
+    "imageCount": 2,
     "youtubeVideoIds": [
-      "TcdKbZmju5I"
+      "TcdKbZmju5I",
+      "W37tmY7OPWw"
     ],
     "externalLinks": [
       {
@@ -15,25 +19,30 @@
         "url": "https://aicbelize.azurewebsites.net/"
       },
       {
-        "title": "View app in Apple App Store",
+        "title": "Apple App Store",
         "url": "https://apps.apple.com/us/app/aic-mobile-app/id1534979546"
       },
       {
-        "title": "View app in Google Play Store",
+        "title": "Google Play Store",
         "url": "https://play.google.com/store/apps/details?id=com.aicbelize.AIMobile"
       }
     ]
   },
   {
     "company": "AMBOTS Inc.",
+    "folderName": "ambots",
     "role": "Lead Robotics Engineer",
     "location": "Fayetteville, AR",
-    "startDate": "2019-08-01T00:00:00Z",
+    "startDate": "2021-02-01T00:00:00Z",
     "endDate": "2021-10-01T00:00:00Z",
-    "description": "AMBOTS is missioned to accelerate the transition to a civilization with fully autonomous and on-demand manufacturing. Their focus is to commercialize the patent-pending swarm 3D printing and assembly technologies invented by the AM3 Lab in the Department of Mechanical Engineering at the University of Arkansas.\\n\\nAs Lead Robotics Engineer, my primary responsibility was to direct the research and development of AMBOTS' first commercial product. During my time there, our team developed specialized modular robotics hardware to support an automated swarm manufacturing process. The team and I were also able to secure the Phase II SBIR grant for $1M and landed the company's first customer.",
+    "description": "As the Lead Robotics Engineer at AMBOTS Inc., I had the privilege of spearheading the transformation of groundbreaking research from the AM³ Lab at the University of Arkansas into a game-changing commercial product. AMBOTS Inc. is dedicated to revolutionizing the future of manufacturing through its patent-pending swarm 3D printing and assembly technologies, which were originally conceived by Dr. Wenchao Zhou in 2015.\n\nOur vision at AMBOTS was nothing short of a manufacturing revolution - a world where production is fully digitized and automated, allowing for the creation of customized products on demand, all at a remarkably low cost. Similar to how a swarm of bees collaborates to build its nest, our smart and autonomous mobile robots were engineered to work seamlessly together, translating digital designs into tangible products.\n\nThe team and I achieved some remarkable milestones some of which include:\n\n• Our groundbreaking work earned us recognition within the industry, including winning the prestigious \"3D Startup of the Year\" by 3D Natives. We were also featured on GE Reports as one of \"The 5 Coolest Things On Earth This Week\" and received coverage on CBS, including an appearance on \"The Henry Ford's Innovation Nation.\"\n\n• We filed patent applications to protect our swarm 3D printing and assembly technology, solidifying our position as pioneers in the field.\n\n• Our dedication and innovation secured Phase I and Phase II of the SBIR grant, totaling $1,225,000 in funding, which fueled our continued growth and development.\n\n• We landed our company's first customer, validating the real-world applicability of our technology.\n\nMy time as the Lead Robotics Engineer at AMBOTS Inc. was marked by a relentless dedication to pushing the boundaries of what's possible in advanced manufacturing. I am proud to have played a pivotal role in bringing the vision of fully automated, on-demand, and cost-effective digital manufacturing closer to reality. Our journey continues, and I look forward to witnessing where the future of this transformative technology takes us.",
+    "videoCount": 10,
+    "imageCount": 13,
     "youtubeVideoIds": [
       "uTrtARdG20E",
-      "xMMauLmHcwk"
+      "xMMauLmHcwk",
+      "BbSe9UXH_A8",
+      "zSt3IIy00O4"
     ],
     "externalLinks": [
       {
@@ -41,12 +50,16 @@
         "url": "https://ambots.net/"
       },
       {
-        "title": "ASBTDC: AMBOTS Gets $1M Phase II Grant from National Science Foundation for Large-Scale 3D Printing",
-        "url": "https://asbtdc.org/ambots-wins-nsf-sbir-grant-to-develop-solution-for-large-scale-3d-printing/"
+        "title": "Research Paper (Architecting the Cooperative 3D Printing System)",
+        "url": "https://www.researchgate.net/publication/341651995_Architecting_the_Cooperative_3D_Printing_System"
       },
       {
-        "title": "CBS, The Henry Ford's Innovation Nation Feature",
-        "url": "https://www.youtube.com/watch?v=uTrtARdG20E"
+        "title": "United States Patent and Trademark Office (Patent Application 20230120878)",
+        "url": "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/20230120878"
+      },
+      {
+        "title": "ASBTDC: AMBOTS Gets $1M Phase II Grant from National Science Foundation for Large-Scale 3D Printing",
+        "url": "https://asbtdc.org/ambots-wins-nsf-sbir-grant-to-develop-solution-for-large-scale-3d-printing/"
       },
       {
         "title": "3D STARTUP OF THE YEAR BY 3D NATIVES",
@@ -59,12 +72,15 @@
     ]
   },
   {
-    "company": "AM3 Lab",
+    "company": "AM³ Lab",
+    "folderName": "am3_lab",
     "role": "Graduate Research Assistant",
     "location": "Fayetteville, AR",
-    "startDate": "2017-08-01T00:00:00Z",
-    "endDate": "2019-08-01T00:00:00Z",
-    "description": "The AM3 Lab is a research group in the Department of Mechanical Engineering at the University of Arkansas. The lab is focused on developing novel additive manufacturing technologies and processes.\\n\\nAs a Graduate Research Assistant, I was responsible for the development of a novel swarm 3D printing process. The process was developed to enable the manufacturing of large-scale structures by a swarm of mobile robots. The process was developed using a combination of hardware and software. The hardware consisted of a custom-built mobile robot, a custom-built 3D printer, and a custom-built robotic arm. The software consisted of a custom-built path planning algorithm and a custom-built control system.",
+    "startDate": "2019-04-01T00:00:00Z",
+    "endDate": "2020-12-01T00:00:00Z",
+    "description": "As a Graduate Research Assistant at the AM³ Lab, University of Arkansas, I played a pivotal role in advancing the cutting-edge field of 3D printing technology. The AM³ Lab is dedicated to developing next generation 3D printing technologies and promoting the use of 3D printing technology to better our lives through excellent research, education, and service to the global 3D printing community.\n\nInitially on-boarded as a volunteer, I assisted in troubleshooting and enhancing the 5th generation 3D printers. My dedication and problem-solving skills quickly earned me the position of Graduate Research Assistant, where I continued my contributions to the field.\n\nMy primary focus during my time with the lab was devloping a groundbreaking swarm 3D printing process designed to enable the production of large-scale structures using a fleet of mobile robots. This innovative approach involved a combination of hardware and software components, including custom-built transporter robots, SCARA 3D printers, and a modular print & power-delivery floor.\n\nMost notably, I was instrumental in transitioning from the 5th generation platform to the 6th and 7th generations. This transition involved separating the SCARA arm from the mobile base, and optimizing the hardware for improved robustness, efficiency, and quality. I assumed a significant role in these evolutions, taking charge of software development and contributing to hardware enhancements.\n\nOne of my key contributions was the implementation of Computer Vision for localization and navigation within the transporter's control system, enabling semi-autonomous operation - a significant advancement in the field.\n\nNot only was my work at the AM³ Lab a valuable learning experience, but also a contribution to the lab's mission of pushing the boundaries of 3D printing technology. I am proud to have been part of a team dedicated to revolutionizing manufacturing and enabling mass customization through next-generation 3D printing innovations.",
+    "videoCount": 11,
+    "imageCount": 8,
     "youtubeVideoIds": [
       "xMMauLmHcwk"
     ],

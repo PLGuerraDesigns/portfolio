@@ -13,12 +13,14 @@ import '../widgets/custom_app_bars.dart';
 import '../widgets/frosted_container.dart';
 import '../widgets/gallery_controls.dart';
 import '../widgets/media_browser.dart';
+import '../widgets/multi_media_player.dart';
 
 /// A screen that displays details about a project/experience.
 class DetailsScreen extends StatefulWidget {
   const DetailsScreen({
     super.key,
     required this.title,
+    required this.subtitle,
     required this.appBarTitle,
     required this.description,
     required this.startDate,
@@ -44,6 +46,9 @@ class DetailsScreen extends StatefulWidget {
 
   /// The title of the project/experience.
   final String title;
+
+  /// The subtitle of the project/experience.
+  final String subtitle;
 
   /// The start date of the project/experience.
   final String? startDate;
@@ -80,23 +85,8 @@ class DetailsScreenState extends State<DetailsScreen> {
   /// The controller for the scroll view.
   final ScrollController _scrollController = ScrollController();
 
-  /// The controller for the image gallery.
-  late PageController _imagePageController;
-
   /// The index of the current media item.
   int _currentMediaIndex = 0;
-
-  /// The number of YouTube videos to display in the gallery.
-  int get youtubeCount => widget.youtubeVideoIds.length;
-
-  /// The number of images to display in the gallery.
-  int get imageCount => widget.imagePaths.length;
-
-  /// The number of videos to display in the gallery.
-  int get videoCount => widget.videoPaths.length;
-
-  /// The total number of media items to display in the gallery.
-  int get totalMediaCount => youtubeCount + imageCount + videoCount;
 
   /// The date range text to display.
   String get dateRangeText {
@@ -110,90 +100,6 @@ class DetailsScreenState extends State<DetailsScreen> {
       dateRangeText += Strings.present;
     }
     return dateRangeText;
-  }
-
-  /// Handles opening the next media item in the gallery.
-  void _nextMedia() {
-    if (_currentMediaIndex < youtubeCount ||
-        (_currentMediaIndex >= imageCount + youtubeCount - 1 &&
-            _currentMediaIndex < totalMediaCount - 1)) {
-      setState(() {
-        _currentMediaIndex++;
-      });
-      return;
-    }
-
-    if (_currentMediaIndex == totalMediaCount - 1) {
-      if (videoCount == 0 && youtubeCount == 0) {
-        _imagePageController.animateToPage(
-          0,
-          duration: const Duration(milliseconds: 250),
-          curve: Curves.easeIn,
-        );
-        return;
-      }
-
-      setState(() {
-        _currentMediaIndex = 0;
-      });
-      _setupImagePageController();
-      return;
-    } else {
-      _imagePageController.nextPage(
-        duration: const Duration(milliseconds: 250),
-        curve: Curves.easeIn,
-      );
-    }
-  }
-
-  /// Handles opening the previous media item in the gallery.
-  void _previousMedia() {
-    if (_currentMediaIndex > imageCount) {
-      setState(() {
-        _currentMediaIndex--;
-      });
-      return;
-    } else if (_currentMediaIndex == imageCount) {
-      setState(() {
-        _currentMediaIndex--;
-      });
-      _setupImagePageController();
-      return;
-    }
-    if (_currentMediaIndex == 0) {
-      if (videoCount == 0 && youtubeCount == 0) {
-        _imagePageController.animateToPage(
-          imageCount - 1,
-          duration: const Duration(milliseconds: 250),
-          curve: Curves.easeIn,
-        );
-        return;
-      }
-      setState(() {
-        _currentMediaIndex = totalMediaCount - 1;
-      });
-      return;
-    }
-    _imagePageController.previousPage(
-      duration: const Duration(milliseconds: 250),
-      curve: Curves.easeIn,
-    );
-  }
-
-  /// Sets up the image page controller.
-  void _setupImagePageController() {
-    _imagePageController = PageController(
-      initialPage: _currentMediaIndex,
-    );
-    _imagePageController.addListener(() {
-      if (_imagePageController.page == null ||
-          _imagePageController.page!.round() == _currentMediaIndex) {
-        return;
-      }
-      setState(() {
-        _currentMediaIndex = _imagePageController.page!.round();
-      });
-    });
   }
 
   /// Builds the tag chips.
@@ -237,6 +143,7 @@ class DetailsScreenState extends State<DetailsScreen> {
           Padding(
             padding: const EdgeInsets.only(bottom: 8.0),
             child: Wrap(
+              crossAxisAlignment: WrapCrossAlignment.center,
               children: <Widget>[
                 Text(
                   '${link['title']}:',
@@ -258,30 +165,7 @@ class DetailsScreenState extends State<DetailsScreen> {
     );
   }
 
-  /// Builds the image to be displayed in the gallery.
-  PhotoViewGalleryPageOptions _galleryImageItem(
-      BuildContext context, int index) {
-    return PhotoViewGalleryPageOptions(
-      gestureDetectorBehavior: HitTestBehavior.opaque,
-      imageProvider: AssetImage(widget.imagePaths[index]),
-      initialScale: PhotoViewComputedScale.contained,
-      minScale: PhotoViewComputedScale.contained * 0.1,
-      maxScale: PhotoViewComputedScale.covered * 5,
-      filterQuality: FilterQuality.high,
-      heroAttributes: PhotoViewHeroAttributes(
-        tag: index.toString(),
-      ),
-      errorBuilder:
-          (BuildContext context, Object error, StackTrace? stackTrace) {
-        return const Icon(
-          Icons.error_outline,
-          color: Colors.black12,
-          size: 100,
-        );
-      },
-    );
-  }
-
+  /// Builds the media browser.
   Widget _mediaBrowser(
       {required BuildContext context, required bool portrait}) {
     return SizedBox(
@@ -291,117 +175,64 @@ class DetailsScreenState extends State<DetailsScreen> {
         imagePaths: widget.imagePaths,
         videoPaths: widget.videoPaths,
         onTapped: (int index) {
-          if (portrait) {
-            _scrollController.animateTo(
-              0,
-              duration: const Duration(milliseconds: 250),
-              curve: Curves.easeIn,
-            );
-          }
-          if (index < youtubeCount || index >= imageCount) {
-            setState(() {
-              _currentMediaIndex = index;
-            });
-            return;
-          }
-          if (_currentMediaIndex >= imageCount) {
-            setState(() {
-              _currentMediaIndex = index;
-            });
-            _setupImagePageController();
-            return;
-          }
-          _imagePageController.jumpToPage(
-            index,
+          setState(() {
+            _currentMediaIndex = index;
+          });
+          _scrollController.animateTo(
+            0,
+            duration: const Duration(milliseconds: 500),
+            curve: Curves.easeInOut,
           );
         },
       ),
     );
   }
 
-  /// Builds the media player.
-  Widget _mediaPlayer(BuildContext context) {
-    return _currentMediaIndex < youtubeCount
-        ? ColoredBox(
-            color: darkColorScheme.surface.withOpacity(0.9),
-            child: Center(
-              child: SizedBox(
-                width: MediaQuery.of(context).size.width,
-                child: YoutubePlayer(
-                  key: Key('yt$_currentMediaIndex'),
-                  controller: YoutubePlayerController.fromVideoId(
-                    videoId: widget.youtubeVideoIds[_currentMediaIndex],
-                    params: const YoutubePlayerParams(
-                      strictRelatedVideos: true,
-                    ),
-                  ),
-                ),
+  /// Builds the header with the logo, title, subtitle, and date range.
+  Widget _infoHeader({required BuildContext context, required bool compact}) {
+    return Row(
+      children: <Widget>[
+        if (widget.logoPath != null)
+          Padding(
+            padding: EdgeInsets.only(right: compact ? 8.0 : 16.0),
+            child: FrostedContainer(
+              padding: const EdgeInsets.all(4),
+              borderRadiusAmount: 100,
+              child: Image.asset(
+                widget.logoPath!,
+                fit: BoxFit.contain,
+                height: compact ? 32 : 40,
+                width: compact ? 32 : 40,
               ),
             ),
-          )
-        : _currentMediaIndex < imageCount + youtubeCount
-            ? PhotoViewGallery.builder(
-                scrollPhysics: const NeverScrollableScrollPhysics(),
-                builder: _galleryImageItem,
-                pageController: _imagePageController,
-                itemCount: imageCount,
-                backgroundDecoration: BoxDecoration(
-                  color: darkColorScheme.surface.withOpacity(0.9),
-                ),
-                onPageChanged: (_) {},
-              )
-            : Chewie(
-                key: Key('video$_currentMediaIndex'),
-                controller: ChewieController(
-                  autoPlay: true,
-                  aspectRatio: 16 / 9,
-                  autoInitialize: true,
-                  allowFullScreen: false,
-                  videoPlayerController: VideoPlayerController.asset(
-                    widget.videoPaths[_currentMediaIndex - imageCount],
-                  ),
-                ),
-              );
-  }
-
-  /// Builds a banner that displays captions and controls for the player.
-  Widget _playerControlBanner(
-      {required BuildContext context, required AppState appState}) {
-    return Align(
-      alignment: Alignment.bottomCenter,
-      child: SizedBox(
-        width: double.infinity,
-        child: FrostedContainer(
-          borderRadiusAmount: 0,
-          padding: const EdgeInsets.all(8.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Flexible(
-                child: Text(
-                  widget.imageCaptions.isEmpty ||
-                          _currentMediaIndex > imageCount - 1
-                      ? ''
-                      : widget.imageCaptions[_currentMediaIndex],
-                  style: Theme.of(context).textTheme.bodyLarge,
-                ),
-              ),
-              GalleryControls(
-                currentIndex: _currentMediaIndex,
-                totalMediaCount: totalMediaCount,
-                onPrevious: _previousMedia,
-                onNext: _nextMedia,
-                onMediaBrowser: () {
-                  setState(() {
-                    appState.mediaBrowserVisible =
-                        !appState.mediaBrowserVisible;
-                  });
-                },
-              ),
-            ],
           ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              widget.title,
+              style: compact
+                  ? Theme.of(context).textTheme.titleMedium
+                  : Theme.of(context).textTheme.titleLarge,
+            ),
+            if (widget.subtitle.isNotEmpty)
+              Text(
+                widget.subtitle,
+                style: compact
+                    ? Theme.of(context).textTheme.titleSmall!.copyWith(
+                          fontWeight: FontWeight.normal,
+                        )
+                    : Theme.of(context).textTheme.titleMedium,
+              ),
+            Text(
+              dateRangeText,
+              style: compact
+                  ? Theme.of(context).textTheme.bodySmall
+                  : Theme.of(context).textTheme.bodySmall,
+            ),
+          ],
         ),
-      ),
+      ],
     );
   }
 
@@ -412,58 +243,24 @@ class DetailsScreenState extends State<DetailsScreen> {
       mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
-        Stack(
-          alignment: Alignment.bottomCenter,
-          children: <Widget>[
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.5,
-              child: Padding(
-                padding: const EdgeInsets.only(bottom: 64.0),
-                child: _mediaPlayer(context),
-              ),
-            ),
-            _playerControlBanner(context: context, appState: appState),
-          ],
+        AspectRatio(
+          aspectRatio: 16 / 11,
+          child: MultiMediaPlayer(
+            key: Key('multiMediaPlayer$_currentMediaIndex'),
+            currentIndex: _currentMediaIndex,
+            youtubeVideoIds: widget.youtubeVideoIds,
+            videoPaths: widget.videoPaths,
+            imagePaths: widget.imagePaths,
+            imageCaptions: widget.imageCaptions,
+            onMediaBrowser: appState.toggleMediaBrowserVisibility,
+          ),
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Row(
-                children: <Widget>[
-                  if (widget.logoPath != null)
-                    Padding(
-                      padding: const EdgeInsets.only(right: 16.0),
-                      child: FrostedContainer(
-                        padding: const EdgeInsets.all(4),
-                        borderRadiusAmount: 100,
-                        child: Image.asset(
-                          widget.logoPath!,
-                          fit: BoxFit.contain,
-                          height: 40,
-                          width: 40,
-                        ),
-                      ),
-                    ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        widget.title,
-                        style:
-                            Theme.of(context).textTheme.titleMedium!.copyWith(
-                                  fontWeight: FontWeight.bold,
-                                ),
-                      ),
-                      Text(
-                        dateRangeText,
-                        style: Theme.of(context).textTheme.bodyMedium,
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+              _infoHeader(context: context, compact: true),
               const Divider(height: 32),
               if (appState.mediaBrowserVisible)
                 _mediaBrowser(context: context, portrait: true),
@@ -500,14 +297,14 @@ class DetailsScreenState extends State<DetailsScreen> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               Expanded(
-                child: Stack(
-                  children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 56.0),
-                      child: _mediaPlayer(context),
-                    ),
-                    _playerControlBanner(context: context, appState: appState),
-                  ],
+                child: MultiMediaPlayer(
+                  key: Key('multiMediaPlayer$_currentMediaIndex'),
+                  currentIndex: _currentMediaIndex,
+                  youtubeVideoIds: widget.youtubeVideoIds,
+                  videoPaths: widget.videoPaths,
+                  imagePaths: widget.imagePaths,
+                  imageCaptions: widget.imageCaptions,
+                  onMediaBrowser: appState.toggleMediaBrowserVisibility,
                 ),
               ),
               if (appState.mediaBrowserVisible)
@@ -520,39 +317,7 @@ class DetailsScreenState extends State<DetailsScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Row(
-                children: <Widget>[
-                  if (widget.logoPath != null)
-                    Padding(
-                      padding: const EdgeInsets.only(right: 16.0),
-                      child: FrostedContainer(
-                        padding: const EdgeInsets.all(4),
-                        borderRadiusAmount: 100,
-                        child: Image.asset(
-                          widget.logoPath!,
-                          fit: BoxFit.contain,
-                          height: 40,
-                          width: 40,
-                        ),
-                      ),
-                    ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        widget.title,
-                        style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                              fontWeight: FontWeight.bold,
-                            ),
-                      ),
-                      Text(
-                        dateRangeText,
-                        style: Theme.of(context).textTheme.titleSmall,
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+              _infoHeader(context: context, compact: false),
               const Divider(height: 32),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -585,21 +350,6 @@ class DetailsScreenState extends State<DetailsScreen> {
         ),
       ],
     );
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    // Initialize the image page controller.
-    _setupImagePageController();
-  }
-
-  @override
-  void dispose() {
-    _scrollController.dispose();
-    _imagePageController.dispose();
-
-    super.dispose();
   }
 
   @override

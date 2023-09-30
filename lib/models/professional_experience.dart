@@ -3,6 +3,7 @@ import 'package:intl/intl.dart';
 class ProfessionalExperience {
   const ProfessionalExperience({
     required this.company,
+    required this.folderName,
     required this.role,
     required this.location,
     required this.startDate,
@@ -10,12 +11,15 @@ class ProfessionalExperience {
     required this.description,
     required this.externalLinks,
     required this.youtubeVideoIds,
+    required this.imageCount,
+    required this.videoCount,
   });
 
   /// Creates a [ProfessionalExperience] from a JSON object.
   factory ProfessionalExperience.fromJson(Map<String, dynamic> json) {
     return ProfessionalExperience(
       company: json['company'].toString(),
+      folderName: json['folderName'].toString(),
       role: json['role'].toString(),
       location: json['location'].toString(),
       description: json['description'].toString(),
@@ -25,6 +29,8 @@ class ProfessionalExperience {
           : DateTime.parse(
               json['endDate'].toString(),
             ),
+      imageCount: int.parse(json['imageCount'].toString()),
+      videoCount: int.parse(json['videoCount'].toString()),
       youtubeVideoIds:
           (json['youtubeVideoIds'] as List<dynamic>).map((dynamic e) {
         return e.toString();
@@ -38,6 +44,9 @@ class ProfessionalExperience {
 
   /// The name of the company.
   final String company;
+
+  /// The name of the folder.
+  final String folderName;
 
   /// The name of the company and role as a path.
   String get titleAsPath =>
@@ -61,12 +70,17 @@ class ProfessionalExperience {
   /// Relevant external links.
   final List<Map<String, String>> externalLinks;
 
+  /// The number of images in the project.
+  final int imageCount;
+
+  /// The number of videos in the project.
+  final int videoCount;
+
   /// The YouTube video IDs.
   final List<String> youtubeVideoIds;
 
   /// The base path for the media.
-  String get baseMediaPath =>
-      'images/professional/${company.toLowerCase().replaceAll(' ', '_').replaceAll('.', '')}/';
+  String get baseMediaPath => 'images/professional/$folderName/';
 
   /// The path for the thumbnail.
   String get thumbnailPath => '${baseMediaPath}thumbnail.png';
@@ -83,5 +97,24 @@ class ProfessionalExperience {
       return null;
     }
     return DateFormat('MMMM yyyy').format(finalDate!);
+  }
+
+  /// The paths for the videos in the project.
+  List<String> get videoPaths {
+    final List<String> paths = <String>[];
+    for (int i = 1; i < videoCount + 1; i++) {
+      paths.add('${baseMediaPath}video_$i.mp4');
+    }
+    return paths;
+  }
+
+  /// The paths for the images in the project.
+  List<String> get imagePaths {
+    final List<String> paths = <String>[];
+    paths.add(thumbnailPath);
+    for (int i = 1; i < imageCount; i++) {
+      paths.add('${baseMediaPath}image_$i.png');
+    }
+    return paths;
   }
 }

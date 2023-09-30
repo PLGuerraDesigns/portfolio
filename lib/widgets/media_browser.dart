@@ -120,7 +120,7 @@ class MediaBrowser extends StatelessWidget {
                 if (onTapped == null) {
                   return;
                 }
-                onTapped!(youtubeVideoIds.length + imagePaths.length + index);
+                onTapped!(index + youtubeVideoIds.length);
               },
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(4.0),
@@ -130,7 +130,7 @@ class MediaBrowser extends StatelessWidget {
                       controller: ChewieController(
                         videoPlayerController: VideoPlayerController.asset(
                           videoPaths[index],
-                        )..initialize(),
+                        ),
                         showControls: false,
                         allowFullScreen: false,
                         allowMuting: false,
@@ -164,6 +164,53 @@ class MediaBrowser extends StatelessWidget {
     );
   }
 
+  /// Builds the image gallery.
+  Widget _imageGallery(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        const SizedBox(height: 8.0),
+        Text(
+          Strings.images,
+          style: Theme.of(context).textTheme.titleLarge,
+        ),
+        const SizedBox(height: 8.0),
+        GridView.builder(
+          physics: const NeverScrollableScrollPhysics(),
+          itemCount: imagePaths.length,
+          shrinkWrap: true,
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+            mainAxisSpacing: 8.0,
+            crossAxisSpacing: 8.0,
+          ),
+          itemBuilder: (BuildContext context, int index) {
+            return HoverScaleHandler(
+              onTap: () {
+                if (onTapped == null) {
+                  return;
+                }
+                onTapped!(index + youtubeVideoIds.length + videoPaths.length);
+              },
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(4.0),
+                child: Image.asset(
+                  imagePaths[index],
+                  fit: BoxFit.cover,
+                ),
+              ),
+            );
+          },
+        ),
+        const SizedBox(height: 8.0),
+        const Divider(
+          indent: 8.0,
+          endIndent: 8.0,
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scrollbar(
@@ -177,45 +224,8 @@ class MediaBrowser extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             if (youtubeVideoIds.isNotEmpty) _youtubeGallery(context),
-            const SizedBox(height: 8.0),
-            Text(
-              Strings.images,
-              style: Theme.of(context).textTheme.titleLarge,
-            ),
-            const SizedBox(height: 8.0),
-            GridView.builder(
-              physics: const NeverScrollableScrollPhysics(),
-              itemCount: imagePaths.length,
-              shrinkWrap: true,
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3,
-                mainAxisSpacing: 8.0,
-                crossAxisSpacing: 8.0,
-              ),
-              itemBuilder: (BuildContext context, int index) {
-                return HoverScaleHandler(
-                  onTap: () {
-                    if (onTapped == null) {
-                      return;
-                    }
-                    onTapped!(youtubeVideoIds.length + index);
-                  },
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(4.0),
-                    child: Image.asset(
-                      imagePaths[index],
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                );
-              },
-            ),
-            const SizedBox(height: 8.0),
-            const Divider(
-              indent: 8.0,
-              endIndent: 8.0,
-            ),
             if (videoPaths.isNotEmpty) _videoGallery(context),
+            if (imagePaths.isNotEmpty) _imageGallery(context),
             const SizedBox(height: 16.0),
           ],
         ),

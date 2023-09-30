@@ -56,6 +56,10 @@ class AppRouter {
                   builder: (BuildContext context, GoRouterState state) =>
                       DetailsScreen(
                     appBarTitle: Strings.professionalExperiences,
+                    subtitle: appState
+                        .getProfessionalExperienceByTitlePath(
+                            state.pathParameters['title']!)
+                        .role,
                     logoPath: appState
                         .getProfessionalExperienceByTitlePath(
                             state.pathParameters['title']!)
@@ -68,13 +72,14 @@ class AppRouter {
                         .getProfessionalExperienceByTitlePath(
                             state.pathParameters['title']!)
                         .description,
-                    imagePaths: <String>[
-                      appState
-                          .getProfessionalExperienceByTitlePath(
-                              state.pathParameters['title']!)
-                          .thumbnailPath
-                    ],
-                    videoPaths: const <String>[],
+                    imagePaths: appState
+                        .getProfessionalExperienceByTitlePath(
+                            state.pathParameters['title']!)
+                        .imagePaths,
+                    videoPaths: appState
+                        .getProfessionalExperienceByTitlePath(
+                            state.pathParameters['title']!)
+                        .videoPaths,
                     youtubeVideoIds: appState
                         .getProfessionalExperienceByTitlePath(
                             state.pathParameters['title']!)
@@ -106,6 +111,7 @@ class AppRouter {
                   path: '${Strings.detailsSubRoute}/:title',
                   builder: (BuildContext context, GoRouterState state) =>
                       DetailsScreen(
+                    subtitle: '',
                     appBarTitle: Strings.personalProjects,
                     title: appState
                         .getProjectByTitlePath(state.pathParameters['title']!)
