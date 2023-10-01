@@ -45,6 +45,26 @@ class _FloatingThumbnailState extends State<FloatingThumbnail> {
     return Stack(
       alignment: Alignment.center,
       children: <Widget>[
+        if (widget.logoPath != null)
+          Positioned(
+            left: 0,
+            top: 0,
+            child: Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: lightColorScheme.surface,
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.asset(
+                  widget.logoPath!,
+                  fit: BoxFit.contain,
+                  height: 50,
+                  width: 50,
+                ),
+              ),
+            ),
+          ),
         Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
@@ -69,26 +89,6 @@ class _FloatingThumbnailState extends State<FloatingThumbnail> {
               ),
           ],
         ),
-        if (widget.logoPath != null)
-          Positioned(
-            left: 0,
-            top: 0,
-            child: Container(
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: lightColorScheme.surface,
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.asset(
-                  widget.logoPath!,
-                  fit: BoxFit.contain,
-                  height: 50,
-                  width: 50,
-                ),
-              ),
-            ),
-          ),
       ],
     );
   }

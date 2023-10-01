@@ -2,7 +2,7 @@ class Strings {
   Strings._();
 
   static const String currentLocation = 'VA, USA';
-  static const String lastUpdated = 'Last Updated 9/23';
+  static const String lastUpdated = 'Last Updated 10/23';
 
   // Routes
   static const String loadingRoute = '/loading';

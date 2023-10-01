@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../common/color_schemes.g.dart';
 import '../common/strings.dart';
 import '../models/app_state.dart';
 import '../services/redirect_handler.dart';
@@ -187,15 +188,20 @@ class DetailsScreenState extends State<DetailsScreen> {
       children: <Widget>[
         if (widget.logoPath != null)
           Padding(
-            padding: EdgeInsets.only(right: compact ? 8.0 : 16.0),
-            child: FrostedContainer(
-              padding: const EdgeInsets.all(4),
-              borderRadiusAmount: 100,
-              child: Image.asset(
-                widget.logoPath!,
-                fit: BoxFit.contain,
-                height: compact ? 32 : 40,
-                width: compact ? 32 : 40,
+            padding: const EdgeInsets.only(right: 8.0),
+            child: Container(
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: lightColorScheme.surface,
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(4.0),
+                child: Image.asset(
+                  widget.logoPath!,
+                  fit: BoxFit.contain,
+                  height: 40,
+                  width: 40,
+                ),
               ),
             ),
           ),
