@@ -19,13 +19,20 @@ jobs:
 
       - name: Commit and push to published-site branch
         run: |
+          cd build
+          mkdir web-deploy
+          cd web-deploy
           git init
           git config --global user.email plguerra@outlook.com
           git config --global user.name plguerradesigns
-          git status
           git remote add origin https://${{secrets.commit_secret}}@github.com/plguerradesigns/portfolio.git
-          git checkout -b master
-          cp -r build/web/* ./
-          git add --all
+          git fetch origin published
+          git switch published
+          cp -R ../web/* .
+          git status
+          git add .
+          echo ""
+          echo "Committing to published branch"
+          echo ""
           git commit -m "Updated Release"
-          git push origin published -f
+          git push origin published
