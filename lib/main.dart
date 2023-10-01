@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:url_strategy/url_strategy.dart';
 
 import 'common/color_schemes.g.dart';
 import 'common/strings.dart';
@@ -9,7 +8,6 @@ import 'models/app_state.dart';
 import 'routes/app_router.dart';
 
 void main() {
-  setPathUrlStrategy();
   runApp(const PortfolioApp());
 }
 
