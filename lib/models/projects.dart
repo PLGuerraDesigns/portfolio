@@ -3,6 +3,7 @@ import 'package:intl/intl.dart';
 class Project {
   Project({
     required this.title,
+    required this.subtitle,
     required this.description,
     required this.startDate,
     required this.finalDate,
@@ -17,6 +18,7 @@ class Project {
   factory Project.fromJson(Map<String, dynamic> json) {
     return Project(
       title: json['title'].toString(),
+      subtitle: json['subtitle'].toString(),
       description: json['description'].toString(),
       startDate: json['startDate'] == null
           ? null
@@ -40,6 +42,9 @@ class Project {
 
   /// The title of the project.
   final String title;
+
+  /// The subtitle of the project.
+  final String subtitle;
 
   /// The title of the project as a path.
   String get titleAsPath => title.toLowerCase().replaceAll(' ', '_');

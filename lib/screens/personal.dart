@@ -67,8 +67,8 @@ class _PersonalScreenState extends State<PersonalScreen> {
                                       (BuildContext context, int index) {
                                         return ProjectThumbnail(
                                           title: appState.projects[index].title,
-                                          subtitle: appState.projects[index]
-                                              .localMediaCaptions[0],
+                                          subtitle:
+                                              appState.projects[index].subtitle,
                                           imagePath: appState
                                               .projects[index].thumbnailPath,
                                           onTap: () => context.go(
@@ -83,12 +83,14 @@ class _PersonalScreenState extends State<PersonalScreen> {
                                   return Padding(
                                     padding: const EdgeInsets.all(24),
                                     child: SizedBox(
-                                        height:
-                                            MediaQuery.of(context).size.height -
-                                                150,
-                                        child: const Center(
-                                            child: CircularProgressIndicator
-                                                .adaptive())),
+                                      height:
+                                          MediaQuery.of(context).size.height -
+                                              150,
+                                      child: const Center(
+                                        child: CircularProgressIndicator
+                                            .adaptive(),
+                                      ),
+                                    ),
                                   );
                                 }
                               },
