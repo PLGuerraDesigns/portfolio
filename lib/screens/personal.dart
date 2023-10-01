@@ -31,65 +31,70 @@ class _PersonalScreenState extends State<PersonalScreen> {
                   context: context, title: Strings.personalProjects),
               body: Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: FrostedContainer(
-                  padding: EdgeInsets.zero,
-                  child: Scrollbar(
-                    controller: _scrollController,
-                    thumbVisibility: true,
-                    child: SingleChildScrollView(
-                      padding: const EdgeInsets.all(12.0),
+                child: SizedBox(
+                  height: MediaQuery.of(context).size.height,
+                  child: FrostedContainer(
+                    padding: EdgeInsets.zero,
+                    child: Scrollbar(
                       controller: _scrollController,
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          FutureBuilder<void>(
-                            future: appState.loadProjects(context),
-                            builder: (BuildContext context,
-                                AsyncSnapshot<dynamic> snapshot) {
-                              if (snapshot.connectionState ==
-                                  ConnectionState.done) {
-                                return GridView.custom(
-                                  gridDelegate:
-                                      SliverGridDelegateWithFixedCrossAxisCount(
-                                    crossAxisCount:
-                                        orientation == Orientation.portrait
-                                            ? 1
-                                            : 5,
-                                    crossAxisSpacing: 8,
-                                  ),
-                                  shrinkWrap: true,
-                                  physics: const NeverScrollableScrollPhysics(),
-                                  childrenDelegate: SliverChildBuilderDelegate(
-                                    (BuildContext context, int index) {
-                                      return ProjectThumbnail(
-                                        title: appState.projects[index].title,
-                                        subtitle: appState
-                                            .projects[index].imageCaptions[0],
-                                        imagePath: appState
-                                            .projects[index].thumbnailPath,
-                                        onTap: () => context.go(
-                                          '${Strings.homeRoute}/${Strings.personalSubRoute}/${Strings.detailsSubRoute}/${appState.projects[index].titleAsPath}',
-                                        ),
-                                      );
-                                    },
-                                    childCount: appState.projects.length,
-                                  ),
-                                );
-                              } else {
-                                return Padding(
-                                  padding: const EdgeInsets.all(24),
-                                  child: SizedBox(
-                                      height:
-                                          MediaQuery.of(context).size.height -
-                                              150,
-                                      child: const Center(
-                                          child: CircularProgressIndicator
-                                              .adaptive())),
-                                );
-                              }
-                            },
-                          ),
-                        ],
+                      thumbVisibility: true,
+                      child: SingleChildScrollView(
+                        padding: const EdgeInsets.all(12.0),
+                        controller: _scrollController,
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: <Widget>[
+                            FutureBuilder<void>(
+                              future: appState.loadProjects(context),
+                              builder: (BuildContext context,
+                                  AsyncSnapshot<dynamic> snapshot) {
+                                if (snapshot.connectionState ==
+                                    ConnectionState.done) {
+                                  return GridView.custom(
+                                    gridDelegate:
+                                        SliverGridDelegateWithFixedCrossAxisCount(
+                                      crossAxisCount:
+                                          orientation == Orientation.portrait
+                                              ? 1
+                                              : 5,
+                                      crossAxisSpacing: 8,
+                                    ),
+                                    shrinkWrap: true,
+                                    physics:
+                                        const NeverScrollableScrollPhysics(),
+                                    childrenDelegate:
+                                        SliverChildBuilderDelegate(
+                                      (BuildContext context, int index) {
+                                        return ProjectThumbnail(
+                                          title: appState.projects[index].title,
+                                          subtitle: appState
+                                              .projects[index].imageCaptions[0],
+                                          imagePath: appState
+                                              .projects[index].thumbnailPath,
+                                          onTap: () => context.go(
+                                            '${Strings.homeRoute}/${Strings.personalSubRoute}/${Strings.detailsSubRoute}/${appState.projects[index].titleAsPath}',
+                                          ),
+                                        );
+                                      },
+                                      childCount: appState.projects.length,
+                                    ),
+                                  );
+                                } else {
+                                  return Padding(
+                                    padding: const EdgeInsets.all(24),
+                                    child: SizedBox(
+                                        height:
+                                            MediaQuery.of(context).size.height -
+                                                150,
+                                        child: const Center(
+                                            child: CircularProgressIndicator
+                                                .adaptive())),
+                                  );
+                                }
+                              },
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),

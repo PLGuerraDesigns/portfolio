@@ -30,9 +30,9 @@ class Strings {
       'https://github.com/PLGuerraDesigns/portfolio';
 
   // Assets
-  static const String projectsJsonPath = 'json/projects.json';
+  static const String projectsJsonPath = 'assets/json/projects.json';
   static const String professionalExperienceJsonPath =
-      'json/professional_experience.json';
+      'assets/json/professional_experience.json';
   static const String projectsImagePath = 'images/personal/';
   static const String socialAssetsBasePath = 'assets/images/social';
   static const String profilePhotoPath = 'assets/images/home/profile_photo.jpg';

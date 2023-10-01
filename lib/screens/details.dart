@@ -1,17 +1,10 @@
-import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';
-import 'package:photo_view/photo_view.dart';
-import 'package:photo_view/photo_view_gallery.dart';
 import 'package:provider/provider.dart';
-import 'package:video_player/video_player.dart';
-import 'package:youtube_player_iframe/youtube_player_iframe.dart';
-import '../common/color_schemes.g.dart';
 import '../common/strings.dart';
 import '../models/app_state.dart';
 import '../services/redirect_handler.dart';
 import '../widgets/custom_app_bars.dart';
 import '../widgets/frosted_container.dart';
-import '../widgets/gallery_controls.dart';
 import '../widgets/media_browser.dart';
 import '../widgets/multi_media_player.dart';
 
