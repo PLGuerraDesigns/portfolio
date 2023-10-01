@@ -13,6 +13,7 @@ class ProfessionalExperience {
     required this.youtubeVideoIds,
     required this.imageCount,
     required this.videoCount,
+    required this.localMediaCaptions,
   });
 
   /// Creates a [ProfessionalExperience] from a JSON object.
@@ -31,6 +32,10 @@ class ProfessionalExperience {
             ),
       imageCount: int.parse(json['imageCount'].toString()),
       videoCount: int.parse(json['videoCount'].toString()),
+      localMediaCaptions:
+          (json['mediaCaptions'] as List<dynamic>).map((dynamic e) {
+        return e.toString();
+      }).toList(),
       youtubeVideoIds:
           (json['youtubeVideoIds'] as List<dynamic>).map((dynamic e) {
         return e.toString();
@@ -75,6 +80,9 @@ class ProfessionalExperience {
 
   /// The number of videos in the project.
   final int videoCount;
+
+  /// The captions for local media.
+  final List<String> localMediaCaptions;
 
   /// The YouTube video IDs.
   final List<String> youtubeVideoIds;

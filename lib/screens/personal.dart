@@ -67,8 +67,8 @@ class _PersonalScreenState extends State<PersonalScreen> {
                                       (BuildContext context, int index) {
                                         return ProjectThumbnail(
                                           title: appState.projects[index].title,
-                                          subtitle: appState
-                                              .projects[index].imageCaptions[0],
+                                          subtitle: appState.projects[index]
+                                              .localMediaCaptions[0],
                                           imagePath: appState
                                               .projects[index].thumbnailPath,
                                           onTap: () => context.go(

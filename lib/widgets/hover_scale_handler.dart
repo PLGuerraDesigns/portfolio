@@ -36,12 +36,25 @@ class HoverScaleHandlerState extends State<HoverScaleHandler> {
   /// Whether the widget has been tapped.
   bool tapped = false;
 
+  /// Whether the mouse is hovering over the widget.
+  bool isHovering = false;
+
   @override
   Widget build(BuildContext context) {
     return MouseRegion(
       cursor: SystemMouseCursors.click,
-      onEnter: (_) => setState(() => currentScale = scaleOnHover),
-      onExit: (_) => setState(() => currentScale = defaultScale),
+      onEnter: (_) => setState(
+        () {
+          isHovering = true;
+          currentScale = scaleOnHover;
+        },
+      ),
+      onExit: (_) => setState(
+        () {
+          isHovering = false;
+          currentScale = defaultScale;
+        },
+      ),
       child: GestureDetector(
         onTap: () async {
           if (tapped) {
@@ -58,11 +71,17 @@ class HoverScaleHandlerState extends State<HoverScaleHandler> {
               Duration(milliseconds: msAnimationDuration + 50));
 
           setState(() {
-            currentScale = 1.05;
+            currentScale = scaleOnHover;
           });
 
           await Future<void>.delayed(
               Duration(milliseconds: msAnimationDuration));
+
+          if (!isHovering) {
+            setState(() {
+              currentScale = defaultScale;
+            });
+          }
 
           widget.onTap?.call();
 

@@ -84,7 +84,10 @@ class AppRouter {
                         .getProfessionalExperienceByTitlePath(
                             state.pathParameters['title']!)
                         .youtubeVideoIds,
-                    imageCaptions: const <String>[],
+                    mediaCaptions: appState
+                        .getProfessionalExperienceByTitlePath(
+                            state.pathParameters['title']!)
+                        .localMediaCaptions,
                     externalLinks: appState
                         .getProfessionalExperienceByTitlePath(
                             state.pathParameters['title']!)
@@ -122,9 +125,9 @@ class AppRouter {
                     imagePaths: appState
                         .getProjectByTitlePath(state.pathParameters['title']!)
                         .imagePaths,
-                    imageCaptions: appState
+                    mediaCaptions: appState
                         .getProjectByTitlePath(state.pathParameters['title']!)
-                        .imageCaptions,
+                        .localMediaCaptions,
                     videoPaths: appState
                         .getProjectByTitlePath(state.pathParameters['title']!)
                         .videoPaths,
