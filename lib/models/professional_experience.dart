@@ -80,7 +80,7 @@ class ProfessionalExperience {
   final List<String> youtubeVideoIds;
 
   /// The base path for the media.
-  String get baseMediaPath => 'images/professional/$folderName/';
+  String get baseMediaPath => 'assets/images/professional/$folderName/';
 
   /// The path for the thumbnail.
   String get thumbnailPath => '${baseMediaPath}thumbnail.png';

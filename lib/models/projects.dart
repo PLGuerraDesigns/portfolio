@@ -72,7 +72,7 @@ class Project {
 
   /// The base path for the media.
   String get baseMediaPath =>
-      'images/personal/${title.toLowerCase().replaceAll(' ', '_')}/';
+      'assets/images/personal/${title.toLowerCase().replaceAll(' ', '_')}/';
 
   /// The paths for the images in the project.
   List<String> get imagePaths {

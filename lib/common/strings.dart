@@ -33,7 +33,6 @@ class Strings {
   static const String projectsJsonPath = 'assets/json/projects.json';
   static const String professionalExperienceJsonPath =
       'assets/json/professional_experience.json';
-  static const String projectsImagePath = 'images/personal/';
   static const String socialAssetsBasePath = 'assets/images/social';
   static const String profilePhotoPath = 'assets/images/home/profile_photo.jpg';
   static const String professionalExperiencePhotoPath =

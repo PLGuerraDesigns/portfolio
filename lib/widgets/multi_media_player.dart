@@ -205,12 +205,15 @@ class MultiMediaPlayerState extends State<MultiMediaPlayer> {
   /// Builds the YouTube player.
   Widget _youTubePlayer() {
     return Center(
-      child: YoutubePlayer(
-        key: Key('yt$currentIndex'),
-        controller: YoutubePlayerController.fromVideoId(
-          videoId: widget.youtubeVideoIds[currentIndex],
-          params: const YoutubePlayerParams(
-            strictRelatedVideos: true,
+      child: SizedBox(
+        width: MediaQuery.of(context).size.width,
+        child: YoutubePlayer(
+          key: Key('yt$currentIndex'),
+          controller: YoutubePlayerController.fromVideoId(
+            videoId: widget.youtubeVideoIds[currentIndex],
+            params: const YoutubePlayerParams(
+              strictRelatedVideos: true,
+            ),
           ),
         ),
       ),

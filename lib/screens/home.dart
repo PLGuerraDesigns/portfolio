@@ -76,8 +76,8 @@ class HomeScreen extends StatelessWidget {
           ),
           const Spacer(),
           if (!compact) _socialMediaButtons(context),
-          if (compact) location(),
           const SizedBox(width: 8.0),
+          if (compact) location(),
         ],
       ),
       subtitle: Row(
