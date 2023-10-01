@@ -17,7 +17,7 @@ class MultiMediaPlayer extends StatefulWidget {
     required this.youtubeVideoIds,
     required this.videoPaths,
     required this.imagePaths,
-    required this.imageCaptions,
+    required this.mediaCaptions,
     required this.currentIndex,
     this.onMediaBrowser,
   });
@@ -26,7 +26,7 @@ class MultiMediaPlayer extends StatefulWidget {
   final List<String> youtubeVideoIds;
   final List<String> videoPaths;
   final List<String> imagePaths;
-  final List<String> imageCaptions;
+  final List<String> mediaCaptions;
   final Function()? onMediaBrowser;
 
   @override
@@ -73,7 +73,7 @@ class MultiMediaPlayerState extends State<MultiMediaPlayer> {
         MediaItem(
           type: MediaType.video,
           path: widget.videoPaths[i],
-          caption: '',
+          caption: widget.mediaCaptions[i],
         ),
       );
     }
@@ -82,8 +82,7 @@ class MultiMediaPlayerState extends State<MultiMediaPlayer> {
         MediaItem(
           type: MediaType.image,
           path: widget.imagePaths[i],
-          caption:
-              i < widget.imageCaptions.length ? widget.imageCaptions[i] : '',
+          caption: widget.mediaCaptions[i + videoCount],
         ),
       );
     }

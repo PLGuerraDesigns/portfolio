@@ -26,6 +26,10 @@
         "title": "Google Play Store",
         "url": "https://play.google.com/store/apps/details?id=com.aicbelize.AIMobile"
       }
+    ],
+    "mediaCaptions": [
+      "",
+      "Installation Flyer"
     ]
   },
   {
@@ -69,6 +73,31 @@
         "title": "GE Reports: The 5 Coolest Things On Earth This Week",
         "url": "https://www.ge.com/news/reports/the-5-coolest-things-on-earth-this-week-4"
       }
+    ],
+    "mediaCaptions": [
+      "3-chunk dachshund wall-art printed by the AMBOTS swarm 3D printing system.",
+      "Transporter - return to dock path finding.",
+      "Transporter - onboard UI for manual control.",
+      "4-chunk AMBOTS logo printed by the AMBOTS swarm 3D printing system.",
+      "Printer movement to next chunk.",
+      "",
+      "UARK Hog Concrete Mold printed by the AMBOTS swarm 3D printing system.",
+      "Transporter misalignment recovery test.",
+      "Transporter - onboard UI for manual control.",
+      "",
+      "Rendering of the AMBOTS swarm 3D printing development platform.",
+      "3-chunk dachshund wall-art printed by the AMBOTS swarm 3D printing system.",
+      "Concrete wall facade mold in progress.",
+      "Concrete wall facade mold in progress.",
+      "Concrete UARK Hog finished product.",
+      "Preparing for UARK's 150th anniversary demo.",
+      "AMBOTS swarm platform demo for students at the UofA campus.",
+      "7th Generation Transporter - Front Left View",
+      "7th Generation Transporter - Front Right View",
+      "7th Generation Transporter - Above View",
+      "7th Generation AMBOTS Swarm 3D Printing System",
+      "Me with the 7th Generation AMBOTS Swarm 3D Printing System",
+      "Rendering of an Extended AMBOTS Swarm 3D Printing System"
     ]
   },
   {
@@ -89,6 +118,27 @@
         "title": "AM³ Lab",
         "url": "https://wordpressua.uark.edu/am3/"
       }
+    ],
+    "mediaCaptions": [
+      "Adding bed leveling to the 5th Gen AMBOTS Printer. How it started...",
+      "Printing a vase on the 5th Gen AMBOTS Printer.",
+      "Early 6th Gen system demo.",
+      "Transporter path finding and printer movement.",
+      "Early 7th Gen Transporter active alignment (spring align) test.",
+      "Early 7th Gen Transporter",
+      "Transporter lighting conditions test.",
+      "Transporter battery life & movement test",
+      "Transporter FPV Cam",
+      "Transporter Docking & Movement Reliability Test",
+      "Early 7th Gen AMBOTS Printer printing a vase.",
+      "Rendering of the 7th Gen Transporter",
+      "Vase Printed by the 5th Gen AMBOTS Printer",
+      "Early 7th Gen Printer Starting a Large 3D Phil Print",
+      "Small and Large 3D Phil Prints by the early 7th Gen AMBOTS Printer",
+      "Small and Large 3D Phil Prints by the early 7th Gen AMBOTS Printer",
+      "Chunk Angle and Bond Test with off-the-shelf nozzles",
+      "Transporter Image Processing Test under different lighting conditions",
+      "Some notable prints made by the various custom AM³ Lab 3D Printers"
     ]
   }
 ]

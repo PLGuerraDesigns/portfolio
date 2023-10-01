@@ -1,28 +1,31 @@
 [
   {
     "title": "AMG GT3 Wheel",
+    "subtitle": "AMG GT3 Thrustmaster Wheel",
     "startDate": null,
     "finalDate": "2018-10-01T00:00:00Z",
     "description": "The goal of the AMG GT3 Wheel project was to design and build a functional, 3D-printed replica of the Mercedes Benz AMG GT3 steering wheel for use in Sim Racing.\n\nAn Arduino Nano powers the wheel and features a thumb-slide joystick, eight pushbuttons, and a pair of paddle shifters. The wheel is directly compatible with the Thrustmaster ecosystem.\n\nYou can find the 3D-printable files on Thingiverse along with an assembly manual, circuit files, and Arduino code.",
-    "imageCount": 15,
-    "imageCaptions": [
-      "AMG GT3 Thrustmaster Wheel",
-      "Original Photoshop design.",
-      "Fusion 360 CAD Rendering.",
-      "Fusion 360 CAD Rendering.",
-      "Wheel plate printed to test size, button fit, and handle thickness.",
-      "Back casing wired and paddle shifters wired.",
-      "Testing material strength and feel.",
-      "Application of vinyl and decals.",
-      "Wheel wired and assembled.",
-      "Comfort and grip improved, using bicycle handle tape.",
-      "Finished wheel mounted on a custom display stand.",
-      "ProtoBoard circuit design in progress.",
-      "ProtoBoard design vs. final custom manufactured PCB board.",
-      "PCB assembled and mounted in wheel.",
-      "Sim Racing Rig"
-    ],
     "videoCount": 2,
+    "imageCount": 15,
+    "mediaCaptions": [
+      "Short video of the wheel in action.",
+      "Full view of the wheel.",
+      "AMG GT3 Thrustmaster Wheel on Display Stand",
+      "Initial Photoshop Concept.",
+      "Fusion 360 CAD Rendering.",
+      "Fusion 360 CAD Rendering.",
+      "Wheel Layout and Button Mapping.",
+      "8-PIN DIN and Paddle Shifter Wiring.",
+      "Material Strength and Feel Testing.",
+      "Application of Vinyl and Decals.",
+      "Wheel Fully Assembled.",
+      "Improved Handle Grip.",
+      "Finished wheel mounted on a custom display stand.",
+      "The ProtoBoard Circuit design in Progress.",
+      "ProtoBoard Design vs. Final Custom Manufactured PCB Board.",
+      "PCB Assembled and Installed.",
+      "My Sim Racing Rig (at the time) with the AMG GT3 Wheel."
+    ],
     "demoVideo": true,
     "externalLinks": [
       {
@@ -54,21 +57,22 @@
   },
   {
     "title": "Apple Charging Station",
+    "subtitle": "3-in-1 Charging Station",
     "startDate": null,
     "finalDate": "2019-01-01T00:00:00Z",
     "description": "The Apple Charging Station, initially sketched in 2016, was later revived and given as a gift to a friend.\n\nRedesigned in Autodesk Fusion 360, printed using wood-infused PLA, and finished with a wood stain. Supports charging of an iPhone, Apple Watch, and the original AirPods. The charging modules are interchangeable to support different product dimensions.",
-    "imageCount": 8,
-    "imageCaptions": [
-      "3-in-1 Charging Station",
-      "Original 2016 design.",
-      "Original 2016 design.",
-      "Printed base with phone holder module inserted.",
-      "Base with phone holder module, name sign, and stained watch charger holder inserted.",
-      "Application of wood stain.",
-      "Wood staining completed.",
-      "Partially assembled charging station (missing Apple Watch charging puck)."
-    ],
     "videoCount": 0,
+    "imageCount": 8,
+    "mediaCaptions": [
+      "3-in-1 Charging Station",
+      "Original 2016 Design Concept in SketchUp.",
+      "Original 2016 Design Concept in SketchUp.",
+      "Redesigned in 2019 and 3D Printed.",
+      "Base with Swappable Charging Module Inserts.",
+      "Application of Wood Stain.",
+      "After Stain Application.",
+      "Charging Station (minus apple watch puck)"
+    ],
     "demoVideo": false,
     "externalLinks": [],
     "tags": [
@@ -86,15 +90,17 @@
   },
   {
     "title": "F1 Sim Engineer",
+    "subtitle": "Codemaster's F1 2019 Companion App",
     "startDate": "2019-10-01T00:00:00Z",
     "finalDate": "2019-12-01T00:00:00Z",
     "description": "F1 Sim Engineer, co-developed with Viktor Soendergaard for a mobile programming class at the University of Arkansas, is a companion app for the F1 2019 sim racing game.\n\nThe app is written in Java and uses the UDP protocol to communicate with the gaming device to receive and display live telemetry data sent from the F1 2019 game. The app obtains various data from the game, including event information, race details, number of laps, number of participants, weather conditions, vehicle setup, vehicle status, and telemetry. This information is displayed live during the race is saved to the local database for later review.",
+    "videoCount": 1,
     "imageCount": 1,
-    "imageCaptions": [
-      "Codemaster's F1 2019 Companion App"
+    "mediaCaptions": [
+      "F1 Sim Engineer Demo",
+      "Companion App for Codemaster's F1 2019 Game"
     ],
     "demoVideo": true,
-    "videoCount": 1,
     "externalLinks": [
       {
         "title": "Project report",
@@ -118,15 +124,16 @@
   },
   {
     "title": "Switch Speaker",
+    "subtitle": "A Nintendo Switch Speaker Attachment",
     "startDate": null,
     "finalDate": "2019-02-01T00:00:00Z",
     "description": "The goal of the Nintendo Switch speaker project was to design and build a speaker attachment that would be louder than the Switch's built-in speakers.\n\nThe attachment features a 3.5mm audio plug, dual mini oval speakers, a rechargeable LiPo battery, a micro USB charging port, sliding power switch, power LED, and charging status LED.",
     "imageCount": 7,
-    "imageCaptions": [
+    "mediaCaptions": [
       "Nintendo Switch Speaker Attachment",
-      "CAD design vs. physical model",
-      "CAD design vs. partial assembly",
-      "Printed prototypes",
+      "CAD Design vs. Final Product",
+      "CAD Design vs. Final Product",
+      "Casing Prototypes",
       "Speaker connected to Nintendo Switch (Front View)",
       "Speaker connected to Nintendo Switch (Left Side View)",
       "Speaker connected to Nintendo Switch (Right Side View)"
@@ -167,11 +174,13 @@
   },
   {
     "title": "Project LeMans",
+    "subtitle": "Homemade Sim Racing Rig",
     "startDate": "2015-06-01T00:00:00Z",
     "finalDate": "2018-01-01T00:00:00Z",
     "description": "The goal of Project LeMans was to build a relatively low-budget sim racing rig out of easy-to-access parts and materials. It needed to have the basic functionality of a sim racing wheel and pedal set.\n\nIt features a Teensy for the brains, emulating a gaming controller and supporting input from the steering wheel's rotation, its two buttons, pair of paddle shifters, as well as the throttle, brakes, and clutch located on the pedal base.",
     "imageCount": 27,
-    "imageCaptions": [
+    "mediaCaptions": [
+      "Project Demo",
       "Homemade Sim Racing Rig",
       "Pedals carved from foam, reinforced in the rear with popsicle sticks",
       "Applying fiberglass to foam pedals, wrapped in foil and masking tape",
@@ -201,7 +210,7 @@
       "Rear side view of the rig"
     ],
     "demoVideo": true,
-    "videoCount": 4,
+    "videoCount": 1,
     "externalLinks": [],
     "tags": [
       "Fiberglass",
@@ -214,20 +223,25 @@
   },
   {
     "title": "SafeDrive MK1",
+    "subtitle": "Concept Self Destructing Storage Device",
     "startDate": "2018-04-01T00:00:00Z",
     "finalDate": "2018-05-01T00:00:00Z",
     "description": "The goal of the SafeDrive MK1 project was to design a secure storage device that unlocked using biometric authentication and is capable of self-destructing.\n\nIt features an Arduino micro-controller, an RGB backlight LCD Panel, a TTL fingerprint scanner, an interchangeable USB flash drive slot, and a USBKill device. If the device recognizes a fingerprint, it will provide access to the internal USB flash drive. However, after ten failed attempts, the Arduino enables the USBKill device, releasing close to 200 negative volts (in the reverse direction), destroying the internal drive's data lines and any unprotected connected devices.",
     "imageCount": 10,
-    "imageCaptions": [
+    "mediaCaptions": [
+      "Project Demo",
+      "Initial Prototype Testing",
+      "Successful Connection to Storage",
+      "Fingerprint invalid attempts state recovery after power cycle.",
       "Concept Self Destructing Storage Device",
       "Initial breadboard prototype",
       "Fusion 360 CAD Rendering",
       "Fusion 360 CAD Rendering",
-      "3D-Printed case",
-      "Wiring and assembly in progress",
-      "Unpainted case assembled",
-      "Case sanded, filled, primed, and painted",
-      "Decals added to the case",
+      "3D-Printed Case",
+      "Wiring and Assembly",
+      "Unfinished SafeDrive MK1",
+      "Case Sanded, Filled, Primed, and Painted",
+      "Warning Labels Added",
       ""
     ],
     "demoVideo": true,
@@ -261,17 +275,21 @@
   },
   {
     "title": "Xbox Head Tracking",
+    "subtitle": "Gyroscopic Head Tracking Device",
     "startDate": "2018-02-01T00:00:00Z",
     "finalDate": "2018-04-01T00:00:00Z",
     "description": "The goal of the Xbox Head Tracking project was to design an Xbox compatible head tracking device to track the user's head movements and move the in-game camera.\n\nThe circuit comprises an Arduino microcontroller that reads incoming data from an MPU-6050 (three-axis accelerometer) to track the user's head movements and then controls a digital potentiometer. The output of the digital potentiometer connects to wires added on a modified after-market Xbox controller. The added wires lead directly to the game controller's internal circuit board input for the analog thumbsticks.\n\nYou can find the build guide on Instructables.com.",
     "imageCount": 6,
-    "imageCaptions": [
-      "Gyroscopic Head Tracking Device",
-      "Modded after-market Xbox controller",
-      "Wires soldered to thumbstick input",
-      "Initial head tracking circuit.",
-      "Breadboard circuit mounted to a hat.",
-      "Output wire runs to the back of the hat and connects to the controller."
+    "mediaCaptions": [
+      "Project Demo",
+      "Testing Gyroscope and Accelerometer.",
+      "Using Digital Potentiometers to Control Thumbstick Input.",
+      "Prototype Mounted on a Hat.",
+      "Modded after-market Xbox controller.",
+      "Wires soldered inline to thumbstick input (maintaining original functionality).",
+      "Initial Head Tracking Circuit.",
+      "",
+      "Top View of the Circuit."
     ],
     "demoVideo": true,
     "videoCount": 3,
@@ -294,13 +312,15 @@
   },
   {
     "title": "Android Calculator",
+    "subtitle": "Calculator App for Android",
     "startDate": null,
     "finalDate": "2018-09-01T00:00:00Z",
     "description": "Android Calculator is a calculator app developed for a mobile programming class assignment at the University of Arkansas.\n\nThe app was designed in Photoshop using popular calculator apps for design reference, then programmed in Java using Android Studio.",
     "imageCount": 2,
-    "imageCaptions": [
-      "Calculator App for Android",
-      "Development and testing using an emulated Android device."
+    "mediaCaptions": [
+      "Calculator App Demo",
+      "",
+      "Development and Testing using an Emulated Android Device."
     ],
     "demoVideo": false,
     "videoCount": 1,
@@ -320,16 +340,17 @@
   },
   {
     "title": "Macro Pad",
+    "subtitle": "Programmable Macro Pad (HID)",
     "startDate": null,
     "finalDate": "2019-04-01T00:00:00Z",
     "description": "Macro Pad is a programmable interface used for executing custom macros (button combinations or input sequences). It allows for extended control and execution of complex commands with a single button press.\n\nThe device features an Arduino Micro, 16 Cherry MX switches, a rotatable and pressable knob, and a micro USB port for connecting.",
-    "imageCount": 3,
-    "imageCaptions": [
-      "Programmable Macro Pad (HID)",
-      "Front view",
-      "Desk setup with Macro Pad. Used for multi-device control and automating tasks."
-    ],
     "videoCount": 0,
+    "imageCount": 3,
+    "mediaCaptions": [
+      "Programmable Macro Pad (HID)",
+      "Macro Pad - Front view",
+      "Desk setup with Macro Pad."
+    ],
     "demoVideo": false,
     "externalLinks": [
       {
@@ -348,16 +369,17 @@
   },
   {
     "title": "LED Wall Decor",
+    "subtitle": "Smart LED Wall Decor",
     "startDate": null,
     "finalDate": "2019-02-01T00:00:00Z",
     "description": "The LED wall decor was made as an art piece for a friend. The signs' colors and patterns are controllable using the Blynk app.\n\nIt features an Arduino MKR1000 controlling eight RGB LEDs and connects to the internet using its onboard WiFi module. The LED cover plate is interchangeable using magnets. A USB micro cable is used for continuous power, but the device can also be powered using a 3.7V LiPo battery and charged with the MKR's onboard charging circuit. One of the LEDs was not working at the time the photos were taken.",
-    "imageCount": 3,
-    "imageCaptions": [
-      "Smart LED Wall Decor",
-      "Interchangeable cover plate using magnets. (Battery removed for direct power)",
-      "USB micro port for continuous power"
-    ],
     "videoCount": 0,
+    "imageCount": 3,
+    "mediaCaptions": [
+      "Smart LED Wall Decor",
+      "Interchangeable cover plate using magnets.",
+      "USB Micro Port for Continuous Power"
+    ],
     "demoVideo": false,
     "externalLinks": [
       {
@@ -378,12 +400,14 @@
   },
   {
     "title": "Handroid",
+    "subtitle": "Bionic Arm and Input Glove",
     "startDate": "2012-09-01T00:00:00Z",
     "finalDate": "2013-01-01T00:00:00Z",
     "description": "The Handroid project was a science fair submission for my junior year of high school. The idea was inspired by arms developed in medical fields, where mechanical arms can mimic finger movements.\n\nThe shape of the arm was made using foam, cardboard, pieces of wood, and fiberglass. Rubber tubes are used for the fingers with incisions made at the bending points. The fingertips are each connected to a fishing line, which routes internally through the finger and arm, then attaches to the horn of a servo motor. An Arduino microcontroller controls the servo motors and receives input from a modified glove with flex sensors attached to each finger. When the input glove is worn, the flex sensors record the amount of bending of each finger which the Arduino uses to determine the degree of rotation for each servo motor to replicate the users' finger movements.",
     "imageCount": 14,
-    "imageCaptions": [
-      "Bionic Arm and Input Glove",
+    "mediaCaptions": [
+      "Project Demo 3 Years Later (Glove melted in Belize's hot climate)",
+      "Preparing For the Science Fair Presentation",
       "Hand made with foam, rubber tubing, and some fishing line.",
       "Forearm skeleton made using foam and wood.",
       "Hand attached to the forearm",

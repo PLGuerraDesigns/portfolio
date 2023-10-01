@@ -7,7 +7,7 @@ class Project {
     required this.startDate,
     required this.finalDate,
     required this.imageCount,
-    required this.imageCaptions,
+    required this.localMediaCaptions,
     required this.videoCount,
     required this.externalLinks,
     required this.tags,
@@ -23,7 +23,8 @@ class Project {
           : DateTime.parse(json['startDate'].toString()),
       finalDate: DateTime.parse(json['finalDate'].toString()),
       imageCount: int.parse(json['imageCount'].toString()),
-      imageCaptions: (json['imageCaptions'] as List<dynamic>).map((dynamic e) {
+      localMediaCaptions:
+          (json['mediaCaptions'] as List<dynamic>).map((dynamic e) {
         return e.toString();
       }).toList(),
       videoCount: int.parse(json['videoCount'].toString()),
@@ -55,8 +56,8 @@ class Project {
   /// The number of images in the project.
   final int imageCount;
 
-  /// The captions for the images in the project.
-  final List<String> imageCaptions;
+  /// The captions for local media.
+  final List<String> localMediaCaptions;
 
   /// The number of videos in the project.
   final int videoCount;

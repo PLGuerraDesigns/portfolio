@@ -20,7 +20,7 @@ class DetailsScreen extends StatefulWidget {
     required this.finalDate,
     required this.tags,
     required this.imagePaths,
-    required this.imageCaptions,
+    required this.mediaCaptions,
     required this.videoPaths,
     required this.externalLinks,
     required this.youtubeVideoIds,
@@ -56,7 +56,7 @@ class DetailsScreen extends StatefulWidget {
   final List<String> imagePaths;
 
   /// The captions to display for each image in the gallery.
-  final List<String> imageCaptions;
+  final List<String> mediaCaptions;
 
   /// The paths to the videos to display in the gallery.
   final List<String> videoPaths;
@@ -244,7 +244,7 @@ class DetailsScreenState extends State<DetailsScreen> {
             youtubeVideoIds: widget.youtubeVideoIds,
             videoPaths: widget.videoPaths,
             imagePaths: widget.imagePaths,
-            imageCaptions: widget.imageCaptions,
+            mediaCaptions: widget.mediaCaptions,
             onMediaBrowser: appState.toggleMediaBrowserVisibility,
           ),
         ),
@@ -296,7 +296,7 @@ class DetailsScreenState extends State<DetailsScreen> {
                   youtubeVideoIds: widget.youtubeVideoIds,
                   videoPaths: widget.videoPaths,
                   imagePaths: widget.imagePaths,
-                  imageCaptions: widget.imageCaptions,
+                  mediaCaptions: widget.mediaCaptions,
                   onMediaBrowser: appState.toggleMediaBrowserVisibility,
                 ),
               ),
