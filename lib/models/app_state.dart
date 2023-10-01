@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../common/strings.dart';
 import 'professional_experience.dart';
@@ -58,9 +59,7 @@ class AppState extends ChangeNotifier {
       return;
     }
     _projects = <Project>[];
-    await DefaultAssetBundle.of(context)
-        .loadString(Strings.projectsJsonPath)
-        .then(
+    await rootBundle.loadString(Strings.projectsJsonPath).then(
       (String data) {
         final dynamic jsonResult = json.decode(data);
         for (final dynamic project in jsonResult as List<dynamic>) {
@@ -77,9 +76,7 @@ class AppState extends ChangeNotifier {
       return;
     }
     _professionalExperiences = <ProfessionalExperience>[];
-    await DefaultAssetBundle.of(context)
-        .loadString(Strings.professionalExperienceJsonPath)
-        .then(
+    await rootBundle.loadString(Strings.professionalExperienceJsonPath).then(
       (String data) {
         final dynamic jsonResult = json.decode(data);
         for (final dynamic professionalExperience

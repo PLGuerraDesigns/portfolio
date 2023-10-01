@@ -82,7 +82,8 @@ class MultiMediaPlayerState extends State<MultiMediaPlayer> {
         MediaItem(
           type: MediaType.image,
           path: widget.imagePaths[i],
-          caption: widget.imageCaptions[i],
+          caption:
+              i < widget.imageCaptions.length ? widget.imageCaptions[i] : '',
         ),
       );
     }
