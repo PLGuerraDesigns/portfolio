@@ -1,0 +1,31 @@
+name: Build and Release
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: subosito/flutter-action@v2
+        with:
+              channel: 'stable'
+      - run: flutter pub get
+      # - run: flutter test
+      - run: flutter build web --release --web-renderer=canvaskit --base-href=/portfolio/
+
+      - name: Commit and push to published-site branch
+        run: |
+         cd build/web
+          git init
+          git config --global user.email plguerra@outlook.com
+          git config --global user.name plguerradesigns
+          git status
+          git remote add origin https://${{secrets.commit_secret}}@github.com/plguerradesigns/portfolio.git
+          git checkout -b master
+          git add --all
+          git commit -m "Published Release"
+          git push origin published -f
