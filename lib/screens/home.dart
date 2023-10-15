@@ -231,26 +231,45 @@ class HomeScreen extends StatelessWidget {
 
   /// A menu that provides various action buttons.
   Widget _actionMenu(BuildContext context, {bool compact = false}) {
+    Widget icon(IconData iconData) {
+      return Icon(
+        iconData,
+        size: 46,
+        color: Theme.of(context).colorScheme.onSurface,
+      );
+    }
+
     return FrostedContainer(
       borderRadiusAmount: compact ? 0 : 24,
       child: GridView.custom(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: compact ? 2 : 5,
+          crossAxisCount: compact ? 2 : 4,
           childAspectRatio: 0.9,
           crossAxisSpacing: 8,
           mainAxisSpacing: 8,
         ),
         childrenDelegate: SliverChildListDelegate(
           <Widget>[
-            FrostedIconButton(
-              icon: Icons.quick_contacts_mail_rounded,
+            FrostedActionButton(
+              icon: icon(Icons.quick_contacts_mail_rounded),
               title: Strings.contact,
               onTap: () => RedirectHandler.openUrl(Strings.contactEmailUrl),
             ),
-            FrostedIconButton(
-              icon: Icons.monetization_on_rounded,
+            FrostedActionButton(
+              icon: icon(Icons.monetization_on_rounded),
               title: Strings.sponsor,
               onTap: () => RedirectHandler.openUrl(Strings.sponsorUrl),
+            ),
+            FrostedActionButton(
+              icon: Image.asset(
+                Strings.resumeBuilderIconPath,
+                color: Theme.of(context).colorScheme.onSurface,
+                height: 46,
+                width: 46,
+              ),
+              title: Strings.resumeBuilder,
+              onTap: () =>
+                  RedirectHandler.openUrl(Strings.flutterResumeBuilderUrl),
             ),
           ],
         ),
@@ -274,27 +293,28 @@ class HomeScreen extends StatelessWidget {
 
   /// Arranges the widgets in a row for landscape orientation.
   Widget _landscapeView(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: <Widget>[
+    return Column(
+      children: [
+        _header(context),
+        const SizedBox(height: 8),
         Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              _header(context),
-              const SizedBox(height: 8, width: 8),
-              Expanded(child: _timeline(context))
-            ],
-          ),
-        ),
-        const SizedBox(height: 8, width: 8),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Expanded(child: _professionalVsPersonalMenu(context)),
-              const SizedBox(height: 8, width: 8),
-              Expanded(child: _actionMenu(context)),
+              Expanded(child: _timeline(context)),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Expanded(
+                      child: _professionalVsPersonalMenu(context),
+                    ),
+                    const SizedBox(height: 8),
+                    Expanded(child: _actionMenu(context)),
+                  ],
+                ),
+              ),
             ],
           ),
         ),

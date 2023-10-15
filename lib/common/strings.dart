@@ -28,12 +28,16 @@ class Strings {
   static const String contactEmailUrl = 'mailto:plguerra@outlook.com';
   static const String sourceCodeUrl =
       'https://github.com/PLGuerraDesigns/portfolio';
+  static const String flutterResumeBuilderUrl =
+      'https://plguerradesigns.github.io/flutter_resume_builder/';
 
   // Assets
   static const String projectsJsonPath = 'assets/json/projects.json';
   static const String professionalExperienceJsonPath =
       'assets/json/professional_experience.json';
-  static const String socialAssetsBasePath = 'assets/images/social';
+  static const String socialAssetsBasePath = 'assets/images/icons';
+  static const String resumeBuilderIconPath =
+      '$socialAssetsBasePath/resume_builder.png';
   static const String profilePhotoPath = 'assets/images/home/profile_photo.jpg';
   static const String professionalExperiencePhotoPath =
       'assets/images/home/professional.png';
@@ -76,4 +80,9 @@ class Strings {
   static const String externalLinks = 'External Links';
   static const String present = 'Present';
   static const String tags = 'Tags';
+  static const String resumeBuilder = 'Resume Builder';
+  static const String uhOh = 'Uh oh!';
+  static const String looksLikeSomethingWentWrong =
+      'Looks like something went wrong.';
+  static const String goToTheHomePage = 'Go to the Home Page';
 }

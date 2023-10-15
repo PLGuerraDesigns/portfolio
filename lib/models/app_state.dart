@@ -94,4 +94,69 @@ class AppState extends ChangeNotifier {
     mediaBrowserVisible = !mediaBrowserVisible;
     notifyListeners();
   }
+
+  /// Whether the provided title from the path is a valid professional
+  /// experience.
+  bool isValidProfessionalExperience(String titleAsPath) {
+    for (final ProfessionalExperience professionalExperience
+        in _professionalExperiences) {
+      if (professionalExperience.titleAsPath == titleAsPath) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  /// Returns the previous professional experience title as a path.
+  String previousProfessionalExperience(String currentProfessionalExperience) {
+    final int index = _professionalExperiences.indexWhere(
+        (ProfessionalExperience element) =>
+            element.titleAsPath == currentProfessionalExperience);
+    if (index == 0) {
+      return _professionalExperiences[_professionalExperiences.length - 1]
+          .titleAsPath;
+    }
+    return _professionalExperiences[index - 1].titleAsPath;
+  }
+
+  /// Returns the next professional experience title as a path.
+  String nextProfessionalExperience(String currentProfessionalExperience) {
+    final int index = _professionalExperiences.indexWhere(
+        (ProfessionalExperience element) =>
+            element.titleAsPath == currentProfessionalExperience);
+    if (index == _professionalExperiences.length - 1) {
+      return _professionalExperiences[0].titleAsPath;
+    }
+    return _professionalExperiences[index + 1].titleAsPath;
+  }
+
+  /// Whether the provided title from the path is a valid project.
+  bool isValidProject(String titleAsPath) {
+    for (final Project project in _projects) {
+      if (project.titleAsPath == titleAsPath) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  /// Returns the previous project title as a path.
+  String previousProject(String currentProject) {
+    final int index = _projects
+        .indexWhere((Project element) => element.titleAsPath == currentProject);
+    if (index == 0) {
+      return _projects[_projects.length - 1].titleAsPath;
+    }
+    return _projects[index - 1].titleAsPath;
+  }
+
+  /// Returns the next project title as a path.
+  String nextProject(String currentProject) {
+    final int index = _projects
+        .indexWhere((Project element) => element.titleAsPath == currentProject);
+    if (index == _projects.length - 1) {
+      return _projects[0].titleAsPath;
+    }
+    return _projects[index + 1].titleAsPath;
+  }
 }

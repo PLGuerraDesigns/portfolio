@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../common/color_schemes.g.dart';
+import '../common/color_schemes.dart';
 import '../common/strings.dart';
 import '../models/app_state.dart';
 import '../services/redirect_handler.dart';
@@ -25,15 +25,14 @@ class DetailsScreen extends StatefulWidget {
     required this.videoPaths,
     required this.externalLinks,
     required this.youtubeVideoIds,
+    required this.webImagePaths,
+    required this.onPreviousPressed,
+    required this.onNextPressed,
     this.logoPath,
-    this.actions,
   });
 
   /// The title of the app bar.
   final String appBarTitle;
-
-  /// The actions to display in the app bar.
-  final List<Widget>? actions;
 
   /// The path to the logo image to display.
   final String? logoPath;
@@ -56,6 +55,9 @@ class DetailsScreen extends StatefulWidget {
   /// The paths to the images to display in the gallery.
   final List<String> imagePaths;
 
+  /// The paths to the web images to display in the gallery.
+  final List<String> webImagePaths;
+
   /// The captions to display for each image in the gallery.
   final List<String> mediaCaptions;
 
@@ -70,6 +72,12 @@ class DetailsScreen extends StatefulWidget {
 
   /// The external links to display.
   final List<Map<String, String>> externalLinks;
+
+  /// The callback to call when the app bar's previous button is pressed.
+  final Function()? onPreviousPressed;
+
+  /// The callback to call when the app bar's next button is pressed.
+  final Function()? onNextPressed;
 
   @override
   DetailsScreenState createState() => DetailsScreenState();
@@ -168,6 +176,7 @@ class DetailsScreenState extends State<DetailsScreen> {
         youtubeVideoIds: widget.youtubeVideoIds,
         imagePaths: widget.imagePaths,
         videoPaths: widget.videoPaths,
+        webImagePaths: widget.webImagePaths,
         onTapped: (int index) {
           setState(() {
             _currentMediaIndex = index;
@@ -245,11 +254,11 @@ class DetailsScreenState extends State<DetailsScreen> {
         AspectRatio(
           aspectRatio: 16 / 11,
           child: MultiMediaPlayer(
-            key: Key('multiMediaPlayer$_currentMediaIndex'),
             currentIndex: _currentMediaIndex,
             youtubeVideoIds: widget.youtubeVideoIds,
             videoPaths: widget.videoPaths,
             imagePaths: widget.imagePaths,
+            webImagePaths: widget.webImagePaths,
             mediaCaptions: widget.mediaCaptions,
             onMediaBrowser: appState.toggleMediaBrowserVisibility,
           ),
@@ -297,11 +306,11 @@ class DetailsScreenState extends State<DetailsScreen> {
             children: <Widget>[
               Expanded(
                 child: MultiMediaPlayer(
-                  key: Key('multiMediaPlayer$_currentMediaIndex'),
                   currentIndex: _currentMediaIndex,
                   youtubeVideoIds: widget.youtubeVideoIds,
                   videoPaths: widget.videoPaths,
                   imagePaths: widget.imagePaths,
+                  webImagePaths: widget.webImagePaths,
                   mediaCaptions: widget.mediaCaptions,
                   onMediaBrowser: appState.toggleMediaBrowserVisibility,
                 ),
@@ -351,6 +360,62 @@ class DetailsScreenState extends State<DetailsScreen> {
     );
   }
 
+  /// Actions to navigate to the previous and next details screens.
+  List<Widget> _appBarActions() {
+    return <Widget>[
+      OutlinedButton(
+        onPressed: () {
+          _currentMediaIndex = 0;
+          widget.onPreviousPressed?.call();
+        },
+        style: OutlinedButton.styleFrom(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8.0),
+          ),
+          foregroundColor: Theme.of(context).colorScheme.onSurface,
+        ),
+        child: const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Icon(
+              Icons.chevron_left,
+            ),
+            Text(
+              'PREV.',
+            ),
+            SizedBox(width: 8.0),
+          ],
+        ),
+      ),
+      const SizedBox(width: 8.0),
+      OutlinedButton(
+        onPressed: () {
+          _currentMediaIndex = 0;
+          widget.onNextPressed?.call();
+        },
+        style: OutlinedButton.styleFrom(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8.0),
+          ),
+          foregroundColor: Theme.of(context).colorScheme.onSurface,
+        ),
+        child: const Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            SizedBox(width: 8.0),
+            Text(
+              'NEXT',
+            ),
+            Icon(
+              Icons.chevron_right,
+            ),
+          ],
+        ),
+      ),
+      const SizedBox(width: 20.0),
+    ];
+  }
+
   @override
   Widget build(BuildContext context) {
     return Consumer<AppState>(
@@ -361,7 +426,7 @@ class DetailsScreenState extends State<DetailsScreen> {
           appBar: CustomAppBars.genericAppBar(
             context: context,
             title: widget.appBarTitle,
-            actions: widget.actions,
+            actions: _appBarActions(),
           ),
           body: FrostedContainer(
             padding: EdgeInsets.zero,
@@ -370,6 +435,7 @@ class DetailsScreenState extends State<DetailsScreen> {
               thumbVisibility: true,
               controller: _scrollController,
               child: SingleChildScrollView(
+                key: UniqueKey(),
                 controller: _scrollController,
                 padding: EdgeInsets.only(
                     right: orientation == Orientation.portrait ? 8.0 : 12.0),

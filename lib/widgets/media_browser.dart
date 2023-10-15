@@ -10,6 +10,7 @@ class MediaBrowser extends StatelessWidget {
   MediaBrowser({
     super.key,
     required this.imagePaths,
+    required this.webImagePaths,
     required this.videoPaths,
     required this.onTapped,
     required this.youtubeVideoIds,
@@ -20,6 +21,9 @@ class MediaBrowser extends StatelessWidget {
 
   /// A list of local image paths.
   final List<String> imagePaths;
+
+  /// A list of web image paths.
+  final List<String> webImagePaths;
 
   /// A list of local video paths.
   final List<String> videoPaths;
@@ -58,28 +62,31 @@ class MediaBrowser extends StatelessWidget {
                 }
                 onTapped!(index);
               },
-              child: Stack(
-                fit: StackFit.expand,
-                alignment: Alignment.center,
-                children: <Widget>[
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(4.0),
-                    child: Image.network(
-                      'https://i3.ytimg.com/vi/${youtubeVideoIds[index]}/sddefault.jpg',
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  const ColoredBox(
-                    color: Colors.transparent,
-                    child: Center(
-                      child: Icon(
-                        Icons.play_circle_outline,
-                        color: Colors.white70,
-                        size: 48.0,
+              child: ColoredBox(
+                color: Colors.black12,
+                child: Stack(
+                  fit: StackFit.expand,
+                  alignment: Alignment.center,
+                  children: <Widget>[
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(4.0),
+                      child: Image.network(
+                        'https://i3.ytimg.com/vi/${youtubeVideoIds[index]}/sddefault.jpg',
+                        fit: BoxFit.cover,
                       ),
                     ),
-                  ),
-                ],
+                    const ColoredBox(
+                      color: Colors.transparent,
+                      child: Center(
+                        child: Icon(
+                          Icons.play_circle_outline,
+                          color: Colors.white70,
+                          size: 48.0,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             );
           },
@@ -124,32 +131,35 @@ class MediaBrowser extends StatelessWidget {
               },
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(4.0),
-                child: Stack(
-                  children: <Widget>[
-                    Chewie(
-                      controller: ChewieController(
-                        videoPlayerController: VideoPlayerController.asset(
-                          videoPaths[index],
-                        ),
-                        showControls: false,
-                        allowFullScreen: false,
-                        allowMuting: false,
-                        placeholder: Container(
-                          color: Colors.black,
-                        ),
-                      ),
-                    ),
-                    const ColoredBox(
-                      color: Colors.transparent,
-                      child: Center(
-                        child: Icon(
-                          Icons.play_circle_outline,
-                          color: Colors.white70,
-                          size: 48.0,
+                child: ColoredBox(
+                  color: Colors.black12,
+                  child: Stack(
+                    children: <Widget>[
+                      Chewie(
+                        controller: ChewieController(
+                          videoPlayerController: VideoPlayerController.asset(
+                            videoPaths[index],
+                          ),
+                          showControls: false,
+                          allowFullScreen: false,
+                          allowMuting: false,
+                          placeholder: Container(
+                            color: Colors.black,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                      const ColoredBox(
+                        color: Colors.transparent,
+                        child: Center(
+                          child: Icon(
+                            Icons.play_circle_outline,
+                            color: Colors.white70,
+                            size: 48.0,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             );
@@ -177,7 +187,7 @@ class MediaBrowser extends StatelessWidget {
         const SizedBox(height: 8.0),
         GridView.builder(
           physics: const NeverScrollableScrollPhysics(),
-          itemCount: imagePaths.length,
+          itemCount: imagePaths.length + webImagePaths.length,
           shrinkWrap: true,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 3,
@@ -194,9 +204,40 @@ class MediaBrowser extends StatelessWidget {
               },
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(4.0),
-                child: Image.asset(
-                  imagePaths[index],
-                  fit: BoxFit.cover,
+                child: ColoredBox(
+                  color: Colors.black12,
+                  child: index < imagePaths.length
+                      ? Image.asset(
+                          imagePaths[index],
+                          fit: BoxFit.cover,
+                        )
+                      : Image.network(
+                          webImagePaths[index - imagePaths.length],
+                          loadingBuilder: (BuildContext context, Widget child,
+                              ImageChunkEvent? loadingProgress) {
+                            if (loadingProgress == null) {
+                              return child;
+                            }
+                            return const Center(
+                              child: CircularProgressIndicator(
+                                valueColor: AlwaysStoppedAnimation<Color>(
+                                  Colors.white70,
+                                ),
+                              ),
+                            );
+                          },
+                          errorBuilder: (BuildContext context, Object exception,
+                              StackTrace? stackTrace) {
+                            return const Center(
+                              child: Icon(
+                                Icons.error_outline,
+                                color: Colors.white70,
+                                size: 48.0,
+                              ),
+                            );
+                          },
+                          fit: BoxFit.cover,
+                        ),
                 ),
               ),
             );
@@ -225,7 +266,8 @@ class MediaBrowser extends StatelessWidget {
           children: <Widget>[
             if (youtubeVideoIds.isNotEmpty) _youtubeGallery(context),
             if (videoPaths.isNotEmpty) _videoGallery(context),
-            if (imagePaths.isNotEmpty) _imageGallery(context),
+            if (imagePaths.isNotEmpty || webImagePaths.isNotEmpty)
+              _imageGallery(context),
             const SizedBox(height: 16.0),
           ],
         ),

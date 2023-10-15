@@ -1,5 +1,101 @@
 [
   {
+    "title": "Flutter Resume Builder",
+    "subtitle": "Resume Builder Progressive Web App",
+    "startDate": "2022-06-03T00:00:00Z",
+    "finalDate": "2023-10-13T00:00:00Z",
+    "description": "The Flutter Resume Builder, created by Pablo L. Guerra, is a user-friendly, open-source progressive web application designed to simplify creating professional resumes. This innovative tool enables users to effortlessly build, edit, and customize their resumes, ensuring they are polished and impactful. With the ability to create, edit, download in both PDF and JSON formats, and import existing resumes, the Flutter Resume Builder offers a comprehensive solution for individuals seeking to craft and maintain their professional documents with ease. Whether you are a job seeker looking to streamline your resume-building process or a developer interested in the project, this platform provides an intuitive and accessible tool for crafting compelling resumes.",
+    "videoCount": 0,
+    "imageCount": 1,
+    "mediaCaptions": [
+      "",
+      "Overview",
+      "Edit Contact Information",
+      "Edit Experiences",
+      "Toggle Visibility",
+      "Download Resume",
+      "Import Resume"
+    ],
+    "externalLinks": [
+      {
+        "title": "Build Your Resume",
+        "url": "https://plguerradesigns.github.io/flutter_resume_builder/"
+      },
+      {
+        "title": "Source Code",
+        "url": "https://github.com/PLGuerraDesigns/flutter_resume_builder/tree/main"
+      }
+    ],
+    "tags": [
+      "Flutter",
+      "Syncfusion",
+      "Dart",
+      "Progressive Web App",
+      "GitHub Pages",
+      "JSON",
+      "PDF",
+      "Open Source"
+    ],
+    "webImages": [
+      "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/overview.gif",
+      "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/edit_contact.gif",
+      "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/edit_experiences.gif",
+      "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/visibility.gif",
+      "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/download.gif",
+      "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/import.gif"
+    ]
+  },
+  {
+    "title": "Blokus",
+    "subtitle": "Blokus Multiplayer Web Game",
+    "startDate": "2023-04-15T00:00:00Z",
+    "finalDate": "2023-05-13T00:00:00Z",
+    "description": "Introducing a real-time multiplayer Blokus game project by Charles Tucker and Pablo L. Guerra, designed using Flutter and Supabase. It offers players the opportunity to engage in multiplayer gaming action with a prototype that utilizes Supabase as the backend and Flame as the game engine. This project was developed as the final project for GMU's ISA 681 class and is not a completed product. Nevertheless, it's entirely usable and serves as a promising foundation for a future real-time multiplayer gaming experience. Explore and play the game to get a firsthand look at its potential. While this project is not currently under active development, it stands as a proof of concept and learning resource, welcoming other developers to build upon its foundation.",
+    "videoCount": 0,
+    "imageCount": 1,
+    "mediaCaptions": [
+      "",
+      "Splash Screen",
+      "Login Screen",
+      "Lobby",
+      "Lobby Room",
+      "Game Screen",
+      "Playing a Piece",
+      "Game Play",
+      "Game Over"
+    ],
+    "externalLinks": [
+      {
+        "title": "Play Blokus",
+        "url": "https://plguerradesigns.github.io/isa681_blokus/"
+      },
+      {
+        "title": "Source Code",
+        "url": "https://github.com/PLGuerraDesigns/isa681_blokus/tree/main"
+      }
+    ],
+    "tags": [
+      "Flutter",
+      "Flame",
+      "Supabase",
+      "Dart",
+      "Progressive Web App",
+      "GitHub Pages",
+      "GMU ISA 681",
+      "Open Source"
+    ],
+    "webImages": [
+      "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/splash_screen.png",
+      "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/login_screen.png",
+      "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/lobby.png",
+      "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/lobby_room.png",
+      "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/game.png",
+      "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/play_piece.gif",
+      "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/game_play.gif",
+      "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/game_over.gif"
+    ]
+  },
+  {
     "title": "AMG GT3 Wheel",
     "subtitle": "AMG GT3 Thrustmaster Wheel",
     "startDate": null,
@@ -8,7 +104,7 @@
     "videoCount": 2,
     "imageCount": 15,
     "mediaCaptions": [
-      "Short video of the wheel in action.",
+      "Wheel in Action on a Thrustmaster Racing Rig",
       "Full view of the wheel.",
       "AMG GT3 Thrustmaster Wheel on Display Stand",
       "Initial Photoshop Concept.",
@@ -26,7 +122,6 @@
       "PCB Assembled and Installed.",
       "My Sim Racing Rig (at the time) with the AMG GT3 Wheel."
     ],
-    "demoVideo": true,
     "externalLinks": [
       {
         "title": "Get the AMG GT3 Wheel Kit on Thingiverse",
@@ -53,7 +148,8 @@
       "Thrustmaster",
       "Mercedes Benz AMG GT3",
       "Published"
-    ]
+    ],
+    "webImages": []
   },
   {
     "title": "Apple Charging Station",
@@ -64,7 +160,7 @@
     "videoCount": 0,
     "imageCount": 8,
     "mediaCaptions": [
-      "3-in-1 Charging Station",
+      "",
       "Original 2016 Design Concept in SketchUp.",
       "Original 2016 Design Concept in SketchUp.",
       "Redesigned in 2019 and 3D Printed.",
@@ -73,7 +169,6 @@
       "After Stain Application.",
       "Charging Station (minus apple watch puck)"
     ],
-    "demoVideo": false,
     "externalLinks": [],
     "tags": [
       "Google SketchUp",
@@ -86,7 +181,8 @@
       "Apple AirPods",
       "Apple iPhone",
       "Ender 3"
-    ]
+    ],
+    "webImages": []
   },
   {
     "title": "F1 Sim Engineer",
@@ -100,7 +196,6 @@
       "F1 Sim Engineer Demo",
       "Companion App for Codemaster's F1 2019 Game"
     ],
-    "demoVideo": true,
     "externalLinks": [
       {
         "title": "Project report",
@@ -120,17 +215,18 @@
       "F1 2019",
       "Xbox One",
       "Sim Racing"
-    ]
+    ],
+    "webImages": []
   },
   {
     "title": "Switch Speaker",
-    "subtitle": "A Nintendo Switch Speaker Attachment",
+    "subtitle": "Nintendo Switch Speaker Attachment",
     "startDate": null,
     "finalDate": "2019-02-01T00:00:00Z",
     "description": "The goal of the Nintendo Switch speaker project was to design and build a speaker attachment that would be louder than the Switch's built-in speakers.\n\nThe attachment features a 3.5mm audio plug, dual mini oval speakers, a rechargeable LiPo battery, a micro USB charging port, sliding power switch, power LED, and charging status LED.",
     "imageCount": 7,
     "mediaCaptions": [
-      "Nintendo Switch Speaker Attachment",
+      "",
       "CAD Design vs. Final Product",
       "CAD Design vs. Final Product",
       "Casing Prototypes",
@@ -139,7 +235,6 @@
       "Speaker connected to Nintendo Switch (Right Side View)"
     ],
     "videoCount": 0,
-    "demoVideo": false,
     "externalLinks": [
       {
         "title": "Mini Oval Speaker",
@@ -170,7 +265,8 @@
       "Ender 3",
       "Nintendo Switch",
       "Adafruit Components"
-    ]
+    ],
+    "webImages": []
   },
   {
     "title": "Project LeMans",
@@ -209,7 +305,6 @@
       "Finished pedal base",
       "Rear side view of the rig"
     ],
-    "demoVideo": true,
     "videoCount": 1,
     "externalLinks": [],
     "tags": [
@@ -219,7 +314,8 @@
       "Teensy",
       "C++ Programming",
       "Sim Racing"
-    ]
+    ],
+    "webImages": []
   },
   {
     "title": "SafeDrive MK1",
@@ -244,7 +340,6 @@
       "Warning Labels Added",
       ""
     ],
-    "demoVideo": true,
     "videoCount": 4,
     "externalLinks": [
       {
@@ -271,7 +366,8 @@
       "Ender 3",
       "Adafruit Components",
       "SparkFun Components"
-    ]
+    ],
+    "webImages": []
   },
   {
     "title": "Xbox Head Tracking",
@@ -291,7 +387,6 @@
       "",
       "Top View of the Circuit."
     ],
-    "demoVideo": true,
     "videoCount": 3,
     "externalLinks": [
       {
@@ -308,7 +403,8 @@
       "Arduino",
       "Sim Racing",
       "Xbox"
-    ]
+    ],
+    "webImages": []
   },
   {
     "title": "Android Calculator",
@@ -322,7 +418,6 @@
       "",
       "Development and Testing using an Emulated Android Device."
     ],
-    "demoVideo": false,
     "videoCount": 1,
     "externalLinks": [
       {
@@ -336,7 +431,8 @@
       "Mobile Programming UARK",
       "Java Programming",
       "Android"
-    ]
+    ],
+    "webImages": []
   },
   {
     "title": "Macro Pad",
@@ -351,7 +447,6 @@
       "Macro Pad - Front view",
       "Desk setup with Macro Pad."
     ],
-    "demoVideo": false,
     "externalLinks": [
       {
         "title": "Macro Scripting Software (Computer Side)",
@@ -365,7 +460,8 @@
       "C++ Programming",
       "Arduino",
       "Ender 3"
-    ]
+    ],
+    "webImages": []
   },
   {
     "title": "LED Wall Decor",
@@ -380,7 +476,6 @@
       "Interchangeable cover plate using magnets.",
       "USB Micro Port for Continuous Power"
     ],
-    "demoVideo": false,
     "externalLinks": [
       {
         "title": "Blynk App",
@@ -396,7 +491,8 @@
       "C++ Programming",
       "Arduino",
       "Ender 3"
-    ]
+    ],
+    "webImages": []
   },
   {
     "title": "Handroid",
@@ -406,7 +502,7 @@
     "description": "The Handroid project was a science fair submission for my junior year of high school. The idea was inspired by arms developed in medical fields, where mechanical arms can mimic finger movements.\n\nThe shape of the arm was made using foam, cardboard, pieces of wood, and fiberglass. Rubber tubes are used for the fingers with incisions made at the bending points. The fingertips are each connected to a fishing line, which routes internally through the finger and arm, then attaches to the horn of a servo motor. An Arduino microcontroller controls the servo motors and receives input from a modified glove with flex sensors attached to each finger. When the input glove is worn, the flex sensors record the amount of bending of each finger which the Arduino uses to determine the degree of rotation for each servo motor to replicate the users' finger movements.",
     "imageCount": 14,
     "mediaCaptions": [
-      "Project Demo 3 Years Later (Glove melted in Belize's hot climate)",
+      "3 Years Later... Glove melted in Belize's hot climate.",
       "Preparing For the Science Fair Presentation",
       "Hand made with foam, rubber tubing, and some fishing line.",
       "Forearm skeleton made using foam and wood.",
@@ -423,7 +519,6 @@
       "Glove melted three years later"
     ],
     "videoCount": 1,
-    "demoVideo": false,
     "externalLinks": [],
     "tags": [
       "Highschool Science Fair",
@@ -433,6 +528,7 @@
       "Flex Sensors",
       "Arduino",
       "C++ Programming"
-    ]
+    ],
+    "webImages": []
   }
 ]

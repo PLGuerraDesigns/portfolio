@@ -70,6 +70,8 @@ class _ProjectThumbnailState extends State<ProjectThumbnail> {
               style: widget.compact
                   ? Theme.of(context).textTheme.bodyMedium
                   : Theme.of(context).textTheme.titleMedium,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
             ),
             Text(
               widget.subtitle,

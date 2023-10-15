@@ -3,6 +3,8 @@ import 'package:go_router/go_router.dart';
 
 import '../common/strings.dart';
 import '../models/app_state.dart';
+import '../models/professional_experience.dart';
+import '../models/projects.dart';
 import '../screens/details.dart';
 import '../screens/home.dart';
 import '../screens/loading.dart';
@@ -52,57 +54,41 @@ class AppRouter {
                   const ProfessionalScreen(),
               routes: <GoRoute>[
                 GoRoute(
-                  path: '${Strings.detailsSubRoute}/:title',
-                  builder: (BuildContext context, GoRouterState state) =>
-                      DetailsScreen(
-                    appBarTitle: Strings.professionalExperiences,
-                    subtitle: appState
-                        .getProfessionalExperienceByTitlePath(
-                            state.pathParameters['title']!)
-                        .role,
-                    logoPath: appState
-                        .getProfessionalExperienceByTitlePath(
-                            state.pathParameters['title']!)
-                        .logoPath,
-                    title: appState
-                        .getProfessionalExperienceByTitlePath(
-                            state.pathParameters['title']!)
-                        .company,
-                    description: appState
-                        .getProfessionalExperienceByTitlePath(
-                            state.pathParameters['title']!)
-                        .description,
-                    imagePaths: appState
-                        .getProfessionalExperienceByTitlePath(
-                            state.pathParameters['title']!)
-                        .imagePaths,
-                    videoPaths: appState
-                        .getProfessionalExperienceByTitlePath(
-                            state.pathParameters['title']!)
-                        .videoPaths,
-                    youtubeVideoIds: appState
-                        .getProfessionalExperienceByTitlePath(
-                            state.pathParameters['title']!)
-                        .youtubeVideoIds,
-                    mediaCaptions: appState
-                        .getProfessionalExperienceByTitlePath(
-                            state.pathParameters['title']!)
-                        .localMediaCaptions,
-                    externalLinks: appState
-                        .getProfessionalExperienceByTitlePath(
-                            state.pathParameters['title']!)
-                        .externalLinks,
-                    startDate: appState
-                        .getProfessionalExperienceByTitlePath(
-                            state.pathParameters['title']!)
-                        .startDateString,
-                    finalDate: appState
-                        .getProfessionalExperienceByTitlePath(
-                            state.pathParameters['title']!)
-                        .finalDateString,
-                    tags: const <String>[],
-                  ),
-                ),
+                    path: '${Strings.detailsSubRoute}/:title',
+                    builder: (BuildContext context, GoRouterState state) {
+                      final ProfessionalExperience professionalExperience =
+                          appState.getProfessionalExperienceByTitlePath(
+                              state.pathParameters['title']!);
+                      return DetailsScreen(
+                        appBarTitle: Strings.professionalExperiences,
+                        subtitle: professionalExperience.role,
+                        logoPath: professionalExperience.logoPath,
+                        title: professionalExperience.company,
+                        description: professionalExperience.description,
+                        imagePaths: professionalExperience.imagePaths,
+                        videoPaths: professionalExperience.videoPaths,
+                        youtubeVideoIds: professionalExperience.youtubeVideoIds,
+                        mediaCaptions:
+                            professionalExperience.localMediaCaptions,
+                        externalLinks: professionalExperience.externalLinks,
+                        startDate: professionalExperience.startDateString,
+                        finalDate: professionalExperience.finalDateString,
+                        webImagePaths: const <String>[],
+                        tags: const <String>[],
+                        onPreviousPressed: () {
+                          context.go(
+                            '${Strings.homeRoute}/${Strings.professionalSubRoute}/${Strings.detailsSubRoute}/'
+                            '${appState.previousProfessionalExperience(professionalExperience.titleAsPath)}',
+                          );
+                        },
+                        onNextPressed: () {
+                          context.go(
+                            '${Strings.homeRoute}/${Strings.professionalSubRoute}/${Strings.detailsSubRoute}/'
+                            '${appState.nextProfessionalExperience(professionalExperience.titleAsPath)}',
+                          );
+                        },
+                      );
+                    }),
               ],
             ),
             GoRoute(
@@ -112,39 +98,37 @@ class AppRouter {
               routes: <GoRoute>[
                 GoRoute(
                   path: '${Strings.detailsSubRoute}/:title',
-                  builder: (BuildContext context, GoRouterState state) =>
-                      DetailsScreen(
-                    subtitle: '',
-                    appBarTitle: Strings.personalProjects,
-                    title: appState
-                        .getProjectByTitlePath(state.pathParameters['title']!)
-                        .title,
-                    description: appState
-                        .getProjectByTitlePath(state.pathParameters['title']!)
-                        .description,
-                    imagePaths: appState
-                        .getProjectByTitlePath(state.pathParameters['title']!)
-                        .imagePaths,
-                    mediaCaptions: appState
-                        .getProjectByTitlePath(state.pathParameters['title']!)
-                        .localMediaCaptions,
-                    videoPaths: appState
-                        .getProjectByTitlePath(state.pathParameters['title']!)
-                        .videoPaths,
-                    startDate: appState
-                        .getProjectByTitlePath(state.pathParameters['title']!)
-                        .startDateString,
-                    finalDate: appState
-                        .getProjectByTitlePath(state.pathParameters['title']!)
-                        .finalDateString,
-                    tags: appState
-                        .getProjectByTitlePath(state.pathParameters['title']!)
-                        .tags,
-                    youtubeVideoIds: const <String>[],
-                    externalLinks: appState
-                        .getProjectByTitlePath(state.pathParameters['title']!)
-                        .externalLinks,
-                  ),
+                  builder: (BuildContext context, GoRouterState state) {
+                    final Project project = appState
+                        .getProjectByTitlePath(state.pathParameters['title']!);
+                    return DetailsScreen(
+                      appBarTitle: Strings.personalProjects,
+                      title: project.title,
+                      subtitle: project.subtitle,
+                      description: project.description,
+                      imagePaths: project.imagePaths,
+                      videoPaths: project.videoPaths,
+                      youtubeVideoIds: const <String>[],
+                      mediaCaptions: project.localMediaCaptions,
+                      externalLinks: project.externalLinks,
+                      startDate: project.startDateString,
+                      finalDate: project.finalDateString,
+                      webImagePaths: project.webImagePaths,
+                      tags: project.tags,
+                      onPreviousPressed: () {
+                        context.go(
+                          '${Strings.homeRoute}/${Strings.personalSubRoute}/${Strings.detailsSubRoute}/'
+                          '${appState.previousProject(project.titleAsPath)}',
+                        );
+                      },
+                      onNextPressed: () {
+                        context.go(
+                          '${Strings.homeRoute}/${Strings.personalSubRoute}/${Strings.detailsSubRoute}/'
+                          '${appState.nextProject(project.titleAsPath)}',
+                        );
+                      },
+                    );
+                  },
                 ),
               ],
             ),
@@ -153,26 +137,79 @@ class AppRouter {
       ],
       redirect: (BuildContext context, GoRouterState state) {
         final String location = state.uri.toString();
+        final String goto = location.split('/').last;
+
+        appState.currentRoute = location;
 
         final bool isAtProfessionalDetails =
             location.contains(Strings.professionalSubRoute) &&
                 location.contains(Strings.detailsSubRoute);
+        // Redirect to loading screen if the user is trying to access the
+        // professional experience details page and the professional experiences
+        // haven't been loaded yet.
         if (isAtProfessionalDetails &&
             !appState.professionalExperiencesLoaded) {
-          final String goto = location.split('/').last;
           return '${Strings.loadingRoute}/${Strings.professionalSubRoute}/$goto';
+        }
+
+        // Redirect to professional experience menu if the professional
+        // experience route doesn't exist.
+        if (isAtProfessionalDetails &&
+            appState.professionalExperiencesLoaded &&
+            !appState.isValidProfessionalExperience(goto)) {
+          return '${Strings.homeRoute}/${Strings.professionalSubRoute}';
         }
 
         final bool isAtPersonalDetails =
             location.contains(Strings.personalSubRoute) &&
                 location.contains(Strings.detailsSubRoute);
+        // Redirect to loading screen if the user is trying to access the
+        // personal project details page and the projects haven't been
+        // loaded yet.
         if (isAtPersonalDetails && !appState.projectsLoaded) {
-          final String goto = location.split('/').last;
           return '${Strings.loadingRoute}/${Strings.personalSubRoute}/$goto';
         }
 
-        appState.currentRoute = location;
+        // Redirect to personal projects menu if the personal projects route
+        // doesn't exist.
+        // print(goto);
+        if (location.contains(Strings.personalSubRoute) &&
+            !appState.isValidProject(goto) &&
+            appState.projectsLoaded) {
+          return '${Strings.homeRoute}/${Strings.personalSubRoute}';
+        }
+
         return null;
+      },
+      errorBuilder: (BuildContext context, GoRouterState state) {
+        return Scaffold(
+          body: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  Strings.uhOh,
+                  style: Theme.of(context).textTheme.titleLarge,
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  Strings.looksLikeSomethingWentWrong,
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+                const SizedBox(height: 16),
+                OutlinedButton(
+                  onPressed: () {
+                    context.go(Strings.homeRoute);
+                  },
+                  child: Text(
+                    Strings.goToTheHomePage.toUpperCase(),
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
+                )
+              ],
+            ),
+          ),
+        );
       },
     );
   }

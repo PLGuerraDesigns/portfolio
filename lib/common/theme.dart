@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'color_schemes.g.dart';
+import 'color_schemes.dart';
 
 /// Text theme for the application.
 class ThemeNotifier extends ChangeNotifier {
