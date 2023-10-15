@@ -1,4 +1,5 @@
 import 'package:intl/intl.dart';
+import "package:unorm_dart/unorm_dart.dart" as unorm;
 
 class ProfessionalExperience {
   const ProfessionalExperience({
@@ -53,9 +54,9 @@ class ProfessionalExperience {
   /// The name of the folder.
   final String folderName;
 
-  /// The name of the company and role as a path.
-  String get titleAsPath =>
-      '${company.toLowerCase().replaceAll(' ', '_')}_${role.toLowerCase().replaceAll(' ', '_')}';
+  /// The name of the company and role as a path
+  String get titleAsPath => unorm.nfkc(
+      '${company.toLowerCase().replaceAll(' ', '_')}_${role.toLowerCase().replaceAll(' ', '_')}');
 
   /// The role in the company.
   final String role;

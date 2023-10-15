@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../common/color_schemes.g.dart';
+import '../common/color_schemes.dart';
 import '../services/redirect_handler.dart';
 
 /// A timeline entry widget containing an icon, title, description, and time

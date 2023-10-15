@@ -11,6 +11,7 @@ class Project {
     required this.localMediaCaptions,
     required this.videoCount,
     required this.externalLinks,
+    required this.webImagePaths,
     required this.tags,
   });
 
@@ -25,6 +26,11 @@ class Project {
           : DateTime.parse(json['startDate'].toString()),
       finalDate: DateTime.parse(json['finalDate'].toString()),
       imageCount: int.parse(json['imageCount'].toString()),
+      webImagePaths: json['webImages'] == null
+          ? <String>[]
+          : (json['webImages'] as List<dynamic>).map((dynamic e) {
+              return e.toString();
+            }).toList(),
       localMediaCaptions:
           (json['mediaCaptions'] as List<dynamic>).map((dynamic e) {
         return e.toString();
@@ -72,6 +78,9 @@ class Project {
 
   /// Relevant tags.
   final List<String> tags;
+
+  /// The paths for the web images in the project.
+  List<String> webImagePaths = <String>[];
 
   /// The total number of media items in the project.
   int get totalMediaCount => imageCount + videoCount;

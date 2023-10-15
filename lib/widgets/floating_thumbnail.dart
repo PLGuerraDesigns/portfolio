@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../common/color_schemes.g.dart';
+import '../common/color_schemes.dart';
 import 'frosted_container.dart';
 import 'hover_scale_handler.dart';
 

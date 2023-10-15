@@ -5,8 +5,8 @@ import 'hover_scale_handler.dart';
 
 /// A button that displays an icon and a title on a frosted glass background.
 /// The button can be tapped to perform an action.
-class FrostedIconButton extends StatelessWidget {
-  const FrostedIconButton({
+class FrostedActionButton extends StatelessWidget {
+  const FrostedActionButton({
     super.key,
     required this.icon,
     required this.title,
@@ -14,7 +14,7 @@ class FrostedIconButton extends StatelessWidget {
   });
 
   /// The icon to display in the button.
-  final IconData icon;
+  final Widget icon;
 
   /// The title to display in the button.
   final String title;
@@ -33,11 +33,7 @@ class FrostedIconButton extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const SizedBox(height: 4),
-            Icon(
-              icon,
-              size: 46,
-              color: Theme.of(context).colorScheme.onSurface,
-            ),
+            icon,
             const SizedBox(height: 8),
             Text(
               title.toUpperCase(),

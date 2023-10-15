@@ -8,13 +8,6 @@ import 'theme_mode_button.dart';
 class CustomAppBars {
   CustomAppBars._();
 
-  /// The default actions to display in all app bars.
-  static List<Widget> _defaultActions(BuildContext context) {
-    return <Widget>[
-      const ThemeModeButton(),
-    ];
-  }
-
   /// The app bar to display on the home page.
   static PreferredSizeWidget homeAppBar({
     required BuildContext context,
@@ -49,7 +42,7 @@ class CustomAppBars {
             icon: const Icon(Icons.code),
             tooltip: Strings.viewSourceCode,
           ),
-        ..._defaultActions(context)
+        const ThemeModeButton(),
       ],
     );
   }
@@ -63,7 +56,7 @@ class CustomAppBars {
     return AppBar(
       title: actions == null ? Text(title) : null,
       centerTitle: false,
-      actions: <Widget>[...?actions, ..._defaultActions(context)],
+      actions: actions,
     );
   }
 }

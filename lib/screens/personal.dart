@@ -58,6 +58,10 @@ class _PersonalScreenState extends State<PersonalScreen> {
                                               ? 1
                                               : 5,
                                       crossAxisSpacing: 8,
+                                      childAspectRatio:
+                                          orientation == Orientation.portrait
+                                              ? 1.175
+                                              : 1.0,
                                     ),
                                     shrinkWrap: true,
                                     physics:

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'common/color_schemes.g.dart';
+import 'common/color_schemes.dart';
 import 'common/strings.dart';
 import 'common/theme.dart';
 import 'models/app_state.dart';

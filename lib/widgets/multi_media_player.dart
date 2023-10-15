@@ -5,7 +5,7 @@ import 'package:photo_view/photo_view_gallery.dart';
 import 'package:video_player/video_player.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
-import '../common/color_schemes.g.dart';
+import '../common/color_schemes.dart';
 import 'frosted_container.dart';
 import 'gallery_controls.dart';
 
@@ -17,6 +17,7 @@ class MultiMediaPlayer extends StatefulWidget {
     required this.youtubeVideoIds,
     required this.videoPaths,
     required this.imagePaths,
+    required this.webImagePaths,
     required this.mediaCaptions,
     required this.currentIndex,
     this.onMediaBrowser,
@@ -26,6 +27,7 @@ class MultiMediaPlayer extends StatefulWidget {
   final List<String> youtubeVideoIds;
   final List<String> videoPaths;
   final List<String> imagePaths;
+  final List<String> webImagePaths;
   final List<String> mediaCaptions;
   final Function()? onMediaBrowser;
 
@@ -53,7 +55,8 @@ class MultiMediaPlayerState extends State<MultiMediaPlayer> {
   int get videoCount => widget.videoPaths.length;
 
   /// The total number of media items to display in the gallery.
-  int get totalMediaCount => youtubeCount + imageCount + videoCount;
+  int get totalMediaCount =>
+      youtubeCount + imageCount + videoCount + widget.webImagePaths.length;
 
   /// The list of media items to display in the gallery.
   List<MediaItem> get mediaItems {
@@ -83,6 +86,15 @@ class MultiMediaPlayerState extends State<MultiMediaPlayer> {
           type: MediaType.image,
           path: widget.imagePaths[i],
           caption: widget.mediaCaptions[i + videoCount],
+        ),
+      );
+    }
+    for (int i = 0; i < widget.webImagePaths.length; i++) {
+      items.add(
+        MediaItem(
+          type: MediaType.networkImage,
+          path: widget.webImagePaths[i],
+          caption: widget.mediaCaptions[i + videoCount + imageCount],
         ),
       );
     }
@@ -117,12 +129,13 @@ class MultiMediaPlayerState extends State<MultiMediaPlayer> {
           _setupImagePageController();
           break;
         }
-
         _imagePageController.animateToPage(
           previousIndex - youtubeCount - videoCount,
           duration: const Duration(milliseconds: 500),
           curve: Curves.easeInOut,
         );
+      case MediaType.networkImage:
+        break;
     }
 
     setState(() {
@@ -161,6 +174,8 @@ class MultiMediaPlayerState extends State<MultiMediaPlayer> {
           duration: const Duration(milliseconds: 500),
           curve: Curves.easeInOut,
         );
+      case MediaType.networkImage:
+        break;
     }
 
     setState(() {
@@ -256,6 +271,17 @@ class MultiMediaPlayerState extends State<MultiMediaPlayer> {
     );
   }
 
+  Widget _networkImageViewer() {
+    return SizedBox(
+      width: MediaQuery.of(context).size.width,
+      height: MediaQuery.of(context).size.height,
+      child: Image.network(
+        mediaItems[currentIndex].path,
+        fit: BoxFit.contain,
+      ),
+    );
+  }
+
   /// Builds the image viewer.
   Widget _imageViewer() {
     return PhotoViewGallery.builder(
@@ -323,7 +349,9 @@ class MultiMediaPlayerState extends State<MultiMediaPlayer> {
                 ? _youTubePlayer()
                 : mediaItems[currentIndex].type == MediaType.video
                     ? _videoPlayer()
-                    : _imageViewer(),
+                    : mediaItems[currentIndex].type == MediaType.networkImage
+                        ? _networkImageViewer()
+                        : _imageViewer(),
           ),
         ),
         _playerControlBanner(
@@ -338,6 +366,7 @@ class MultiMediaPlayerState extends State<MultiMediaPlayer> {
 /// The different types of media that can be displayed in the gallery.
 enum MediaType {
   image,
+  networkImage,
   video,
   youtube,
 }
