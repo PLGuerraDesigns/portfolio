@@ -1,5 +1,72 @@
 [
   {
+    "title": "SWE 632 Lottery",
+    "subtitle": "A GMU-Themed Lottery Web App",
+    "startDate": "2023-09-03T00:00:00Z",
+    "finalDate": "2023-11-30T00:00:00Z",
+    "description": "The SWE 632 Lottery Web App, developed for GMU's User Interface Design and Development course, offers an immersive gaming experience with Wheel of Fortune and Scratch Cards, allowing players to earn virtual currency and unlock GMU merchandise. Created in collaboration with Afrina Sharmin and Suzzana Rafi, this project highlights our ability to implement the latest technologies and best practices in user interface design. While it's primarily an academic project, the app is fully functional, exemplifying our team's expertise in developing engaging and user-friendly web applications. We invite you to explore and engage with the app, experiencing our dedication to quality design firsthand.",
+    "videoCount": 0,
+    "imageCount": 8,
+    "mediaCaptions": [
+      "",
+      "Presentation Slide 1/7",
+      "Presentation Slide 2/7",
+      "Presentation Slide 3/7",
+      "Presentation Slide 4/7",
+      "Presentation Slide 5/7",
+      "Presentation Slide 6/7",
+      "Presentation Slide 7/7",
+      "Spin the Wheel",
+      "Shuffle Prizes",
+      "Scratch the Card",
+      "Swipe to Dismiss Card",
+      "Pay to Unlock Reward",
+      "Toggle Theme Mode"
+    ],
+    "externalLinks": [
+      {
+        "title": "Play to Win",
+        "url": "https://plguerradesigns.github.io/swe_632_lottery/"
+      },
+      {
+        "title": "Source Code",
+        "url": "https://github.com/PLGuerraDesigns/swe_632_lottery/"
+      },
+      {
+        "title": "v0.0.2",
+        "url": "https://plguerradesigns.github.io/swe_632_lottery/v0.0.2/"
+      },
+      {
+        "title": "v0.0.4",
+        "url": "https://plguerradesigns.github.io/swe_632_lottery/v0.0.4/"
+      },
+      {
+        "title": "v0.1.4",
+        "url": "https://plguerradesigns.github.io/swe_632_lottery/v0.1.4/"
+      },
+      {
+        "title": "v0.3.1",
+        "url": "https://plguerradesigns.github.io/swe_632_lottery/v0.3.1/"
+      }
+    ],
+    "tags": [
+      "Flutter",
+      "Dart",
+      "Progressive Web App",
+      "GitHub Pages",
+      "GMU SWE 632",
+      "Open Source"
+    ],
+    "webImages": [
+      "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/spin_the_wheel.gif",
+      "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/shuffle_prizes.gif",
+      "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/scratch_the_card.gif",
+      "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/swipe_to_dismiss_card.gif",
+      "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/pay_to_unlock_reward.gif",
+      "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/toggle_theme_mode.gif"
+    ]
+  },
+  {
     "title": "Flutter Resume Builder",
     "subtitle": "Resume Builder Progressive Web App",
     "startDate": "2022-06-03T00:00:00Z",

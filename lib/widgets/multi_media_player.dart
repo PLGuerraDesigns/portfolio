@@ -166,6 +166,7 @@ class MultiMediaPlayerState extends State<MultiMediaPlayer> {
         );
       case MediaType.image:
         if (currentMediaType != MediaType.image) {
+          currentIndex = nextIndex;
           _setupImagePageController();
           break;
         }
