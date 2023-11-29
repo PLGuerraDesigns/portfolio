@@ -1,7 +1,7 @@
 name: plg_portfolio
 description: Pablo L. Guerra's web-app portfolio powered by Flutter.
 publish_to: "none"
-version: 2.0.9+29
+version: 2.0.10+30
 
 environment:
   sdk: ">=3.1.1 <4.0.0"
@@ -49,3 +49,4 @@ flutter:
     - assets/images/personal/xbox_head_tracking/
     - assets/images/personal/flutter_resume_builder/
     - assets/images/personal/blokus/
+    - assets/images/personal/swe_632_lottery/
