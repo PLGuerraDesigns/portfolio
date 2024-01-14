@@ -30,7 +30,8 @@
     "mediaCaptions": [
       "",
       "Installation Flyer"
-    ]
+    ],
+    "webImages": []
   },
   {
     "company": "AMBOTS Inc.",
@@ -96,7 +97,17 @@
       "7th Generation Transporter - Above View",
       "7th Generation AMBOTS Swarm 3D Printing System",
       "Me with the 7th Generation AMBOTS Swarm 3D Printing System",
-      "Rendering of an Extended AMBOTS Swarm 3D Printing System"
+      "Rendering of the AMBOTS Development Kit",
+      "AMBOTS Development Kit",
+      "",
+      "",
+      ""
+    ],
+    "webImages": [
+      "https://asbtdc.org/wp-content/uploads/2022/03/ambots-dev-kit.jpg",
+      "https://asbtdc.org/wp-content/uploads/2019/11/AMBOTS-team-picture-november-11.jpg",
+      "https://pbs.twimg.com/media/EnSJD80XcAI6EfX?format=jpg&name=large",
+      "https://asbtdc.org/wp-content/uploads/2021/08/AMBOTS-2021-e1629923247390-1024x590.jpg"
     ]
   },
   {
@@ -138,6 +149,7 @@
       "Chunk Angle and Bond Test with off-the-shelf nozzles",
       "Transporter Image Processing Test under different lighting conditions",
       "Some notable prints made by the various custom AM³ Lab 3D Printers"
-    ]
+    ],
+    "webImages": []
   }
 ]
