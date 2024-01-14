@@ -1,8 +1,10 @@
+import 'package:flutter/material.dart';
+
 class Strings {
   Strings._();
 
   static const String currentLocation = 'VA, USA';
-  static const String lastUpdated = 'Last Updated 11/23';
+  static const String lastUpdated = 'Updated JAN 2024';
 
   // Routes
   static const String loadingRoute = '/loading';
@@ -38,7 +40,8 @@ class Strings {
   static const String socialAssetsBasePath = 'assets/images/icons';
   static const String resumeBuilderIconPath =
       '$socialAssetsBasePath/resume_builder.png';
-  static const String profilePhotoPath = 'assets/images/home/profile_photo.jpg';
+  static String profilePhotoPath(Brightness brightness) =>
+      'assets/images/home/profile_${brightness == Brightness.dark ? 'dark' : 'light'}.jpg';
   static const String professionalExperiencePhotoPath =
       'assets/images/home/professional.png';
   static const String personalExperiencePhotoPath =
@@ -54,7 +57,7 @@ class Strings {
   static const String github = 'GitHub';
   static const String thingiverse = 'Thingiverse';
   static const String linkedin = 'LinkedIn';
-  static const String appName = "PLGuerra's Portfolio";
+  static const String appName = 'PLG Portfolio';
   static const String name = 'Pablo L. Guerra';
   static const String subtitle =
       'Software Engineer  •  Innovator  •  Technologist';
@@ -68,6 +71,7 @@ class Strings {
   static const String videos = 'Videos';
   static const String images = 'Images';
   static const String previous = 'Previous';
+  static const String prev = 'Prev.';
   static const String next = 'Next';
   static const String viewAllMedia = 'View all Media';
   static const String viewSourceCode = 'View the Source Code';
@@ -75,9 +79,9 @@ class Strings {
   static const String previousProject = 'Previous Project';
   static const String nextProject = 'Next Project';
   static const String personalProjects = 'Personal Projects';
-  static const String contact = 'Contact';
+  static const String contactMe = 'Contact Me';
   static const String sponsor = 'Sponsor';
-  static const String externalLinks = 'External Links';
+  static const String moreInfo = 'More Info';
   static const String present = 'Present';
   static const String tags = 'Tags';
   static const String resumeBuilder = 'Resume Builder';

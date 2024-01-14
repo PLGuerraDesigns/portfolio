@@ -99,6 +99,7 @@ class _FloatingThumbnailState extends State<FloatingThumbnail> {
       onTap: widget.onTap,
       child: widget.frosted
           ? FrostedContainer(
+              borderRadiusAmount: 16.0,
               child: _body(),
             )
           : _body(),

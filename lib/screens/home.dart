@@ -60,8 +60,8 @@ class HomeScreen extends StatelessWidget {
       leading: CircleAvatar(
         radius: compact ? 38 : 55,
         backgroundColor: Theme.of(context).colorScheme.surfaceVariant,
-        backgroundImage: const AssetImage(
-          Strings.profilePhotoPath,
+        backgroundImage: AssetImage(
+          Strings.profilePhotoPath(Theme.of(context).brightness),
         ),
       ),
       title: Row(
@@ -138,8 +138,19 @@ class HomeScreen extends StatelessWidget {
                 logoPath: Strings.gmuLogoPath,
                 title: 'George Mason University',
                 description: 'M.S. in Software Engineering',
-                timeFrame: '2022 - PRESENT',
+                timeFrame: 'AUG 2022 - MAY 2024 (EXPECTED)',
                 urlString: Strings.gmuUrl,
+              ),
+              const Divider(
+                indent: 8,
+                endIndent: 8,
+              ),
+              const TimelineEntry(
+                logoPath: Strings.ambotsLogoPath,
+                title: 'AMBOTS Inc.',
+                description: 'Lead Robotics Engineer',
+                timeFrame: 'FEB 2021 - OCT 2021',
+                urlString: Strings.ambotsUrl,
               ),
               const Divider(
                 indent: 8,
@@ -150,19 +161,8 @@ class HomeScreen extends StatelessWidget {
                 title: 'Atlantic Insurance Co. Ltd.',
                 description:
                     'Contract Software Engineer\nAIC Mobile App & Management Portal',
-                timeFrame: '2020 - PRESENT',
+                timeFrame: 'JUN 2020 - PRESENT',
                 urlString: Strings.aicUrl,
-              ),
-              const Divider(
-                indent: 8,
-                endIndent: 8,
-              ),
-              const TimelineEntry(
-                logoPath: Strings.ambotsLogoPath,
-                title: 'AMBOTS Inc.',
-                description: 'Lead Robotics Engineer',
-                timeFrame: '2020 - 2021',
-                urlString: Strings.ambotsUrl,
               ),
               const Divider(
                 indent: 8,
@@ -172,7 +172,7 @@ class HomeScreen extends StatelessWidget {
                 logoPath: Strings.uarkLogoPath,
                 title: 'University of Arkansas (AM³ Lab)',
                 description: 'Graduate Research Assistant',
-                timeFrame: '2019 - 2020',
+                timeFrame: 'APR 2019 - DEC 2020',
                 urlString: Strings.am3LabUrl,
               ),
               const Divider(
@@ -183,7 +183,7 @@ class HomeScreen extends StatelessWidget {
                 logoPath: Strings.uarkLogoPath,
                 title: 'University of Arkansas',
                 description: 'B.S. in Computer Science',
-                timeFrame: '2017 - 2020',
+                timeFrame: 'AUG 2017 - DEC 2020',
                 urlString: Strings.uarkUrl,
               ),
             ],
@@ -240,7 +240,7 @@ class HomeScreen extends StatelessWidget {
     }
 
     return FrostedContainer(
-      borderRadiusAmount: compact ? 0 : 24,
+      borderRadiusAmount: compact ? 0 : 16.0,
       child: GridView.custom(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: compact ? 2 : 4,
@@ -252,25 +252,25 @@ class HomeScreen extends StatelessWidget {
           <Widget>[
             FrostedActionButton(
               icon: icon(Icons.quick_contacts_mail_rounded),
-              title: Strings.contact,
+              title: Strings.contactMe,
               onTap: () => RedirectHandler.openUrl(Strings.contactEmailUrl),
             ),
-            FrostedActionButton(
-              icon: icon(Icons.monetization_on_rounded),
-              title: Strings.sponsor,
-              onTap: () => RedirectHandler.openUrl(Strings.sponsorUrl),
-            ),
-            FrostedActionButton(
-              icon: Image.asset(
-                Strings.resumeBuilderIconPath,
-                color: Theme.of(context).colorScheme.onSurface,
-                height: 46,
-                width: 46,
-              ),
-              title: Strings.resumeBuilder,
-              onTap: () =>
-                  RedirectHandler.openUrl(Strings.flutterResumeBuilderUrl),
-            ),
+            // FrostedActionButton(
+            //   icon: icon(Icons.monetization_on_rounded),
+            //   title: Strings.sponsor,
+            //   onTap: () => RedirectHandler.openUrl(Strings.sponsorUrl),
+            // ),
+            // FrostedActionButton(
+            //   icon: Image.asset(
+            //     Strings.resumeBuilderIconPath,
+            //     color: Theme.of(context).colorScheme.onSurface,
+            //     height: 46,
+            //     width: 46,
+            //   ),
+            //   title: Strings.resumeBuilder,
+            //   onTap: () =>
+            //       RedirectHandler.openUrl(Strings.flutterResumeBuilderUrl),
+            // ),
           ],
         ),
       ),
@@ -294,7 +294,7 @@ class HomeScreen extends StatelessWidget {
   /// Arranges the widgets in a row for landscape orientation.
   Widget _landscapeView(BuildContext context) {
     return Column(
-      children: [
+      children: <Widget>[
         _header(context),
         const SizedBox(height: 8),
         Expanded(
@@ -384,7 +384,7 @@ class HomeScreen extends StatelessWidget {
           drawer:
               orientation == Orientation.landscape ? null : _drawer(context),
           body: Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(8.0),
             child: orientation == Orientation.portrait
                 ? _portraitView(context)
                 : _landscapeView(context),

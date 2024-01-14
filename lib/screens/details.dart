@@ -6,6 +6,7 @@ import '../models/app_state.dart';
 import '../services/redirect_handler.dart';
 import '../widgets/custom_app_bars.dart';
 import '../widgets/frosted_container.dart';
+import '../widgets/hover_scale_handler.dart';
 import '../widgets/media_browser.dart';
 import '../widgets/multi_media_player.dart';
 
@@ -119,10 +120,16 @@ class DetailsScreenState extends State<DetailsScreen> {
           runSpacing: 8.0,
           children: <Widget>[
             for (final String tag in widget.tags)
-              Chip(
-                  label: Text(tag),
-                  backgroundColor:
-                      Theme.of(context).colorScheme.surface.withOpacity(0.9)),
+              HoverScaleHandler(
+                onTap: () {
+                  RedirectHandler.openUrl(
+                      'https://www.google.com/search?q=$tag');
+                },
+                child: Chip(
+                    label: Text(tag),
+                    backgroundColor:
+                        Theme.of(context).colorScheme.surface.withOpacity(0.9)),
+              ),
           ],
         ),
       ],
@@ -137,7 +144,7 @@ class DetailsScreenState extends State<DetailsScreen> {
         const SizedBox(height: 8.0),
         const Divider(height: 32),
         Text(
-          Strings.externalLinks,
+          Strings.moreInfo,
           style: Theme.of(context).textTheme.titleMedium,
         ),
         const SizedBox(height: 8.0),
@@ -168,26 +175,22 @@ class DetailsScreenState extends State<DetailsScreen> {
   }
 
   /// Builds the media browser.
-  Widget _mediaBrowser(
-      {required BuildContext context, required bool portrait}) {
-    return SizedBox(
-      width: MediaQuery.of(context).size.width * (portrait ? 1 : 0.3),
-      child: MediaBrowser(
-        youtubeVideoIds: widget.youtubeVideoIds,
-        imagePaths: widget.imagePaths,
-        videoPaths: widget.videoPaths,
-        webImagePaths: widget.webImagePaths,
-        onTapped: (int index) {
-          setState(() {
-            _currentMediaIndex = index;
-          });
-          _scrollController.animateTo(
-            0,
-            duration: const Duration(milliseconds: 500),
-            curve: Curves.easeInOut,
-          );
-        },
-      ),
+  Widget _mediaBrowser({required BuildContext context}) {
+    return MediaBrowser(
+      youtubeVideoIds: widget.youtubeVideoIds,
+      imagePaths: widget.imagePaths,
+      videoPaths: widget.videoPaths,
+      webImagePaths: widget.webImagePaths,
+      onTapped: (int index) {
+        setState(() {
+          _currentMediaIndex = index;
+        });
+        _scrollController.animateTo(
+          0,
+          duration: const Duration(milliseconds: 500),
+          curve: Curves.easeInOut,
+        );
+      },
     );
   }
 
@@ -271,7 +274,9 @@ class DetailsScreenState extends State<DetailsScreen> {
               _infoHeader(context: context, compact: true),
               const Divider(height: 32),
               if (appState.mediaBrowserVisible)
-                _mediaBrowser(context: context, portrait: true),
+                _mediaBrowser(
+                  context: context,
+                ),
               Text(
                 widget.description,
                 style: Theme.of(context).textTheme.bodyLarge,
@@ -294,17 +299,18 @@ class DetailsScreenState extends State<DetailsScreen> {
   /// Arranges the widgets in a row for landscape orientation.
   Widget _landscapeView(
       {required BuildContext context, required AppState appState}) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment.stretch,
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        SizedBox(
-          height: MediaQuery.of(context).size.height * 0.8,
-          width: MediaQuery.of(context).size.width,
-          child: Row(
+        Expanded(
+          flex: 2,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Expanded(
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.8,
+                width: MediaQuery.of(context).size.width,
                 child: MultiMediaPlayer(
                   currentIndex: _currentMediaIndex,
                   youtubeVideoIds: widget.youtubeVideoIds,
@@ -315,47 +321,37 @@ class DetailsScreenState extends State<DetailsScreen> {
                   onMediaBrowser: appState.toggleMediaBrowserVisibility,
                 ),
               ),
-              if (appState.mediaBrowserVisible)
-                _mediaBrowser(context: context, portrait: false),
-            ],
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              _infoHeader(context: context, compact: false),
-              const Divider(height: 32),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: <Widget>[
-                        Text(
-                          widget.description,
-                          style: Theme.of(context).textTheme.bodyLarge,
-                        ),
-                        if (widget.externalLinks.isNotEmpty) _moreInfo(context),
-                        const SizedBox(height: 100.00),
-                      ],
+              Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    _infoHeader(context: context, compact: false),
+                    const Divider(height: 32),
+                    Text(
+                      widget.description,
+                      style: Theme.of(context).textTheme.bodyLarge,
                     ),
-                  ),
-                  if (widget.tags.isNotEmpty)
-                    Padding(
-                      padding: const EdgeInsets.only(left: 32.0),
-                      child: SizedBox(
+                    if (widget.externalLinks.isNotEmpty) _moreInfo(context),
+                    const Divider(height: 32),
+                    if (widget.tags.isNotEmpty)
+                      SizedBox(
                         width: MediaQuery.of(context).size.width * 0.2,
                         child: _tagChips(context),
                       ),
-                    ),
-                ],
+                    const SizedBox(height: 100.00),
+                  ],
+                ),
               ),
             ],
           ),
         ),
+        if (appState.mediaBrowserVisible)
+          Flexible(
+              child: _mediaBrowser(
+            context: context,
+          )),
       ],
     );
   }
@@ -374,16 +370,16 @@ class DetailsScreenState extends State<DetailsScreen> {
           ),
           foregroundColor: Theme.of(context).colorScheme.onSurface,
         ),
-        child: const Row(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Icon(
+            const Icon(
               Icons.chevron_left,
             ),
             Text(
-              'PREV.',
+              Strings.prev.toUpperCase(),
             ),
-            SizedBox(width: 8.0),
+            const SizedBox(width: 8.0),
           ],
         ),
       ),
@@ -399,14 +395,14 @@ class DetailsScreenState extends State<DetailsScreen> {
           ),
           foregroundColor: Theme.of(context).colorScheme.onSurface,
         ),
-        child: const Row(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SizedBox(width: 8.0),
+            const SizedBox(width: 8.0),
             Text(
-              'NEXT',
+              Strings.next.toUpperCase(),
             ),
-            Icon(
+            const Icon(
               Icons.chevron_right,
             ),
           ],
