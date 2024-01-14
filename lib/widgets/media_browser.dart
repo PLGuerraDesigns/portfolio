@@ -39,7 +39,6 @@ class MediaBrowser extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        const SizedBox(height: 8.0),
         Text(
           Strings.youTubeVideos,
           style: Theme.of(context).textTheme.titleLarge,
@@ -73,6 +72,8 @@ class MediaBrowser extends StatelessWidget {
                       child: Image.network(
                         'https://i3.ytimg.com/vi/${youtubeVideoIds[index]}/sddefault.jpg',
                         fit: BoxFit.cover,
+                        cacheHeight: 250,
+                        cacheWidth: 250,
                       ),
                     ),
                     const ColoredBox(
@@ -92,10 +93,7 @@ class MediaBrowser extends StatelessWidget {
           },
         ),
         const SizedBox(height: 8.0),
-        const Divider(
-          indent: 8.0,
-          endIndent: 8.0,
-        ),
+        const Divider(),
       ],
     );
   }
@@ -105,13 +103,11 @@ class MediaBrowser extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(
-            Strings.videos,
-            style: Theme.of(context).textTheme.titleLarge,
-          ),
+        Text(
+          Strings.videos,
+          style: Theme.of(context).textTheme.titleLarge,
         ),
+        const SizedBox(height: 8.0),
         GridView.builder(
           physics: const NeverScrollableScrollPhysics(),
           itemCount: videoPaths.length,
@@ -166,10 +162,7 @@ class MediaBrowser extends StatelessWidget {
           },
         ),
         const SizedBox(height: 8.0),
-        const Divider(
-          indent: 8.0,
-          endIndent: 8.0,
-        ),
+        const Divider(),
       ],
     );
   }
@@ -179,7 +172,6 @@ class MediaBrowser extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        const SizedBox(height: 8.0),
         Text(
           Strings.images,
           style: Theme.of(context).textTheme.titleLarge,
@@ -209,10 +201,14 @@ class MediaBrowser extends StatelessWidget {
                   child: index < imagePaths.length
                       ? Image.asset(
                           imagePaths[index],
+                          cacheHeight: 250,
+                          cacheWidth: 250,
                           fit: BoxFit.cover,
                         )
                       : Image.network(
                           webImagePaths[index - imagePaths.length],
+                          cacheHeight: 250,
+                          cacheWidth: 250,
                           loadingBuilder: (BuildContext context, Widget child,
                               ImageChunkEvent? loadingProgress) {
                             if (loadingProgress == null) {
@@ -244,10 +240,7 @@ class MediaBrowser extends StatelessWidget {
           },
         ),
         const SizedBox(height: 8.0),
-        const Divider(
-          indent: 8.0,
-          endIndent: 8.0,
-        ),
+        const Divider(),
       ],
     );
   }

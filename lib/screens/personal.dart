@@ -30,7 +30,7 @@ class _PersonalScreenState extends State<PersonalScreen> {
               appBar: CustomAppBars.genericAppBar(
                   context: context, title: Strings.personalProjects),
               body: Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(8.0),
                 child: SizedBox(
                   height: MediaQuery.of(context).size.height,
                   child: FrostedContainer(
@@ -39,7 +39,9 @@ class _PersonalScreenState extends State<PersonalScreen> {
                       controller: _scrollController,
                       thumbVisibility: true,
                       child: SingleChildScrollView(
-                        padding: const EdgeInsets.all(12.0),
+                        padding: orientation == Orientation.portrait
+                            ? const EdgeInsets.only(right: 8)
+                            : EdgeInsets.zero,
                         controller: _scrollController,
                         child: Column(
                           mainAxisSize: MainAxisSize.min,
@@ -51,6 +53,7 @@ class _PersonalScreenState extends State<PersonalScreen> {
                                 if (snapshot.connectionState ==
                                     ConnectionState.done) {
                                   return GridView.custom(
+                                    padding: const EdgeInsets.all(8),
                                     gridDelegate:
                                         SliverGridDelegateWithFixedCrossAxisCount(
                                       crossAxisCount:

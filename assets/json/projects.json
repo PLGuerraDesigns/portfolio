@@ -187,15 +187,25 @@
       "The ProtoBoard Circuit design in Progress.",
       "ProtoBoard Design vs. Final Custom Manufactured PCB Board.",
       "PCB Assembled and Installed.",
-      "My Sim Racing Rig (at the time) with the AMG GT3 Wheel."
+      "My Sim Racing Rig (at the time) with the AMG GT3 Wheel.",
+      "Community Member Build",
+      "Community Member Build",
+      "Community Member Build",
+      "Community Member Build",
+      "Community Member Build",
+      "Community Member Build",
+      "Community Member Build",
+      "Community Member Build",
+      "Community Member Build",
+      "Community Member Build"
     ],
     "externalLinks": [
       {
-        "title": "Get the AMG GT3 Wheel Kit on Thingiverse",
+        "title": "Download and Build the Wheel Yourself",
         "url": "https://www.thingiverse.com/thing:3182414"
       },
       {
-        "title": "Wheel in Action on a Fanatec Racing Rig",
+        "title": "Video of the Wheel in Action by a Community Member",
         "url": "https://www.youtube.com/watch?v=R-0pL1AsorE"
       }
     ],
@@ -207,16 +217,28 @@
       "Graphic Design",
       "CAD Design",
       "PCB Design",
+      "PCB Assembly",
       "3D Printing",
-      "Wiring & Soldering",
+      "Wiring and Soldering",
       "C++ Programming",
       "Sim Racing",
       "Ender 3",
       "Thrustmaster",
       "Mercedes Benz AMG GT3",
-      "Published"
+      "Open Source"
     ],
-    "webImages": []
+    "webImages": [
+      "https://cdn.thingiverse.com/assets/d4/ad/d6/24/2a/IMG_20201129_163233_HDR.jpg",
+      "https://cdn.thingiverse.com/assets/89/87/88/95/19/1.jpg",
+      "https://cdn.thingiverse.com/assets/ea/15/cb/eb/60/AMG_Steering_Wheel.jpg",
+      "https://cdn.thingiverse.com/assets/55/1b/f3/7a/3f/volant_face.jpg",
+      "https://cdn.thingiverse.com/assets/fe/7a/98/09/29/FDE0EFB6-C784-498E-B386-7E9A9C3C0BA0.jpeg",
+      "https://cdn.thingiverse.com/assets/7e/e1/4a/69/8a/87052509_854879888290366_2111462423008378880_n.jpg",
+      "https://cdn.thingiverse.com/assets/a9/d5/6e/59/76/IMG_20191001_172428.jpg",
+      "https://cdn.thingiverse.com/renders/88/e5/e8/5b/a0/6ea030e2dbcc1b8c82ef0ef56de93fc9_display_large.jpg",
+      "https://cdn.thingiverse.com/renders/7e/be/d2/09/ac/86dc5ba0f800cf421ee795145cbdea15_display_large.JPG",
+      "https://cdn.thingiverse.com/renders/df/17/0f/d5/a6/2723476733c115f2167e5e15e1f090ad_display_large.jpg"
+    ]
   },
   {
     "title": "Apple Charging Station",
@@ -278,8 +300,8 @@
       "Adobe Illustrator",
       "Adobe XD",
       "Android",
-      "Mobile Programming UARK",
-      "F1 2019",
+      "UARK CSCE 4623",
+      "F1 2019 - Codemasters",
       "Xbox One",
       "Sim Racing"
     ],
@@ -495,7 +517,7 @@
     "tags": [
       "Adobe Photoshop",
       "Calculator",
-      "Mobile Programming UARK",
+      "UARK CSCE 4623",
       "Java Programming",
       "Android"
     ],

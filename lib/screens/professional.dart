@@ -30,7 +30,7 @@ class _ProfessionalScreenState extends State<ProfessionalScreen> {
               appBar: CustomAppBars.genericAppBar(
                   context: context, title: Strings.professionalExperiences),
               body: Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(8.0),
                 child: SizedBox(
                   height: MediaQuery.of(context).size.height,
                   child: FrostedContainer(
@@ -39,7 +39,9 @@ class _ProfessionalScreenState extends State<ProfessionalScreen> {
                       controller: _scrollController,
                       thumbVisibility: true,
                       child: SingleChildScrollView(
-                        padding: const EdgeInsets.all(12.0),
+                        padding: orientation == Orientation.portrait
+                            ? const EdgeInsets.only(right: 8)
+                            : EdgeInsets.zero,
                         controller: _scrollController,
                         child: FutureBuilder<void>(
                           future: appState.loadProfessionalExperiences(context),
@@ -48,7 +50,7 @@ class _ProfessionalScreenState extends State<ProfessionalScreen> {
                             if (snapshot.connectionState ==
                                 ConnectionState.done) {
                               return GridView.custom(
-                                  padding: const EdgeInsets.all(10),
+                                  padding: const EdgeInsets.all(16),
                                   gridDelegate:
                                       SliverGridDelegateWithFixedCrossAxisCount(
                                     crossAxisCount:

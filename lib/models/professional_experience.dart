@@ -1,8 +1,8 @@
 import 'package:intl/intl.dart';
-import "package:unorm_dart/unorm_dart.dart" as unorm;
+import 'package:unorm_dart/unorm_dart.dart' as unorm;
 
 class ProfessionalExperience {
-  const ProfessionalExperience({
+  ProfessionalExperience({
     required this.company,
     required this.folderName,
     required this.role,
@@ -14,6 +14,7 @@ class ProfessionalExperience {
     required this.youtubeVideoIds,
     required this.imageCount,
     required this.videoCount,
+    required this.webImagePaths,
     required this.localMediaCaptions,
   });
 
@@ -32,6 +33,11 @@ class ProfessionalExperience {
               json['endDate'].toString(),
             ),
       imageCount: int.parse(json['imageCount'].toString()),
+      webImagePaths: json['webImages'] == null
+          ? <String>[]
+          : (json['webImages'] as List<dynamic>).map((dynamic e) {
+              return e.toString();
+            }).toList(),
       videoCount: int.parse(json['videoCount'].toString()),
       localMediaCaptions:
           (json['mediaCaptions'] as List<dynamic>).map((dynamic e) {
@@ -84,6 +90,9 @@ class ProfessionalExperience {
 
   /// The captions for local media.
   final List<String> localMediaCaptions;
+
+  /// The paths for the web images in the project.
+  List<String> webImagePaths = <String>[];
 
   /// The YouTube video IDs.
   final List<String> youtubeVideoIds;

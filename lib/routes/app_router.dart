@@ -21,6 +21,7 @@ class AppRouter {
   /// Returns a [GoRouter] instance with the app's routing configuration.
   GoRouter configureRouter() {
     return GoRouter(
+      navigatorKey: appState.navigatorKey,
       initialLocation: appState.currentRoute,
       refreshListenable: appState,
       routes: <GoRoute>[
@@ -45,8 +46,15 @@ class AppRouter {
         ),
         GoRoute(
           path: Strings.homeRoute,
-          builder: (BuildContext context, GoRouterState state) =>
-              const HomeScreen(),
+          pageBuilder: (BuildContext context, GoRouterState state) =>
+              CustomTransitionPage<Widget>(
+            child: const HomeScreen(),
+            transitionsBuilder: (BuildContext context,
+                    Animation<double> animation,
+                    Animation<double> secondaryAnimation,
+                    Widget child) =>
+                FadeTransition(opacity: animation, child: child),
+          ),
           routes: <GoRoute>[
             GoRoute(
               path: Strings.professionalSubRoute,
@@ -73,7 +81,7 @@ class AppRouter {
                         externalLinks: professionalExperience.externalLinks,
                         startDate: professionalExperience.startDateString,
                         finalDate: professionalExperience.finalDateString,
-                        webImagePaths: const <String>[],
+                        webImagePaths: professionalExperience.webImagePaths,
                         tags: const <String>[],
                         onPreviousPressed: () {
                           context.go(
@@ -138,8 +146,6 @@ class AppRouter {
       redirect: (BuildContext context, GoRouterState state) {
         final String location = state.uri.toString();
         final String goto = location.split('/').last;
-
-        appState.currentRoute = location;
 
         final bool isAtProfessionalDetails =
             location.contains(Strings.professionalSubRoute) &&

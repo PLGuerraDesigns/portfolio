@@ -21,6 +21,12 @@ class AppState extends ChangeNotifier {
   /// Whether the professional experiences have been loaded.
   bool professionalExperiencesLoaded = false;
 
+  /// The navigator key.
+  final GlobalKey<NavigatorState> _navigatorKey = GlobalKey<NavigatorState>();
+
+  /// The navigator key.
+  GlobalKey<NavigatorState> get navigatorKey => _navigatorKey;
+
   /// The list of projects.
   List<Project> get projects => _projects;
   List<Project> _projects = <Project>[];

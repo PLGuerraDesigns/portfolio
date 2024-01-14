@@ -54,7 +54,8 @@ class CustomAppBars {
     List<Widget>? actions,
   }) {
     return AppBar(
-      title: actions == null ? Text(title) : null,
+      title: Text(title),
+      titleSpacing: 0,
       centerTitle: false,
       actions: actions,
     );

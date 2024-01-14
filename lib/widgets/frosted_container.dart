@@ -7,8 +7,8 @@ class FrostedContainer extends StatelessWidget {
   const FrostedContainer({
     super.key,
     required this.child,
-    this.borderRadiusAmount = 24,
-    this.padding = const EdgeInsets.all(12.0),
+    this.borderRadiusAmount = 16.0,
+    this.padding = const EdgeInsets.all(16.0),
   });
 
   /// The widget to display inside the container.
