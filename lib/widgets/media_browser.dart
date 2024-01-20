@@ -73,7 +73,6 @@ class MediaBrowser extends StatelessWidget {
                         'https://i3.ytimg.com/vi/${youtubeVideoIds[index]}/sddefault.jpg',
                         fit: BoxFit.cover,
                         cacheHeight: 250,
-                        cacheWidth: 250,
                       ),
                     ),
                     const ColoredBox(
@@ -202,13 +201,11 @@ class MediaBrowser extends StatelessWidget {
                       ? Image.asset(
                           imagePaths[index],
                           cacheHeight: 250,
-                          cacheWidth: 250,
                           fit: BoxFit.cover,
                         )
                       : Image.network(
                           webImagePaths[index - imagePaths.length],
                           cacheHeight: 250,
-                          cacheWidth: 250,
                           loadingBuilder: (BuildContext context, Widget child,
                               ImageChunkEvent? loadingProgress) {
                             if (loadingProgress == null) {
