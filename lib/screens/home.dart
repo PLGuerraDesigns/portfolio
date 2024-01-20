@@ -205,6 +205,7 @@ class HomeScreen extends StatelessWidget {
             child: FloatingThumbnail(
               title: Strings.professional,
               image: Strings.professionalExperiencePhotoPath,
+              shimmer: true,
               onTap: () {
                 context
                     .go('${Strings.homeRoute}/${Strings.professionalSubRoute}');
@@ -219,6 +220,7 @@ class HomeScreen extends StatelessWidget {
             child: FloatingThumbnail(
               title: Strings.personal,
               image: Strings.personalExperiencePhotoPath,
+              shimmer: true,
               onTap: () {
                 context.go('${Strings.homeRoute}/${Strings.personalSubRoute}');
               },

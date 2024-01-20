@@ -1,7 +1,7 @@
 name: plg_portfolio
 description: Pablo L. Guerra's web-app portfolio powered by Flutter.
 publish_to: "none"
-version: 2.0.11+31
+version: 2.0.12+32
 
 environment:
   sdk: ">=3.1.1 <4.0.0"
@@ -20,6 +20,7 @@ dependencies:
   go_router: ^11.1.2
   url_strategy: ^0.2.0
   unorm_dart: ^0.2.0
+  shimmer: ^3.0.0
 
 dev_dependencies:
   flutter_test:

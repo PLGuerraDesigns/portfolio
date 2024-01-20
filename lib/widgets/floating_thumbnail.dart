@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shimmer/shimmer.dart';
 
 import '../common/color_schemes.dart';
 import 'frosted_container.dart';
@@ -16,6 +17,7 @@ class FloatingThumbnail extends StatefulWidget {
     this.logoPath,
     this.subtitle,
     this.frosted = false,
+    this.shimmer = false,
   });
 
   /// The logo to display in the thumbnail.
@@ -35,6 +37,9 @@ class FloatingThumbnail extends StatefulWidget {
 
   /// Whether the thumbnail should be on a frosted glass background.
   final bool frosted;
+
+  /// Whether the thumbnail should shimmer.
+  final bool shimmer;
 
   @override
   State<FloatingThumbnail> createState() => _FloatingThumbnailState();
@@ -69,9 +74,25 @@ class _FloatingThumbnailState extends State<FloatingThumbnail> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
             Expanded(
-              child: Image.asset(
-                widget.image,
-                fit: BoxFit.contain,
+              child: Stack(
+                fit: StackFit.expand,
+                alignment: Alignment.center,
+                children: <Widget>[
+                  Image.asset(
+                    widget.image,
+                    fit: BoxFit.contain,
+                  ),
+                  if (widget.shimmer)
+                    Shimmer.fromColors(
+                      period: const Duration(milliseconds: 5000),
+                      baseColor: Colors.transparent,
+                      highlightColor: Colors.white24,
+                      child: Image.asset(
+                        widget.image,
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                ],
               ),
             ),
             const SizedBox(height: 16),
@@ -99,7 +120,6 @@ class _FloatingThumbnailState extends State<FloatingThumbnail> {
       onTap: widget.onTap,
       child: widget.frosted
           ? FrostedContainer(
-              borderRadiusAmount: 16.0,
               child: _body(),
             )
           : _body(),
