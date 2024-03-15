@@ -8,28 +8,33 @@
     "endDate": null,
     "description": "As a contract software engineer, I led the strategic planning, development, and successful launch of the AIC Mobile App and Management Portal for Atlantic Insurance Company Limited.\n\nThis innovative app, available for Android and iOS, was meticulously designed with a customer-centric approach to enrich interactions with the company.\n\nIts features includes access to insured item details, a digital certificate of insurance, timely renewal notifications, claims filing, quote requests, office location guidance, and more.\n\nThis endeavor reflects AIC's commitment to delivering unsurpassed customer service, upholding integrity, demonstrating professionalism, and fostering teamwork in line with Atlantic Insurance Company Limited's values.",
     "videoCount": 0,
-    "imageCount": 2,
+    "imageCount": 3,
     "youtubeVideoIds": [
-      "TcdKbZmju5I",
-      "W37tmY7OPWw"
+      "Mz4JteT4jLw",
+      "TcdKbZmju5I"
     ],
     "externalLinks": [
       {
-        "title": "Atlantic Insurance Company Ltd.",
-        "url": "https://aicbelize.azurewebsites.net/"
-      },
-      {
-        "title": "Apple App Store",
+        "title": "Download on the App Store",
         "url": "https://apps.apple.com/us/app/aic-mobile-app/id1534979546"
       },
       {
-        "title": "Google Play Store",
+        "title": "Get it on Google Play",
         "url": "https://play.google.com/store/apps/details?id=com.aicbelize.AIMobile"
+      },
+      {
+        "title": "AIC Mobile App Support",
+        "url": "https://aic-support.web.app"
+      },
+      {
+        "title": "Atlantic Insurance Company Ltd.",
+        "url": "https://aicbelize.azurewebsites.net/"
       }
     ],
     "mediaCaptions": [
       "",
-      "Installation Flyer"
+      "Store Screenshots",
+      "UI Design"
     ],
     "webImages": []
   },

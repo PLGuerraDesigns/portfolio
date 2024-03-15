@@ -68,7 +68,7 @@ class MediaBrowser extends StatelessWidget {
                   alignment: Alignment.center,
                   children: <Widget>[
                     ClipRRect(
-                      borderRadius: BorderRadius.circular(4.0),
+                      borderRadius: BorderRadius.circular(8.0),
                       child: Image.network(
                         'https://i3.ytimg.com/vi/${youtubeVideoIds[index]}/sddefault.jpg',
                         fit: BoxFit.cover,
@@ -125,7 +125,7 @@ class MediaBrowser extends StatelessWidget {
                 onTapped!(index + youtubeVideoIds.length);
               },
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(4.0),
+                borderRadius: BorderRadius.circular(8.0),
                 child: ColoredBox(
                   color: Colors.black12,
                   child: Stack(
@@ -194,7 +194,7 @@ class MediaBrowser extends StatelessWidget {
                 onTapped!(index + youtubeVideoIds.length + videoPaths.length);
               },
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(4.0),
+                borderRadius: BorderRadius.circular(8.0),
                 child: ColoredBox(
                   color: Colors.black12,
                   child: index < imagePaths.length
