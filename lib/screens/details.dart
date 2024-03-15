@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../common/color_schemes.dart';
+import '../common/enums.dart';
 import '../common/strings.dart';
 import '../models/app_state.dart';
+import '../models/media_item.dart';
 import '../services/redirect_handler.dart';
 import '../widgets/custom_app_bars.dart';
 import '../widgets/frosted_container.dart';
 import '../widgets/hover_scale_handler.dart';
 import '../widgets/media_browser.dart';
-import '../widgets/multi_media_player.dart';
+import '../widgets/media_player.dart';
 
 /// A screen that displays details about a project/experience.
 class DetailsScreen extends StatefulWidget {
@@ -87,6 +89,42 @@ class DetailsScreen extends StatefulWidget {
 class DetailsScreenState extends State<DetailsScreen> {
   /// The controller for the scroll view.
   final ScrollController _scrollController = ScrollController();
+
+  /// The list of media items to display.
+  List<MediaItem> get mediaItems {
+    final List<MediaItem> mediaItems = <MediaItem>[];
+    for (int i = 0; i < widget.youtubeVideoIds.length; i++) {
+      mediaItems.add(MediaItem(
+        type: MediaType.youTubeVideo,
+        path: widget.youtubeVideoIds[i],
+        caption: '',
+      ));
+    }
+    for (int i = 0; i < widget.videoPaths.length; i++) {
+      mediaItems.add(MediaItem(
+        type: MediaType.localVideo,
+        path: widget.videoPaths[i],
+        caption: widget.mediaCaptions[i],
+      ));
+    }
+
+    for (int i = 0; i < widget.imagePaths.length; i++) {
+      mediaItems.add(MediaItem(
+        type: MediaType.localImage,
+        path: widget.imagePaths[i],
+        caption: widget.mediaCaptions[i + widget.videoPaths.length],
+      ));
+    }
+    for (int i = 0; i < widget.webImagePaths.length; i++) {
+      mediaItems.add(MediaItem(
+        type: MediaType.networkImage,
+        path: widget.webImagePaths[i],
+        caption: widget.mediaCaptions[
+            i + widget.videoPaths.length + widget.imagePaths.length],
+      ));
+    }
+    return mediaItems;
+  }
 
   /// The index of the current media item.
   int _currentMediaIndex = 0;
@@ -256,13 +294,9 @@ class DetailsScreenState extends State<DetailsScreen> {
       children: <Widget>[
         AspectRatio(
           aspectRatio: 16 / 11,
-          child: MultiMediaPlayer(
+          child: MediaPlayer(
             currentIndex: _currentMediaIndex,
-            youtubeVideoIds: widget.youtubeVideoIds,
-            videoPaths: widget.videoPaths,
-            imagePaths: widget.imagePaths,
-            webImagePaths: widget.webImagePaths,
-            mediaCaptions: widget.mediaCaptions,
+            mediaList: mediaItems,
             onMediaBrowser: appState.toggleMediaBrowserVisibility,
           ),
         ),
@@ -279,7 +313,7 @@ class DetailsScreenState extends State<DetailsScreen> {
                 ),
               Text(
                 widget.description,
-                style: Theme.of(context).textTheme.bodyLarge,
+                style: Theme.of(context).textTheme.bodyMedium,
               ),
               if (widget.externalLinks.isNotEmpty) _moreInfo(context),
               const Divider(height: 32),
@@ -311,13 +345,9 @@ class DetailsScreenState extends State<DetailsScreen> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.8,
                 width: MediaQuery.of(context).size.width,
-                child: MultiMediaPlayer(
+                child: MediaPlayer(
                   currentIndex: _currentMediaIndex,
-                  youtubeVideoIds: widget.youtubeVideoIds,
-                  videoPaths: widget.videoPaths,
-                  imagePaths: widget.imagePaths,
-                  webImagePaths: widget.webImagePaths,
-                  mediaCaptions: widget.mediaCaptions,
+                  mediaList: mediaItems,
                   onMediaBrowser: appState.toggleMediaBrowserVisibility,
                 ),
               ),
@@ -331,7 +361,7 @@ class DetailsScreenState extends State<DetailsScreen> {
                     const Divider(height: 32),
                     Text(
                       widget.description,
-                      style: Theme.of(context).textTheme.bodyLarge,
+                      style: Theme.of(context).textTheme.bodyMedium,
                     ),
                     if (widget.externalLinks.isNotEmpty) _moreInfo(context),
                     const Divider(height: 32),

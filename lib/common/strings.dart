@@ -4,7 +4,7 @@ class Strings {
   Strings._();
 
   static const String currentLocation = 'VA, USA';
-  static const String lastUpdated = 'Updated JAN 2024';
+  static const String lastUpdated = 'Updated MAR 2024';
 
   // Routes
   static const String loadingRoute = '/loading';
@@ -41,7 +41,7 @@ class Strings {
   static const String resumeBuilderIconPath =
       '$socialAssetsBasePath/resume_builder.png';
   static String profilePhotoPath(Brightness brightness) =>
-      'assets/images/home/profile_${brightness == Brightness.dark ? 'dark' : 'light'}.jpg';
+      'assets/images/home/profile_dark.jpg';
   static const String professionalExperiencePhotoPath =
       'assets/images/home/professional.png';
   static const String personalExperiencePhotoPath =
