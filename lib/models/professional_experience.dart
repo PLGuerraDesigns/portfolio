@@ -1,6 +1,9 @@
 import 'package:intl/intl.dart';
 import 'package:unorm_dart/unorm_dart.dart' as unorm;
 
+import '../common/enums.dart';
+import 'media_item.dart';
+
 class ProfessionalExperience {
   ProfessionalExperience({
     required this.company,
@@ -9,17 +12,28 @@ class ProfessionalExperience {
     required this.location,
     required this.startDate,
     required this.finalDate,
+    required this.mediaItems,
     required this.description,
     required this.externalLinks,
-    required this.youtubeVideoIds,
-    required this.imageCount,
-    required this.videoCount,
-    required this.webImagePaths,
-    required this.localMediaCaptions,
   });
 
   /// Creates a [ProfessionalExperience] from a JSON object.
   factory ProfessionalExperience.fromJson(Map<String, dynamic> json) {
+    List<MediaItem> mediaItems = <MediaItem>[];
+    if (json['media'] != null) {
+      mediaItems = (json['media'] as List<dynamic>)
+          .map((dynamic e) => MediaItem.fromJson(e as Map<String, dynamic>))
+          .toList();
+    }
+    for (int i = 0; i < mediaItems.length; i++) {
+      final MediaItem mediaItem = mediaItems[i];
+      if (mediaItem.type == MediaType.localImage ||
+          mediaItem.type == MediaType.localVideo) {
+        mediaItems[i].path =
+            'assets/images/professional/${json['folderName'].toString().toLowerCase().replaceAll(' ', '_')}/${mediaItem.path}';
+      }
+    }
+
     return ProfessionalExperience(
       company: json['company'].toString(),
       folderName: json['folderName'].toString(),
@@ -27,26 +41,12 @@ class ProfessionalExperience {
       location: json['location'].toString(),
       description: json['description'].toString(),
       startDate: DateTime.parse(json['startDate'].toString()),
+      mediaItems: mediaItems,
       finalDate: json['endDate'] == null
           ? null
           : DateTime.parse(
               json['endDate'].toString(),
             ),
-      imageCount: int.parse(json['imageCount'].toString()),
-      webImagePaths: json['webImages'] == null
-          ? <String>[]
-          : (json['webImages'] as List<dynamic>).map((dynamic e) {
-              return e.toString();
-            }).toList(),
-      videoCount: int.parse(json['videoCount'].toString()),
-      localMediaCaptions:
-          (json['mediaCaptions'] as List<dynamic>).map((dynamic e) {
-        return e.toString();
-      }).toList(),
-      youtubeVideoIds:
-          (json['youtubeVideoIds'] as List<dynamic>).map((dynamic e) {
-        return e.toString();
-      }).toList(),
       externalLinks: (json['externalLinks'] as List<dynamic>)
           .map((dynamic e) =>
               Map<String, String>.from(e as Map<dynamic, dynamic>))
@@ -82,20 +82,11 @@ class ProfessionalExperience {
   /// Relevant external links.
   final List<Map<String, String>> externalLinks;
 
-  /// The number of images in the project.
-  final int imageCount;
+  /// The list of media items.
+  List<MediaItem> mediaItems;
 
-  /// The number of videos in the project.
-  final int videoCount;
-
-  /// The captions for local media.
-  final List<String> localMediaCaptions;
-
-  /// The paths for the web images in the project.
-  List<String> webImagePaths = <String>[];
-
-  /// The YouTube video IDs.
-  final List<String> youtubeVideoIds;
+  /// The total number of media items in the project.
+  int get totalMediaCount => mediaItems.length;
 
   /// The base path for the media.
   String get baseMediaPath => 'assets/images/professional/$folderName/';
@@ -115,24 +106,5 @@ class ProfessionalExperience {
       return null;
     }
     return DateFormat('MMMM yyyy').format(finalDate!);
-  }
-
-  /// The paths for the videos in the project.
-  List<String> get videoPaths {
-    final List<String> paths = <String>[];
-    for (int i = 1; i < videoCount + 1; i++) {
-      paths.add('${baseMediaPath}video_$i.mp4');
-    }
-    return paths;
-  }
-
-  /// The paths for the images in the project.
-  List<String> get imagePaths {
-    final List<String> paths = <String>[];
-    paths.add(thumbnailPath);
-    for (int i = 1; i < imageCount; i++) {
-      paths.add('${baseMediaPath}image_$i.png');
-    }
-    return paths;
   }
 }

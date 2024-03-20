@@ -1,5 +1,8 @@
 import 'package:intl/intl.dart';
 
+import '../common/enums.dart';
+import 'media_item.dart';
+
 class Project {
   Project({
     required this.title,
@@ -7,16 +10,28 @@ class Project {
     required this.description,
     required this.startDate,
     required this.finalDate,
-    required this.imageCount,
-    required this.localMediaCaptions,
-    required this.videoCount,
     required this.externalLinks,
-    required this.webImagePaths,
+    required this.mediaItems,
     required this.tags,
   });
 
   /// Creates a [Project] from a JSON object.
   factory Project.fromJson(Map<String, dynamic> json) {
+    List<MediaItem> mediaItems = <MediaItem>[];
+    if (json['media'] != null) {
+      mediaItems = (json['media'] as List<dynamic>)
+          .map((dynamic e) => MediaItem.fromJson(e as Map<String, dynamic>))
+          .toList();
+    }
+    for (int i = 0; i < mediaItems.length; i++) {
+      final MediaItem mediaItem = mediaItems[i];
+      if (mediaItem.type == MediaType.localImage ||
+          mediaItem.type == MediaType.localVideo) {
+        mediaItems[i].path =
+            'assets/images/personal/${json['title'].toString().toLowerCase().replaceAll(' ', '_')}/${mediaItem.path}';
+      }
+    }
+
     return Project(
       title: json['title'].toString(),
       subtitle: json['subtitle'].toString(),
@@ -25,17 +40,7 @@ class Project {
           ? null
           : DateTime.parse(json['startDate'].toString()),
       finalDate: DateTime.parse(json['finalDate'].toString()),
-      imageCount: int.parse(json['imageCount'].toString()),
-      webImagePaths: json['webImages'] == null
-          ? <String>[]
-          : (json['webImages'] as List<dynamic>).map((dynamic e) {
-              return e.toString();
-            }).toList(),
-      localMediaCaptions:
-          (json['mediaCaptions'] as List<dynamic>).map((dynamic e) {
-        return e.toString();
-      }).toList(),
-      videoCount: int.parse(json['videoCount'].toString()),
+      mediaItems: mediaItems,
       externalLinks: (json['externalLinks'] as List<dynamic>)
           .map((dynamic e) =>
               Map<String, String>.from(e as Map<dynamic, dynamic>))
@@ -64,49 +69,21 @@ class Project {
   /// The description of the project.
   final String description;
 
-  /// The number of images in the project.
-  final int imageCount;
-
-  /// The captions for local media.
-  final List<String> localMediaCaptions;
-
-  /// The number of videos in the project.
-  final int videoCount;
-
   /// Relevant external links.
   final List<Map<String, String>> externalLinks;
 
   /// Relevant tags.
   final List<String> tags;
 
-  /// The paths for the web images in the project.
-  List<String> webImagePaths = <String>[];
+  /// The list of media items.
+  List<MediaItem> mediaItems;
 
   /// The total number of media items in the project.
-  int get totalMediaCount => imageCount + videoCount;
+  int get totalMediaCount => mediaItems.length;
 
   /// The base path for the media.
   String get baseMediaPath =>
       'assets/images/personal/${title.toLowerCase().replaceAll(' ', '_')}/';
-
-  /// The paths for the images in the project.
-  List<String> get imagePaths {
-    final List<String> paths = <String>[];
-    paths.add(thumbnailPath);
-    for (int i = 1; i < imageCount; i++) {
-      paths.add('${baseMediaPath}image_$i.png');
-    }
-    return paths;
-  }
-
-  /// The paths for the videos in the project.
-  List<String> get videoPaths {
-    final List<String> paths = <String>[];
-    for (int i = 1; i < videoCount + 1; i++) {
-      paths.add('${baseMediaPath}video_$i.mp4');
-    }
-    return paths;
-  }
 
   /// The path for the thumbnail.
   String get thumbnailPath => '${baseMediaPath}thumbnail.png';

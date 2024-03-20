@@ -8,6 +8,7 @@ class HoverScaleHandler extends StatefulWidget {
     super.key,
     required this.child,
     required this.onTap,
+    this.tooltip = '',
   });
 
   /// The widget to apply the hover scale effect to.
@@ -15,6 +16,8 @@ class HoverScaleHandler extends StatefulWidget {
 
   /// The function to call when the widget is tapped.
   final Function()? onTap;
+
+  final String tooltip;
 
   @override
   State<HoverScaleHandler> createState() => HoverScaleHandlerState();
@@ -41,56 +44,60 @@ class HoverScaleHandlerState extends State<HoverScaleHandler> {
 
   @override
   Widget build(BuildContext context) {
-    return MouseRegion(
-      cursor: SystemMouseCursors.click,
-      onEnter: (_) => setState(
-        () {
-          isHovering = true;
-          currentScale = scaleOnHover;
-        },
-      ),
-      onExit: (_) => setState(
-        () {
-          isHovering = false;
-          currentScale = defaultScale;
-        },
-      ),
-      child: GestureDetector(
-        onTap: () async {
-          if (tapped) {
-            return;
-          }
-
-          tapped = true;
-
-          setState(() {
-            currentScale = 1;
-          });
-
-          await Future<void>.delayed(
-              Duration(milliseconds: msAnimationDuration + 50));
-
-          setState(() {
+    return Tooltip(
+      message: widget.tooltip,
+      waitDuration: const Duration(milliseconds: 500),
+      child: MouseRegion(
+        cursor: SystemMouseCursors.click,
+        onEnter: (_) => setState(
+          () {
+            isHovering = true;
             currentScale = scaleOnHover;
-          });
+          },
+        ),
+        onExit: (_) => setState(
+          () {
+            isHovering = false;
+            currentScale = defaultScale;
+          },
+        ),
+        child: GestureDetector(
+          onTap: () async {
+            if (tapped) {
+              return;
+            }
 
-          await Future<void>.delayed(
-              Duration(milliseconds: msAnimationDuration));
+            tapped = true;
 
-          if (!isHovering) {
             setState(() {
-              currentScale = defaultScale;
+              currentScale = 1;
             });
-          }
 
-          widget.onTap?.call();
+            await Future<void>.delayed(
+                Duration(milliseconds: msAnimationDuration + 50));
 
-          tapped = false;
-        },
-        child: AnimatedScale(
-          scale: currentScale,
-          duration: Duration(milliseconds: msAnimationDuration),
-          child: widget.child,
+            setState(() {
+              currentScale = scaleOnHover;
+            });
+
+            await Future<void>.delayed(
+                Duration(milliseconds: msAnimationDuration));
+
+            if (!isHovering) {
+              setState(() {
+                currentScale = defaultScale;
+              });
+            }
+
+            widget.onTap?.call();
+
+            tapped = false;
+          },
+          child: AnimatedScale(
+            scale: currentScale,
+            duration: Duration(milliseconds: msAnimationDuration),
+            child: widget.child,
+          ),
         ),
       ),
     );

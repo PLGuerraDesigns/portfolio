@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../common/color_schemes.dart';
-import '../common/enums.dart';
 import '../common/strings.dart';
 import '../models/app_state.dart';
 import '../models/media_item.dart';
@@ -9,7 +8,6 @@ import '../services/redirect_handler.dart';
 import '../widgets/custom_app_bars.dart';
 import '../widgets/frosted_container.dart';
 import '../widgets/hover_scale_handler.dart';
-import '../widgets/media_browser.dart';
 import '../widgets/media_player.dart';
 
 /// A screen that displays details about a project/experience.
@@ -23,14 +21,10 @@ class DetailsScreen extends StatefulWidget {
     required this.startDate,
     required this.finalDate,
     required this.tags,
-    required this.imagePaths,
-    required this.mediaCaptions,
-    required this.videoPaths,
     required this.externalLinks,
-    required this.youtubeVideoIds,
-    required this.webImagePaths,
     required this.onPreviousPressed,
     required this.onNextPressed,
+    required this.mediaItems,
     this.logoPath,
   });
 
@@ -55,20 +49,8 @@ class DetailsScreen extends StatefulWidget {
   /// The description of the project/experience.
   final String description;
 
-  /// The paths to the images to display in the gallery.
-  final List<String> imagePaths;
-
-  /// The paths to the web images to display in the gallery.
-  final List<String> webImagePaths;
-
-  /// The captions to display for each image in the gallery.
-  final List<String> mediaCaptions;
-
-  /// The paths to the videos to display in the gallery.
-  final List<String> videoPaths;
-
-  /// The YouTube video IDs to display in the gallery.
-  final List<String> youtubeVideoIds;
+  /// The list of media items to display.
+  final List<MediaItem> mediaItems;
 
   /// The tags to display.
   final List<String> tags;
@@ -90,41 +72,8 @@ class DetailsScreenState extends State<DetailsScreen> {
   /// The controller for the scroll view.
   final ScrollController _scrollController = ScrollController();
 
-  /// The list of media items to display.
-  List<MediaItem> get mediaItems {
-    final List<MediaItem> mediaItems = <MediaItem>[];
-    for (int i = 0; i < widget.youtubeVideoIds.length; i++) {
-      mediaItems.add(MediaItem(
-        type: MediaType.youTubeVideo,
-        path: widget.youtubeVideoIds[i],
-        caption: '',
-      ));
-    }
-    for (int i = 0; i < widget.videoPaths.length; i++) {
-      mediaItems.add(MediaItem(
-        type: MediaType.localVideo,
-        path: widget.videoPaths[i],
-        caption: widget.mediaCaptions[i],
-      ));
-    }
-
-    for (int i = 0; i < widget.imagePaths.length; i++) {
-      mediaItems.add(MediaItem(
-        type: MediaType.localImage,
-        path: widget.imagePaths[i],
-        caption: widget.mediaCaptions[i + widget.videoPaths.length],
-      ));
-    }
-    for (int i = 0; i < widget.webImagePaths.length; i++) {
-      mediaItems.add(MediaItem(
-        type: MediaType.networkImage,
-        path: widget.webImagePaths[i],
-        caption: widget.mediaCaptions[
-            i + widget.videoPaths.length + widget.imagePaths.length],
-      ));
-    }
-    return mediaItems;
-  }
+  /// The list of media items.
+  List<MediaItem> get mediaItems => widget.mediaItems;
 
   /// The index of the current media item.
   int _currentMediaIndex = 0;
@@ -212,26 +161,6 @@ class DetailsScreenState extends State<DetailsScreen> {
     );
   }
 
-  /// Builds the media browser.
-  Widget _mediaBrowser({required BuildContext context}) {
-    return MediaBrowser(
-      youtubeVideoIds: widget.youtubeVideoIds,
-      imagePaths: widget.imagePaths,
-      videoPaths: widget.videoPaths,
-      webImagePaths: widget.webImagePaths,
-      onTapped: (int index) {
-        setState(() {
-          _currentMediaIndex = index;
-        });
-        _scrollController.animateTo(
-          0,
-          duration: const Duration(milliseconds: 500),
-          curve: Curves.easeInOut,
-        );
-      },
-    );
-  }
-
   /// Builds the header with the logo, title, subtitle, and date range.
   Widget _infoHeader({required BuildContext context, required bool compact}) {
     return Row(
@@ -288,42 +217,101 @@ class DetailsScreenState extends State<DetailsScreen> {
   /// Arranges the widgets in a column for portrait orientation.
   Widget _portraitView(
       {required BuildContext context, required AppState appState}) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment.stretch,
+    return Stack(
       children: <Widget>[
-        AspectRatio(
-          aspectRatio: 16 / 11,
-          child: MediaPlayer(
-            currentIndex: _currentMediaIndex,
-            mediaList: mediaItems,
-            onMediaBrowser: appState.toggleMediaBrowserVisibility,
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
+        AnimatedOpacity(
+          opacity: appState.mediaBrowserVisible ? 0.0 : 1.0,
+          duration: const Duration(milliseconds: 250),
           child: Column(
+            mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              _infoHeader(context: context, compact: true),
-              const Divider(height: 32),
-              if (appState.mediaBrowserVisible)
-                _mediaBrowser(
-                  context: context,
+              AspectRatio(
+                aspectRatio: 16 / 9,
+                child: SizedBox(
+                  width: MediaQuery.of(context).size.width,
                 ),
-              Text(
-                widget.description,
-                style: Theme.of(context).textTheme.bodyMedium,
               ),
-              if (widget.externalLinks.isNotEmpty) _moreInfo(context),
-              const Divider(height: 32),
-              if (widget.tags.isNotEmpty)
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.2,
-                  child: _tagChips(context),
+              const SizedBox(
+                height: 64,
+              ),
+              Expanded(
+                child: Scrollbar(
+                  controller: _scrollController,
+                  thumbVisibility: true,
+                  child: SingleChildScrollView(
+                    clipBehavior: Clip.none,
+                    controller: _scrollController,
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        left: 8.0,
+                        top: 8.0,
+                        right: 16.0,
+                      ),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: <Widget>[
+                          _infoHeader(context: context, compact: true),
+                          const Divider(height: 32),
+                          SelectableText(
+                            widget.description,
+                            style: Theme.of(context).textTheme.bodyMedium,
+                            textAlign: TextAlign.justify,
+                          ),
+                          if (widget.externalLinks.isNotEmpty)
+                            _moreInfo(context),
+                          const Divider(height: 32),
+                          if (widget.tags.isNotEmpty)
+                            SizedBox(
+                              width: MediaQuery.of(context).size.width * 0.2,
+                              child: _tagChips(context),
+                            ),
+                          const SizedBox(height: 100.00),
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
-              const SizedBox(height: 100.00),
+              ),
             ],
+          ),
+        ),
+        // A gradient overlay to fade out the text under the media player.
+        Container(
+          height: MediaQuery.of(context).size.width * 0.69 + 24,
+          decoration: BoxDecoration(
+            borderRadius: const BorderRadius.only(
+              bottomLeft: Radius.circular(16.0),
+              bottomRight: Radius.circular(16.0),
+            ),
+            gradient: LinearGradient(
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+              colors: <Color>[
+                Theme.of(context).colorScheme.surface,
+                Theme.of(context).colorScheme.surface.withOpacity(0.95),
+                Theme.of(context).colorScheme.surface.withOpacity(0.001),
+              ],
+              stops: const <double>[0.0, 0.8, 1.0],
+            ),
+          ),
+        ),
+        // The media player.
+        SizedBox(
+          width: MediaQuery.of(context).size.width,
+          child: MediaPlayer(
+            key: ValueKey<int>(_currentMediaIndex),
+            currentIndex: _currentMediaIndex,
+            browserAxis: Axis.vertical,
+            mediaList: mediaItems,
+            isMediaBrowserVisible: appState.mediaBrowserVisible,
+            onMediaSelected: (int index) {
+              setState(() {
+                _currentMediaIndex = index;
+              });
+            },
+            onMediaBrowserToggle: appState.toggleMediaBrowserVisibility,
           ),
         ),
       ],
@@ -333,56 +321,57 @@ class DetailsScreenState extends State<DetailsScreen> {
   /// Arranges the widgets in a row for landscape orientation.
   Widget _landscapeView(
       {required BuildContext context, required AppState appState}) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        Expanded(
-          flex: 2,
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.8,
-                width: MediaQuery.of(context).size.width,
-                child: MediaPlayer(
-                  currentIndex: _currentMediaIndex,
-                  mediaList: mediaItems,
-                  onMediaBrowser: appState.toggleMediaBrowserVisibility,
-                ),
+    return Scrollbar(
+      controller: _scrollController,
+      thumbVisibility: true,
+      child: SingleChildScrollView(
+        controller: _scrollController,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(right: 8.0),
+              child: MediaPlayer(
+                key: ValueKey<int>(_currentMediaIndex),
+                browserAxis: Axis.horizontal,
+                currentIndex: _currentMediaIndex,
+                mediaList: mediaItems,
+                isMediaBrowserVisible: appState.mediaBrowserVisible,
+                onMediaSelected: (int index) {
+                  setState(() {
+                    _currentMediaIndex = index;
+                  });
+                },
+                onMediaBrowserToggle: appState.toggleMediaBrowserVisibility,
               ),
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: <Widget>[
-                    _infoHeader(context: context, compact: false),
-                    const Divider(height: 32),
-                    Text(
-                      widget.description,
-                      style: Theme.of(context).textTheme.bodyMedium,
+            ),
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  _infoHeader(context: context, compact: false),
+                  const Divider(height: 32),
+                  SelectableText(
+                    widget.description,
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
+                  if (widget.externalLinks.isNotEmpty) _moreInfo(context),
+                  const Divider(height: 32),
+                  if (widget.tags.isNotEmpty)
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.2,
+                      child: _tagChips(context),
                     ),
-                    if (widget.externalLinks.isNotEmpty) _moreInfo(context),
-                    const Divider(height: 32),
-                    if (widget.tags.isNotEmpty)
-                      SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.2,
-                        child: _tagChips(context),
-                      ),
-                    const SizedBox(height: 100.00),
-                  ],
-                ),
+                  const SizedBox(height: 100.00),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
-        if (appState.mediaBrowserVisible)
-          Flexible(
-              child: _mediaBrowser(
-            context: context,
-          )),
-      ],
+      ),
     );
   }
 
@@ -391,7 +380,9 @@ class DetailsScreenState extends State<DetailsScreen> {
     return <Widget>[
       OutlinedButton(
         onPressed: () {
-          _currentMediaIndex = 0;
+          setState(() {
+            _currentMediaIndex = 0;
+          });
           widget.onPreviousPressed?.call();
         },
         style: OutlinedButton.styleFrom(
@@ -449,6 +440,7 @@ class DetailsScreenState extends State<DetailsScreen> {
       return OrientationBuilder(
           builder: (BuildContext context, Orientation orientation) {
         return Scaffold(
+          key: ValueKey<String>(widget.title),
           appBar: CustomAppBars.genericAppBar(
             context: context,
             title: widget.appBarTitle,
@@ -457,19 +449,9 @@ class DetailsScreenState extends State<DetailsScreen> {
           body: FrostedContainer(
             padding: EdgeInsets.zero,
             borderRadiusAmount: 0,
-            child: Scrollbar(
-              thumbVisibility: true,
-              controller: _scrollController,
-              child: SingleChildScrollView(
-                key: UniqueKey(),
-                controller: _scrollController,
-                padding: EdgeInsets.only(
-                    right: orientation == Orientation.portrait ? 8.0 : 12.0),
-                child: orientation == Orientation.portrait
-                    ? _portraitView(context: context, appState: appState)
-                    : _landscapeView(context: context, appState: appState),
-              ),
-            ),
+            child: orientation == Orientation.portrait
+                ? _portraitView(context: context, appState: appState)
+                : _landscapeView(context: context, appState: appState),
           ),
         );
       });

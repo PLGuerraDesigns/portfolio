@@ -1,3 +1,13 @@
+## 2.1.0
+
+- ENHANCED: Added an option tooltip message to the HoverScaleHandler.
+- REVISED: JSON media data has been merged into a single list of media items containing the type, path and caption. This allows for easier management of media items and enables custom ordering of media items.
+- REVISED: Updated Models to use the new media data structure.
+- REVISED: Converted the details page body text to a selectable text widget.
+- REVISED: Embedded the MediaBrowser into the MediaPlayer to allow for browsing while keeping the player visible.
+- REVISED: Removed scroll under elevation for the App Bar.
+- REVISED: Updated FrostedContainer styling.
+
 ## 2.0.13
 
 - NEW: Added Pinch to Zoom functionality to images in the media player.
