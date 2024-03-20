@@ -34,7 +34,7 @@ class MediaBrowser extends StatelessWidget {
         Image.network(
           'https://i3.ytimg.com/vi/$path/sddefault.jpg',
           fit: BoxFit.cover,
-          cacheHeight: 100,
+          cacheHeight: 250,
         ),
         ColoredBox(
           color: Colors.transparent,
@@ -85,9 +85,9 @@ class MediaBrowser extends StatelessWidget {
   Widget _imageThumbnail(String path) {
     return Image.asset(
       path,
-      cacheHeight: 100,
-      width: 100,
-      height: 100,
+      cacheHeight: 250,
+      width: 250,
+      height: 250,
       fit: BoxFit.cover,
     );
   }
@@ -96,9 +96,9 @@ class MediaBrowser extends StatelessWidget {
   Widget _networkImageThumbnail(String path) {
     return Image.network(
       path,
-      cacheHeight: 100,
-      height: 100,
-      width: 100,
+      cacheHeight: 250,
+      height: 250,
+      width: 250,
       loadingBuilder: (BuildContext context, Widget child,
           ImageChunkEvent? loadingProgress) {
         if (loadingProgress == null) {

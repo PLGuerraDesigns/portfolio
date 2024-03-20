@@ -1,3 +1,8 @@
+## 2.1.1
+
+- REVISED: Increased the Browser Thumbnail cache size.
+- REVISED: Upgraded dependencies.
+
 ## 2.1.0
 
 - ENHANCED: Added an option tooltip message to the HoverScaleHandler.
