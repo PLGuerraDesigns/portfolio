@@ -22,19 +22,31 @@ class FrostedContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
+    return Material(
+      color: Colors.transparent,
+      elevation: 3,
+      shadowColor: Theme.of(context).brightness == Brightness.dark
+          ? Colors.black87
+          : Colors.black87,
       borderRadius: BorderRadius.circular(borderRadiusAmount),
-      child: BackdropFilter(
-        filter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
-        child: Container(
-          decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.surfaceVariant.withOpacity(
-                Theme.of(context).brightness == Brightness.light ? 0.4 : 0.3),
-            borderRadius: BorderRadius.circular(borderRadiusAmount),
-          ),
-          child: Padding(
-            padding: padding,
-            child: child,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(borderRadiusAmount),
+        child: BackdropFilter(
+          filter: ImageFilter.blur(sigmaX: 8, sigmaY: 8),
+          child: Container(
+            decoration: BoxDecoration(
+              color: Theme.of(context).brightness == Brightness.light
+                  ? Theme.of(context).colorScheme.surface.withOpacity(0.75)
+                  : Theme.of(context)
+                      .colorScheme
+                      .surfaceVariant
+                      .withOpacity(0.3),
+              borderRadius: BorderRadius.circular(borderRadiusAmount),
+            ),
+            child: Padding(
+              padding: padding,
+              child: child,
+            ),
           ),
         ),
       ),

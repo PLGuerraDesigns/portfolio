@@ -57,6 +57,7 @@ class CustomAppBars {
       title: Text(title),
       titleSpacing: 0,
       centerTitle: false,
+      scrolledUnderElevation: 0,
       actions: actions,
     );
   }

@@ -13,7 +13,9 @@ class AppState extends ChangeNotifier {
   String currentRoute = Strings.homeRoute;
 
   /// Whether the media browser is visible.
-  bool mediaBrowserVisible = false;
+  bool _mediaBrowserVisible = false;
+
+  bool get mediaBrowserVisible => _mediaBrowserVisible;
 
   /// Whether the projects have been loaded.
   bool projectsLoaded = false;
@@ -97,7 +99,7 @@ class AppState extends ChangeNotifier {
 
   /// Toggles the visibility of the media browser.
   void toggleMediaBrowserVisibility() {
-    mediaBrowserVisible = !mediaBrowserVisible;
+    _mediaBrowserVisible = !_mediaBrowserVisible;
     notifyListeners();
   }
 

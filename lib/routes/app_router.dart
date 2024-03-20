@@ -73,15 +73,10 @@ class AppRouter {
                         logoPath: professionalExperience.logoPath,
                         title: professionalExperience.company,
                         description: professionalExperience.description,
-                        imagePaths: professionalExperience.imagePaths,
-                        videoPaths: professionalExperience.videoPaths,
-                        youtubeVideoIds: professionalExperience.youtubeVideoIds,
-                        mediaCaptions:
-                            professionalExperience.localMediaCaptions,
                         externalLinks: professionalExperience.externalLinks,
                         startDate: professionalExperience.startDateString,
                         finalDate: professionalExperience.finalDateString,
-                        webImagePaths: professionalExperience.webImagePaths,
+                        mediaItems: professionalExperience.mediaItems,
                         tags: const <String>[],
                         onPreviousPressed: () {
                           context.go(
@@ -114,14 +109,10 @@ class AppRouter {
                       title: project.title,
                       subtitle: project.subtitle,
                       description: project.description,
-                      imagePaths: project.imagePaths,
-                      videoPaths: project.videoPaths,
-                      youtubeVideoIds: const <String>[],
-                      mediaCaptions: project.localMediaCaptions,
                       externalLinks: project.externalLinks,
                       startDate: project.startDateString,
                       finalDate: project.finalDateString,
-                      webImagePaths: project.webImagePaths,
+                      mediaItems: project.mediaItems,
                       tags: project.tags,
                       onPreviousPressed: () {
                         context.go(
