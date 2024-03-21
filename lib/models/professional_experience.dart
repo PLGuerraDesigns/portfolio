@@ -92,10 +92,10 @@ class ProfessionalExperience {
   String get baseMediaPath => 'assets/images/professional/$folderName/';
 
   /// The path for the thumbnail.
-  String get thumbnailPath => '${baseMediaPath}thumbnail.png';
+  String get thumbnailPath => '${baseMediaPath}thumbnail.webp';
 
   /// The path for the logo.
-  String get logoPath => '${baseMediaPath}logo.png';
+  String get logoPath => '${baseMediaPath}logo.webp';
 
   /// A string representation of the start date.
   String get startDateString => DateFormat('MMMM yyyy').format(startDate);

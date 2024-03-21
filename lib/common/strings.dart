@@ -39,19 +39,19 @@ class Strings {
       'assets/json/professional_experience.json';
   static const String socialAssetsBasePath = 'assets/images/icons';
   static const String resumeBuilderIconPath =
-      '$socialAssetsBasePath/resume_builder.png';
+      '$socialAssetsBasePath/resume_builder.webp';
   static String profilePhotoPath(Brightness brightness) =>
-      'assets/images/home/profile_dark.jpg';
+      'assets/images/home/profile_dark.webp';
   static const String professionalExperiencePhotoPath =
-      'assets/images/home/professional.png';
+      'assets/images/home/professional.webp';
   static const String personalExperiencePhotoPath =
-      'assets/images/home/personal.png';
-  static const String gmuLogoPath = 'assets/images/home/gmu_logo.png';
+      'assets/images/home/personal.webp';
+  static const String gmuLogoPath = 'assets/images/home/gmu_logo.webp';
   static const String aicLogoPath =
-      'assets/images/professional/atlantic_insurance/logo.png';
+      'assets/images/professional/atlantic_insurance/logo.webp';
   static const String ambotsLogoPath =
-      'assets/images/professional/ambots/logo.png';
-  static const String uarkLogoPath = 'assets/images/home/uark_logo.png';
+      'assets/images/professional/ambots/logo.webp';
+  static const String uarkLogoPath = 'assets/images/home/uark_logo.webp';
 
   // General
   static const String github = 'GitHub';
