@@ -9,42 +9,42 @@
       {
         "type": "localImage",
         "caption": "",
-        "path": "thumbnail.png"
+        "path": "thumbnail.webp"
       },
       {
         "type": "localImage",
         "caption": "Presentation Slide 1/7",
-        "path": "image_1.png"
+        "path": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "Presentation Slide 2/7",
-        "path": "image_2.png"
+        "path": "image_2.webp"
       },
       {
         "type": "localImage",
         "caption": "Presentation Slide 3/7",
-        "path": "image_3.png"
+        "path": "image_3.webp"
       },
       {
         "type": "localImage",
         "caption": "Presentation Slide 4/7",
-        "path": "image_4.png"
+        "path": "image_4.webp"
       },
       {
         "type": "localImage",
         "caption": "Presentation Slide 5/7",
-        "path": "image_5.png"
+        "path": "image_5.webp"
       },
       {
         "type": "localImage",
         "caption": "Presentation Slide 6/7",
-        "path": "image_6.png"
+        "path": "image_6.webp"
       },
       {
         "type": "localImage",
         "caption": "Presentation Slide 7/7",
-        "path": "image_7.png"
+        "path": "image_7.webp"
       },
       {
         "type": "networkImage",
@@ -122,7 +122,7 @@
       {
         "type": "localImage",
         "caption": "",
-        "path": "thumbnail.png"
+        "path": "thumbnail.webp"
       },
       {
         "type": "networkImage",
@@ -186,7 +186,7 @@
       {
         "type": "localImage",
         "caption": "",
-        "path": "thumbnail.png"
+        "path": "thumbnail.webp"
       },
       {
         "type": "networkImage",
@@ -256,7 +256,7 @@
       {
         "type": "localImage",
         "caption": "AMG GT3 Thrustmaster Wheel on Display Stand",
-        "path": "thumbnail.png"
+        "path": "thumbnail.webp"
       },
       {
         "type": "localVideo",
@@ -271,72 +271,72 @@
       {
         "type": "localImage",
         "caption": "Initial Photoshop Concept.",
-        "path": "image_1.png"
+        "path": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "Fusion 360 CAD Rendering.",
-        "path": "image_2.png"
+        "path": "image_2.webp"
       },
       {
         "type": "localImage",
         "caption": "Fusion 360 CAD Rendering.",
-        "path": "image_3.png"
+        "path": "image_3.webp"
       },
       {
         "type": "localImage",
         "caption": "Wheel Layout and Button Mapping.",
-        "path": "image_4.png"
+        "path": "image_4.webp"
       },
       {
         "type": "localImage",
         "caption": "8-PIN DIN and Paddle Shifter Wiring.",
-        "path": "image_5.png"
+        "path": "image_5.webp"
       },
       {
         "type": "localImage",
         "caption": "Material Strength and Feel Testing.",
-        "path": "image_6.png"
+        "path": "image_6.webp"
       },
       {
         "type": "localImage",
         "caption": "Application of Vinyl Wrap and Decals.",
-        "path": "image_7.png"
+        "path": "image_7.webp"
       },
       {
         "type": "localImage",
         "caption": "Wheel Fully Assembled.",
-        "path": "image_8.png"
+        "path": "image_8.webp"
       },
       {
         "type": "localImage",
         "caption": "Improved Handle Grip.",
-        "path": "image_9.png"
+        "path": "image_9.webp"
       },
       {
         "type": "localImage",
         "caption": "Finished wheel mounted on a custom display stand.",
-        "path": "image_10.png"
+        "path": "image_10.webp"
       },
       {
         "type": "localImage",
         "caption": "The ProtoBoard Circuit design in Progress.",
-        "path": "image_11.png"
+        "path": "image_11.webp"
       },
       {
         "type": "localImage",
         "caption": "ProtoBoard Design vs. Final Custom Manufactured PCB Board.",
-        "path": "image_12.png"
+        "path": "image_12.webp"
       },
       {
         "type": "localImage",
         "caption": "PCB Assembled and Installed.",
-        "path": "image_13.png"
+        "path": "image_13.webp"
       },
       {
         "type": "localImage",
         "caption": "My Sim Racing Rig (at the time) with the AMG GT3 Wheel.",
-        "path": "image_14.png"
+        "path": "image_14.webp"
       },
       {
         "type": "networkImage",
@@ -433,42 +433,42 @@
       {
         "type": "localImage",
         "caption": "Apple Charging Station",
-        "path": "thumbnail.png"
+        "path": "thumbnail.webp"
       },
       {
         "type": "localImage",
         "caption": "Original 2016 Design Concept in SketchUp.",
-        "path": "image_1.png"
+        "path": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "Original 2016 Design Concept in SketchUp.",
-        "path": "image_2.png"
+        "path": "image_2.webp"
       },
       {
         "type": "localImage",
         "caption": "Redesigned in 2019 and 3D Printed.",
-        "path": "image_3.png"
+        "path": "image_3.webp"
       },
       {
         "type": "localImage",
         "caption": "Base with Swappable Charging Module Inserts.",
-        "path": "image_4.png"
+        "path": "image_4.webp"
       },
       {
         "type": "localImage",
         "caption": "Application of Wood Stain.",
-        "path": "image_5.png"
+        "path": "image_5.webp"
       },
       {
         "type": "localImage",
         "caption": "After Stain Application.",
-        "path": "image_6.png"
+        "path": "image_6.webp"
       },
       {
         "type": "localImage",
         "caption": "Charging Station (minus apple watch puck)",
-        "path": "image_7.png"
+        "path": "image_7.webp"
       }
     ],
     "externalLinks": [],
@@ -495,7 +495,7 @@
       {
         "type": "localImage",
         "caption": "Companion App for Codemaster's F1 2019 Game",
-        "path": "thumbnail.png"
+        "path": "thumbnail.webp"
       },
       {
         "type": "localVideo",
@@ -534,37 +534,37 @@
       {
         "type": "localImage",
         "caption": "Nintendo Switch Speaker Attachment",
-        "path": "thumbnail.png"
+        "path": "thumbnail.webp"
       },
       {
         "type": "localImage",
         "caption": "CAD Design vs. Final Product",
-        "path": "image_1.png"
+        "path": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "CAD Design vs. Final Product",
-        "path": "image_2.png"
+        "path": "image_2.webp"
       },
       {
         "type": "localImage",
         "caption": "Casing Prototypes",
-        "path": "image_3.png"
+        "path": "image_3.webp"
       },
       {
         "type": "localImage",
         "caption": "Speaker connected to Nintendo Switch (Front View)",
-        "path": "image_4.png"
+        "path": "image_4.webp"
       },
       {
         "type": "localImage",
         "caption": "Speaker connected to Nintendo Switch (Left Side View)",
-        "path": "image_5.png"
+        "path": "image_5.webp"
       },
       {
         "type": "localImage",
         "caption": "Speaker connected to Nintendo Switch (Right Side View)",
-        "path": "image_6.png"
+        "path": "image_6.webp"
       }
     ],
     "externalLinks": [
@@ -609,7 +609,7 @@
       {
         "type": "localImage",
         "caption": "Homemade Sim Racing Rig",
-        "path": "thumbnail.png"
+        "path": "thumbnail.webp"
       },
       {
         "type": "localVideo",
@@ -619,132 +619,132 @@
       {
         "type": "localImage",
         "caption": "Pedals carved from foam, reinforced in the rear with popsicle sticks",
-        "path": "image_1.png"
+        "path": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "Applying fiberglass to foam pedals, wrapped in foil and masking tape",
-        "path": "image_2.png"
+        "path": "image_2.webp"
       },
       {
         "type": "localImage",
         "caption": "Pedal finished with body filler, primed and painted; door hinge used for pedal attachment.",
-        "path": "image_3.png"
+        "path": "image_3.webp"
       },
       {
         "type": "localImage",
         "caption": "Foam pedal base reinforced with wood and wrapped in foil and masking tape.",
-        "path": "image_4.png"
+        "path": "image_4.webp"
       },
       {
         "type": "localImage",
         "caption": "Applying fiberglass to pedal base",
-        "path": "image_5.png"
+        "path": "image_5.webp"
       },
       {
         "type": "localImage",
         "caption": "Spray painting pedal base",
-        "path": "image_6.png"
+        "path": "image_6.webp"
       },
       {
         "type": "localImage",
         "caption": "Fitment test with pedal springs",
-        "path": "image_7.png"
+        "path": "image_7.webp"
       },
       {
         "type": "localImage",
         "caption": "Potentiometers added to the pedals for determining their position.",
-        "path": "image_8.png"
+        "path": "image_8.webp"
       },
       {
         "type": "localImage",
         "caption": "Steering wheel shape outlined on foam",
-        "path": "image_9.png"
+        "path": "image_9.webp"
       },
       {
         "type": "localImage",
         "caption": "Wheel carved from foam",
-        "path": "image_10.png"
+        "path": "image_10.webp"
       },
       {
         "type": "localImage",
         "caption": "Foam wheel reinforced with wood and wrapped in foil and masking tape.",
-        "path": "image_11.png"
+        "path": "image_11.webp"
       },
       {
         "type": "localImage",
         "caption": "Applying fiberglass to the steering wheel",
-        "path": "image_12.png"
+        "path": "image_12.webp"
       },
       {
         "type": "localImage",
         "caption": "Fiberglass wheel finished with body filler and vinyl spackling.",
-        "path": "image_13.png"
+        "path": "image_13.webp"
       },
       {
         "type": "localImage",
         "caption": "Wheel sanded smooth, and the buttonholes drilled.",
-        "path": "image_14.png"
+        "path": "image_14.webp"
       },
       {
         "type": "localImage",
         "caption": "Wheel primed and mounted to wheelbase using PCB pipes.",
-        "path": "image_15.png"
+        "path": "image_15.webp"
       },
       {
         "type": "localImage",
         "caption": "A potentiometer attached to the wheel shaft mechanism was added to determine wheel position.",
-        "path": "image_16.png"
+        "path": "image_16.webp"
       },
       {
         "type": "localImage",
         "caption": "Wheelbase painted by a friend",
-        "path": "image_17.png"
+        "path": "image_17.webp"
       },
       {
         "type": "localImage",
         "caption": "Steering wheel painted",
-        "path": "image_18.png"
+        "path": "image_18.webp"
       },
       {
         "type": "localImage",
         "caption": "Paddle shifters cut from pieces of acrylic and attached to cabinet door hinges",
-        "path": "image_19.png"
+        "path": "image_19.webp"
       },
       {
         "type": "localImage",
         "caption": "Paddle shifters mounted to the wheel",
-        "path": "image_20.png"
+        "path": "image_20.webp"
       },
       {
         "type": "localImage",
         "caption": "Endstop switches added for paddle shifter input",
-        "path": "image_21.png"
+        "path": "image_21.webp"
       },
       {
         "type": "localImage",
         "caption": "Finished wheel",
-        "path": "image_22.png"
+        "path": "image_22.webp"
       },
       {
         "type": "localImage",
         "caption": "Custom rig built for the steering wheel and pedal base",
-        "path": "image_23.png"
+        "path": "image_23.webp"
       },
       {
         "type": "localImage",
         "caption": "Bungee cord added to the steering wheel shaft for auto-centering",
-        "path": "image_24.png"
+        "path": "image_24.webp"
       },
       {
         "type": "localImage",
         "caption": "Finished pedal base",
-        "path": "image_25.png"
+        "path": "image_25.webp"
       },
       {
         "type": "localImage",
         "caption": "Rear side view of the rig",
-        "path": "image_26.png"
+        "path": "image_26.webp"
       }
     ],
     "externalLinks": [],
@@ -767,7 +767,7 @@
       {
         "type": "localImage",
         "caption": "Concept Self Destructing Storage Device",
-        "path": "thumbnail.png"
+        "path": "thumbnail.webp"
       },
       {
         "type": "localVideo",
@@ -787,42 +787,42 @@
       {
         "type": "localImage",
         "caption": "Initial breadboard prototype",
-        "path": "image_1.png"
+        "path": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "Fusion 360 CAD Rendering",
-        "path": "image_2.png"
+        "path": "image_2.webp"
       },
       {
         "type": "localImage",
         "caption": "Fusion 360 CAD Rendering",
-        "path": "image_3.png"
+        "path": "image_3.webp"
       },
       {
         "type": "localImage",
         "caption": "3D-Printed Case",
-        "path": "image_4.png"
+        "path": "image_4.webp"
       },
       {
         "type": "localImage",
         "caption": "Wiring and Assembly",
-        "path": "image_5.png"
+        "path": "image_5.webp"
       },
       {
         "type": "localImage",
         "caption": "Unfinished SafeDrive MK1",
-        "path": "image_6.png"
+        "path": "image_6.webp"
       },
       {
         "type": "localImage",
         "caption": "Case Sanded, Filled, Primed, and Painted",
-        "path": "image_7.png"
+        "path": "image_7.webp"
       },
       {
         "type": "localImage",
         "caption": "Warning Labels Added",
-        "path": "image_8.png"
+        "path": "image_8.webp"
       },
       {
         "type": "localVideo",
@@ -867,7 +867,7 @@
       {
         "type": "localImage",
         "caption": "",
-        "path": "thumbnail.png"
+        "path": "thumbnail.webp"
       },
       {
         "type": "localVideo",
@@ -887,27 +887,27 @@
       {
         "type": "localImage",
         "caption": "Prototype Mounted on a Hat.",
-        "path": "image_1.png"
+        "path": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "Modded after-market Xbox controller.",
-        "path": "image_2.png"
+        "path": "image_2.webp"
       },
       {
         "type": "localImage",
         "caption": "Wires soldered inline to thumbstick input (maintaining original functionality).",
-        "path": "image_3.png"
+        "path": "image_3.webp"
       },
       {
         "type": "localImage",
         "caption": "Initial Head Tracking Circuit.",
-        "path": "image_4.png"
+        "path": "image_4.webp"
       },
       {
         "type": "localImage",
         "caption": "Top View of the Circuit.",
-        "path": "image_5.png"
+        "path": "image_5.webp"
       }
     ],
     "videoCount": 3,
@@ -938,7 +938,7 @@
       {
         "type": "localImage",
         "caption": "",
-        "path": "thumbnail.png"
+        "path": "thumbnail.webp"
       },
       {
         "type": "localVideo",
@@ -948,7 +948,7 @@
       {
         "type": "localImage",
         "caption": "Development and Testing using an Emulated Android Device.",
-        "path": "image_1.png"
+        "path": "image_1.webp"
       }
     ],
     "externalLinks": [
@@ -975,17 +975,17 @@
       {
         "type": "localImage",
         "caption": "Programmable Macro Pad (HID)",
-        "path": "thumbnail.png"
+        "path": "thumbnail.webp"
       },
       {
         "type": "localImage",
         "caption": "Macro Pad - Front view",
-        "path": "image_1.png"
+        "path": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "Desk setup with Macro Pad.",
-        "path": "image_2.png"
+        "path": "image_2.webp"
       }
     ],
     "externalLinks": [
@@ -1013,17 +1013,17 @@
       {
         "type": "localImage",
         "caption": "Smart LED Wall Decor",
-        "path": "thumbnail.png"
+        "path": "thumbnail.webp"
       },
       {
         "type": "localImage",
         "caption": "Interchangeable cover plate using magnets.",
-        "path": "image_1.png"
+        "path": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "USB Micro Port for Continuous Power",
-        "path": "image_2.png"
+        "path": "image_2.webp"
       }
     ],
     "externalLinks": [
@@ -1053,7 +1053,7 @@
       {
         "type": "localImage",
         "caption": "Preparing For the Science Fair Presentation",
-        "path": "thumbnail.png"
+        "path": "thumbnail.webp"
       },
       {
         "type": "localVideo",
@@ -1063,62 +1063,62 @@
       {
         "type": "localImage",
         "caption": "Hand made with foam, rubber tubing, and some fishing line.",
-        "path": "image_1.png"
+        "path": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "Forearm skeleton made using foam and wood.",
-        "path": "image_2.png"
+        "path": "image_2.webp"
       },
       {
         "type": "localImage",
         "caption": "Hand attached to the forearm",
-        "path": "image_3.png"
+        "path": "image_3.webp"
       },
       {
         "type": "localImage",
         "caption": "Securing servo motors",
-        "path": "image_4.png"
+        "path": "image_4.webp"
       },
       {
         "type": "localImage",
         "caption": "Forearm wrapped with bristol board",
-        "path": "image_5.png"
+        "path": "image_5.webp"
       },
       {
         "type": "localImage",
         "caption": "Cut-out made to access servo motors",
-        "path": "image_6.png"
+        "path": "image_6.webp"
       },
       {
         "type": "localImage",
         "caption": "Applying fiberglass to the entire arm",
-        "path": "image_7.png"
+        "path": "image_7.webp"
       },
       {
         "type": "localImage",
         "caption": "Input glove with flex sensors on fingers",
-        "path": "image_8.png"
+        "path": "image_8.webp"
       },
       {
         "type": "localImage",
         "caption": "Finished hand",
-        "path": "image_9.png"
+        "path": "image_9.webp"
       },
       {
         "type": "localImage",
         "caption": "Finished hand with Arduino and input glove",
-        "path": "image_10.png"
+        "path": "image_10.webp"
       },
       {
         "type": "localImage",
         "caption": "School science fair display",
-        "path": "image_11.png"
+        "path": "image_11.webp"
       },
       {
         "type": "localImage",
         "caption": "Demonstration for local news",
-        "path": "image_12.png"
+        "path": "image_12.webp"
       }
     ],
     "externalLinks": [],

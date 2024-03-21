@@ -21,17 +21,17 @@
       {
         "type": "localImage",
         "caption": "",
-        "path": "thumbnail.png"
+        "path": "thumbnail.webp"
       },
       {
         "type": "localImage",
         "caption": "Store Screenshots",
-        "path": "image_1.png"
+        "path": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "UI Design",
-        "path": "image_2.png"
+        "path": "image_2.webp"
       }
     ],
     "externalLinks": [
@@ -130,82 +130,82 @@
       {
         "type": "localImage",
         "caption": "Rendering of the AMBOTS swarm 3D printing development platform.",
-        "path": "thumbnail.png"
+        "path": "thumbnail.webp"
       },
       {
         "type": "localImage",
         "caption": "3-chunk dachshund wall-art printed by the AMBOTS swarm 3D printing system.",
-        "path": "image_1.png"
+        "path": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "Concrete wall facade mold in progress.",
-        "path": "image_2.png"
+        "path": "image_2.webp"
       },
       {
         "type": "localImage",
         "caption": "Concrete wall facade mold in progress.",
-        "path": "image_3.png"
+        "path": "image_3.webp"
       },
       {
         "type": "localImage",
         "caption": "Concrete UARK Hog finished product.",
-        "path": "image_4.png"
+        "path": "image_4.webp"
       },
       {
         "type": "localImage",
         "caption": "Preparing for UARK's 150th anniversary demo.",
-        "path": "image_5.png"
+        "path": "image_5.webp"
       },
       {
         "type": "localImage",
         "caption": "AMBOTS swarm platform demo for students at the UofA campus.",
-        "path": "image_6.png"
+        "path": "image_6.webp"
       },
       {
         "type": "localImage",
         "caption": "7th Generation Transporter - Front Left View",
-        "path": "image_7.png"
+        "path": "image_7.webp"
       },
       {
         "type": "localImage",
         "caption": "7th Generation Transporter - Front Right View",
-        "path": "image_8.png"
+        "path": "image_8.webp"
       },
       {
         "type": "localImage",
         "caption": "7th Generation Transporter - Above View",
-        "path": "image_9.png"
+        "path": "image_9.webp"
       },
       {
         "type": "localImage",
         "caption": "7th Generation AMBOTS Swarm 3D Printing System",
-        "path": "image_10.png"
+        "path": "image_10.webp"
       },
       {
         "type": "localImage",
         "caption": "Me with the 7th Generation AMBOTS Swarm 3D Printing System",
-        "path": "image_11.png"
+        "path": "image_11.webp"
       },
       {
         "type": "localImage",
         "caption": "Rendering of the AMBOTS Development Kit",
-        "path": "image_12.png"
+        "path": "image_12.webp"
       },
       {
-        "type": "networkImage",
+        "type": "localImage",
         "caption": "AMBOTS Development Kit",
-        "path": "https://asbtdc.org/wp-content/uploads/2022/03/ambots-dev-kit.jpg"
+        "path": "image_13.webp"
       },
       {
-        "type": "networkImage",
+        "type": "localImage",
         "caption": "",
-        "path": "https://asbtdc.org/wp-content/uploads/2019/11/AMBOTS-team-picture-november-11.jpg"
+        "path": "image_14.webp"
       },
       {
-        "type": "networkImage",
+        "type": "localImage",
         "caption": "",
-        "path": "https://asbtdc.org/wp-content/uploads/2021/08/AMBOTS-2021-e1629923247390-1024x590.jpg"
+        "path": "image_15.webp"
       }
     ],
     "externalLinks": [
@@ -307,42 +307,42 @@
       {
         "type": "localImage",
         "caption": "Rendering of the 7th Gen Transporter",
-        "path": "thumbnail.png"
+        "path": "thumbnail.webp"
       },
       {
         "type": "localImage",
         "caption": "Vase Printed by the 5th Gen AMBOTS Printer",
-        "path": "image_1.png"
+        "path": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "Early 7th Gen Printer Starting a Large 3D Phil Print",
-        "path": "image_2.png"
+        "path": "image_2.webp"
       },
       {
         "type": "localImage",
         "caption": "Small and Large 3D Phil Prints by the early 7th Gen AMBOTS Printer",
-        "path": "image_3.png"
+        "path": "image_3.webp"
       },
       {
         "type": "localImage",
         "caption": "Small and Large 3D Phil Prints by the early 7th Gen AMBOTS Printer",
-        "path": "image_4.png"
+        "path": "image_4.webp"
       },
       {
         "type": "localImage",
         "caption": "Chunk Angle and Bond Test with off-the-shelf nozzles",
-        "path": "image_5.png"
+        "path": "image_5.webp"
       },
       {
         "type": "localImage",
         "caption": "Transporter Image Processing Test under different lighting conditions",
-        "path": "image_6.png"
+        "path": "image_6.webp"
       },
       {
         "type": "localImage",
         "caption": "Some notable prints made by the various custom AM³ Lab 3D Printers",
-        "path": "image_7.png"
+        "path": "image_7.webp"
       }
     ],
     "externalLinks": [
