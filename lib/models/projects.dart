@@ -86,7 +86,7 @@ class Project {
       'assets/images/personal/${title.toLowerCase().replaceAll(' ', '_')}/';
 
   /// The path for the thumbnail.
-  String get thumbnailPath => '${baseMediaPath}thumbnail.png';
+  String get thumbnailPath => '${baseMediaPath}thumbnail.webp';
 
   /// A string representation of the start date.
   String? get startDateString {

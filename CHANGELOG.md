@@ -1,3 +1,10 @@
+## 2.1.2
+
+- ENHANCED: Added thumbnail images for videos.
+- REVISED: Set HitBehavior for HoverScaleHandler to `opaque`.
+- REVISED: Converted all image formats to WebP to reduce content size.
+- REVISED: Implemented image_network package for YouTube thumbnail browser images.
+
 ## 2.1.1
 
 - REVISED: Increased the Browser Thumbnail cache size.

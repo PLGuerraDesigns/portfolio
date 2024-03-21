@@ -22,6 +22,7 @@ dependencies:
   unorm_dart: ^0.3.0
   shimmer: ^3.0.0
   zoom_pinch_overlay: ^1.4.3
+  image_network: ^2.5.6
 
 dev_dependencies:
   flutter_test:

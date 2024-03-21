@@ -1,6 +1,5 @@
-import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';
-import 'package:video_player/video_player.dart';
+import 'package:image_network/image_network.dart';
 
 import '../common/enums.dart';
 import '../models/media_item.dart';
@@ -31,11 +30,7 @@ class MediaBrowser extends StatelessWidget {
       fit: StackFit.expand,
       alignment: Alignment.center,
       children: <Widget>[
-        Image.network(
-          'https://i3.ytimg.com/vi/$path/sddefault.jpg',
-          fit: BoxFit.cover,
-          cacheHeight: 250,
-        ),
+        _networkImageThumbnail('https://i3.ytimg.com/vi/$path/sddefault.jpg'),
         ColoredBox(
           color: Colors.transparent,
           child: Center(
@@ -54,25 +49,13 @@ class MediaBrowser extends StatelessWidget {
   Widget _videoThumbnail(String path) {
     return Stack(
       children: <Widget>[
-        Chewie(
-          controller: ChewieController(
-            videoPlayerController: VideoPlayerController.asset(
-              path,
-            ),
-            showControls: false,
-            allowFullScreen: false,
-            allowMuting: false,
-            placeholder: Container(
-              color: Colors.black,
-            ),
-          ),
-        ),
-        const ColoredBox(
+        _imageThumbnail(path),
+        ColoredBox(
           color: Colors.transparent,
           child: Center(
             child: Icon(
               Icons.play_circle_outline,
-              color: Colors.white70,
+              color: Colors.white.withOpacity(0.95),
               size: 48.0,
             ),
           ),
@@ -94,36 +77,36 @@ class MediaBrowser extends StatelessWidget {
 
   /// Thumbnail for a network image.
   Widget _networkImageThumbnail(String path) {
-    return Image.network(
-      path,
-      cacheHeight: 250,
-      height: 250,
-      width: 250,
-      loadingBuilder: (BuildContext context, Widget child,
-          ImageChunkEvent? loadingProgress) {
-        if (loadingProgress == null) {
-          return child;
-        }
-        return const Center(
-          child: CircularProgressIndicator(
-            valueColor: AlwaysStoppedAnimation<Color>(
-              Colors.white70,
-            ),
+    return FittedBox(
+      fit: BoxFit.cover,
+      child: ImageNetwork(
+        image: path,
+        height: 250,
+        width: 250,
+        onLoading: const CircularProgressIndicator(
+          valueColor: AlwaysStoppedAnimation<Color>(
+            Colors.white70,
           ),
-        );
-      },
-      errorBuilder:
-          (BuildContext context, Object exception, StackTrace? stackTrace) {
-        return const Center(
+        ),
+        onError: const Center(
           child: Icon(
             Icons.error_outline,
             color: Colors.white70,
             size: 48.0,
           ),
-        );
-      },
-      fit: BoxFit.cover,
+        ),
+      ),
     );
+  }
+
+  /// The thumbnail for the specified video.
+  String getVideoThumbnailPath(String path) {
+    final String thumbnailPath =
+        path.split('_').sublist(0, path.split('_').length - 1).join('_');
+    final int index = int.parse(
+      path.split('_').last.split('.').first,
+    );
+    return '${thumbnailPath}_thumbnail_$index.webp';
   }
 
   @override
@@ -167,7 +150,9 @@ class MediaBrowser extends StatelessWidget {
                           : mediaItems[index].type == MediaType.networkImage
                               ? _networkImageThumbnail(mediaItems[index].path)
                               : mediaItems[index].type == MediaType.localVideo
-                                  ? _videoThumbnail(mediaItems[index].path)
+                                  ? _videoThumbnail(getVideoThumbnailPath(
+                                      mediaItems[index].path,
+                                    ))
                                   : _youTubeVideoThumbnail(
                                       mediaItems[index].path),
                     ),

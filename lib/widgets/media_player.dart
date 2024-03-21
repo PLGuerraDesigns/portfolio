@@ -49,6 +49,7 @@ class MediaPlayer extends StatefulWidget {
 }
 
 class MediaPlayerState extends State<MediaPlayer> {
+  /// Whether the media browser is visible.
   late bool _isMediaBrowserVisible;
 
   /// The index of the current media item.

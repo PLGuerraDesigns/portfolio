@@ -62,6 +62,7 @@ class HoverScaleHandlerState extends State<HoverScaleHandler> {
           },
         ),
         child: GestureDetector(
+          behavior: HitTestBehavior.opaque,
           onTap: () async {
             if (tapped) {
               return;

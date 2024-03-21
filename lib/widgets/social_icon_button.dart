@@ -25,7 +25,7 @@ class SocialIconButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return IconButton(
       icon: Image.asset(
-        '$socialAssetBasePath/${title.toLowerCase()}.png',
+        '$socialAssetBasePath/${title.toLowerCase()}.webp',
         height: 24.0,
         color: Theme.of(context).colorScheme.onSurface,
       ),
