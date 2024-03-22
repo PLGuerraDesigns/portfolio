@@ -254,19 +254,19 @@
     "description": "The goal of the AMG GT3 Wheel project was to design and build a functional, 3D-printed replica of the Mercedes Benz AMG GT3 steering wheel for use in Sim Racing.\n\nAn Arduino Nano powers the wheel and features a thumb-slide joystick, eight pushbuttons, and a pair of paddle shifters. The wheel is directly compatible with the Thrustmaster ecosystem.\n\nYou can find the 3D-printable files on Thingiverse along with an assembly manual, circuit files, and Arduino code.",
     "media": [
       {
+        "type": "youTubeVideo",
+        "caption": "Wheel in Action on a Thrustmaster Racing Rig",
+        "path": "nsCTZuELh-k"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Full view of the wheel.",
+        "path": "S6_5_JhzCXQ"
+      },
+      {
         "type": "localImage",
         "caption": "AMG GT3 Thrustmaster Wheel on Display Stand",
         "path": "thumbnail.webp"
-      },
-      {
-        "type": "localVideo",
-        "caption": "Wheel in Action on a Thrustmaster Racing Rig",
-        "path": "video_1.mp4"
-      },
-      {
-        "type": "localVideo",
-        "caption": "Full view of the wheel.",
-        "path": "video_2.mp4"
       },
       {
         "type": "localImage",
@@ -825,9 +825,9 @@
         "path": "image_8.webp"
       },
       {
-        "type": "localVideo",
+        "type": "youTubeVideo",
         "caption": "Project Demo",
-        "path": "video_1.mp4"
+        "path": "XBJTbQ3lhxo"
       }
     ],
     "externalLinks": [
@@ -865,24 +865,24 @@
     "description": "The goal of the Xbox Head Tracking project was to design an Xbox compatible head tracking device to track the user's head movements and move the in-game camera.\n\nThe circuit comprises an Arduino microcontroller that reads incoming data from an MPU-6050 (three-axis accelerometer) to track the user's head movements and then controls a digital potentiometer. The output of the digital potentiometer connects to wires added on a modified after-market Xbox controller. The added wires lead directly to the game controller's internal circuit board input for the analog thumbsticks.\n\nYou can find the build guide on Instructables.com.",
     "media": [
       {
-        "type": "localImage",
-        "caption": "",
-        "path": "thumbnail.webp"
-      },
-      {
-        "type": "localVideo",
+        "type": "youTubeVideo",
         "caption": "Project Demo",
-        "path": "video_1.mp4"
+        "path": "XxF-zlooXNg"
       },
       {
-        "type": "localVideo",
+        "type": "youTubeVideo",
         "caption": "Testing Gyroscope and Accelerometer.",
-        "path": "video_2.mp4"
+        "path": "_smU7T_qflA"
       },
       {
         "type": "localVideo",
         "caption": "Using Digital Potentiometers to Control Thumbstick Input.",
         "path": "video_3.mp4"
+      },
+      {
+        "type": "localImage",
+        "caption": "",
+        "path": "thumbnail.webp"
       },
       {
         "type": "localImage",
