@@ -64,78 +64,38 @@
     "media": [
       {
         "type": "youTubeVideo",
-        "caption": "",
+        "caption": "CBS - The Henry Ford's Innovation Nation",
         "path": "uTrtARdG20E"
       },
       {
         "type": "youTubeVideo",
-        "caption": "",
-        "path": "BbSe9UXH_A8"
-      },
-      {
-        "type": "youTubeVideo",
-        "caption": "",
-        "path": "zSt3IIy00O4"
-      },
-      {
-        "type": "localVideo",
         "caption": "3-chunk dachshund wall-art printed by the AMBOTS swarm 3D printing system.",
-        "path": "video_1.mp4"
-      },
-      {
-        "type": "localVideo",
-        "caption": "Transporter - return to dock path finding.",
-        "path": "video_2.mp4"
-      },
-      {
-        "type": "localVideo",
-        "caption": "Transporter - onboard UI for manual control.",
-        "path": "video_3.mp4"
-      },
-      {
-        "type": "localVideo",
-        "caption": "4-chunk AMBOTS logo printed by the AMBOTS swarm 3D printing system.",
-        "path": "video_4.mp4"
-      },
-      {
-        "type": "localVideo",
-        "caption": "Printer movement to next chunk.",
-        "path": "video_5.mp4"
-      },
-      {
-        "type": "localVideo",
-        "caption": "",
-        "path": "video_6.mp4"
-      },
-      {
-        "type": "localVideo",
-        "caption": "UARK Hog Concrete Mold printed by the AMBOTS swarm 3D printing system.",
-        "path": "video_7.mp4"
-      },
-      {
-        "type": "localVideo",
-        "caption": "Transporter misalignment recovery test.",
-        "path": "video_8.mp4"
-      },
-      {
-        "type": "localVideo",
-        "caption": "Transporter - onboard UI for manual control.",
-        "path": "video_9.mp4"
-      },
-      {
-        "type": "localVideo",
-        "caption": "",
-        "path": "video_10.mp4"
-      },
-      {
-        "type": "localImage",
-        "caption": "Rendering of the AMBOTS swarm 3D printing development platform.",
-        "path": "thumbnail.webp"
+        "path": "WLdU_nB4Tmg"
       },
       {
         "type": "localImage",
         "caption": "3-chunk dachshund wall-art printed by the AMBOTS swarm 3D printing system.",
         "path": "image_1.webp"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "A New Generation of Swarm 3D Printing Robots",
+        "path": "xMMauLmHcwk"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "UARK Hog Concrete Mold printed by the AMBOTS swarm 3D printing system.",
+        "path": "kyzpE83BQIM"
+      },
+      {
+        "type": "localImage",
+        "caption": "Concrete UARK Hog finished product.",
+        "path": "image_4.webp"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Printer movement to next chunk.",
+        "path": "Bo7Qsp6Bg3w"
       },
       {
         "type": "localImage",
@@ -148,9 +108,59 @@
         "path": "image_3.webp"
       },
       {
+        "type": "youTubeVideo",
+        "caption": "4-chunk AMBOTS logo printed by the AMBOTS swarm 3D printing system.",
+        "path": "CZnIDNd1iqs"
+      },
+      {
         "type": "localImage",
-        "caption": "Concrete UARK Hog finished product.",
-        "path": "image_4.webp"
+        "caption": "4-chunk AMBOTS logo finished product (post-processed).",
+        "path": "image_16.webp"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Transporter",
+        "path": "p09xkrQKyMs"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Transporter: Return to Dock",
+        "path": "AyI313TPQuE"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Transporter misalignment recovery test.",
+        "path": "bu5smH7ooAE"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Demonstration of Transporter onboard UI for direct control.",
+        "path": "3SWOADS7OOk"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Transporter Onboard UI Demonstration",
+        "path": "bJGc8ChOAcs"
+      },
+      {
+        "type": "localImage",
+        "caption": "7th-Generation Transporter - Front Left View",
+        "path": "image_7.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "7th-Generation Transporter - Front Right View",
+        "path": "image_8.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "7th-Generation Transporter - Above View",
+        "path": "image_9.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "7th-Generation AMBOTS Swarm 3D Printing System",
+        "path": "image_10.webp"
       },
       {
         "type": "localImage",
@@ -164,48 +174,53 @@
       },
       {
         "type": "localImage",
-        "caption": "7th Generation Transporter - Front Left View",
-        "path": "image_7.webp"
+        "caption": "Rendering of the AMBOTS Swarm 3D-Printing Development Platform.",
+        "path": "thumbnail.webp"
       },
       {
         "type": "localImage",
-        "caption": "7th Generation Transporter - Front Right View",
-        "path": "image_8.webp"
-      },
-      {
-        "type": "localImage",
-        "caption": "7th Generation Transporter - Above View",
-        "path": "image_9.webp"
-      },
-      {
-        "type": "localImage",
-        "caption": "7th Generation AMBOTS Swarm 3D Printing System",
-        "path": "image_10.webp"
-      },
-      {
-        "type": "localImage",
-        "caption": "Me with the 7th Generation AMBOTS Swarm 3D Printing System",
-        "path": "image_11.webp"
-      },
-      {
-        "type": "localImage",
-        "caption": "Rendering of the AMBOTS Development Kit",
+        "caption": "Rendering of an Extended AMBOTS Development Kit",
         "path": "image_12.webp"
       },
       {
         "type": "localImage",
-        "caption": "AMBOTS Development Kit",
+        "caption": "Extended AMBOTS Development Kit",
         "path": "image_13.webp"
       },
       {
+        "type": "youTubeVideo",
+        "caption": "Transporter Demo",
+        "path": "BbSe9UXH_A8"
+      },
+      {
         "type": "localImage",
-        "caption": "",
+        "caption": "Me with the 7th-Generation AMBOTS Swarm 3D Printing System",
+        "path": "image_11.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Founders of AMBOTS Inc.",
+        "path": "image_17.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Team Photo",
         "path": "image_14.webp"
       },
       {
         "type": "localImage",
-        "caption": "",
+        "caption": "Team Photo",
         "path": "image_15.webp"
+      },
+      {
+        "type": "localVideo",
+        "caption": "System Conceptualization Animation",
+        "path": "video_10.mp4"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Technology Centers Spotlight Series - Swarm Manufacturing",
+        "path": "zSt3IIy00O4"
       }
     ],
     "externalLinks": [
@@ -242,92 +257,67 @@
     "location": "Fayetteville, AR",
     "startDate": "2019-04-01T00:00:00Z",
     "endDate": "2020-12-01T00:00:00Z",
-    "description": "As a Graduate Research Assistant at the AM³ Lab, University of Arkansas, I played a pivotal role in advancing the cutting-edge field of 3D printing technology. The AM³ Lab is dedicated to developing next generation 3D printing technologies and promoting the use of 3D printing technology to better our lives through excellent research, education, and service to the global 3D printing community.\n\nInitially on-boarded as a volunteer, I assisted in troubleshooting and enhancing the 5th generation 3D printers. My dedication and problem-solving skills quickly earned me the position of Graduate Research Assistant, where I continued my contributions to the field.\n\nMy primary focus during my time with the lab was developing a groundbreaking swarm 3D printing process designed to enable the production of large-scale structures using a fleet of mobile robots. This innovative approach involved a combination of hardware and software components, including custom-built transporter robots, SCARA 3D printers, and a modular print & power-delivery floor.\n\nMost notably, I was instrumental in transitioning from the 5th generation platform to the 6th and 7th generations. This transition involved separating the SCARA arm from the mobile base, and optimizing the hardware for improved robustness, efficiency, and quality. I assumed a significant role in these evolutions, taking charge of software development and contributing to hardware enhancements.\n\nOne of my key contributions was the implementation of Computer Vision for localization and navigation within the transporter's control system, enabling semi-autonomous operation - a significant advancement in the field.\n\nNot only was my work at the AM³ Lab a valuable learning experience, but also a contribution to the lab's mission of pushing the boundaries of 3D printing technology. I am proud to have been part of a team dedicated to revolutionizing manufacturing and enabling mass customization through next-generation 3D printing innovations.",
+    "description": "As a Graduate Research Assistant at the AM³ Lab, University of Arkansas, I played a pivotal role in advancing the cutting-edge field of 3D printing technology. The AM³ Lab is dedicated to developing next generation 3D printing technologies and promoting the use of 3D printing technology to better our lives through excellent research, education, and service to the global 3D printing community.\n\nInitially on-boarded as a volunteer, I assisted in troubleshooting and enhancing the 5th-Generation 3D printers. My dedication and problem-solving skills quickly earned me the position of Graduate Research Assistant, where I continued my contributions to the field.\n\nMy primary focus during my time with the lab was developing a groundbreaking swarm 3D printing process designed to enable the production of large-scale structures using a fleet of mobile robots. This innovative approach involved a combination of hardware and software components, including custom-built transporter robots, SCARA 3D printers, and a modular print & power-delivery floor.\n\nMost notably, I was instrumental in transitioning from the 5th-Generation platform to the 6th and 7th-Generations. This transition involved separating the SCARA arm from the mobile base, and optimizing the hardware for improved robustness, efficiency, and quality. I assumed a significant role in these evolutions, taking charge of software development and contributing to hardware enhancements.\n\nOne of my key contributions was the implementation of Computer Vision for localization and navigation within the transporter's control system, enabling semi-autonomous operation - a significant advancement in the field.\n\nNot only was my work at the AM³ Lab a valuable learning experience, but also a contribution to the lab's mission of pushing the boundaries of 3D printing technology. I am proud to have been part of a team dedicated to revolutionizing manufacturing and enabling mass customization through next-generation 3D printing innovations.",
     "media": [
       {
         "type": "youTubeVideo",
-        "caption": "",
-        "path": "xMMauLmHcwk"
+        "caption": "Implementing bed leveling on the 5th-Gen AMBOTS Printer. (My first task)",
+        "path": "C9XJQf-Xsi8"
       },
       {
-        "type": "localVideo",
-        "caption": "Adding bed leveling to the 5th Gen AMBOTS Printer. How it started...",
-        "path": "video_1.mp4"
+        "type": "youTubeVideo",
+        "caption": "Printing a vase on the 5th-Gen AMBOTS Printer.",
+        "path": "iyC6uOwBRJ8"
       },
       {
-        "type": "localVideo",
-        "caption": "Printing a vase on the 5th Gen AMBOTS Printer.",
-        "path": "video_2.mp4"
+        "type": "youTubeVideo",
+        "caption": "6th-Gen System Demo: Printer printing a vase and Transporter Movement.",
+        "path": "OKf5JHyCjuU"
       },
       {
-        "type": "localVideo",
-        "caption": "Early 6th Gen system demo.",
-        "path": "video_3.mp4"
+        "type": "youTubeVideo",
+        "caption": "6th-Gen System Demo: Transporter Path Planning and Printer Movement.",
+        "path": "yrxG1dslxHE"
       },
       {
-        "type": "localVideo",
-        "caption": "Transporter path finding and printer movement.",
-        "path": "video_4.mp4"
+        "type": "youTubeVideo",
+        "caption": "Early 7th-Gen Transporter active alignment (spring align) test.",
+        "path": "SEu59ochxd4"
       },
       {
-        "type": "localVideo",
-        "caption": "Early 7th Gen Transporter active alignment (spring align) test.",
-        "path": "video_5.mp4"
+        "type": "youTubeVideo",
+        "caption": "Early 7th-Gen Transporter",
+        "path": "-GJoTirxo74"
       },
       {
-        "type": "localVideo",
-        "caption": "Early 7th Gen Transporter",
-        "path": "video_6.mp4"
+        "type": "localImage",
+        "caption": "Testing Transporter Image Processing under different lighting conditions",
+        "path": "image_6.webp"
       },
       {
-        "type": "localVideo",
-        "caption": "Transporter lighting conditions test.",
-        "path": "video_7.mp4"
+        "type": "youTubeVideo",
+        "caption": "Testing Transporter Image Processing under low lighting conditions",
+        "path": "RiuoP2lwnu4"
       },
       {
-        "type": "localVideo",
-        "caption": "Transporter battery life & movement test",
-        "path": "video_8.mp4"
+        "type": "youTubeVideo",
+        "caption": "Transporter Battery Life & Movement Reliability Test",
+        "path": "P9ySf_Wu0Zc"
       },
       {
-        "type": "localVideo",
-        "caption": "Transporter FPV Cam",
-        "path": "video_9.mp4"
-      },
-      {
-        "type": "localVideo",
+        "type": "youTubeVideo",
         "caption": "Transporter Docking & Movement Reliability Test",
-        "path": "video_10.mp4"
+        "path": "F-MT72wZfUQ"
       },
       {
-        "type": "localVideo",
-        "caption": "Early 7th Gen AMBOTS Printer printing a vase.",
-        "path": "video_11.mp4"
+        "type": "youTubeVideo",
+        "caption": "Transporter FPV Cam",
+        "path": "ijfGwYGG6SU"
       },
       {
-        "type": "localImage",
-        "caption": "Rendering of the 7th Gen Transporter",
-        "path": "thumbnail.webp"
-      },
-      {
-        "type": "localImage",
-        "caption": "Vase Printed by the 5th Gen AMBOTS Printer",
-        "path": "image_1.webp"
-      },
-      {
-        "type": "localImage",
-        "caption": "Early 7th Gen Printer Starting a Large 3D Phil Print",
-        "path": "image_2.webp"
-      },
-      {
-        "type": "localImage",
-        "caption": "Small and Large 3D Phil Prints by the early 7th Gen AMBOTS Printer",
-        "path": "image_3.webp"
-      },
-      {
-        "type": "localImage",
-        "caption": "Small and Large 3D Phil Prints by the early 7th Gen AMBOTS Printer",
-        "path": "image_4.webp"
+        "type": "youTubeVideo",
+        "caption": "Early 7th-Gen AMBOTS Printer printing a vase.",
+        "path": "JhLCmqpONOc"
       },
       {
         "type": "localImage",
@@ -336,13 +326,33 @@
       },
       {
         "type": "localImage",
-        "caption": "Transporter Image Processing Test under different lighting conditions",
-        "path": "image_6.webp"
+        "caption": "Vase Printed by the 5th-Gen AMBOTS Printer",
+        "path": "image_1.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Early 7th-Gen Printer Starting a Large 3D Phil Print",
+        "path": "image_2.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Small and Large 3D Phil Prints by the early 7th-Gen AMBOTS Printer",
+        "path": "image_3.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Small and Large 3D Phil Prints by the early 7th-Gen AMBOTS Printer",
+        "path": "image_4.webp"
       },
       {
         "type": "localImage",
         "caption": "Some notable prints made by the various custom AM³ Lab 3D Printers",
         "path": "image_7.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Rendering of the 7th-Gen Transporter",
+        "path": "thumbnail.webp"
       }
     ],
     "externalLinks": [
