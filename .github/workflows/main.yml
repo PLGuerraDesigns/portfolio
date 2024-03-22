@@ -15,7 +15,7 @@ jobs:
               channel: 'stable'
       - run: flutter pub get
       # - run: flutter test
-      - run: flutter build web --release --web-renderer=canvaskit --base-href=/portfolio/
+      - run: flutter build web --release --web-renderer=html --base-href=/portfolio/
 
       - name: Commit and push to published-site branch
         run: |
