@@ -1,5 +1,115 @@
 [
   {
+    "title": "AMG Inspired Mobile Sim Wheel",
+    "subtitle": "For on-the-go Sim Racing",
+    "startDate": "2024-04-14T00:00:00Z",
+    "finalDate": "2024-04-16T00:00:00Z",
+    "description": "Designed for mobile sim racing, the AMG GT3/GT4 Mobile Sim Wheel kit is a completely 3D-printable steering wheel. It is a remix of one of my earlier and highly popular projects, the AMG GT3 Wheel Kit for Thrustmaster, now optimized for mobile use. The AMG inspired wheel has been shrunk down to 230mm x 130mm, with built in grip handles and slots for attaching a phone mount. The wheel supports mobile games using tilt to steer and tap to accelerate or break.\n\nThe kit itself contains all STL files for the wheel, phone mount, and an assembly manual. Total print time can be completed in under 15 hours (varies based on print settings and materials), while assembly time takes approximately 30 minutes.",
+    "media": [
+      {
+        "type": "localImage",
+        "caption": "CAD Rendering Vs. Final Assembly",
+        "path": "thumbnail.webp"
+      },
+      {
+        "type": "networkImage",
+        "caption": "CAD Rendering Left-Front View",
+        "path": "https://cdn.thingiverse.com/assets/07/e6/89/5b/bc/large_display_014c469a-e014-4ad5-bdf3-da2e75f129b8.jpeg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Final Assembly Left-Front View",
+        "path": "https://cdn.thingiverse.com/assets/61/fb/45/5a/3b/large_display_7993f07e-1718-4088-8bc4-bbcd39a565f7.jpeg"
+      },
+      {
+        "type": "localImage",
+        "caption": "Initial Prototype using paracord and screws",
+        "path": "image_1.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Testing snap to fit mechanism to omit screws",
+        "path": "image_2.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "1 - Original AMG GT3 Wheel Kit, 2 - Shrunken Wheel Plate Prototype, 3 - Final Product with built-in handles",
+        "path": "image_3.webp"
+      },
+      {
+        "type": "networkImage",
+        "caption": "CAD Rendering Front View",
+        "path": "https://cdn.thingiverse.com/assets/34/95/7e/7b/35/large_display_2c868e7a-b123-4716-85de-2c148cce8f5e.jpeg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "CAD Rendering Right-Rear View",
+        "path": "https://cdn.thingiverse.com/assets/ef/8b/3b/e1/06/large_display_404996c2-4441-427a-80cf-25f301732ab8.jpeg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Final Assembly Rear View",
+        "path": "https://cdn.thingiverse.com/assets/53/53/b4/eb/5b/large_display_e883ea50-e25d-45ff-9f6d-cf7d13653c5c.jpeg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "CAD Rendering Front View",
+        "path": "https://cdn.thingiverse.com/assets/34/95/7e/7b/35/large_display_2c868e7a-b123-4716-85de-2c148cce8f5e.jpeg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Final Assembly Front-Right View",
+        "path": "https://cdn.thingiverse.com/assets/22/cd/c0/bb/80/large_display_8e7ff666-9c87-4011-a4a6-cc84536fed04.jpeg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Assembly Diagram",
+        "path": "https://cdn.thingiverse.com/assets/d2/97/e6/70/c7/large_display_4f5e265d-58c6-429c-8c98-63f70b6025c8.png"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Wheel Plate STL Model",
+        "path": "https://cdn.thingiverse.com/assets/29/49/7e/72/6d/large_display_91a92450-e35f-49d5-8a79-297a036ba698.png"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Left Handle STL Model",
+        "path": "https://cdn.thingiverse.com/assets/7c/2e/fe/64/5c/large_display_b06e0ef4-1f87-4a1d-ad92-69fcde719a1f.png"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Right Handle STL Model",
+        "path": "https://cdn.thingiverse.com/assets/12/41/23/ae/45/large_display_667834bc-139b-4fba-94ee-99a067eb16f3.png"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Mount Adapter STL Model",
+        "path": "https://cdn.thingiverse.com/assets/d0/f0/13/1e/3f/large_display_f03b2d05-e140-4501-b182-08c6ca9847a0.png"
+      }
+    ],
+    "externalLinks": [
+      {
+        "title": "Download, assemble, and race today!",
+        "url": "https://www.thingiverse.com/thing:6581521/zip"
+      },
+      {
+        "title": "View on Thingiverse",
+        "url": "https://www.thingiverse.com/thing:6581521"
+      }
+    ],
+    "tags": [
+      "3D Printing",
+      "Ender 3",
+      "Autodesk Fusion 360",
+      "Adobe Illustrator",
+      "Sim Racing",
+      "Mercedes-AMG GT3/GT4",
+      "Mobile",
+      "Steering Wheel",
+      "Real Racing 3"
+    ]
+  },
+  {
     "title": "SWE 632 Lottery",
     "subtitle": "A GMU-Themed Lottery Web App",
     "startDate": "2023-09-03T00:00:00Z",
@@ -248,7 +358,7 @@
   },
   {
     "title": "AMG GT3 Wheel",
-    "subtitle": "AMG GT3 Thrustmaster Wheel",
+    "subtitle": "A 3D-Printable Wheel Kit",
     "startDate": null,
     "finalDate": "2018-10-01T00:00:00Z",
     "description": "The goal of the AMG GT3 Wheel project was to design and build a functional, 3D-printed replica of the Mercedes Benz AMG GT3 steering wheel for use in Sim Racing.\n\nAn Arduino Nano powers the wheel and features a thumb-slide joystick, eight pushbuttons, and a pair of paddle shifters. The wheel is directly compatible with the Thrustmaster ecosystem.\n\nYou can find the 3D-printable files on Thingiverse along with an assembly manual, circuit files, and Arduino code.",
@@ -264,8 +374,13 @@
         "path": "S6_5_JhzCXQ"
       },
       {
+        "type": "youTubeVideo",
+        "caption": "Community Video: Build Photos and Race Gameplay",
+        "path": "R-0pL1AsorE"
+      },
+      {
         "type": "localImage",
-        "caption": "AMG GT3 Thrustmaster Wheel on Display Stand",
+        "caption": "Wheel installed on a Thrustmaster Servo Base.",
         "path": "thumbnail.webp"
       },
       {
@@ -340,68 +455,83 @@
       },
       {
         "type": "networkImage",
-        "caption": "Community Member Build",
-        "path": "https://cdn.thingiverse.com/assets/d4/ad/d6/24/2a/IMG_20201129_163233_HDR.jpg"
-      },
-      {
-        "type": "networkImage",
-        "caption": "Community Member Build",
-        "path": "https://cdn.thingiverse.com/assets/89/87/88/95/19/1.jpg"
-      },
-      {
-        "type": "networkImage",
-        "caption": "Community Member Build",
-        "path": "https://cdn.thingiverse.com/assets/ea/15/cb/eb/60/AMG_Steering_Wheel.jpg"
-      },
-      {
-        "type": "networkImage",
-        "caption": "Community Member Build",
-        "path": "https://cdn.thingiverse.com/assets/55/1b/f3/7a/3f/volant_face.jpg"
-      },
-      {
-        "type": "networkImage",
-        "caption": "Community Member Build",
-        "path": "https://cdn.thingiverse.com/assets/fe/7a/98/09/29/FDE0EFB6-C784-498E-B386-7E9A9C3C0BA0.jpeg"
-      },
-      {
-        "type": "networkImage",
-        "caption": "Community Member Build",
-        "path": "https://cdn.thingiverse.com/assets/7e/e1/4a/69/8a/87052509_854879888290366_2111462423008378880_n.jpg"
-      },
-      {
-        "type": "networkImage",
-        "caption": "Community Member Build",
+        "caption": "Community Remake",
         "path": "https://cdn.thingiverse.com/assets/a9/d5/6e/59/76/IMG_20191001_172428.jpg"
       },
       {
         "type": "networkImage",
-        "caption": "Community Member Build",
+        "caption": "Community Remake",
+        "path": "https://i.redd.it/ib6m4vsja3k21.jpg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Community Remake",
+        "path": "https://cdn.thingiverse.com/assets/d4/ad/d6/24/2a/IMG_20201129_163233_HDR.jpg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Community Remake",
+        "path": "https://cdn.thingiverse.com/assets/89/87/88/95/19/1.jpg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Community Remake",
+        "path": "https://cdn.thingiverse.com/assets/ea/15/cb/eb/60/AMG_Steering_Wheel.jpg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Community Remake",
+        "path": "https://cdn.thingiverse.com/assets/55/1b/f3/7a/3f/volant_face.jpg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Community Remake",
+        "path": "https://cdn.thingiverse.com/assets/fe/7a/98/09/29/FDE0EFB6-C784-498E-B386-7E9A9C3C0BA0.jpeg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Community Remake",
+        "path": "https://cdn.thingiverse.com/assets/7e/e1/4a/69/8a/87052509_854879888290366_2111462423008378880_n.jpg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Community Remake",
         "path": "https://cdn.thingiverse.com/renders/88/e5/e8/5b/a0/6ea030e2dbcc1b8c82ef0ef56de93fc9_display_large.jpg"
       },
       {
         "type": "networkImage",
-        "caption": "Community Member Build",
+        "caption": "Community Remake",
         "path": "https://cdn.thingiverse.com/renders/7e/be/d2/09/ac/86dc5ba0f800cf421ee795145cbdea15_display_large.JPG"
       },
       {
         "type": "networkImage",
-        "caption": "Community Member Build",
+        "caption": "Community Remake",
         "path": "https://cdn.thingiverse.com/renders/df/17/0f/d5/a6/2723476733c115f2167e5e15e1f090ad_display_large.jpg"
       },
       {
         "type": "networkImage",
-        "caption": "Community Member Build",
+        "caption": "Community Remake",
         "path": "https://cdn.thingiverse.com/assets/7f/8e/b0/a6/97/dc90e110-15da-4dca-8109-b9910a4b4e12.jpg"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Community Video: Build Tutorial Pt. 1 (Spanish)",
+        "path": "qrQnisocpDg"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Community Video: Build Tutorial Pt. 2 (Spanish)",
+        "path": "KhZN_uf8_Q4"
       }
     ],
     "externalLinks": [
       {
         "title": "Download and Build the Wheel Yourself",
-        "url": "https://www.thingiverse.com/thing:3182414"
+        "url": "https://www.thingiverse.com/thing:3182414/zip"
       },
       {
-        "title": "Video of the Wheel in Action by a Community Member",
-        "url": "https://www.youtube.com/watch?v=R-0pL1AsorE"
+        "title": "View on Thingiverse",
+        "url": "https://www.thingiverse.com/thing:3182414"
       }
     ],
     "tags": [
