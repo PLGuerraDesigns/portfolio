@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -83,13 +84,28 @@ class HomeScreen extends StatelessWidget {
       subtitle: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          Flexible(
-            child: Text(
-              Strings.subtitle,
-              style: compact
-                  ? Theme.of(context).textTheme.labelSmall
-                  : Theme.of(context).textTheme.titleMedium,
+          DefaultTextStyle(
+            style: compact
+                ? Theme.of(context).textTheme.labelSmall!
+                : Theme.of(context).textTheme.titleMedium!,
+            textAlign: TextAlign.left,
+            child: AnimatedTextKit(
+              repeatForever: true,
+              pause: const Duration(milliseconds: 250),
+              animatedTexts: <AnimatedText>[
+                RotateAnimatedText(
+                  Strings.subtitle,
+                  duration: const Duration(seconds: 7),
+                ),
+                RotateAnimatedText(
+                  Strings.motto,
+                  duration: const Duration(seconds: 7),
+                ),
+              ],
             ),
+          ),
+          SizedBox(
+            height: compact ? 40 : 55,
           ),
           if (!compact) location(),
         ],
@@ -257,22 +273,11 @@ class HomeScreen extends StatelessWidget {
               title: Strings.contactMe,
               onTap: () => RedirectHandler.openUrl(Strings.contactEmailUrl),
             ),
-            // FrostedActionButton(
-            //   icon: icon(Icons.monetization_on_rounded),
-            //   title: Strings.sponsor,
-            //   onTap: () => RedirectHandler.openUrl(Strings.sponsorUrl),
-            // ),
-            // FrostedActionButton(
-            //   icon: Image.asset(
-            //     Strings.resumeBuilderIconPath,
-            //     color: Theme.of(context).colorScheme.onSurface,
-            //     height: 46,
-            //     width: 46,
-            //   ),
-            //   title: Strings.resumeBuilder,
-            //   onTap: () =>
-            //       RedirectHandler.openUrl(Strings.flutterResumeBuilderUrl),
-            // ),
+            FrostedActionButton(
+              icon: icon(Icons.bug_report_rounded),
+              title: Strings.reportAnIssue,
+              onTap: () => RedirectHandler.openUrl(Strings.issuesUrl),
+            ),
           ],
         ),
       ),

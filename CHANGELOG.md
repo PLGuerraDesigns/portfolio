@@ -1,3 +1,8 @@
+## 2.2.0
+
+- NEW: Added an animation to the home page subtitle to switch between the subtitle and motto.
+- NEW: Added 'Report an Issue' button on the home page, redirecting to the GitHub issues page.
+
 ## 2.1.2
 
 - ENHANCED: Added thumbnail images for videos.
