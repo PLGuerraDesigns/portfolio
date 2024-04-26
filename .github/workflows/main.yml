@@ -13,6 +13,8 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
               channel: 'stable'
+              flutter-version: 4145645
+      - run: flutter --version
       - run: flutter pub get
       # - run: flutter test
       - run: flutter build web --release --web-renderer=html --base-href=/portfolio/
