@@ -4,7 +4,7 @@ class Strings {
   Strings._();
 
   static const String currentLocation = 'VA, USA';
-  static const String lastUpdated = 'Updated MAR 2024';
+  static const String lastUpdated = 'Updated APR 2024';
 
   // Routes
   static const String loadingRoute = '/loading';
@@ -26,7 +26,8 @@ class Strings {
   static const String am3LabUrl = 'https://wordpressua.uark.edu/am3/';
   static const String uarkUrl =
       'https://catalog.uark.edu/plangrids/computerscience_bs/';
-  static const String sponsorUrl = 'https://www.buymeacoffee.com/plguerra';
+  static const String issuesUrl =
+      'https://github.com/PLGuerraDesigns/portfolio/issues';
   static const String contactEmailUrl = 'mailto:plguerra@outlook.com';
   static const String sourceCodeUrl =
       'https://github.com/PLGuerraDesigns/portfolio';
@@ -61,6 +62,7 @@ class Strings {
   static const String name = 'Pablo L. Guerra';
   static const String subtitle =
       'Software Engineer  •  Innovator  •  Technologist';
+  static const String motto = 'Men for Others';
   static const String poweredByFlutter = 'Powered by Flutter';
   static const String professional = 'Professional';
   static const String personal = 'Personal';
@@ -80,7 +82,7 @@ class Strings {
   static const String nextProject = 'Next Project';
   static const String personalProjects = 'Personal Projects';
   static const String contactMe = 'Contact Me';
-  static const String sponsor = 'Sponsor';
+  static const String reportAnIssue = 'Report an Issue';
   static const String moreInfo = 'More Info';
   static const String present = 'Present';
   static const String tags = 'Tags';

@@ -7,6 +7,11 @@
     "description": "Designed for mobile sim racing, the AMG GT3/GT4 Mobile Sim Wheel kit is a completely 3D-printable steering wheel. It is a remix of one of my earlier and highly popular projects, the AMG GT3 Wheel Kit for Thrustmaster, now optimized for mobile use. The AMG inspired wheel has been shrunk down to 230mm x 130mm, with built in grip handles and slots for attaching a phone mount. The wheel supports mobile games using tilt to steer and tap to accelerate or break.\n\nThe kit itself contains all STL files for the wheel, phone mount, and an assembly manual. Total print time can be completed in under 15 hours (varies based on print settings and materials), while assembly time takes approximately 30 minutes.",
     "media": [
       {
+        "type": "youTubeVideo",
+        "caption": "Demo Video - Real Racing 3",
+        "path": "4QhZNsjgN2k"
+      },
+      {
         "type": "localImage",
         "caption": "CAD Rendering Vs. Final Assembly",
         "path": "thumbnail.webp"
