@@ -1,3 +1,8 @@
+## 2.2.1
+
+- FIX: Fixed issue with swiping between media items in the media player not updating the player banner details.
+- FIX: Fixed issue with the media browser not registering tap events for web images.
+
 ## 2.2.0
 
 - NEW: Added an animation to the home page subtitle to switch between the subtitle and motto.

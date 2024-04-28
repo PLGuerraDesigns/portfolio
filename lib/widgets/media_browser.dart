@@ -80,6 +80,14 @@ class MediaBrowser extends StatelessWidget {
     return FittedBox(
       fit: BoxFit.cover,
       child: ImageNetwork(
+        onTap: () {
+          if (onTapped == null) {
+            return;
+          }
+          onTapped!(mediaItems.indexWhere(
+            (MediaItem mediaItem) => mediaItem.path == path,
+          ));
+        },
         image: path,
         height: 250,
         width: 250,
