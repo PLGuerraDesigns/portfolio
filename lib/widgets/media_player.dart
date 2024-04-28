@@ -75,6 +75,7 @@ class MediaPlayerState extends State<MediaPlayer> {
       child: AspectRatio(
         aspectRatio: 16 / 9,
         child: PhotoViewGallery.builder(
+          scrollPhysics: const NeverScrollableScrollPhysics(),
           builder: (BuildContext context, int index) {
             return PhotoViewGalleryPageOptions.customChild(
               disableGestures: true,
