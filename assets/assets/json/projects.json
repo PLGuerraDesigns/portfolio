@@ -3,9 +3,14 @@
     "title": "AMG Inspired Mobile Sim Wheel",
     "subtitle": "For on-the-go Sim Racing",
     "startDate": "2024-04-14T00:00:00Z",
-    "finalDate": "2024-04-16T00:00:00Z",
-    "description": "Designed for mobile sim racing, the AMG GT3/GT4 Mobile Sim Wheel kit is a completely 3D-printable steering wheel. It is a remix of one of my earlier and highly popular projects, the AMG GT3 Wheel Kit for Thrustmaster, now optimized for mobile use. The AMG inspired wheel has been shrunk down to 230mm x 130mm, with built in grip handles and slots for attaching a phone mount. The wheel supports mobile games using tilt to steer and tap to accelerate or break.\n\nThe kit itself contains all STL files for the wheel, phone mount, and an assembly manual. Total print time can be completed in under 15 hours (varies based on print settings and materials), while assembly time takes approximately 30 minutes.\n\nVersion 2 of the wheel was designed to more closely resemble the original AMG GT3 wheel. The handles were updated to match the original design and 'fidget' buttons were added for a more realistic look and feel. Several spring mechanisms were tested with different materials to allow for fully 3D-printable parts that can be assembled without the need for additional hardware. The phone clamp was also updated to included thumb cutouts for easier access to the screen during gameplay.",
+    "finalDate": "2024-04-26T00:00:00Z",
+    "description": "Designed for mobile sim racing, the AMG GT3/GT4 Mobile Sim Wheel kit is a completely 3D-printable steering wheel. It is a remix of one of my earlier and highly popular projects, the AMG GT3 Wheel Kit for Thrustmaster, now optimized for mobile use. The AMG inspired wheel has been shrunk down to 230mm x 130mm, with built in grip handles and slots for attaching a phone mount. The wheel supports mobile games using tilt to steer and tap to accelerate or break.\n\nThe kit itself contains all STL files for the wheel, phone mount, and an assembly manual. Total print time can be completed in under 15 hours (varies based on print settings and materials), while assembly time takes approximately 30 minutes.\n\nVersion 2 of the wheel was designed to more closely resemble the AMG GT3 wheel. The handles were updated to match the actual style and 'fidget' buttons were added for a more realistic look and feel. Several spring mechanisms were tested with different materials to allow for fully 3D-printable parts that can be assembled without the need for additional hardware. The phone clamp was also updated to included thumb cutouts for easier access to the screen during gameplay.",
     "media": [
+      {
+        "type": "youTubeVideo",
+        "caption": "AMG GT3 Inspired Mobile Sim Wheel: CAD Development Process",
+        "path": "u2Hcy3uadDQ"
+      },
       {
         "type": "localImage",
         "caption": "V2 Wheel CAD Renderings",
