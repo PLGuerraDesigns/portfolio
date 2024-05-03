@@ -4,7 +4,7 @@ class Strings {
   Strings._();
 
   static const String currentLocation = 'VA, USA';
-  static const String lastUpdated = 'Updated APR 2024';
+  static const String lastUpdated = 'Updated MAY 2024';
 
   // Routes
   static const String loadingRoute = '/loading';
@@ -19,13 +19,10 @@ class Strings {
   static const String thingiverseUrl =
       'https://www.thingiverse.com/plg_designs/designs';
   static const String linkedinUrl = 'https://www.linkedin.com/in/plguerra/';
-  static const String gmuUrl =
-      'https://catalog.gmu.edu/colleges-schools/engineering-computing/school-computing/computer-science/software-engineering-ms/';
   static const String aicUrl = 'https://aicbelize.com/AIC-Mobile-App';
   static const String ambotsUrl = 'https://www.ambots.net/';
   static const String am3LabUrl = 'https://wordpressua.uark.edu/am3/';
-  static const String uarkUrl =
-      'https://catalog.uark.edu/plangrids/computerscience_bs/';
+
   static const String issuesUrl =
       'https://github.com/PLGuerraDesigns/portfolio/issues';
   static const String contactEmailUrl = 'mailto:plguerra@outlook.com';
@@ -38,6 +35,7 @@ class Strings {
   static const String projectsJsonPath = 'assets/json/projects.json';
   static const String professionalExperienceJsonPath =
       'assets/json/professional_experience.json';
+  static const String educationJsonPath = 'assets/json/education.json';
   static const String socialAssetsBasePath = 'assets/images/icons';
   static const String resumeBuilderIconPath =
       '$socialAssetsBasePath/resume_builder.webp';
@@ -47,12 +45,10 @@ class Strings {
       'assets/images/home/professional.webp';
   static const String personalExperiencePhotoPath =
       'assets/images/home/personal.webp';
-  static const String gmuLogoPath = 'assets/images/home/gmu_logo.webp';
   static const String aicLogoPath =
       'assets/images/professional/atlantic_insurance/logo.webp';
   static const String ambotsLogoPath =
       'assets/images/professional/ambots/logo.webp';
-  static const String uarkLogoPath = 'assets/images/home/uark_logo.webp';
 
   // General
   static const String github = 'GitHub';
@@ -67,6 +63,7 @@ class Strings {
   static const String professional = 'Professional';
   static const String personal = 'Personal';
   static const String projects = 'Projects';
+  static const String education = 'Education';
   static const String or = 'or';
   static const String toggleBrightness = 'Toggle the Brightness';
   static const String youTubeVideos = 'YouTube Videos';
@@ -91,4 +88,8 @@ class Strings {
   static const String looksLikeSomethingWentWrong =
       'Looks like something went wrong.';
   static const String goToTheHomePage = 'Go to the Home Page';
+  static const String entries = 'Entries';
+  static const String selectACategoryToViewTheEntries =
+      'Select a category to view the entries.';
+  static const String expected = 'Expected';
 }

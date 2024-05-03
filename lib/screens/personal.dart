@@ -47,7 +47,7 @@ class _PersonalScreenState extends State<PersonalScreen> {
                           mainAxisSize: MainAxisSize.min,
                           children: <Widget>[
                             FutureBuilder<void>(
-                              future: appState.loadProjects(context),
+                              future: appState.loadProjects(),
                               builder: (BuildContext context,
                                   AsyncSnapshot<dynamic> snapshot) {
                                 if (snapshot.connectionState ==

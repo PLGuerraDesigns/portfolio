@@ -1,7 +1,10 @@
+import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:unorm_dart/unorm_dart.dart' as unorm;
 
 import '../common/enums.dart';
+import '../common/strings.dart';
+import '../widgets/time_line_entry.dart';
 import 'media_item.dart';
 
 class ProfessionalExperience {
@@ -98,13 +101,30 @@ class ProfessionalExperience {
   String get logoPath => '${baseMediaPath}logo.webp';
 
   /// A string representation of the start date.
-  String get startDateString => DateFormat('MMMM yyyy').format(startDate);
+  String get startDateString =>
+      DateFormat('MMM yyyy').format(startDate).toUpperCase();
 
   /// A string representation of the final date.
   String? get finalDateString {
     if (finalDate == null) {
       return null;
     }
-    return DateFormat('MMMM yyyy').format(finalDate!);
+    return DateFormat('MMM yyyy').format(finalDate!).toUpperCase();
   }
+
+  /// A timeline entry for the professional experience.
+  TimelineEntry get timelineEntry => TimelineEntry(
+        logoPath: logoPath,
+        title: company,
+        label: Strings.professionalExperiences,
+        labelColor: Colors.deepOrangeAccent,
+        description: role,
+        startDate: startDate,
+        finalDateString: finalDateString == null
+            ? Strings.present.toUpperCase()
+            : '$finalDateString',
+        urlString:
+            'https://plguerradesigns.github.io/portfolio/#/home/professional/details/$titleAsPath',
+        coverImage: false,
+      );
 }
