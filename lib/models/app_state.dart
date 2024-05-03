@@ -162,6 +162,10 @@ class AppState extends ChangeNotifier {
       entries.addAll(_projects.map((Project project) => project.timelineEntry));
     }
 
+    entries.sort((TimelineEntry a, TimelineEntry b) {
+      return b.startDate.compareTo(a.startDate);
+    });
+
     return entries;
   }
 

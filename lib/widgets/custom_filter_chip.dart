@@ -19,15 +19,21 @@ class CustomFilterChip extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FilterChip.elevated(
-      label: Text(label),
-      selected: selected,
-      onSelected: onSelected,
-      selectedColor: Theme.of(context).colorScheme.background,
-      backgroundColor:
-          Theme.of(context).colorScheme.background.withOpacity(0.2),
-      checkmarkColor: Theme.of(context).colorScheme.primary,
-      visualDensity: VisualDensity.compact,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 4.0),
+      child: FilterChip.elevated(
+        label: Text(
+          label,
+          style: Theme.of(context).textTheme.labelLarge,
+        ),
+        selected: selected,
+        onSelected: onSelected,
+        selectedColor: Theme.of(context).colorScheme.background,
+        backgroundColor:
+            Theme.of(context).colorScheme.background.withOpacity(0.2),
+        checkmarkColor: Theme.of(context).colorScheme.primary,
+        visualDensity: VisualDensity.compact,
+      ),
     );
   }
 }
