@@ -23,17 +23,26 @@ class HeaderBanner extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FrostedContainer(
+      padding: const EdgeInsets.symmetric(horizontal: 12.0, vertical: 8.0),
       child: Row(
         children: <Widget>[
           if (leading != null) leading!,
-          if (leading != null) const SizedBox(width: 16.0),
+          if (leading != null) const SizedBox(width: 12.0),
           Expanded(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                title,
+                const SizedBox(height: 10.0),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                  child: title,
+                ),
                 const Divider(),
-                subtitle,
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                  child: subtitle,
+                ),
               ],
             ),
           ),

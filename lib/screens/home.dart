@@ -165,31 +165,35 @@ class HomeScreen extends StatelessWidget {
                     controller: scrollController,
                     padding: const EdgeInsets.all(16),
                     childrenDelegate: SliverChildListDelegate(<Widget>[
-                      Wrap(
-                        spacing: 8,
-                        children: <Widget>[
-                          CustomFilterChip(
-                            label: Strings.education,
-                            selected: appState.educationVisible,
-                            onSelected: (bool value) {
-                              appState.toggleEducationVisibility();
-                            },
-                          ),
-                          CustomFilterChip(
-                            label: Strings.professional,
-                            selected: appState.professionalExperiencesVisible,
-                            onSelected: (bool value) {
-                              appState.toggleProfessionalExperienceVisibility();
-                            },
-                          ),
-                          CustomFilterChip(
-                            label: Strings.projects,
-                            selected: appState.projectsVisible,
-                            onSelected: (bool value) {
-                              appState.toggleProjectsVisibility();
-                            },
-                          ),
-                        ],
+                      FittedBox(
+                        fit: BoxFit.scaleDown,
+                        alignment: Alignment.centerLeft,
+                        child: Row(
+                          children: <Widget>[
+                            CustomFilterChip(
+                              label: Strings.education,
+                              selected: appState.educationVisible,
+                              onSelected: (bool value) {
+                                appState.toggleEducationVisibility();
+                              },
+                            ),
+                            CustomFilterChip(
+                              label: Strings.professional,
+                              selected: appState.professionalExperiencesVisible,
+                              onSelected: (bool value) {
+                                appState
+                                    .toggleProfessionalExperienceVisibility();
+                              },
+                            ),
+                            CustomFilterChip(
+                              label: Strings.projects,
+                              selected: appState.projectsVisible,
+                              onSelected: (bool value) {
+                                appState.toggleProjectsVisibility();
+                              },
+                            ),
+                          ],
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 8.0),

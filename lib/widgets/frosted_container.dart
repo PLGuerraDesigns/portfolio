@@ -25,9 +25,7 @@ class FrostedContainer extends StatelessWidget {
     return Material(
       color: Colors.transparent,
       elevation: 3,
-      shadowColor: Theme.of(context).brightness == Brightness.dark
-          ? Colors.black87
-          : Colors.black87,
+      shadowColor: Colors.black87,
       borderRadius: BorderRadius.circular(borderRadiusAmount),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(borderRadiusAmount),
@@ -36,7 +34,7 @@ class FrostedContainer extends StatelessWidget {
           child: Container(
             decoration: BoxDecoration(
               color: Theme.of(context).brightness == Brightness.light
-                  ? Theme.of(context).colorScheme.surface.withOpacity(0.75)
+                  ? Theme.of(context).colorScheme.background.withOpacity(0.8)
                   : Theme.of(context)
                       .colorScheme
                       .surfaceVariant

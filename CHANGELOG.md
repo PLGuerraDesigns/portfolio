@@ -1,3 +1,10 @@
+## 2.3.1
+
+- REVISED: Revised home header banner padding.
+- REVISED: Revised timeline filter chip fitment.
+- REVISED: Timeline entries are now sorted by start date in descending order.
+- REVISED: Revised the FrostedContainer color for light mode.
+
 ## 2.3.0
 
 - NEW: Timeline section on home page now includes projects.
