@@ -1,6 +1,9 @@
+import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import '../common/enums.dart';
+import '../common/strings.dart';
+import '../widgets/time_line_entry.dart';
 import 'media_item.dart';
 
 class Project {
@@ -36,9 +39,7 @@ class Project {
       title: json['title'].toString(),
       subtitle: json['subtitle'].toString(),
       description: json['description'].toString(),
-      startDate: json['startDate'] == null
-          ? null
-          : DateTime.parse(json['startDate'].toString()),
+      startDate: DateTime.parse(json['startDate'].toString()),
       finalDate: DateTime.parse(json['finalDate'].toString()),
       mediaItems: mediaItems,
       externalLinks: (json['externalLinks'] as List<dynamic>)
@@ -61,7 +62,7 @@ class Project {
   String get titleAsPath => title.toLowerCase().replaceAll(' ', '_');
 
   /// The start date of the project.
-  final DateTime? startDate;
+  final DateTime startDate;
 
   /// The final date of the project.
   final DateTime finalDate;
@@ -89,13 +90,24 @@ class Project {
   String get thumbnailPath => '${baseMediaPath}thumbnail.webp';
 
   /// A string representation of the start date.
-  String? get startDateString {
-    if (startDate == null) {
-      return null;
-    }
-    return DateFormat('MMMM yyyy').format(startDate!);
+  String get startDateString {
+    return DateFormat('MMM yyyy').format(startDate).toUpperCase();
   }
 
   /// A string representation of the final date.
-  String get finalDateString => DateFormat('MMMM yyyy').format(finalDate);
+  String get finalDateString =>
+      DateFormat('MMM yyyy').format(finalDate).toUpperCase();
+
+  /// A timeline entry for the professional experience.
+  TimelineEntry get timelineEntry => TimelineEntry(
+        title: title,
+        logoPath: thumbnailPath,
+        label: Strings.projects,
+        labelColor: Colors.grey,
+        startDate: startDate,
+        finalDateString: finalDateString,
+        description: description,
+        urlString:
+            'https://plguerradesigns.github.io/portfolio/#/home/personal/details/$titleAsPath',
+      );
 }

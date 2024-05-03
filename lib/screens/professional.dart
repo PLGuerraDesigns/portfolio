@@ -44,7 +44,7 @@ class _ProfessionalScreenState extends State<ProfessionalScreen> {
                             : EdgeInsets.zero,
                         controller: _scrollController,
                         child: FutureBuilder<void>(
-                          future: appState.loadProfessionalExperiences(context),
+                          future: appState.loadProfessionalExperiences(),
                           builder: (BuildContext context,
                               AsyncSnapshot<dynamic> snapshot) {
                             if (snapshot.connectionState ==

@@ -1,3 +1,9 @@
+## 2.3.0
+
+- NEW: Timeline section on home page now includes projects.
+- NEW: The list of timeline entries can be filtered by type.
+- NEW: Added a count of the number of timeline entries.
+
 ## 2.2.1
 
 - FIX: Fixed issue with swiping between media items in the media player not updating the player banner details.

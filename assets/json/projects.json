@@ -225,9 +225,9 @@
   {
     "title": "Flutter Resume Builder",
     "subtitle": "Resume Builder Progressive Web App",
-    "startDate": "2022-06-03T00:00:00Z",
+    "startDate": "2022-10-06T00:00:00Z",
     "finalDate": "2023-10-13T00:00:00Z",
-    "description": "The Flutter Resume Builder, created by Pablo L. Guerra, is a user-friendly, open-source progressive web application designed to simplify creating professional resumes. This innovative tool enables users to effortlessly build, edit, and customize their resumes, ensuring they are polished and impactful. With the ability to create, edit, download in both PDF and JSON formats, and import existing resumes, the Flutter Resume Builder offers a comprehensive solution for individuals seeking to craft and maintain their professional documents with ease. Whether you are a job seeker looking to streamline your resume-building process or a developer interested in the project, this platform provides an intuitive and accessible tool for crafting compelling resumes.",
+    "description": "The Flutter Resume Builder is a user-friendly, open-source progressive web application designed to simplify creating professional resumes. This innovative tool enables users to effortlessly build, edit, and customize their resumes, ensuring they are polished and impactful. With the ability to create, edit, download in both PDF and JSON formats, and import existing resumes, the Flutter Resume Builder offers a comprehensive solution for individuals seeking to craft and maintain their professional documents with ease. Whether you are a job seeker looking to streamline your resume-building process or a developer interested in the project, this platform provides an intuitive and accessible tool for crafting compelling resumes.",
     "media": [
       {
         "type": "localImage",
@@ -359,7 +359,7 @@
   {
     "title": "AMG GT3 Wheel",
     "subtitle": "A 3D-Printable Wheel Kit",
-    "startDate": null,
+    "startDate": "2018-10-01T00:00:00Z",
     "finalDate": "2018-10-01T00:00:00Z",
     "description": "The goal of the AMG GT3 Wheel project was to design and build a functional, 3D-printed replica of the Mercedes Benz AMG GT3 steering wheel for use in Sim Racing.\n\nAn Arduino Nano powers the wheel and features a thumb-slide joystick, eight pushbuttons, and a pair of paddle shifters. The wheel is directly compatible with the Thrustmaster ecosystem.\n\nYou can find the 3D-printable files on Thingiverse along with an assembly manual, circuit files, and Arduino code.",
     "media": [
@@ -556,7 +556,7 @@
   {
     "title": "Apple Charging Station",
     "subtitle": "3-in-1 Charging Station",
-    "startDate": null,
+    "startDate": "2019-01-01T00:00:00Z",
     "finalDate": "2019-01-01T00:00:00Z",
     "description": "The Apple Charging Station, initially sketched in 2016, was later revived and given as a gift to a friend.\n\nRedesigned in Autodesk Fusion 360, printed using wood-infused PLA, and finished with a wood stain. Supports charging of an iPhone, Apple Watch, and the original AirPods. The charging modules are interchangeable to support different product dimensions.",
     "media": [
@@ -657,7 +657,7 @@
   {
     "title": "Switch Speaker",
     "subtitle": "Nintendo Switch Speaker Attachment",
-    "startDate": null,
+    "startDate": "2019-02-01T00:00:00Z",
     "finalDate": "2019-02-01T00:00:00Z",
     "description": "The goal of the Nintendo Switch speaker project was to design and build a speaker attachment that would be louder than the Switch's built-in speakers.\n\nThe attachment features a 3.5mm audio plug, dual mini oval speakers, a rechargeable LiPo battery, a micro USB charging port, sliding power switch, power LED, and charging status LED.",
     "media": [
@@ -1061,8 +1061,8 @@
   {
     "title": "Android Calculator",
     "subtitle": "Calculator App for Android",
-    "startDate": null,
-    "finalDate": "2018-09-01T00:00:00Z",
+    "startDate": "2019-09-01T00:00:00Z",
+    "finalDate": "2019-09-01T00:00:00Z",
     "description": "Android Calculator is a calculator app developed for a mobile programming class assignment at the University of Arkansas.\n\nThe app was designed in Photoshop using popular calculator apps for design reference, then programmed in Java using Android Studio.",
     "media": [
       {
@@ -1098,7 +1098,7 @@
   {
     "title": "Macro Pad",
     "subtitle": "Programmable Macro Pad (HID)",
-    "startDate": null,
+    "startDate": "2019-04-01T00:00:00Z",
     "finalDate": "2019-04-01T00:00:00Z",
     "description": "Macro Pad is a programmable interface used for executing custom macros (button combinations or input sequences). It allows for extended control and execution of complex commands with a single button press.\n\nThe device features an Arduino Micro, 16 Cherry MX switches, a rotatable and pressable knob, and a micro USB port for connecting.",
     "media": [
@@ -1136,7 +1136,7 @@
   {
     "title": "LED Wall Decor",
     "subtitle": "Smart LED Wall Decor",
-    "startDate": null,
+    "startDate": "2019-02-01T00:00:00Z",
     "finalDate": "2019-02-01T00:00:00Z",
     "description": "The LED wall decor was made as an art piece for a friend. The signs' colors and patterns are controllable using the Blynk app.\n\nIt features an Arduino MKR1000 controlling eight RGB LEDs and connects to the internet using its onboard WiFi module. The LED cover plate is interchangeable using magnets. A USB micro cable is used for continuous power, but the device can also be powered using a 3.7V LiPo battery and charged with the MKR's onboard charging circuit. One of the LEDs was not working at the time the photos were taken.",
     "media": [

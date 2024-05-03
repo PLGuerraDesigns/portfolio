@@ -4,7 +4,7 @@ import 'package:go_router/go_router.dart';
 import '../common/strings.dart';
 import '../models/app_state.dart';
 import '../models/professional_experience.dart';
-import '../models/projects.dart';
+import '../models/project.dart';
 import '../screens/details.dart';
 import '../screens/home.dart';
 import '../screens/loading.dart';
@@ -34,12 +34,12 @@ class AppRouter {
               if (state.pathParameters['from'] ==
                       Strings.professionalSubRoute &&
                   !appState.professionalExperiencesLoaded) {
-                await appState.loadProfessionalExperiences(context);
+                await appState.loadProfessionalExperiences();
               }
               if (state.pathParameters['from'] == Strings.personalSubRoute &&
                   !appState.projectsLoaded &&
                   context.mounted) {
-                await appState.loadProjects(context);
+                await appState.loadProjects();
               }
             },
           ),

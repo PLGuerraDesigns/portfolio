@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import '../common/color_schemes.dart';
 import '../services/redirect_handler.dart';
@@ -10,9 +11,13 @@ class TimelineEntry extends StatelessWidget {
     super.key,
     required this.logoPath,
     required this.title,
+    required this.label,
     required this.description,
-    required this.timeFrame,
+    required this.startDate,
+    required this.finalDateString,
     required this.urlString,
+    required this.labelColor,
+    this.coverImage = true,
   });
 
   /// The path to the logo.
@@ -21,14 +26,30 @@ class TimelineEntry extends StatelessWidget {
   /// The title of the entry.
   final String title;
 
+  /// The label of the entry.
+  final String label;
+
+  /// The color of the label.
+  final Color labelColor;
+
   /// The description of the entry.
   final String description;
 
-  /// The time frame of the entry.
-  final String timeFrame;
+  /// The start date of the entry.
+  final DateTime startDate;
+
+  /// The final date of the entry.
+  final String finalDateString;
 
   /// The URL string to redirect to.
   final String urlString;
+
+  /// Whether the image should cover the entire space.
+  final bool coverImage;
+
+  /// A string representation of the start date.
+  String get startDateString =>
+      DateFormat('MMM yyyy').format(startDate).toUpperCase();
 
   @override
   Widget build(BuildContext context) {
@@ -36,36 +57,67 @@ class TimelineEntry extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: ListTile(
         contentPadding: EdgeInsets.zero,
-        horizontalTitleGap: 0,
+        horizontalTitleGap: 8,
         dense: false,
         visualDensity: VisualDensity.standard,
-        leading: Container(
-          decoration: BoxDecoration(
-            shape: BoxShape.circle,
-            color: lightColorScheme.surface,
-          ),
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Image.asset(
-              logoPath,
-              fit: BoxFit.contain,
-              height: 50,
-              width: 50,
+        leading: ClipOval(
+          child: Container(
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              color: lightColorScheme.surface,
+            ),
+            child: Padding(
+              padding: coverImage ? EdgeInsets.zero : const EdgeInsets.all(4.0),
+              child: Image.asset(
+                logoPath,
+                fit: coverImage ? BoxFit.cover : BoxFit.contain,
+                height: coverImage ? 50 : 38,
+                width: coverImage ? 50 : 38,
+              ),
             ),
           ),
         ),
-        title: Align(
-          alignment: Alignment.centerLeft,
-          child: TextButton(
-            onPressed: () => RedirectHandler.openUrl(urlString),
-            child: Text(title.toUpperCase()),
-          ),
+        title: Row(
+          children: <Widget>[
+            Flexible(
+              child: TextButton(
+                onPressed: () => RedirectHandler.openUrl(urlString),
+                child: Text(title.toUpperCase()),
+              ),
+            ),
+            const SizedBox(width: 2),
+            Container(
+              decoration: BoxDecoration(
+                color: labelColor.withOpacity(0.05),
+                borderRadius: BorderRadius.circular(16),
+              ),
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: Text(
+                label.toUpperCase(),
+                style: Theme.of(context).textTheme.labelSmall!.copyWith(
+                      color: labelColor.withOpacity(0.8),
+                    ),
+              ),
+            )
+          ],
         ),
         subtitle: Padding(
-          padding: const EdgeInsets.only(left: 12.0),
-          child: Text(
-            '$timeFrame\n$description',
-            style: Theme.of(context).textTheme.bodyLarge,
+          padding: const EdgeInsets.symmetric(horizontal: 12),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Text(
+                '$startDateString - $finalDateString',
+                overflow: TextOverflow.ellipsis,
+                style: Theme.of(context).textTheme.bodyMedium,
+              ),
+              Text(
+                description,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: Theme.of(context).textTheme.bodyLarge,
+              ),
+            ],
           ),
         ),
       ),

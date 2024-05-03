@@ -1,11 +1,14 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../common/strings.dart';
+import '../models/app_state.dart';
 import '../services/redirect_handler.dart';
 import '../widgets/custom_app_bars.dart';
+import '../widgets/custom_filter_chip.dart';
 import '../widgets/custom_icon_button.dart';
 import '../widgets/floating_thumbnail.dart';
 import '../widgets/frosted_container.dart';
@@ -140,72 +143,98 @@ class HomeScreen extends StatelessWidget {
   /// A list of notable events, projects, and experiences.
   Widget _timeline(BuildContext context) {
     final ScrollController scrollController = ScrollController();
-    return FrostedContainer(
-      padding: EdgeInsets.zero,
-      child: Scrollbar(
-        controller: scrollController,
-        thumbVisibility: true,
-        child: ListView.custom(
-          controller: scrollController,
-          padding: const EdgeInsets.all(16),
-          childrenDelegate: SliverChildListDelegate(
-            <Widget>[
-              const TimelineEntry(
-                logoPath: Strings.gmuLogoPath,
-                title: 'George Mason University',
-                description: 'M.S. in Software Engineering',
-                timeFrame: 'AUG 2022 - MAY 2024 (EXPECTED)',
-                urlString: Strings.gmuUrl,
-              ),
-              const Divider(
-                indent: 8,
-                endIndent: 8,
-              ),
-              const TimelineEntry(
-                logoPath: Strings.ambotsLogoPath,
-                title: 'AMBOTS Inc.',
-                description: 'Lead Robotics Engineer',
-                timeFrame: 'FEB 2021 - OCT 2021',
-                urlString: Strings.ambotsUrl,
-              ),
-              const Divider(
-                indent: 8,
-                endIndent: 8,
-              ),
-              const TimelineEntry(
-                logoPath: Strings.aicLogoPath,
-                title: 'Atlantic Insurance Co. Ltd.',
-                description:
-                    'Contract Software Engineer\nAIC Mobile App & Management Portal',
-                timeFrame: 'JUN 2020 - PRESENT',
-                urlString: Strings.aicUrl,
-              ),
-              const Divider(
-                indent: 8,
-                endIndent: 8,
-              ),
-              const TimelineEntry(
-                logoPath: Strings.uarkLogoPath,
-                title: 'University of Arkansas (AM³ Lab)',
-                description: 'Graduate Research Assistant',
-                timeFrame: 'APR 2019 - DEC 2020',
-                urlString: Strings.am3LabUrl,
-              ),
-              const Divider(
-                indent: 8,
-                endIndent: 8,
-              ),
-              const TimelineEntry(
-                logoPath: Strings.uarkLogoPath,
-                title: 'University of Arkansas',
-                description: 'B.S. in Computer Science',
-                timeFrame: 'AUG 2017 - DEC 2020',
-                urlString: Strings.uarkUrl,
-              ),
-            ],
-          ),
-        ),
-      ),
+    return Consumer<AppState>(
+      builder: (BuildContext context, AppState appState, Widget? child) {
+        return FrostedContainer(
+          padding: EdgeInsets.zero,
+          child: FutureBuilder<List<TimelineEntry>>(
+              future: appState.loadTimelineEntries(),
+              builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
+                if (snapshot.connectionState != ConnectionState.done) {
+                  return const Center(
+                    child: CircularProgressIndicator(),
+                  );
+                }
+                final List<TimelineEntry> entries =
+                    snapshot.data as List<TimelineEntry>;
+
+                return Scrollbar(
+                  controller: scrollController,
+                  thumbVisibility: true,
+                  child: ListView.custom(
+                    controller: scrollController,
+                    padding: const EdgeInsets.all(16),
+                    childrenDelegate: SliverChildListDelegate(<Widget>[
+                      Wrap(
+                        spacing: 8,
+                        children: <Widget>[
+                          CustomFilterChip(
+                            label: Strings.education,
+                            selected: appState.educationVisible,
+                            onSelected: (bool value) {
+                              appState.toggleEducationVisibility();
+                            },
+                          ),
+                          CustomFilterChip(
+                            label: Strings.professional,
+                            selected: appState.professionalExperiencesVisible,
+                            onSelected: (bool value) {
+                              appState.toggleProfessionalExperienceVisibility();
+                            },
+                          ),
+                          CustomFilterChip(
+                            label: Strings.projects,
+                            selected: appState.projectsVisible,
+                            onSelected: (bool value) {
+                              appState.toggleProjectsVisibility();
+                            },
+                          ),
+                        ],
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 8.0),
+                        child: Text(
+                          '${entries.length} ${Strings.entries}',
+                          style:
+                              Theme.of(context).textTheme.labelSmall!.copyWith(
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .onSurface
+                                        .withOpacity(0.5),
+                                  ),
+                        ),
+                      ),
+                      if (entries.isEmpty)
+                        Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Text(
+                            Strings.selectACategoryToViewTheEntries,
+                            style: TextStyle(
+                              color: Theme.of(context)
+                                  .colorScheme
+                                  .onSurface
+                                  .withOpacity(0.5),
+                            ),
+                          ),
+                        ),
+                      ...entries.map(
+                        (TimelineEntry entry) => Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            entry,
+                            const Divider(
+                              indent: 8,
+                              endIndent: 8,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ]),
+                  ),
+                );
+              }),
+        );
+      },
     );
   }
 
