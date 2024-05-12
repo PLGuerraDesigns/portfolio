@@ -1,3 +1,10 @@
+## 2.4.0
+
+- NEW: Added the ability to expand and collapse the timeline view.
+- FIX: Removed scroll under elevation for the home page app bar.
+- REVISED: Wrapping timeline title widgets instead of text.
+- REVISED: Project timeline entry subtitle now displays the subtitle instead of the description.
+
 ## 2.3.1
 
 - REVISED: Revised home header banner padding.

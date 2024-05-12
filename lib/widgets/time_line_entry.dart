@@ -77,26 +77,27 @@ class TimelineEntry extends StatelessWidget {
             ),
           ),
         ),
-        title: Row(
+        title: Wrap(
           children: <Widget>[
-            Flexible(
-              child: TextButton(
-                onPressed: () => RedirectHandler.openUrl(urlString),
-                child: Text(title.toUpperCase()),
-              ),
+            TextButton(
+              onPressed: () => RedirectHandler.openUrl(urlString),
+              child: Text(title.toUpperCase()),
             ),
             const SizedBox(width: 2),
-            Container(
-              decoration: BoxDecoration(
-                color: labelColor.withOpacity(0.05),
-                borderRadius: BorderRadius.circular(16),
-              ),
-              padding: const EdgeInsets.symmetric(horizontal: 8.0),
-              child: Text(
-                label.toUpperCase(),
-                style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                      color: labelColor.withOpacity(0.8),
-                    ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 4.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: labelColor.withOpacity(0.05),
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: Text(
+                  label.toUpperCase(),
+                  style: Theme.of(context).textTheme.labelSmall!.copyWith(
+                        color: labelColor.withOpacity(0.8),
+                      ),
+                ),
               ),
             )
           ],

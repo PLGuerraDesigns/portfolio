@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -17,8 +19,16 @@ import '../widgets/social_icon_button.dart';
 import '../widgets/time_line_entry.dart';
 
 /// A screen that displays the home page.
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  /// A boolean that determines whether the timeline should take up more space.
+  bool _timelineExpanded = false;
 
   /// A button that redirects to the Flutter website.
   Widget _poweredByFlutterButton(BuildContext context) {
@@ -150,90 +160,134 @@ class HomeScreen extends StatelessWidget {
           child: FutureBuilder<List<TimelineEntry>>(
               future: appState.loadTimelineEntries(),
               builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
-                if (snapshot.connectionState != ConnectionState.done) {
-                  return const Center(
-                    child: CircularProgressIndicator(),
-                  );
+                List<TimelineEntry> entries = <TimelineEntry>[];
+                if (snapshot.connectionState == ConnectionState.done) {
+                  entries = snapshot.data as List<TimelineEntry>;
                 }
-                final List<TimelineEntry> entries =
-                    snapshot.data as List<TimelineEntry>;
 
-                return Scrollbar(
-                  controller: scrollController,
-                  thumbVisibility: true,
-                  child: ListView.custom(
+                return AnimatedOpacity(
+                  duration: const Duration(milliseconds: 500),
+                  opacity: entries.isEmpty ? 0.001 : 1,
+                  child: Scrollbar(
                     controller: scrollController,
-                    padding: const EdgeInsets.all(16),
-                    childrenDelegate: SliverChildListDelegate(<Widget>[
-                      FittedBox(
-                        fit: BoxFit.scaleDown,
-                        alignment: Alignment.centerLeft,
-                        child: Row(
+                    thumbVisibility: true,
+                    child: ListView.custom(
+                      controller: scrollController,
+                      padding: const EdgeInsets.all(16),
+                      childrenDelegate: SliverChildListDelegate(<Widget>[
+                        Stack(
                           children: <Widget>[
-                            CustomFilterChip(
-                              label: Strings.education,
-                              selected: appState.educationVisible,
-                              onSelected: (bool value) {
-                                appState.toggleEducationVisibility();
-                              },
+                            FittedBox(
+                              fit: BoxFit.scaleDown,
+                              alignment: Alignment.centerLeft,
+                              child: Row(
+                                children: <Widget>[
+                                  Text(
+                                    Strings.show.toUpperCase(),
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .labelSmall!
+                                        .copyWith(
+                                          color: Theme.of(context)
+                                              .hintColor
+                                              .withOpacity(0.5),
+                                        ),
+                                  ),
+                                  const SizedBox(width: 8),
+                                  CustomFilterChip(
+                                    label: Strings.education,
+                                    selected: appState.educationVisible,
+                                    onSelected: (bool value) {
+                                      appState.toggleEducationVisibility();
+                                    },
+                                  ),
+                                  CustomFilterChip(
+                                    label: Strings.professional,
+                                    selected:
+                                        appState.professionalExperiencesVisible,
+                                    onSelected: (bool value) {
+                                      appState
+                                          .toggleProfessionalExperienceVisibility();
+                                    },
+                                  ),
+                                  CustomFilterChip(
+                                    label: Strings.projects,
+                                    selected: appState.projectsVisible,
+                                    onSelected: (bool value) {
+                                      appState.toggleProjectsVisibility();
+                                    },
+                                  ),
+                                  const SizedBox(width: 52),
+                                ],
+                              ),
                             ),
-                            CustomFilterChip(
-                              label: Strings.professional,
-                              selected: appState.professionalExperiencesVisible,
-                              onSelected: (bool value) {
-                                appState
-                                    .toggleProfessionalExperienceVisibility();
-                              },
-                            ),
-                            CustomFilterChip(
-                              label: Strings.projects,
-                              selected: appState.projectsVisible,
-                              onSelected: (bool value) {
-                                appState.toggleProjectsVisibility();
-                              },
-                            ),
+                            Align(
+                              alignment: Alignment.centerRight,
+                              child: IconButton(
+                                tooltip: _timelineExpanded
+                                    ? Strings.collapse
+                                    : Strings.expand,
+                                visualDensity: VisualDensity.compact,
+                                color: Theme.of(context).colorScheme.onSurface,
+                                onPressed: () {
+                                  setState(() {
+                                    _timelineExpanded = !_timelineExpanded;
+                                  });
+                                },
+                                icon: Icon(
+                                  _timelineExpanded
+                                      ? Icons.zoom_in_map
+                                      : Icons.zoom_out_map,
+                                  color: Theme.of(context)
+                                      .hintColor
+                                      .withOpacity(0.5),
+                                ),
+                              ),
+                            )
                           ],
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 8.0),
-                        child: Text(
-                          '${entries.length} ${Strings.entries}',
-                          style:
-                              Theme.of(context).textTheme.labelSmall!.copyWith(
-                                    color: Theme.of(context)
-                                        .colorScheme
-                                        .onSurface
-                                        .withOpacity(0.5),
-                                  ),
-                        ),
-                      ),
-                      if (entries.isEmpty)
                         Padding(
-                          padding: const EdgeInsets.all(16.0),
+                          padding: const EdgeInsets.only(top: 8.0),
                           child: Text(
-                            Strings.selectACategoryToViewTheEntries,
-                            style: TextStyle(
-                              color: Theme.of(context)
-                                  .colorScheme
-                                  .onSurface
-                                  .withOpacity(0.5),
-                            ),
+                            '${entries.length} ${Strings.entries}',
+                            style: Theme.of(context)
+                                .textTheme
+                                .labelSmall!
+                                .copyWith(
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onSurface
+                                      .withOpacity(0.5),
+                                ),
                           ),
                         ),
-                      ...entries.map(
-                        (TimelineEntry entry) => Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            entry,
-                            const Divider(
-                              indent: 8,
-                              endIndent: 8,
+                        if (entries.isEmpty)
+                          Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Text(
+                              Strings.selectACategoryToViewTheEntries,
+                              style: TextStyle(
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .onSurface
+                                    .withOpacity(0.5),
+                              ),
                             ),
-                          ],
+                          ),
+                        ...entries.map(
+                          (TimelineEntry entry) => Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              entry,
+                              const Divider(
+                                indent: 8,
+                                endIndent: 8,
+                              ),
+                            ],
+                          ),
                         ),
-                      ),
-                    ]),
+                      ]),
+                    ),
                   ),
                 );
               }),
@@ -246,33 +300,67 @@ class HomeScreen extends StatelessWidget {
   /// and personal projects screens.
   Widget _professionalVsPersonalMenu(BuildContext context) {
     return FrostedContainer(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+      child: Column(
         children: <Widget>[
-          Expanded(
-            child: FloatingThumbnail(
-              title: Strings.professional,
-              image: Strings.professionalExperiencePhotoPath,
-              shimmer: true,
-              onTap: () {
-                context
-                    .go('${Strings.homeRoute}/${Strings.professionalSubRoute}');
-              },
+          Padding(
+            padding: const EdgeInsets.only(bottom: 4.0),
+            child: Text(
+              Strings.explore.toUpperCase(),
+              style: Theme.of(context).textTheme.labelSmall!.copyWith(
+                    color: Theme.of(context).hintColor.withOpacity(0.75),
+                  ),
             ),
           ),
-          const VerticalDivider(
-            indent: 8,
-            endIndent: 8,
-          ),
           Expanded(
-            child: FloatingThumbnail(
-              title: Strings.personal,
-              image: Strings.personalExperiencePhotoPath,
-              shimmer: true,
-              onTap: () {
-                context.go('${Strings.homeRoute}/${Strings.personalSubRoute}');
-              },
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Expanded(
+                  child: FloatingThumbnail(
+                    title: Strings.professional,
+                    image: Strings.professionalExperiencePhotoPath,
+                    shimmer: true,
+                    onTap: () {
+                      context.go(
+                          '${Strings.homeRoute}/${Strings.professionalSubRoute}');
+                    },
+                  ),
+                ),
+                Column(
+                  children: <Widget>[
+                    const Expanded(
+                      child: VerticalDivider(
+                        indent: 8,
+                        endIndent: 8,
+                      ),
+                    ),
+                    Text(
+                      Strings.or.toUpperCase(),
+                      style: Theme.of(context).textTheme.labelSmall!.copyWith(
+                            color: Theme.of(context).hintColor.withOpacity(0.5),
+                          ),
+                    ),
+                    const Expanded(
+                      child: VerticalDivider(
+                        indent: 8,
+                        endIndent: 8,
+                      ),
+                    ),
+                  ],
+                ),
+                Expanded(
+                  child: FloatingThumbnail(
+                    title: Strings.personal,
+                    image: Strings.personalExperiencePhotoPath,
+                    shimmer: true,
+                    onTap: () {
+                      context.go(
+                          '${Strings.homeRoute}/${Strings.personalSubRoute}');
+                    },
+                  ),
+                ),
+              ],
             ),
           ),
         ],
@@ -323,10 +411,23 @@ class HomeScreen extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
         _header(context, compact: true),
+        AnimatedContainer(
+            duration: const Duration(milliseconds: 250),
+            height: _timelineExpanded
+                ? MediaQuery.of(context).size.height * 0.001
+                : MediaQuery.of(context).size.height * 0.26,
+            child: AnimatedOpacity(
+              duration: const Duration(milliseconds: 150),
+              opacity: _timelineExpanded ? 0.001 : 1,
+              child: Column(
+                children: <Widget>[
+                  const SizedBox(height: 8, width: 8),
+                  Expanded(child: _professionalVsPersonalMenu(context)),
+                ],
+              ),
+            )),
         const SizedBox(height: 8, width: 8),
-        Flexible(child: _professionalVsPersonalMenu(context)),
-        const SizedBox(height: 8, width: 8),
-        Flexible(flex: 2, child: _timeline(context)),
+        Expanded(child: _timeline(context)),
       ],
     );
   }
@@ -341,18 +442,29 @@ class HomeScreen extends StatelessWidget {
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Expanded(child: _timeline(context)),
-              const SizedBox(width: 8),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Expanded(
-                      child: _professionalVsPersonalMenu(context),
-                    ),
-                    const SizedBox(height: 8),
-                    Expanded(child: _actionMenu(context)),
-                  ],
+              Flexible(
+                child: _timeline(context),
+              ),
+              if (!_timelineExpanded) const SizedBox(width: 8),
+              AnimatedContainer(
+                duration: const Duration(milliseconds: 150),
+                transformAlignment: Alignment.centerRight,
+                width: _timelineExpanded
+                    ? MediaQuery.of(context).size.width * 0.001
+                    : MediaQuery.of(context).size.width * 0.5,
+                child: AnimatedOpacity(
+                  duration: const Duration(milliseconds: 100),
+                  opacity: _timelineExpanded ? 0.001 : 1,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Expanded(
+                        child: _professionalVsPersonalMenu(context),
+                      ),
+                      const SizedBox(height: 8),
+                      Expanded(child: _actionMenu(context)),
+                    ],
+                  ),
                 ),
               ),
             ],

@@ -106,7 +106,7 @@ class Project {
         labelColor: Colors.grey,
         startDate: startDate,
         finalDateString: finalDateString,
-        description: description,
+        description: subtitle,
         urlString:
             'https://plguerradesigns.github.io/portfolio/#/home/personal/details/$titleAsPath',
       );

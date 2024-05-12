@@ -51,6 +51,10 @@ class Strings {
       'assets/images/professional/ambots/logo.webp';
 
   // General
+  static const String explore = 'Explore';
+  static const String expand = 'Expand';
+  static const String collapse = 'Collapse';
+  static const String show = 'Show';
   static const String github = 'GitHub';
   static const String thingiverse = 'Thingiverse';
   static const String linkedin = 'LinkedIn';
