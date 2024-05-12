@@ -25,6 +25,7 @@ class CustomAppBars {
           if (!compact) poweredByFlutterButton,
         ],
       ),
+      scrolledUnderElevation: 0,
       centerTitle: false,
       actions: <Widget>[
         if (!compact)

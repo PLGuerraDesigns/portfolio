@@ -144,20 +144,26 @@ class AppState extends ChangeNotifier {
   Future<List<TimelineEntry>> loadTimelineEntries() async {
     final List<TimelineEntry> entries = <TimelineEntry>[];
 
-    await loadProfessionalExperiences();
+    if (_professionalExperiences.isEmpty) {
+      await loadProfessionalExperiences();
+    }
     if (_professionalExperiencesVisible) {
       entries.addAll(_professionalExperiences.map(
           (ProfessionalExperience professionalExperience) =>
               professionalExperience.timelineEntry));
     }
 
-    await loadEducation();
+    if (_education.isEmpty) {
+      await loadEducation();
+    }
     if (_educationVisible) {
       entries.addAll(
           _education.map((Education education) => education.timelineEntry));
     }
 
-    await loadProjects();
+    if (_projects.isEmpty) {
+      await loadProjects();
+    }
     if (_projectsVisible) {
       entries.addAll(_projects.map((Project project) => project.timelineEntry));
     }
