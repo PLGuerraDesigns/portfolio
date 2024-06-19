@@ -636,11 +636,11 @@
     "externalLinks": [
       {
         "title": "Project report",
-        "url": "https://github.com/PLGuerraDesigns/portfolio/blob/published/assets/assets/other/f1se_report.pdf"
+        "url": "https://github.com/PLGuerraDesigns/portfolio/blob/published/assets/assets/docs/f1se_report.pdf"
       },
       {
-        "title": "F1 2019 UDP Specification",
-        "url": "https://forums.codemasters.com/topic/44592-f1-2019-udp-specification/"
+        "title": "F1 2019 Telemetry Packet Specification",
+        "url": "https://f1-2019-telemetry.readthedocs.io/en/latest/telemetry-specification.html"
       }
     ],
     "tags": [
@@ -1084,7 +1084,7 @@
     "externalLinks": [
       {
         "title": "Project report",
-        "url": "https://github.com/PLGuerraDesigns/portfolio/blob/published/assets/assets/other/android_calculator_report.pdf"
+        "url": "https://github.com/PLGuerraDesigns/portfolio/blob/published/assets/assets/docs/android_calculator_report.pdf"
       }
     ],
     "tags": [
