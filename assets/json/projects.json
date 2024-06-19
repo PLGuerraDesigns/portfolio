@@ -1,6 +1,6 @@
 [
   {
-    "title": "AMG Inspired Mobile Sim Wheel",
+    "title": "Mobile Sim Wheel",
     "subtitle": "For on-the-go Sim Racing",
     "startDate": "2024-04-14T00:00:00Z",
     "finalDate": "2024-04-26T00:00:00Z",
@@ -10,6 +10,11 @@
         "type": "youTubeVideo",
         "caption": "AMG GT3 Inspired Mobile Sim Wheel: CAD Development Process",
         "path": "u2Hcy3uadDQ"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Demo Video - Real Racing 3",
+        "path": "YmphJtfp86E"
       },
       {
         "type": "localImage",
@@ -80,11 +85,6 @@
         "type": "localImage",
         "caption": "Button Section Analysis - TPU based spring mechanism",
         "path": "image_8.webp"
-      },
-      {
-        "type": "youTubeVideo",
-        "caption": "Demo Video - Real Racing 3",
-        "path": "4QhZNsjgN2k"
       }
     ],
     "externalLinks": [
