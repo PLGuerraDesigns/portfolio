@@ -64,8 +64,13 @@
     "media": [
       {
         "type": "youTubeVideo",
-        "caption": "CBS - The Henry Ford's Innovation Nation",
+        "caption": "The Henry Ford's Innovation Nation [CBS]",
         "path": "uTrtARdG20E"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Swarm Manufacturing of Mini-EV",
+        "path": "iimghhKjQlY"
       },
       {
         "type": "youTubeVideo",
