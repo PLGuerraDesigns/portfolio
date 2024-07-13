@@ -204,6 +204,11 @@
       },
       {
         "type": "localImage",
+        "caption": "United States Patent Plaque",
+        "path": "image_18.webp"
+      },
+      {
+        "type": "localImage",
         "caption": "Founders of AMBOTS Inc.",
         "path": "image_17.webp"
       },
@@ -238,8 +243,8 @@
         "url": "https://www.researchgate.net/publication/341651995_Architecting_the_Cooperative_3D_Printing_System"
       },
       {
-        "title": "United States Patent and Trademark Office (Patent Application 20230120878)",
-        "url": "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/20230120878"
+        "title": "United States Patent (Swarm Manufacturing for Smart Factory - US11975486B2)",
+        "url": "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11975486"
       },
       {
         "title": "ASBTDC: AMBOTS Gets $1M Phase II Grant from National Science Foundation for Large-Scale 3D Printing",

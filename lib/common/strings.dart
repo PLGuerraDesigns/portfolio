@@ -4,7 +4,7 @@ class Strings {
   Strings._();
 
   static const String currentLocation = 'VA, USA';
-  static const String lastUpdated = 'Updated JUNE 2024';
+  static const String lastUpdated = 'Updated JULY 2024';
 
   // Routes
   static const String loadingRoute = '/loading';
