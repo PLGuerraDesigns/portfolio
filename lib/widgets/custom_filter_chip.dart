@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+/// A custom filter chip used for filtering content.
 class CustomFilterChip extends StatelessWidget {
   const CustomFilterChip({
     super.key,

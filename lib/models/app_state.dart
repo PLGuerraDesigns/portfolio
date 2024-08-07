@@ -3,8 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../common/strings.dart';
-import '../widgets/time_line_entry.dart';
+import '../common/asset_paths.dart';
+import '../common/routing/routes.dart';
 import 'education.dart';
 import 'professional_experience.dart';
 import 'project.dart';
@@ -12,20 +12,17 @@ import 'project.dart';
 /// The application state.
 class AppState extends ChangeNotifier {
   /// The current route.
-  String currentRoute = Strings.homeRoute;
+  String currentRoute = Routes.home;
 
-  /// Whether the media browser is visible.
-  bool _mediaBrowserVisible = false;
-
-  bool get mediaBrowserVisible => _mediaBrowserVisible;
+  /// Whether the media browser is open.
+  bool _mediaBrowserOpen = false;
+  bool get mediaBrowserOpen => _mediaBrowserOpen;
 
   /// The navigator key.
   final GlobalKey<NavigatorState> _navigatorKey = GlobalKey<NavigatorState>();
-
-  /// The navigator key.
   GlobalKey<NavigatorState> get navigatorKey => _navigatorKey;
 
-  /// Whether the projects have been loaded.
+  /// Whether the project data has been loaded.
   bool _projectsLoaded = false;
   bool get projectsLoaded => _projectsLoaded;
 
@@ -33,19 +30,7 @@ class AppState extends ChangeNotifier {
   List<Project> get projects => _projects;
   List<Project> _projects = <Project>[];
 
-  /// Whether the professional experiences are visible in the timeline.
-  bool _professionalExperiencesVisible = true;
-  bool get professionalExperiencesVisible => _professionalExperiencesVisible;
-
-  /// Whether the projects are visible in the timeline.
-  bool _projectsVisible = false;
-  bool get projectsVisible => _projectsVisible;
-
-  /// Whether the education is visible in the timeline.
-  bool _educationVisible = true;
-  bool get educationVisible => _educationVisible;
-
-  /// Returns the project with the given title as a path.
+  /// Returns the project for the given title in path format.
   Project getProjectByTitlePath(String titleAsPath) {
     for (final Project project in _projects) {
       if (project.titleAsPath == titleAsPath) {
@@ -55,7 +40,7 @@ class AppState extends ChangeNotifier {
     throw Exception('Project not found.');
   }
 
-  /// Whether the professional experiences have been loaded.
+  /// Whether the professional experience data has been loaded.
   bool professionalExperiencesLoaded = false;
 
   /// The list of professional experiences.
@@ -64,7 +49,7 @@ class AppState extends ChangeNotifier {
   List<ProfessionalExperience> _professionalExperiences =
       <ProfessionalExperience>[];
 
-  /// Returns the professional experience with the given title as a path.
+  /// Returns the professional experience for the given title in path format.
   ProfessionalExperience getProfessionalExperienceByTitlePath(
       String titleAsPath) {
     for (final ProfessionalExperience professionalExperience
@@ -76,7 +61,7 @@ class AppState extends ChangeNotifier {
     throw Exception('Professional experience not found.');
   }
 
-  /// Whether the education has been loaded.
+  /// Whether the education data has been loaded.
   bool _educationLoaded = false;
   bool get educationLoaded => _educationLoaded;
 
@@ -84,10 +69,10 @@ class AppState extends ChangeNotifier {
   List<Education> get education => _education;
   List<Education> _education = <Education>[];
 
-  /// Loads the education from the JSON file.
+  /// Loads the education data from the JSON file.
   Future<void> loadEducation() async {
     _education = <Education>[];
-    await rootBundle.loadString(Strings.educationJsonPath).then(
+    await rootBundle.loadString(AssetPaths.educationJsonData).then(
       (String data) {
         final dynamic jsonResult = json.decode(data);
         for (final dynamic education in jsonResult as List<dynamic>) {
@@ -101,10 +86,14 @@ class AppState extends ChangeNotifier {
     _educationLoaded = true;
   }
 
-  /// Loads the projects from the JSON file.
+  /// Loads the project data from the JSON file.
   Future<void> loadProjects() async {
+    if (projectsLoaded) {
+      return;
+    }
+
     _projects = <Project>[];
-    await rootBundle.loadString(Strings.projectsJsonPath).then(
+    await rootBundle.loadString(AssetPaths.projectsJsonData).then(
       (String data) {
         final dynamic jsonResult = json.decode(data);
         for (final dynamic project in jsonResult as List<dynamic>) {
@@ -118,10 +107,14 @@ class AppState extends ChangeNotifier {
     _projectsLoaded = true;
   }
 
-  /// Loads the professional experiences from the JSON file.
+  /// Loads the professional experience data from the JSON file.
   Future<void> loadProfessionalExperiences() async {
+    if (professionalExperiencesLoaded) {
+      return;
+    }
+
     _professionalExperiences = <ProfessionalExperience>[];
-    await rootBundle.loadString(Strings.professionalExperienceJsonPath).then(
+    await rootBundle.loadString(AssetPaths.professionalExperienceJsonData).then(
       (String data) {
         final dynamic jsonResult = json.decode(data);
         for (final dynamic professionalExperience
@@ -140,44 +133,9 @@ class AppState extends ChangeNotifier {
     professionalExperiencesLoaded = true;
   }
 
-  /// Loads the timeline entries.
-  Future<List<TimelineEntry>> loadTimelineEntries() async {
-    final List<TimelineEntry> entries = <TimelineEntry>[];
-
-    if (_professionalExperiences.isEmpty) {
-      await loadProfessionalExperiences();
-    }
-    if (_professionalExperiencesVisible) {
-      entries.addAll(_professionalExperiences.map(
-          (ProfessionalExperience professionalExperience) =>
-              professionalExperience.timelineEntry));
-    }
-
-    if (_education.isEmpty) {
-      await loadEducation();
-    }
-    if (_educationVisible) {
-      entries.addAll(
-          _education.map((Education education) => education.timelineEntry));
-    }
-
-    if (_projects.isEmpty) {
-      await loadProjects();
-    }
-    if (_projectsVisible) {
-      entries.addAll(_projects.map((Project project) => project.timelineEntry));
-    }
-
-    entries.sort((TimelineEntry a, TimelineEntry b) {
-      return b.startDate.compareTo(a.startDate);
-    });
-
-    return entries;
-  }
-
   /// Toggles the visibility of the media browser.
   void toggleMediaBrowserVisibility() {
-    _mediaBrowserVisible = !_mediaBrowserVisible;
+    _mediaBrowserOpen = !_mediaBrowserOpen;
     notifyListeners();
   }
 
@@ -244,23 +202,5 @@ class AppState extends ChangeNotifier {
       return _projects[0].titleAsPath;
     }
     return _projects[index + 1].titleAsPath;
-  }
-
-  /// Toggles the visibility of the professional experiences.
-  void toggleProfessionalExperienceVisibility() {
-    _professionalExperiencesVisible = !_professionalExperiencesVisible;
-    notifyListeners();
-  }
-
-  /// Toggles the visibility of the projects.
-  void toggleProjectsVisibility() {
-    _projectsVisible = !_projectsVisible;
-    notifyListeners();
-  }
-
-  /// Toggles the visibility of the education.
-  void toggleEducationVisibility() {
-    _educationVisible = !_educationVisible;
-    notifyListeners();
   }
 }

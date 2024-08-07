@@ -6,11 +6,11 @@ import 'package:video_player/video_player.dart';
 import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 import 'package:zoom_pinch_overlay/zoom_pinch_overlay.dart';
 
-import '../common/color_schemes.dart';
-import '../common/enums.dart';
-import '../models/media_item.dart';
-import 'frosted_container.dart';
-import 'gallery_controls.dart';
+import '../../../../common/enums.dart';
+import '../../../../common/theming/color_schemes.dart';
+import '../../../../models/media_item.dart';
+import '../../../../widgets/frosted_container.dart';
+import '../../../../widgets/gallery_controls.dart';
 import 'media_browser.dart';
 
 /// Displays different types of media (images, videos, youTubeVideo videos)
@@ -160,14 +160,14 @@ class MediaPlayerState extends State<MediaPlayer> {
       child: Container(
         width: double.infinity,
         decoration: BoxDecoration(
-          border:
-              widget.browserAxis == Axis.horizontal && _isMediaBrowserVisible
-                  ? Border(
-                      right: BorderSide(
-                        color: darkColorScheme.surface.withOpacity(0.5),
-                      ),
-                    )
-                  : null,
+          border: widget.browserAxis == Axis.horizontal &&
+                  _isMediaBrowserVisible
+              ? Border(
+                  right: BorderSide(
+                    color: PortfolioColorSchemes.dark.surface.withOpacity(0.5),
+                  ),
+                )
+              : null,
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -366,7 +366,7 @@ class MediaPlayerState extends State<MediaPlayer> {
                 mainAxisSize: MainAxisSize.min,
                 children: <Widget>[
                   ColoredBox(
-                    color: darkColorScheme.surface.withOpacity(0.9),
+                    color: PortfolioColorSchemes.dark.surface.withOpacity(0.9),
                     child: LayoutBuilder(
                       builder:
                           (BuildContext context, BoxConstraints constraints) {

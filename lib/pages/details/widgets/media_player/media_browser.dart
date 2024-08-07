@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:image_network/image_network.dart';
 
-import '../common/enums.dart';
-import '../models/media_item.dart';
-import 'hover_scale_handler.dart';
+import '../../../../common/enums.dart';
+import '../../../../models/media_item.dart';
+import '../../../../widgets/hover_scale_handler.dart';
 
 /// Displays a gallery of YouTube videos, local images, and local videos.
 class MediaBrowser extends StatelessWidget {

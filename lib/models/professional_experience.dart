@@ -3,8 +3,11 @@ import 'package:intl/intl.dart';
 import 'package:unorm_dart/unorm_dart.dart' as unorm;
 
 import '../common/enums.dart';
+import '../common/routing/routes.dart';
 import '../common/strings.dart';
-import '../widgets/time_line_entry.dart';
+import '../common/urls.dart';
+import '../pages/details/details.model.dart';
+import '../pages/home/widgets/time_line_entry.dart';
 import 'media_item.dart';
 
 class ProfessionalExperience {
@@ -65,7 +68,7 @@ class ProfessionalExperience {
 
   /// The name of the company and role as a path
   String get titleAsPath => unorm.nfkc(
-      '${company.toLowerCase().replaceAll(' ', '_')}_${role.toLowerCase().replaceAll(' ', '_')}');
+      '${company.toLowerCase().replaceAll(' ', '-')}_${role.toLowerCase().replaceAll(' ', '-')}');
 
   /// The role in the company.
   final String role;
@@ -124,7 +127,22 @@ class ProfessionalExperience {
             ? Strings.present.toUpperCase()
             : '$finalDateString',
         urlString:
-            'https://plguerradesigns.github.io/portfolio/#/home/professional/details/$titleAsPath',
+            '${Urls.portfolioBase}${Routes.professionalExpDetails(titleAsPath: titleAsPath)}',
         coverImage: false,
+      );
+
+  /// The details for the professional experience.
+  Details get details => Details(
+        title: company,
+        titleAsPath: titleAsPath,
+        subtitle: role,
+        appBarTitle: Strings.professionalExperiences,
+        logoPath: logoPath,
+        description: description,
+        externalLinks: externalLinks,
+        startDate: startDateString,
+        endDate: finalDateString,
+        mediaItems: mediaItems,
+        tags: const <String>[],
       );
 }

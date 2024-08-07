@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
-import '../common/strings.dart';
-import '../services/redirect_handler.dart';
+import '../../../common/strings.dart';
+import '../../../common/urls.dart';
+import '../../../services/redirect_handler.dart';
+import 'powered_by_flutter_button.dart';
 import 'theme_mode_button.dart';
 
-/// A collection of custom app bars.
-class CustomAppBars {
-  CustomAppBars._();
+/// The app bar for the home page.
+class HomeAppBar {
+  HomeAppBar._();
 
-  /// The app bar to display on the home page.
-  static PreferredSizeWidget homeAppBar({
+  /// The app bar for the home page.
+  static PreferredSizeWidget build({
     required BuildContext context,
-    required Widget poweredByFlutterButton,
-    required String lastUpdated,
-    bool compact = false,
+    required bool compact,
   }) {
     return AppBar(
       title: Row(
@@ -22,7 +22,7 @@ class CustomAppBars {
             padding: EdgeInsets.only(right: 8.0),
             child: Text(Strings.appName),
           ),
-          if (!compact) poweredByFlutterButton,
+          if (!compact) const PoweredByFlutterButton(),
         ],
       ),
       scrolledUnderElevation: 0,
@@ -30,7 +30,7 @@ class CustomAppBars {
       actions: <Widget>[
         if (!compact)
           Text(
-            lastUpdated,
+            Strings.lastUpdated,
             style: Theme.of(context).textTheme.labelSmall!.copyWith(
                   color:
                       Theme.of(context).colorScheme.onSurface.withOpacity(0.5),
@@ -39,27 +39,12 @@ class CustomAppBars {
         const SizedBox(width: 12),
         if (!compact)
           IconButton(
-            onPressed: () => RedirectHandler.openUrl(Strings.sourceCodeUrl),
+            onPressed: () => RedirectHandler.openUrl(Urls.projectSourceCode),
             icon: const Icon(Icons.code),
             tooltip: Strings.viewSourceCode,
           ),
         const ThemeModeButton(),
       ],
-    );
-  }
-
-  /// A generic app bar used throughout the app.
-  static PreferredSizeWidget genericAppBar({
-    required BuildContext context,
-    required String title,
-    List<Widget>? actions,
-  }) {
-    return AppBar(
-      title: Text(title),
-      titleSpacing: 0,
-      centerTitle: false,
-      scrolledUnderElevation: 0,
-      actions: actions,
     );
   }
 }

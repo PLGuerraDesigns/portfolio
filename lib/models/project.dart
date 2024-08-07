@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import '../common/enums.dart';
+import '../common/routing/routes.dart';
 import '../common/strings.dart';
-import '../widgets/time_line_entry.dart';
+import '../common/urls.dart';
+import '../pages/details/details.model.dart';
+import '../pages/home/widgets/time_line_entry.dart';
 import 'media_item.dart';
 
 class Project {
@@ -59,7 +62,7 @@ class Project {
   final String subtitle;
 
   /// The title of the project as a path.
-  String get titleAsPath => title.toLowerCase().replaceAll(' ', '_');
+  String get titleAsPath => title.toLowerCase().replaceAll(' ', '-');
 
   /// The start date of the project.
   final DateTime startDate;
@@ -108,6 +111,21 @@ class Project {
         finalDateString: finalDateString,
         description: subtitle,
         urlString:
-            'https://plguerradesigns.github.io/portfolio/#/home/personal/details/$titleAsPath',
+            '${Urls.portfolioBase}${Routes.projectDetails(titleAsPath: titleAsPath)}',
+      );
+
+  /// The details for the project.
+  Details get details => Details(
+        logoPath: null,
+        title: title,
+        titleAsPath: titleAsPath,
+        appBarTitle: Strings.projects,
+        subtitle: subtitle,
+        description: description,
+        externalLinks: externalLinks,
+        startDate: startDateString,
+        endDate: finalDateString,
+        mediaItems: mediaItems,
+        tags: tags,
       );
 }
