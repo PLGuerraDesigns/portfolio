@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:photo_view/photo_view.dart';
 import 'package:photo_view/photo_view_gallery.dart';
 import 'package:video_player/video_player.dart';
-import 'package:zoom_pinch_overlay/zoom_pinch_overlay.dart';
 
 import '../../../../common/enums.dart';
 import '../../../../models/media_item.dart';
@@ -78,18 +77,11 @@ class MediaViewer extends StatelessWidget {
                   heroAttributes: PhotoViewHeroAttributes(
                     tag: index.toString(),
                   ),
-                  child: ZoomOverlay(
-                    twoTouchOnly: true,
-                    modalBarrierColor: Colors.black87,
-                    minScale: 0.5,
-                    maxScale: 3.0,
-                    animationDuration: const Duration(milliseconds: 300),
-                    child: SizedBox(
-                      key: ValueKey<String>(mediaItems[index].source),
-                      width: constraints.maxWidth,
-                      height: constraints.maxHeight,
-                      child: _media(mediaItems[index]),
-                    ),
+                  child: SizedBox(
+                    key: ValueKey<String>(mediaItems[index].source),
+                    width: constraints.maxWidth,
+                    height: constraints.maxHeight,
+                    child: _media(mediaItems[index]),
                   ),
                 );
               },

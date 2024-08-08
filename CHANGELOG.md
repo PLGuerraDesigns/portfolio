@@ -1,3 +1,8 @@
+## 2.4.3
+
+- FIX: Fixed issue with pinch to zoom being misaligned.
+- REVISED: Pinch to zoom only enabled for images.
+
 ## 2.4.2
 
 - NEW: Added compact details page navigation buttons for mobile.
