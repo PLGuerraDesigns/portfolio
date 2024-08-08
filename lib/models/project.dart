@@ -33,8 +33,8 @@ class Project {
       final MediaItem mediaItem = mediaItems[i];
       if (mediaItem.type == MediaType.localImage ||
           mediaItem.type == MediaType.localVideo) {
-        mediaItems[i].path =
-            'assets/images/personal/${json['title'].toString().toLowerCase().replaceAll(' ', '_')}/${mediaItem.path}';
+        mediaItems[i].source =
+            'assets/images/personal/${json['title'].toString().toLowerCase().replaceAll(' ', '_')}/${mediaItem.source}';
       }
     }
 
@@ -119,7 +119,7 @@ class Project {
         logoPath: null,
         title: title,
         titleAsPath: titleAsPath,
-        appBarTitle: Strings.projects,
+        appBarTitle: Strings.personalProjects,
         subtitle: subtitle,
         description: description,
         externalLinks: externalLinks,

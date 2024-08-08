@@ -18,4 +18,7 @@ class Urls {
   static const String contactEmail = 'mailto:plguerra@outlook.com';
 
   static const String googleSearchBase = 'https://www.google.com/search?q=';
+
+  static String youTubeThumbnail(String videoId) =>
+      'https://img.youtube.com/vi/$videoId/hqdefault.jpg';
 }

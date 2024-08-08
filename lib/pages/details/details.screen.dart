@@ -8,7 +8,8 @@ import 'details.controller.dart';
 import 'details.model.dart';
 import 'widgets/app_bar_actions.dart';
 import 'widgets/info_header.dart';
-import 'widgets/media_player/media_player.dart';
+import 'widgets/media_player/multi_media_player.controller.dart';
+import 'widgets/media_player/multi_media_player.dart';
 import 'widgets/more_info.dart';
 import 'widgets/tags_menu.dart';
 
@@ -35,68 +36,62 @@ class DetailsScreenState extends State<DetailsScreen> {
           (BuildContext context, DetailsController controller, Widget? child) {
         return Stack(
           children: <Widget>[
-            AnimatedOpacity(
-              opacity: controller.mediaBrowserOpen ? 0.0 : 1.0,
-              duration: const Duration(milliseconds: 250),
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: <Widget>[
-                  AspectRatio(
-                    aspectRatio: 16 / 9,
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width,
-                    ),
+            Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                AspectRatio(
+                  aspectRatio: 16 / 9,
+                  child: SizedBox(
+                    width: MediaQuery.of(context).size.width,
                   ),
-                  const SizedBox(
-                    height: 64,
-                  ),
-                  Expanded(
-                    child: Scrollbar(
+                ),
+                const SizedBox(
+                  height: 64,
+                ),
+                Expanded(
+                  child: Scrollbar(
+                    controller: controller.screenScrollController,
+                    thumbVisibility: true,
+                    child: SingleChildScrollView(
+                      clipBehavior: Clip.none,
                       controller: controller.screenScrollController,
-                      thumbVisibility: true,
-                      child: SingleChildScrollView(
-                        clipBehavior: Clip.none,
-                        controller: controller.screenScrollController,
-                        child: Padding(
-                          padding: const EdgeInsets.only(
-                            left: 8.0,
-                            top: 8.0,
-                            right: 16.0,
-                          ),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: <Widget>[
-                              InfoHeader(
-                                details: widget.details,
-                                compact: true,
+                      child: Padding(
+                        padding: const EdgeInsets.only(
+                          left: 8.0,
+                          top: 8.0,
+                          right: 16.0,
+                        ),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: <Widget>[
+                            InfoHeader(
+                              details: widget.details,
+                              compact: true,
+                            ),
+                            const Divider(height: 32),
+                            SelectableText(
+                              controller.description,
+                              style: Theme.of(context).textTheme.bodyMedium,
+                              textAlign: TextAlign.justify,
+                            ),
+                            if (controller.externalLinks.isNotEmpty)
+                              MoreInfo(externalLinks: controller.externalLinks),
+                            const Divider(height: 32),
+                            if (controller.tags.isNotEmpty)
+                              SizedBox(
+                                width: MediaQuery.of(context).size.width * 0.2,
+                                child: TagsMenu(tags: controller.tags),
                               ),
-                              const Divider(height: 32),
-                              SelectableText(
-                                controller.description,
-                                style: Theme.of(context).textTheme.bodyMedium,
-                                textAlign: TextAlign.justify,
-                              ),
-                              if (controller.externalLinks.isNotEmpty)
-                                MoreInfo(
-                                    externalLinks: controller.externalLinks),
-                              const Divider(height: 32),
-                              if (controller.tags.isNotEmpty)
-                                SizedBox(
-                                  width:
-                                      MediaQuery.of(context).size.width * 0.2,
-                                  child: TagsMenu(tags: controller.tags),
-                                ),
-                              const SizedBox(height: 100.00),
-                            ],
-                          ),
+                            const SizedBox(height: 100.00),
+                          ],
                         ),
                       ),
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
             // A gradient overlay to fade out the text under the media player.
             Container(
@@ -121,15 +116,7 @@ class DetailsScreenState extends State<DetailsScreen> {
             // The media player.
             SizedBox(
               width: MediaQuery.of(context).size.width,
-              child: MediaPlayer(
-                key: ValueKey<int>(controller.currentMediaIndex),
-                currentIndex: controller.currentMediaIndex,
-                browserAxis: Axis.vertical,
-                mediaList: controller.mediaItems,
-                isMediaBrowserVisible: controller.mediaBrowserOpen,
-                onMediaSelected: controller.onMediaItemSelected,
-                onMediaBrowserToggle: controller.toggleMediaBrowser,
-              ),
+              child: const MultiMediaPlayer(),
             ),
           ],
         );
@@ -151,17 +138,9 @@ class DetailsScreenState extends State<DetailsScreen> {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.only(right: 8.0),
-                  child: MediaPlayer(
-                    key: ValueKey<int>(controller.currentMediaIndex),
-                    browserAxis: Axis.horizontal,
-                    currentIndex: controller.currentMediaIndex,
-                    mediaList: controller.mediaItems,
-                    isMediaBrowserVisible: controller.mediaBrowserOpen,
-                    onMediaSelected: controller.onMediaItemSelected,
-                    onMediaBrowserToggle: controller.toggleMediaBrowser,
-                  ),
+                const Padding(
+                  padding: EdgeInsets.only(right: 8.0),
+                  child: MultiMediaPlayer(),
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(
@@ -209,11 +188,20 @@ class DetailsScreenState extends State<DetailsScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<DetailsController>.value(
-      value: _controller,
+    return MultiProvider(
+      providers: <ChangeNotifierProvider<ChangeNotifier>>[
+        ChangeNotifierProvider<DetailsController>.value(value: _controller),
+        ChangeNotifierProvider<MultiMediaPlayerController>.value(
+          value: _controller.mediaController,
+        ),
+      ],
       builder: (BuildContext context, Widget? child) {
         return OrientationBuilder(
           builder: (BuildContext context, Orientation orientation) {
+            _controller.mediaController.browserAxis =
+                orientation == Orientation.portrait
+                    ? Axis.vertical
+                    : Axis.horizontal;
             return Scaffold(
               appBar: GenericAppBar.build(
                 context: context,

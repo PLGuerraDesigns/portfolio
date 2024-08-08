@@ -35,8 +35,8 @@ class ProfessionalExperience {
       final MediaItem mediaItem = mediaItems[i];
       if (mediaItem.type == MediaType.localImage ||
           mediaItem.type == MediaType.localVideo) {
-        mediaItems[i].path =
-            'assets/images/professional/${json['folderName'].toString().toLowerCase().replaceAll(' ', '_')}/${mediaItem.path}';
+        mediaItems[i].source =
+            'assets/images/professional/${json['folderName'].toString().toLowerCase().replaceAll(' ', '_')}/${mediaItem.source}';
       }
     }
 

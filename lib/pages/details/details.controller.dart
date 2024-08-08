@@ -6,6 +6,7 @@ import '../../common/strings.dart';
 import '../../models/app_state.dart';
 import '../../models/media_item.dart';
 import 'details.model.dart';
+import 'widgets/media_player/multi_media_player.controller.dart';
 
 class DetailsController extends ChangeNotifier {
   DetailsController({
@@ -14,6 +15,11 @@ class DetailsController extends ChangeNotifier {
   }) {
     _details = details;
     _appState = appState;
+    mediaController = MultiMediaPlayerController(
+      mediaItems: _details.mediaItems,
+      isMediaBrowserOpen: _appState.mediaBrowserOpen,
+      updateMediaBrowserVisibilityState: _appState.toggleMediaBrowserVisibility,
+    );
   }
 
   /// The application state.
@@ -25,9 +31,8 @@ class DetailsController extends ChangeNotifier {
   /// The controller for the scroll view.
   final ScrollController screenScrollController = ScrollController();
 
-  /// The index of the current media item.
-  int _currentMediaIndex = 0;
-  int get currentMediaIndex => _currentMediaIndex;
+  /// The controller for the media player.
+  late final MultiMediaPlayerController mediaController;
 
   /// The title of the app bar.
   String get appBarTitle => _details.appBarTitle;
@@ -49,12 +54,6 @@ class DetailsController extends ChangeNotifier {
 
   /// Whether the media browser is open.
   bool get mediaBrowserOpen => _appState.mediaBrowserOpen;
-
-  /// Callback to toggle the media browser.
-  void toggleMediaBrowser() {
-    _appState.toggleMediaBrowserVisibility();
-    notifyListeners();
-  }
 
   /// The callback for navigating to the previous project/experience.
   void onPreviousPressed(BuildContext context) {
@@ -87,11 +86,5 @@ class DetailsController extends ChangeNotifier {
     }
 
     context.go(route);
-  }
-
-  /// The callback for selecting a media item.
-  void onMediaItemSelected(int index) {
-    _currentMediaIndex = index;
-    notifyListeners();
   }
 }
