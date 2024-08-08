@@ -4,7 +4,7 @@ import '../common/enums.dart';
 class MediaItem {
   MediaItem({
     required this.type,
-    required this.path,
+    required this.source,
     required this.caption,
   });
 
@@ -12,7 +12,7 @@ class MediaItem {
   factory MediaItem.fromJson(Map<String, dynamic> json) {
     return MediaItem(
       type: mediaTypeFromString(json['type'].toString()),
-      path: json['path'].toString(),
+      source: json['source'].toString(),
       caption: json['caption'].toString(),
     );
   }
@@ -21,7 +21,7 @@ class MediaItem {
   final MediaType type;
 
   /// The path to the media.
-  String path;
+  String source;
 
   /// The caption to be displayed with the media.
   final String caption;

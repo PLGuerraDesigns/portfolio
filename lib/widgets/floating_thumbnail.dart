@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
-import '../common/color_schemes.dart';
+import '../common/theming/color_schemes.dart';
 import 'frosted_container.dart';
 import 'hover_scale_handler.dart';
 
@@ -57,7 +57,7 @@ class _FloatingThumbnailState extends State<FloatingThumbnail> {
             child: Container(
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: lightColorScheme.surface,
+                color: PortfolioColorSchemes.light.surface,
               ),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),

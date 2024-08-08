@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 import '../common/strings.dart';
-import '../widgets/time_line_entry.dart';
+import '../pages/home/widgets/time_line_entry.dart';
 
+/// A class representing an education entry.
 class Education {
   Education({
     required this.school,
@@ -15,7 +16,7 @@ class Education {
     required this.url,
   });
 
-  /// Creates am [Education] entry from a JSON object.
+  /// Creates an [Education] entry from a JSON object.
   factory Education.fromJson(Map<String, dynamic> json) {
     return Education(
       school: json['school'].toString(),
