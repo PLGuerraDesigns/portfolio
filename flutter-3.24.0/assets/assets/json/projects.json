@@ -1,0 +1,1265 @@
+[
+  {
+    "title": "Mobile Sim Wheel",
+    "subtitle": "For on-the-go Sim Racing",
+    "startDate": "2024-04-14T00:00:00Z",
+    "finalDate": "2024-04-26T00:00:00Z",
+    "description": "Designed for mobile sim racing, the AMG GT3/GT4 Mobile Sim Wheel kit is a completely 3D-printable steering wheel. It is a remix of one of my earlier and highly popular projects, the AMG GT3 Wheel Kit for Thrustmaster, now optimized for mobile use. The AMG inspired wheel has been shrunk down to 230mm x 130mm, with built in grip handles and slots for attaching a phone mount. The wheel supports mobile games using tilt to steer and tap to accelerate or break.\n\nThe kit itself contains all STL files for the wheel, phone mount, and an assembly manual. Total print time can be completed in under 15 hours (varies based on print settings and materials), while assembly time takes approximately 30 minutes.\n\nVersion 2 of the wheel was designed to more closely resemble the AMG GT3 wheel. The handles were updated to match the actual style and 'fidget' buttons were added for a more realistic look and feel. Several spring mechanisms were tested with different materials to allow for fully 3D-printable parts that can be assembled without the need for additional hardware. The phone clamp was also updated to included thumb cutouts for easier access to the screen during gameplay.",
+    "media": [
+      {
+        "type": "youTubeVideo",
+        "caption": "AMG GT3 Inspired Mobile Sim Wheel: CAD Development Process",
+        "source": "u2Hcy3uadDQ"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Demo Video - Real Racing 3",
+        "source": "YmphJtfp86E"
+      },
+      {
+        "type": "localImage",
+        "caption": "V2 Wheel CAD Renderings",
+        "source": "thumbnail.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Initial Prototype using paracord and screws for assembly.",
+        "source": "image_1.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "1: Original AMG GT3 Wheel Kit,\n2: Shrunken Wheel Plate Prototype,\n3: Final Product with built-in handles",
+        "source": "image_2.webp"
+      },
+      {
+        "type": "networkImage",
+        "caption": "V1 CAD Rendering Left-Front View",
+        "source": "https://cdn.thingiverse.com/assets/07/e6/89/5b/bc/large_display_014c469a-e014-4ad5-bdf3-da2e75f129b8.jpeg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "V1 Final Assembly Left-Front View",
+        "source": "https://cdn.thingiverse.com/assets/61/fb/45/5a/3b/large_display_7993f07e-1718-4088-8bc4-bbcd39a565f7.jpeg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "V1 Final Assembly Front-Right View",
+        "source": "https://cdn.thingiverse.com/assets/22/cd/c0/bb/80/large_display_8e7ff666-9c87-4011-a4a6-cc84536fed04.jpeg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "V1 Final Assembly Rear View",
+        "source": "https://cdn.thingiverse.com/assets/53/53/b4/eb/5b/large_display_e883ea50-e25d-45ff-9f6d-cf7d13653c5c.jpeg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "V1 Assembly Diagram",
+        "source": "https://cdn.thingiverse.com/assets/d2/97/e6/70/c7/large_display_4f5e265d-58c6-429c-8c98-63f70b6025c8.png"
+      },
+      {
+        "type": "localImage",
+        "caption": "1: V1 Original Design,\n2: V1.1 (Updated handles and Phone Clamp),\n3: V2 Rendering (Added 'Fidget' Buttons)",
+        "source": "image_3.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "V1 and V2 Wheel Comparison",
+        "source": "image_4.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "V2 Wheel Exploded View - Front",
+        "source": "image_5.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "V2 Wheel Exploded View - Rear",
+        "source": "image_6.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Button Section Analysis - PLA based spring mechanism",
+        "source": "image_7.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Button Section Analysis - TPU based spring mechanism",
+        "source": "image_8.webp"
+      }
+    ],
+    "externalLinks": [
+      {
+        "title": "Download, assemble, and race today!",
+        "url": "https://www.thingiverse.com/thing:6581521/zip"
+      },
+      {
+        "title": "View on Thingiverse",
+        "url": "https://www.thingiverse.com/thing:6581521"
+      }
+    ],
+    "tags": [
+      "3D Printing",
+      "Ender 3",
+      "Autodesk Fusion 360",
+      "Adobe Illustrator",
+      "Sim Racing",
+      "Mercedes-AMG GT3/GT4",
+      "Mobile",
+      "Steering Wheel",
+      "Real Racing 3"
+    ]
+  },
+  {
+    "title": "SWE 632 Lottery",
+    "subtitle": "A GMU-Themed Lottery Web App",
+    "startDate": "2023-09-03T00:00:00Z",
+    "finalDate": "2023-11-30T00:00:00Z",
+    "description": "The SWE 632 Lottery Web App, developed for GMU's User Interface Design and Development course, offers an immersive gaming experience with Wheel of Fortune and Scratch Cards, allowing players to earn virtual currency and unlock GMU merchandise. Created in collaboration with Afrina Sharmin and Suzzana Rafi, this project highlights our ability to implement the latest technologies and best practices in user interface design. While it's primarily an academic project, the app is fully functional, exemplifying our team's expertise in developing engaging and user-friendly web applications. We invite you to explore and engage with the app, experiencing our dedication to quality design firsthand.",
+    "media": [
+      {
+        "type": "localImage",
+        "caption": "",
+        "source": "thumbnail.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Presentation Slide 1/7",
+        "source": "image_1.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Presentation Slide 2/7",
+        "source": "image_2.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Presentation Slide 3/7",
+        "source": "image_3.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Presentation Slide 4/7",
+        "source": "image_4.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Presentation Slide 5/7",
+        "source": "image_5.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Presentation Slide 6/7",
+        "source": "image_6.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Presentation Slide 7/7",
+        "source": "image_7.webp"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Spin the Wheel",
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/spin_the_wheel.gif"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Shuffle Prizes",
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/shuffle_prizes.gif"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Scratch the Card",
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/scratch_the_card.gif"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Swipe to Dismiss Card",
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/swipe_to_dismiss_card.gif"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Pay to Unlock Reward",
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/pay_to_unlock_reward.gif"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Toggle Theme Mode",
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/toggle_theme_mode.gif"
+      }
+    ],
+    "externalLinks": [
+      {
+        "title": "Play to Win",
+        "url": "https://plguerradesigns.github.io/swe_632_lottery/"
+      },
+      {
+        "title": "Source Code",
+        "url": "https://github.com/PLGuerraDesigns/swe_632_lottery/"
+      },
+      {
+        "title": "v0.0.2",
+        "url": "https://plguerradesigns.github.io/swe_632_lottery/v0.0.2/"
+      },
+      {
+        "title": "v0.0.4",
+        "url": "https://plguerradesigns.github.io/swe_632_lottery/v0.0.4/"
+      },
+      {
+        "title": "v0.1.4",
+        "url": "https://plguerradesigns.github.io/swe_632_lottery/v0.1.4/"
+      },
+      {
+        "title": "v0.3.1",
+        "url": "https://plguerradesigns.github.io/swe_632_lottery/v0.3.1/"
+      }
+    ],
+    "tags": [
+      "Flutter",
+      "Dart",
+      "Progressive Web App",
+      "GitHub Pages",
+      "GMU SWE 632",
+      "Open Source"
+    ]
+  },
+  {
+    "title": "Flutter Resume Builder",
+    "subtitle": "Resume Builder Progressive Web App",
+    "startDate": "2022-10-06T00:00:00Z",
+    "finalDate": "2023-10-13T00:00:00Z",
+    "description": "The Flutter Resume Builder is a user-friendly, open-source progressive web application designed to simplify creating professional resumes. This innovative tool enables users to effortlessly build, edit, and customize their resumes, ensuring they are polished and impactful. With the ability to create, edit, download in both PDF and JSON formats, and import existing resumes, the Flutter Resume Builder offers a comprehensive solution for individuals seeking to craft and maintain their professional documents with ease. Whether you are a job seeker looking to streamline your resume-building process or a developer interested in the project, this platform provides an intuitive and accessible tool for crafting compelling resumes.",
+    "media": [
+      {
+        "type": "localImage",
+        "caption": "",
+        "source": "thumbnail.webp"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Overview",
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/overview.gif"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Edit Contact Information",
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/edit_contact.gif"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Edit Experiences",
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/edit_experiences.gif"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Toggle Visibility",
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/visibility.gif"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Download Resume",
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/download.gif"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Import Resume",
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/import.gif"
+      }
+    ],
+    "externalLinks": [
+      {
+        "title": "Build Your Resume",
+        "url": "https://plguerradesigns.github.io/flutter_resume_builder/"
+      },
+      {
+        "title": "Source Code",
+        "url": "https://github.com/PLGuerraDesigns/flutter_resume_builder/tree/main"
+      }
+    ],
+    "tags": [
+      "Flutter",
+      "Syncfusion",
+      "Dart",
+      "Progressive Web App",
+      "GitHub Pages",
+      "JSON",
+      "PDF",
+      "Open Source"
+    ]
+  },
+  {
+    "title": "Blokus",
+    "subtitle": "Blokus Multiplayer Web Game",
+    "startDate": "2023-04-15T00:00:00Z",
+    "finalDate": "2023-05-13T00:00:00Z",
+    "description": "Introducing a real-time multiplayer Blokus game project by Charles Tucker and Pablo L. Guerra, designed using Flutter and Supabase. It offers players the opportunity to engage in multiplayer gaming action with a prototype that utilizes Supabase as the backend and Flame as the game engine. This project was developed as the final project for GMU's ISA 681 class and is not a completed product. Nevertheless, it's entirely usable and serves as a promising foundation for a future real-time multiplayer gaming experience. Explore and play the game to get a firsthand look at its potential. While this project is not currently under active development, it stands as a proof of concept and learning resource, welcoming other developers to build upon its foundation.",
+    "media": [
+      {
+        "type": "localImage",
+        "caption": "",
+        "source": "thumbnail.webp"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Splash Screen",
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/game_play.gif"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Login Screen",
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/login_screen.png"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Lobby",
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/lobby.png"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Lobby Room",
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/lobby_room.png"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Game Screen",
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/game.png"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Playing a Piece",
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/play_piece.gif"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Game Play",
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/game_play.gif"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Game Over",
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/game_over.gif"
+      }
+    ],
+    "externalLinks": [
+      {
+        "title": "Source Code",
+        "url": "https://github.com/PLGuerraDesigns/isa681_blokus/tree/main"
+      }
+    ],
+    "tags": [
+      "Flutter",
+      "Flame",
+      "Supabase",
+      "Dart",
+      "Progressive Web App",
+      "GitHub Pages",
+      "GMU ISA 681",
+      "Open Source"
+    ]
+  },
+  {
+    "title": "AMG GT3 Wheel",
+    "subtitle": "A 3D-Printable Wheel Kit",
+    "startDate": "2018-10-01T00:00:00Z",
+    "finalDate": "2018-10-01T00:00:00Z",
+    "description": "The goal of the AMG GT3 Wheel project was to design and build a functional, 3D-printed replica of the Mercedes Benz AMG GT3 steering wheel for use in Sim Racing.\n\nAn Arduino Nano powers the wheel and features a thumb-slide joystick, eight pushbuttons, and a pair of paddle shifters. The wheel is directly compatible with the Thrustmaster ecosystem.\n\nYou can find the 3D-printable files on Thingiverse along with an assembly manual, circuit files, and Arduino code.",
+    "media": [
+      {
+        "type": "youTubeVideo",
+        "caption": "Wheel in Action on a Thrustmaster Racing Rig",
+        "source": "nsCTZuELh-k"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Full view of the wheel.",
+        "source": "S6_5_JhzCXQ"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Community Video: Build Photos and Race Gameplay",
+        "source": "R-0pL1AsorE"
+      },
+      {
+        "type": "localImage",
+        "caption": "Wheel installed on a Thrustmaster Servo Base.",
+        "source": "thumbnail.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Initial Photoshop Concept.",
+        "source": "image_1.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Fusion 360 CAD Rendering.",
+        "source": "image_2.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Fusion 360 CAD Rendering.",
+        "source": "image_3.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Wheel Layout and Button Mapping.",
+        "source": "image_4.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "8-PIN DIN and Paddle Shifter Wiring.",
+        "source": "image_5.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Material Strength and Feel Testing.",
+        "source": "image_6.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Application of Vinyl Wrap and Decals.",
+        "source": "image_7.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Wheel Fully Assembled.",
+        "source": "image_8.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Improved Handle Grip.",
+        "source": "image_9.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Finished wheel mounted on a custom display stand.",
+        "source": "image_10.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "The ProtoBoard Circuit design in Progress.",
+        "source": "image_11.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "ProtoBoard Design vs. Final Custom Manufactured PCB Board.",
+        "source": "image_12.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "PCB Assembled and Installed.",
+        "source": "image_13.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "My Sim Racing Rig (at the time) with the AMG GT3 Wheel.",
+        "source": "image_14.webp"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Community Remake",
+        "source": "https://cdn.thingiverse.com/assets/a9/d5/6e/59/76/IMG_20191001_172428.jpg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Community Remake",
+        "source": "https://i.redd.it/ib6m4vsja3k21.jpg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Community Remake",
+        "source": "https://cdn.thingiverse.com/assets/d4/ad/d6/24/2a/IMG_20201129_163233_HDR.jpg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Community Remake",
+        "source": "https://cdn.thingiverse.com/assets/89/87/88/95/19/1.jpg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Community Remake",
+        "source": "https://cdn.thingiverse.com/assets/ea/15/cb/eb/60/AMG_Steering_Wheel.jpg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Community Remake",
+        "source": "https://cdn.thingiverse.com/assets/55/1b/f3/7a/3f/volant_face.jpg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Community Remake",
+        "source": "https://cdn.thingiverse.com/assets/fe/7a/98/09/29/FDE0EFB6-C784-498E-B386-7E9A9C3C0BA0.jpeg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Community Remake",
+        "source": "https://cdn.thingiverse.com/assets/7e/e1/4a/69/8a/87052509_854879888290366_2111462423008378880_n.jpg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Community Remake",
+        "source": "https://cdn.thingiverse.com/renders/88/e5/e8/5b/a0/6ea030e2dbcc1b8c82ef0ef56de93fc9_display_large.jpg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Community Remake",
+        "source": "https://cdn.thingiverse.com/renders/7e/be/d2/09/ac/86dc5ba0f800cf421ee795145cbdea15_display_large.JPG"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Community Remake",
+        "source": "https://cdn.thingiverse.com/renders/df/17/0f/d5/a6/2723476733c115f2167e5e15e1f090ad_display_large.jpg"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Community Remake",
+        "source": "https://cdn.thingiverse.com/assets/7f/8e/b0/a6/97/dc90e110-15da-4dca-8109-b9910a4b4e12.jpg"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Community Video: Build Tutorial Pt. 1 (Spanish)",
+        "source": "qrQnisocpDg"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Community Video: Build Tutorial Pt. 2 (Spanish)",
+        "source": "KhZN_uf8_Q4"
+      }
+    ],
+    "externalLinks": [
+      {
+        "title": "Download and Build the Wheel Yourself",
+        "url": "https://www.thingiverse.com/thing:3182414/zip"
+      },
+      {
+        "title": "View on Thingiverse",
+        "url": "https://www.thingiverse.com/thing:3182414"
+      }
+    ],
+    "tags": [
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+      "Autodesk Fusion 360",
+      "Arduino",
+      "Graphic Design",
+      "CAD Design",
+      "PCB Design",
+      "PCB Assembly",
+      "3D Printing",
+      "Wiring and Soldering",
+      "C++ Programming",
+      "Sim Racing",
+      "Ender 3",
+      "Thrustmaster",
+      "Mercedes Benz AMG GT3",
+      "Open Source"
+    ]
+  },
+  {
+    "title": "Apple Charging Station",
+    "subtitle": "3-in-1 Charging Station",
+    "startDate": "2019-01-01T00:00:00Z",
+    "finalDate": "2019-01-01T00:00:00Z",
+    "description": "The Apple Charging Station, initially sketched in 2016, was later revived and given as a gift to a friend.\n\nRedesigned in Autodesk Fusion 360, printed using wood-infused PLA, and finished with a wood stain. Supports charging of an iPhone, Apple Watch, and the original AirPods. The charging modules are interchangeable to support different product dimensions.",
+    "media": [
+      {
+        "type": "localImage",
+        "caption": "Apple Charging Station",
+        "source": "thumbnail.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Original 2016 Design Concept in SketchUp.",
+        "source": "image_1.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Original 2016 Design Concept in SketchUp.",
+        "source": "image_2.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Redesigned in 2019 and 3D Printed.",
+        "source": "image_3.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Base with Swappable Charging Module Inserts.",
+        "source": "image_4.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Application of Wood Stain.",
+        "source": "image_5.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "After Stain Application.",
+        "source": "image_6.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Charging Station (minus apple watch puck)",
+        "source": "image_7.webp"
+      }
+    ],
+    "externalLinks": [],
+    "tags": [
+      "Google SketchUp",
+      "Autodesk Fusion 360",
+      "CAD Design",
+      "3D Printing",
+      "Wood-infused PLA",
+      "Wood Staining",
+      "Apple Watch",
+      "Apple AirPods",
+      "Apple iPhone",
+      "Ender 3"
+    ]
+  },
+  {
+    "title": "F1 Sim Engineer",
+    "subtitle": "Codemaster's F1 2019 Companion App",
+    "startDate": "2019-10-01T00:00:00Z",
+    "finalDate": "2019-12-01T00:00:00Z",
+    "description": "F1 Sim Engineer, co-developed with Viktor Soendergaard for a mobile programming class at the University of Arkansas, is a companion app for the F1 2019 sim racing game.\n\nThe app is written in Java and uses the UDP protocol to communicate with the gaming device to receive and display live telemetry data sent from the F1 2019 game. The app obtains various data from the game, including event information, race details, number of laps, number of participants, weather conditions, vehicle setup, vehicle status, and telemetry. This information is displayed live during the race is saved to the local database for later review.",
+    "media": [
+      {
+        "type": "localImage",
+        "caption": "Companion App for Codemaster's F1 2019 Game",
+        "source": "thumbnail.webp"
+      },
+      {
+        "type": "localVideo",
+        "caption": "F1 Sim Engineer Demo",
+        "source": "video_1.mp4"
+      }
+    ],
+    "externalLinks": [
+      {
+        "title": "Project report",
+        "url": "https://github.com/PLGuerraDesigns/portfolio/blob/published/assets/assets/docs/f1se_report.pdf"
+      },
+      {
+        "title": "F1 2019 Telemetry Packet Specification",
+        "url": "https://f1-2019-telemetry.readthedocs.io/en/latest/telemetry-specification.html"
+      }
+    ],
+    "tags": [
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+      "Adobe XD",
+      "Android",
+      "UARK CSCE 4623",
+      "F1 2019 - Codemasters",
+      "Xbox One",
+      "Sim Racing"
+    ]
+  },
+  {
+    "title": "Switch Speaker",
+    "subtitle": "Nintendo Switch Speaker Attachment",
+    "startDate": "2019-02-01T00:00:00Z",
+    "finalDate": "2019-02-01T00:00:00Z",
+    "description": "The goal of the Nintendo Switch speaker project was to design and build a speaker attachment that would be louder than the Switch's built-in speakers.\n\nThe attachment features a 3.5mm audio plug, dual mini oval speakers, a rechargeable LiPo battery, a micro USB charging port, sliding power switch, power LED, and charging status LED.",
+    "media": [
+      {
+        "type": "localImage",
+        "caption": "Nintendo Switch Speaker Attachment",
+        "source": "thumbnail.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "CAD Design vs. Final Product",
+        "source": "image_1.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "CAD Design vs. Final Product",
+        "source": "image_2.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Casing Prototypes",
+        "source": "image_3.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Speaker connected to Nintendo Switch (Front View)",
+        "source": "image_4.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Speaker connected to Nintendo Switch (Left Side View)",
+        "source": "image_5.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Speaker connected to Nintendo Switch (Right Side View)",
+        "source": "image_6.webp"
+      }
+    ],
+    "externalLinks": [
+      {
+        "title": "Mini Oval Speaker",
+        "url": "https://www.adafruit.com/product/3923"
+      },
+      {
+        "title": "Stereo 2.1W Class D Audio Amplifier",
+        "url": "https://www.adafruit.com/product/1552"
+      },
+      {
+        "title": "Adafruit LiIon/LiPoly Backpack Add-On",
+        "url": "https://www.adafruit.com/product/2124"
+      },
+      {
+        "title": "Lithium Ion Polymer Battery",
+        "url": "https://www.adafruit.com/product/1578"
+      },
+      {
+        "title": "3.5mm (1/8\") Stereo DIY Plug",
+        "url": "https://www.adafruit.com/product/1800"
+      }
+    ],
+    "tags": [
+      "Autodesk Fusion 360",
+      "CAD Design",
+      "3D Printing",
+      "Wiring & Soldering",
+      "Ender 3",
+      "Nintendo Switch",
+      "Adafruit Components"
+    ]
+  },
+  {
+    "title": "Project LeMans",
+    "subtitle": "Homemade Sim Racing Rig",
+    "startDate": "2015-06-01T00:00:00Z",
+    "finalDate": "2018-01-01T00:00:00Z",
+    "description": "The goal of Project LeMans was to build a relatively low-budget sim racing rig out of easy-to-access parts and materials. It needed to have the basic functionality of a sim racing wheel and pedal set.\n\nIt features a Teensy for the brains, emulating a gaming controller and supporting input from the steering wheel's rotation, its two buttons, pair of paddle shifters, as well as the throttle, brakes, and clutch located on the pedal base.",
+    "media": [
+      {
+        "type": "localImage",
+        "caption": "Homemade Sim Racing Rig",
+        "source": "thumbnail.webp"
+      },
+      {
+        "type": "localVideo",
+        "caption": "Project Demo",
+        "source": "video_1.mp4"
+      },
+      {
+        "type": "localImage",
+        "caption": "Pedals carved from foam, reinforced in the rear with popsicle sticks",
+        "source": "image_1.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Applying fiberglass to foam pedals, wrapped in foil and masking tape",
+        "source": "image_2.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Pedal finished with body filler, primed and painted; door hinge used for pedal attachment.",
+        "source": "image_3.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Foam pedal base reinforced with wood and wrapped in foil and masking tape.",
+        "source": "image_4.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Applying fiberglass to pedal base",
+        "source": "image_5.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Spray painting pedal base",
+        "source": "image_6.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Fitment test with pedal springs",
+        "source": "image_7.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Potentiometers added to the pedals for determining their position.",
+        "source": "image_8.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Steering wheel shape outlined on foam",
+        "source": "image_9.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Wheel carved from foam",
+        "source": "image_10.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Foam wheel reinforced with wood and wrapped in foil and masking tape.",
+        "source": "image_11.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Applying fiberglass to the steering wheel",
+        "source": "image_12.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Fiberglass wheel finished with body filler and vinyl spackling.",
+        "source": "image_13.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Wheel sanded smooth, and the buttonholes drilled.",
+        "source": "image_14.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Wheel primed and mounted to wheelbase using PCB pipes.",
+        "source": "image_15.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "A potentiometer attached to the wheel shaft mechanism was added to determine wheel position.",
+        "source": "image_16.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Wheelbase painted by a friend",
+        "source": "image_17.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Steering wheel painted",
+        "source": "image_18.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Paddle shifters cut from pieces of acrylic and attached to cabinet door hinges",
+        "source": "image_19.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Paddle shifters mounted to the wheel",
+        "source": "image_20.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Endstop switches added for paddle shifter input",
+        "source": "image_21.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Finished wheel",
+        "source": "image_22.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Custom rig built for the steering wheel and pedal base",
+        "source": "image_23.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Bungee cord added to the steering wheel shaft for auto-centering",
+        "source": "image_24.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Finished pedal base",
+        "source": "image_25.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Rear side view of the rig",
+        "source": "image_26.webp"
+      }
+    ],
+    "externalLinks": [],
+    "tags": [
+      "Fiberglass",
+      "Painting",
+      "DIY",
+      "Teensy",
+      "C++ Programming",
+      "Sim Racing"
+    ]
+  },
+  {
+    "title": "SafeDrive MK1",
+    "subtitle": "Concept Self Destructing Storage Device",
+    "startDate": "2018-04-01T00:00:00Z",
+    "finalDate": "2018-05-01T00:00:00Z",
+    "description": "The goal of the SafeDrive MK1 project was to design a secure storage device that unlocked using biometric authentication and is capable of self-destructing.\n\nIt features an Arduino micro-controller, an RGB backlight LCD Panel, a TTL fingerprint scanner, an interchangeable USB flash drive slot, and a USBKill device. If the device recognizes a fingerprint, it will provide access to the internal USB flash drive. However, after ten failed attempts, the Arduino enables the USBKill device, releasing close to 200 negative volts (in the reverse direction), destroying the internal drive's data lines and any unprotected connected devices.",
+    "media": [
+      {
+        "type": "localImage",
+        "caption": "Concept Self Destructing Storage Device",
+        "source": "thumbnail.webp"
+      },
+      {
+        "type": "localVideo",
+        "caption": "Initial Prototype Testing",
+        "source": "video_2.mp4"
+      },
+      {
+        "type": "localVideo",
+        "caption": "Successful Connection to Storage",
+        "source": "video_3.mp4"
+      },
+      {
+        "type": "localVideo",
+        "caption": "Fingerprint invalid attempts state recovery after power cycle.",
+        "source": "video_4.mp4"
+      },
+      {
+        "type": "localImage",
+        "caption": "Initial breadboard prototype",
+        "source": "image_1.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Fusion 360 CAD Rendering",
+        "source": "image_2.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Fusion 360 CAD Rendering",
+        "source": "image_3.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "3D-Printed Case",
+        "source": "image_4.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Wiring and Assembly",
+        "source": "image_5.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Unfinished SafeDrive MK1",
+        "source": "image_6.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Case Sanded, Filled, Primed, and Painted",
+        "source": "image_7.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Warning Labels Added",
+        "source": "image_8.webp"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Project Demo",
+        "source": "XBJTbQ3lhxo"
+      }
+    ],
+    "externalLinks": [
+      {
+        "title": "USBKill Device",
+        "url": "https://usbkill.com/"
+      },
+      {
+        "title": "Fingerprint Scanner",
+        "url": "https://www.sparkfun.com/products/14585"
+      },
+      {
+        "title": "RGB backlight positive LCD 16x2",
+        "url": "https://www.adafruit.com/product/398"
+      }
+    ],
+    "tags": [
+      "Autodesk Fusion 360",
+      "CAD Design",
+      "3D Printing",
+      "Wiring & Soldering",
+      "C++",
+      "Arduino",
+      "USBKill",
+      "Ender 3",
+      "Adafruit Components",
+      "SparkFun Components"
+    ]
+  },
+  {
+    "title": "Xbox Head Tracking",
+    "subtitle": "Gyroscopic Head Tracking Device",
+    "startDate": "2018-02-01T00:00:00Z",
+    "finalDate": "2018-04-01T00:00:00Z",
+    "description": "The goal of the Xbox Head Tracking project was to design an Xbox compatible head tracking device to track the user's head movements and move the in-game camera.\n\nThe circuit comprises an Arduino microcontroller that reads incoming data from an MPU-6050 (three-axis accelerometer) to track the user's head movements and then controls a digital potentiometer. The output of the digital potentiometer connects to wires added on a modified after-market Xbox controller. The added wires lead directly to the game controller's internal circuit board input for the analog thumbsticks.\n\nYou can find the build guide on Instructables.com.",
+    "media": [
+      {
+        "type": "youTubeVideo",
+        "caption": "Project Demo",
+        "source": "XxF-zlooXNg"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Testing Gyroscope and Accelerometer.",
+        "source": "_smU7T_qflA"
+      },
+      {
+        "type": "localVideo",
+        "caption": "Using Digital Potentiometers to Control Thumbstick Input.",
+        "source": "video_3.mp4"
+      },
+      {
+        "type": "localImage",
+        "caption": "",
+        "source": "thumbnail.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Prototype Mounted on a Hat.",
+        "source": "image_1.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Modded after-market Xbox controller.",
+        "source": "image_2.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Wires soldered inline to thumbstick input (maintaining original functionality).",
+        "source": "image_3.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Initial Head Tracking Circuit.",
+        "source": "image_4.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Top View of the Circuit.",
+        "source": "image_5.webp"
+      }
+    ],
+    "videoCount": 3,
+    "externalLinks": [
+      {
+        "title": "Published step-by-step guide",
+        "url": "https://www.instructables.com/Xbox-Head-Tracking/"
+      }
+    ],
+    "tags": [
+      "Head Tracking",
+      "Handicap",
+      "MPU 6050",
+      "Digital Potentiometer",
+      "C++ Programming",
+      "Arduino",
+      "Sim Racing",
+      "Xbox"
+    ]
+  },
+  {
+    "title": "Android Calculator",
+    "subtitle": "Calculator App for Android",
+    "startDate": "2019-09-01T00:00:00Z",
+    "finalDate": "2019-09-01T00:00:00Z",
+    "description": "Android Calculator is a calculator app developed for a mobile programming class assignment at the University of Arkansas.\n\nThe app was designed in Photoshop using popular calculator apps for design reference, then programmed in Java using Android Studio.",
+    "media": [
+      {
+        "type": "localImage",
+        "caption": "",
+        "source": "thumbnail.webp"
+      },
+      {
+        "type": "localVideo",
+        "caption": "Calculator App Demo",
+        "source": "video_1.mp4"
+      },
+      {
+        "type": "localImage",
+        "caption": "Development and Testing using an Emulated Android Device.",
+        "source": "image_1.webp"
+      }
+    ],
+    "externalLinks": [
+      {
+        "title": "Project report",
+        "url": "https://github.com/PLGuerraDesigns/portfolio/blob/published/assets/assets/docs/android_calculator_report.pdf"
+      }
+    ],
+    "tags": [
+      "Adobe Photoshop",
+      "Calculator",
+      "UARK CSCE 4623",
+      "Java Programming",
+      "Android"
+    ]
+  },
+  {
+    "title": "Macro Pad",
+    "subtitle": "Programmable Macro Pad (HID)",
+    "startDate": "2019-04-01T00:00:00Z",
+    "finalDate": "2019-04-01T00:00:00Z",
+    "description": "Macro Pad is a programmable interface used for executing custom macros (button combinations or input sequences). It allows for extended control and execution of complex commands with a single button press.\n\nThe device features an Arduino Micro, 16 Cherry MX switches, a rotatable and pressable knob, and a micro USB port for connecting.",
+    "media": [
+      {
+        "type": "localImage",
+        "caption": "Programmable Macro Pad (HID)",
+        "source": "thumbnail.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Macro Pad - Front view",
+        "source": "image_1.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Desk setup with Macro Pad.",
+        "source": "image_2.webp"
+      }
+    ],
+    "externalLinks": [
+      {
+        "title": "Macro Scripting Software (Computer Side)",
+        "url": "https://www.orderedbytes.com/controllermate/"
+      }
+    ],
+    "tags": [
+      "Autodesk Fusion 360",
+      "Cherry MX Switches",
+      "3D Printing",
+      "C++ Programming",
+      "Arduino",
+      "Ender 3"
+    ]
+  },
+  {
+    "title": "LED Wall Decor",
+    "subtitle": "Smart LED Wall Decor",
+    "startDate": "2019-02-01T00:00:00Z",
+    "finalDate": "2019-02-01T00:00:00Z",
+    "description": "The LED wall decor was made as an art piece for a friend. The signs' colors and patterns are controllable using the Blynk app.\n\nIt features an Arduino MKR1000 controlling eight RGB LEDs and connects to the internet using its onboard WiFi module. The LED cover plate is interchangeable using magnets. A USB micro cable is used for continuous power, but the device can also be powered using a 3.7V LiPo battery and charged with the MKR's onboard charging circuit. One of the LEDs was not working at the time the photos were taken.",
+    "media": [
+      {
+        "type": "localImage",
+        "caption": "Smart LED Wall Decor",
+        "source": "thumbnail.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Interchangeable cover plate using magnets.",
+        "source": "image_1.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "USB Micro Port for Continuous Power",
+        "source": "image_2.webp"
+      }
+    ],
+    "externalLinks": [
+      {
+        "title": "Blynk App",
+        "url": "https://blynk.io/"
+      }
+    ],
+    "tags": [
+      "Autodesk Fusion 360",
+      "3D Printing",
+      "Internet of Things",
+      "Wall Art",
+      "RGB LED",
+      "C++ Programming",
+      "Arduino",
+      "Ender 3"
+    ]
+  },
+  {
+    "title": "Handroid",
+    "subtitle": "Bionic Arm and Input Glove",
+    "startDate": "2012-09-01T00:00:00Z",
+    "finalDate": "2013-01-01T00:00:00Z",
+    "description": "The Handroid project was a science fair submission for my junior year of high school. The idea was inspired by arms developed in medical fields, where mechanical arms can mimic finger movements.\n\nThe shape of the arm was made using foam, cardboard, pieces of wood, and fiberglass. Rubber tubes are used for the fingers with incisions made at the bending points. The fingertips are each connected to a fishing line, which routes internally through the finger and arm, then attaches to the horn of a servo motor. An Arduino microcontroller controls the servo motors and receives input from a modified glove with flex sensors attached to each finger. When the input glove is worn, the flex sensors record the amount of bending of each finger which the Arduino uses to determine the degree of rotation for each servo motor to replicate the users' finger movements.",
+    "media": [
+      {
+        "type": "localImage",
+        "caption": "Preparing For the Science Fair Presentation",
+        "source": "thumbnail.webp"
+      },
+      {
+        "type": "localVideo",
+        "caption": "3 Years Later... Glove melted in Belize's hot climate.",
+        "source": "video_1.mp4"
+      },
+      {
+        "type": "localImage",
+        "caption": "Hand made with foam, rubber tubing, and some fishing line.",
+        "source": "image_1.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Forearm skeleton made using foam and wood.",
+        "source": "image_2.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Hand attached to the forearm",
+        "source": "image_3.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Securing servo motors",
+        "source": "image_4.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Forearm wrapped with bristol board",
+        "source": "image_5.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Cut-out made to access servo motors",
+        "source": "image_6.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Applying fiberglass to the entire arm",
+        "source": "image_7.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Input glove with flex sensors on fingers",
+        "source": "image_8.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Finished hand",
+        "source": "image_9.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Finished hand with Arduino and input glove",
+        "source": "image_10.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "School science fair display",
+        "source": "image_11.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Demonstration for local news",
+        "source": "image_12.webp"
+      }
+    ],
+    "externalLinks": [],
+    "tags": [
+      "Highschool Science Fair",
+      "Fiberglass",
+      "Mechanical Arm",
+      "Input glove",
+      "Flex Sensors",
+      "Arduino",
+      "C++ Programming"
+    ]
+  }
+]

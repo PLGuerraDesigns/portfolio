@@ -1,0 +1,38 @@
+[
+    {
+        "school": "George Mason University",
+        "degree": "M.S. in Software Engineering",
+        "location": "Virginia, USA",
+        "startDate": "2022-08-01T00:00:00Z",
+        "endDate": "2024-05-09T00:00:00Z",
+        "logo": "gmu_logo.webp",
+        "url": "https://catalog.gmu.edu/colleges-schools/engineering-computing/school-computing/computer-science/software-engineering-ms/"
+    },
+    {
+        "school": "University of Arkansas",
+        "degree": "B.S. in Computer Science (Transfer)",
+        "location": "Arkansas, USA",
+        "startDate": "2017-08-01T00:00:00Z",
+        "endDate": "2020-12-01T00:00:00Z",
+        "logo": "uark_logo.webp",
+        "url": "https://catalog.uark.edu/plangrids/computerscience_bs/"
+    },
+    {
+        "school": "St. John's Junior College",
+        "degree": "Associate Degree in Computer Science",
+        "location": "Belize City, Belize",
+        "startDate": "2014-06-16T00:00:00Z",
+        "endDate": "2017-05-17T00:00:00Z",
+        "logo": "sjc_logo.webp",
+        "url": "https://www.sjc.edu.bz/jcacademics"
+    },
+    {
+        "school": "St. John's College",
+        "degree": "High School Diploma",
+        "location": "Belize City, Belize",
+        "startDate": "2010-08-01T00:00:00Z",
+        "endDate": "2014-05-17T00:00:00Z",
+        "logo": "sjc_logo.webp",
+        "url": "https://www.sjc.edu.bz/academics"
+    }
+]

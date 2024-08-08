@@ -1,0 +1,375 @@
+[
+  {
+    "company": "Atlantic Insurance Company Ltd.",
+    "folderName": "atlantic_insurance",
+    "role": "Contract Software Engineer",
+    "location": "(Remote) Belize City, Belize",
+    "startDate": "2020-06-01T00:00:00Z",
+    "endDate": null,
+    "description": "As a contract software engineer, I led the strategic planning, development, and successful launch of the AIC Mobile App and Management Portal for Atlantic Insurance Company Limited.\n\nThis innovative app, available for Android and iOS, was meticulously designed with a customer-centric approach to enrich interactions with the company.\n\nIts features includes access to insured item details, a digital certificate of insurance, timely renewal notifications, claims filing, quote requests, office location guidance, and more.\n\nThis endeavor reflects AIC's commitment to delivering unsurpassed customer service, upholding integrity, demonstrating professionalism, and fostering teamwork in line with Atlantic Insurance Company Limited's values.",
+    "media": [
+      {
+        "type": "youTubeVideo",
+        "caption": "",
+        "source": "Mz4JteT4jLw"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "",
+        "source": "TcdKbZmju5I"
+      },
+      {
+        "type": "localImage",
+        "caption": "",
+        "source": "thumbnail.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Store Screenshots",
+        "source": "image_1.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "UI Design",
+        "source": "image_2.webp"
+      }
+    ],
+    "externalLinks": [
+      {
+        "title": "AIC Mobile App Support",
+        "url": "https://aic-support.web.app"
+      },
+      {
+        "title": "Download on the App Store",
+        "url": "https://apps.apple.com/us/app/aic-mobile-app/id1534979546"
+      },
+      {
+        "title": "Get it on Google Play",
+        "url": "https://play.google.com/store/apps/details?id=com.aicbelize.AIMobile"
+      },
+      {
+        "title": "Atlantic Insurance Company Ltd.",
+        "url": "https://aicbelize.azurewebsites.net/"
+      }
+    ]
+  },
+  {
+    "company": "AMBOTS Inc.",
+    "folderName": "ambots",
+    "role": "Lead Robotics Engineer",
+    "location": "Fayetteville, AR",
+    "startDate": "2021-02-01T00:00:00Z",
+    "endDate": "2021-10-01T00:00:00Z",
+    "description": "As the Lead Robotics Engineer at AMBOTS Inc., I had the privilege of spearheading the transformation of groundbreaking research from the AM³ Lab at the University of Arkansas into a game-changing commercial product. AMBOTS Inc. is dedicated to revolutionizing the future of manufacturing through its patent-pending swarm 3D printing and assembly technologies, which were originally conceived by Dr. Wenchao Zhou in 2015.\n\nOur vision at AMBOTS was nothing short of a manufacturing revolution - a world where production is fully digitized and automated, allowing for the creation of customized products on demand, all at a remarkably low cost. Similar to how a swarm of bees collaborates to build its nest, our smart and autonomous mobile robots were engineered to work seamlessly together, translating digital designs into tangible products.\n\nThe team and I achieved some remarkable milestones some of which include:\n\n• Our groundbreaking work earned us recognition within the industry, including winning the prestigious \"3D Startup of the Year\" by 3D Natives. We were also featured on GE Reports as one of \"The 5 Coolest Things On Earth This Week\" and received coverage on CBS, including an appearance on \"The Henry Ford's Innovation Nation.\"\n\n• We filed patent applications to protect our swarm 3D printing and assembly technology, solidifying our position as pioneers in the field.\n\n• Our dedication and innovation secured Phase I and Phase II of the SBIR grant, totaling $1,225,000 in funding, which fueled our continued growth and development.\n\n• We landed our company's first customer, validating the real-world applicability of our technology.\n\nMy time as the Lead Robotics Engineer at AMBOTS Inc. was marked by a relentless dedication to pushing the boundaries of what's possible in advanced manufacturing. I am proud to have played a pivotal role in bringing the vision of fully automated, on-demand, and cost-effective digital manufacturing closer to reality. Our journey continues, and I look forward to witnessing where the future of this transformative technology takes us.",
+    "media": [
+      {
+        "type": "youTubeVideo",
+        "caption": "The Henry Ford's Innovation Nation [CBS]",
+        "source": "uTrtARdG20E"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Swarm Manufacturing of Mini-EV",
+        "source": "iimghhKjQlY"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "3-chunk dachshund wall-art printed by the AMBOTS swarm 3D printing system.",
+        "source": "WLdU_nB4Tmg"
+      },
+      {
+        "type": "localImage",
+        "caption": "3-chunk dachshund wall-art printed by the AMBOTS swarm 3D printing system.",
+        "source": "image_1.webp"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "A New Generation of Swarm 3D Printing Robots",
+        "source": "xMMauLmHcwk"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "UARK Hog Concrete Mold printed by the AMBOTS swarm 3D printing system.",
+        "source": "kyzpE83BQIM"
+      },
+      {
+        "type": "localImage",
+        "caption": "Concrete UARK Hog finished product.",
+        "source": "image_4.webp"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Printer movement to next chunk.",
+        "source": "Bo7Qsp6Bg3w"
+      },
+      {
+        "type": "localImage",
+        "caption": "Concrete wall facade mold in progress.",
+        "source": "image_2.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Concrete wall facade mold in progress.",
+        "source": "image_3.webp"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "4-chunk AMBOTS logo printed by the AMBOTS swarm 3D printing system.",
+        "source": "CZnIDNd1iqs"
+      },
+      {
+        "type": "localImage",
+        "caption": "4-chunk AMBOTS logo finished product (post-processed).",
+        "source": "image_16.webp"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Transporter",
+        "source": "p09xkrQKyMs"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Transporter: Return to Dock",
+        "source": "AyI313TPQuE"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Transporter misalignment recovery test.",
+        "source": "bu5smH7ooAE"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Demonstration of Transporter onboard UI for direct control.",
+        "source": "3SWOADS7OOk"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Transporter Onboard UI Demonstration",
+        "source": "bJGc8ChOAcs"
+      },
+      {
+        "type": "localImage",
+        "caption": "7th-Generation Transporter - Front Left View",
+        "source": "image_7.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "7th-Generation Transporter - Front Right View",
+        "source": "image_8.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "7th-Generation Transporter - Above View",
+        "source": "image_9.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "7th-Generation AMBOTS Swarm 3D Printing System",
+        "source": "image_10.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Preparing for UARK's 150th anniversary demo.",
+        "source": "image_5.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "AMBOTS swarm platform demo for students at the UofA campus.",
+        "source": "image_6.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Rendering of the AMBOTS Swarm 3D-Printing Development Platform.",
+        "source": "thumbnail.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Rendering of an Extended AMBOTS Development Kit",
+        "source": "image_12.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Extended AMBOTS Development Kit",
+        "source": "image_13.webp"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Transporter Demo",
+        "source": "BbSe9UXH_A8"
+      },
+      {
+        "type": "localImage",
+        "caption": "Me with the 7th-Generation AMBOTS Swarm 3D Printing System",
+        "source": "image_11.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "United States Patent Plaque",
+        "source": "image_18.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Founders of AMBOTS Inc.",
+        "source": "image_17.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Team Photo",
+        "source": "image_14.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Team Photo",
+        "source": "image_15.webp"
+      },
+      {
+        "type": "localVideo",
+        "caption": "System Conceptualization Animation",
+        "source": "video_10.mp4"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Technology Centers Spotlight Series - Swarm Manufacturing",
+        "source": "zSt3IIy00O4"
+      }
+    ],
+    "externalLinks": [
+      {
+        "title": "AMBOTS Inc.",
+        "url": "https://ambots.net/"
+      },
+      {
+        "title": "Research Paper (Architecting the Cooperative 3D Printing System)",
+        "url": "https://www.researchgate.net/publication/341651995_Architecting_the_Cooperative_3D_Printing_System"
+      },
+      {
+        "title": "United States Patent (Swarm Manufacturing for Smart Factory - US11975486B2)",
+        "url": "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11975486"
+      },
+      {
+        "title": "ASBTDC: AMBOTS Gets $1M Phase II Grant from National Science Foundation for Large-Scale 3D Printing",
+        "url": "https://asbtdc.org/ambots-wins-nsf-sbir-grant-to-develop-solution-for-large-scale-3d-printing/"
+      },
+      {
+        "title": "3D STARTUP OF THE YEAR BY 3D NATIVES",
+        "url": "https://www.3dnatives.com/en/ambots-startup-2019-030120204/#!"
+      },
+      {
+        "title": "GE Reports: The 5 Coolest Things On Earth This Week",
+        "url": "https://www.ge.com/news/reports/the-5-coolest-things-on-earth-this-week-4"
+      }
+    ]
+  },
+  {
+    "company": "University of Arkansas (AM³ Lab)",
+    "folderName": "am3_lab",
+    "role": "Graduate Research Assistant",
+    "location": "Fayetteville, AR",
+    "startDate": "2019-04-01T00:00:00Z",
+    "endDate": "2020-12-01T00:00:00Z",
+    "description": "As a Graduate Research Assistant at the AM³ Lab, University of Arkansas, I played a pivotal role in advancing the cutting-edge field of 3D printing technology. The AM³ Lab is dedicated to developing next generation 3D printing technologies and promoting the use of 3D printing technology to better our lives through excellent research, education, and service to the global 3D printing community.\n\nInitially on-boarded as a volunteer, I assisted in troubleshooting and enhancing the 5th-Generation 3D printers. My dedication and problem-solving skills quickly earned me the position of Graduate Research Assistant, where I continued my contributions to the field.\n\nMy primary focus during my time with the lab was developing a groundbreaking swarm 3D printing process designed to enable the production of large-scale structures using a fleet of mobile robots. This innovative approach involved a combination of hardware and software components, including custom-built transporter robots, SCARA 3D printers, and a modular print & power-delivery floor.\n\nMost notably, I was instrumental in transitioning from the 5th-Generation platform to the 6th and 7th-Generations. This transition involved separating the SCARA arm from the mobile base, and optimizing the hardware for improved robustness, efficiency, and quality. I assumed a significant role in these evolutions, taking charge of software development and contributing to hardware enhancements.\n\nOne of my key contributions was the implementation of Computer Vision for localization and navigation within the transporter's control system, enabling semi-autonomous operation - a significant advancement in the field.\n\nNot only was my work at the AM³ Lab a valuable learning experience, but also a contribution to the lab's mission of pushing the boundaries of 3D printing technology. I am proud to have been part of a team dedicated to revolutionizing manufacturing and enabling mass customization through next-generation 3D printing innovations.",
+    "media": [
+      {
+        "type": "youTubeVideo",
+        "caption": "Implementing bed leveling on the 5th-Gen AMBOTS Printer. (My first task)",
+        "source": "C9XJQf-Xsi8"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Printing a vase on the 5th-Gen AMBOTS Printer.",
+        "source": "iyC6uOwBRJ8"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "6th-Gen System Demo: Printer printing a vase and Transporter Movement.",
+        "source": "OKf5JHyCjuU"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "6th-Gen System Demo: Transporter source Planning and Printer Movement.",
+        "source": "yrxG1dslxHE"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Early 7th-Gen Transporter active alignment (spring align) test.",
+        "source": "SEu59ochxd4"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Early 7th-Gen Transporter",
+        "source": "-GJoTirxo74"
+      },
+      {
+        "type": "localImage",
+        "caption": "Testing Transporter Image Processing under different lighting conditions",
+        "source": "image_6.webp"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Testing Transporter Image Processing under low lighting conditions",
+        "source": "RiuoP2lwnu4"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Transporter Battery Life & Movement Reliability Test",
+        "source": "P9ySf_Wu0Zc"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Transporter Docking & Movement Reliability Test",
+        "source": "F-MT72wZfUQ"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Transporter FPV Cam",
+        "source": "ijfGwYGG6SU"
+      },
+      {
+        "type": "youTubeVideo",
+        "caption": "Early 7th-Gen AMBOTS Printer printing a vase.",
+        "source": "JhLCmqpONOc"
+      },
+      {
+        "type": "localImage",
+        "caption": "Chunk Angle and Bond Test with off-the-shelf nozzles",
+        "source": "image_5.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Vase Printed by the 5th-Gen AMBOTS Printer",
+        "source": "image_1.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Early 7th-Gen Printer Starting a Large 3D Phil Print",
+        "source": "image_2.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Small and Large 3D Phil Prints by the early 7th-Gen AMBOTS Printer",
+        "source": "image_3.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Small and Large 3D Phil Prints by the early 7th-Gen AMBOTS Printer",
+        "source": "image_4.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Some notable prints made by the various custom AM³ Lab 3D Printers",
+        "source": "image_7.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Rendering of the 7th-Gen Transporter",
+        "source": "thumbnail.webp"
+      }
+    ],
+    "externalLinks": [
+      {
+        "title": "AM³ Lab",
+        "url": "https://wordpressua.uark.edu/am3/"
+      }
+    ]
+  }
+]
