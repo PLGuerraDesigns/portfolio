@@ -1,3 +1,11 @@
+## 2.4.2
+
+- NEW: Added compact details page navigation buttons for mobile.
+
+## 2.4.1
+
+- FIX: Fixed issue with media browser scroll state not persisting when a media item is selected.
+
 ## 2.4.0
 
 - NEW: Added the ability to expand and collapse the timeline view.

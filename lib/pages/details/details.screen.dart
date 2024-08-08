@@ -208,6 +208,7 @@ class DetailsScreenState extends State<DetailsScreen> {
                 title: _controller.appBarTitle,
                 actions: <Widget>[
                   DetailsAppBarActions(
+                    isCompact: orientation == Orientation.portrait,
                     onPreviousPressed: () =>
                         _controller.onPreviousPressed(context),
                     onNextPressed: () => _controller.onNextPressed(context),
