@@ -9,82 +9,82 @@
       {
         "type": "youTubeVideo",
         "caption": "AMG GT3 Inspired Mobile Sim Wheel: CAD Development Process",
-        "path": "u2Hcy3uadDQ"
+        "source": "u2Hcy3uadDQ"
       },
       {
         "type": "youTubeVideo",
         "caption": "Demo Video - Real Racing 3",
-        "path": "YmphJtfp86E"
+        "source": "YmphJtfp86E"
       },
       {
         "type": "localImage",
         "caption": "V2 Wheel CAD Renderings",
-        "path": "thumbnail.webp"
+        "source": "thumbnail.webp"
       },
       {
         "type": "localImage",
         "caption": "Initial Prototype using paracord and screws for assembly.",
-        "path": "image_1.webp"
+        "source": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "1: Original AMG GT3 Wheel Kit,\n2: Shrunken Wheel Plate Prototype,\n3: Final Product with built-in handles",
-        "path": "image_2.webp"
+        "source": "image_2.webp"
       },
       {
         "type": "networkImage",
         "caption": "V1 CAD Rendering Left-Front View",
-        "path": "https://cdn.thingiverse.com/assets/07/e6/89/5b/bc/large_display_014c469a-e014-4ad5-bdf3-da2e75f129b8.jpeg"
+        "source": "https://cdn.thingiverse.com/assets/07/e6/89/5b/bc/large_display_014c469a-e014-4ad5-bdf3-da2e75f129b8.jpeg"
       },
       {
         "type": "networkImage",
         "caption": "V1 Final Assembly Left-Front View",
-        "path": "https://cdn.thingiverse.com/assets/61/fb/45/5a/3b/large_display_7993f07e-1718-4088-8bc4-bbcd39a565f7.jpeg"
+        "source": "https://cdn.thingiverse.com/assets/61/fb/45/5a/3b/large_display_7993f07e-1718-4088-8bc4-bbcd39a565f7.jpeg"
       },
       {
         "type": "networkImage",
         "caption": "V1 Final Assembly Front-Right View",
-        "path": "https://cdn.thingiverse.com/assets/22/cd/c0/bb/80/large_display_8e7ff666-9c87-4011-a4a6-cc84536fed04.jpeg"
+        "source": "https://cdn.thingiverse.com/assets/22/cd/c0/bb/80/large_display_8e7ff666-9c87-4011-a4a6-cc84536fed04.jpeg"
       },
       {
         "type": "networkImage",
         "caption": "V1 Final Assembly Rear View",
-        "path": "https://cdn.thingiverse.com/assets/53/53/b4/eb/5b/large_display_e883ea50-e25d-45ff-9f6d-cf7d13653c5c.jpeg"
+        "source": "https://cdn.thingiverse.com/assets/53/53/b4/eb/5b/large_display_e883ea50-e25d-45ff-9f6d-cf7d13653c5c.jpeg"
       },
       {
         "type": "networkImage",
         "caption": "V1 Assembly Diagram",
-        "path": "https://cdn.thingiverse.com/assets/d2/97/e6/70/c7/large_display_4f5e265d-58c6-429c-8c98-63f70b6025c8.png"
+        "source": "https://cdn.thingiverse.com/assets/d2/97/e6/70/c7/large_display_4f5e265d-58c6-429c-8c98-63f70b6025c8.png"
       },
       {
         "type": "localImage",
         "caption": "1: V1 Original Design,\n2: V1.1 (Updated handles and Phone Clamp),\n3: V2 Rendering (Added 'Fidget' Buttons)",
-        "path": "image_3.webp"
+        "source": "image_3.webp"
       },
       {
         "type": "localImage",
         "caption": "V1 and V2 Wheel Comparison",
-        "path": "image_4.webp"
+        "source": "image_4.webp"
       },
       {
         "type": "localImage",
         "caption": "V2 Wheel Exploded View - Front",
-        "path": "image_5.webp"
+        "source": "image_5.webp"
       },
       {
         "type": "localImage",
         "caption": "V2 Wheel Exploded View - Rear",
-        "path": "image_6.webp"
+        "source": "image_6.webp"
       },
       {
         "type": "localImage",
         "caption": "Button Section Analysis - PLA based spring mechanism",
-        "path": "image_7.webp"
+        "source": "image_7.webp"
       },
       {
         "type": "localImage",
         "caption": "Button Section Analysis - TPU based spring mechanism",
-        "path": "image_8.webp"
+        "source": "image_8.webp"
       }
     ],
     "externalLinks": [
@@ -119,72 +119,72 @@
       {
         "type": "localImage",
         "caption": "",
-        "path": "thumbnail.webp"
+        "source": "thumbnail.webp"
       },
       {
         "type": "localImage",
         "caption": "Presentation Slide 1/7",
-        "path": "image_1.webp"
+        "source": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "Presentation Slide 2/7",
-        "path": "image_2.webp"
+        "source": "image_2.webp"
       },
       {
         "type": "localImage",
         "caption": "Presentation Slide 3/7",
-        "path": "image_3.webp"
+        "source": "image_3.webp"
       },
       {
         "type": "localImage",
         "caption": "Presentation Slide 4/7",
-        "path": "image_4.webp"
+        "source": "image_4.webp"
       },
       {
         "type": "localImage",
         "caption": "Presentation Slide 5/7",
-        "path": "image_5.webp"
+        "source": "image_5.webp"
       },
       {
         "type": "localImage",
         "caption": "Presentation Slide 6/7",
-        "path": "image_6.webp"
+        "source": "image_6.webp"
       },
       {
         "type": "localImage",
         "caption": "Presentation Slide 7/7",
-        "path": "image_7.webp"
+        "source": "image_7.webp"
       },
       {
         "type": "networkImage",
         "caption": "Spin the Wheel",
-        "path": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/spin_the_wheel.gif"
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/spin_the_wheel.gif"
       },
       {
         "type": "networkImage",
         "caption": "Shuffle Prizes",
-        "path": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/shuffle_prizes.gif"
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/shuffle_prizes.gif"
       },
       {
         "type": "networkImage",
         "caption": "Scratch the Card",
-        "path": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/scratch_the_card.gif"
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/scratch_the_card.gif"
       },
       {
         "type": "networkImage",
         "caption": "Swipe to Dismiss Card",
-        "path": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/swipe_to_dismiss_card.gif"
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/swipe_to_dismiss_card.gif"
       },
       {
         "type": "networkImage",
         "caption": "Pay to Unlock Reward",
-        "path": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/pay_to_unlock_reward.gif"
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/pay_to_unlock_reward.gif"
       },
       {
         "type": "networkImage",
         "caption": "Toggle Theme Mode",
-        "path": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/toggle_theme_mode.gif"
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/toggle_theme_mode.gif"
       }
     ],
     "externalLinks": [
@@ -232,37 +232,37 @@
       {
         "type": "localImage",
         "caption": "",
-        "path": "thumbnail.webp"
+        "source": "thumbnail.webp"
       },
       {
         "type": "networkImage",
         "caption": "Overview",
-        "path": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/overview.gif"
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/overview.gif"
       },
       {
         "type": "networkImage",
         "caption": "Edit Contact Information",
-        "path": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/edit_contact.gif"
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/edit_contact.gif"
       },
       {
         "type": "networkImage",
         "caption": "Edit Experiences",
-        "path": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/edit_experiences.gif"
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/edit_experiences.gif"
       },
       {
         "type": "networkImage",
         "caption": "Toggle Visibility",
-        "path": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/visibility.gif"
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/visibility.gif"
       },
       {
         "type": "networkImage",
         "caption": "Download Resume",
-        "path": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/download.gif"
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/download.gif"
       },
       {
         "type": "networkImage",
         "caption": "Import Resume",
-        "path": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/import.gif"
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/import.gif"
       }
     ],
     "externalLinks": [
@@ -296,47 +296,47 @@
       {
         "type": "localImage",
         "caption": "",
-        "path": "thumbnail.webp"
+        "source": "thumbnail.webp"
       },
       {
         "type": "networkImage",
         "caption": "Splash Screen",
-        "path": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/game_play.gif"
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/game_play.gif"
       },
       {
         "type": "networkImage",
         "caption": "Login Screen",
-        "path": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/login_screen.png"
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/login_screen.png"
       },
       {
         "type": "networkImage",
         "caption": "Lobby",
-        "path": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/lobby.png"
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/lobby.png"
       },
       {
         "type": "networkImage",
         "caption": "Lobby Room",
-        "path": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/lobby_room.png"
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/lobby_room.png"
       },
       {
         "type": "networkImage",
         "caption": "Game Screen",
-        "path": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/game.png"
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/game.png"
       },
       {
         "type": "networkImage",
         "caption": "Playing a Piece",
-        "path": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/play_piece.gif"
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/play_piece.gif"
       },
       {
         "type": "networkImage",
         "caption": "Game Play",
-        "path": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/game_play.gif"
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/game_play.gif"
       },
       {
         "type": "networkImage",
         "caption": "Game Over",
-        "path": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/game_over.gif"
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/game_over.gif"
       }
     ],
     "externalLinks": [
@@ -366,162 +366,162 @@
       {
         "type": "youTubeVideo",
         "caption": "Wheel in Action on a Thrustmaster Racing Rig",
-        "path": "nsCTZuELh-k"
+        "source": "nsCTZuELh-k"
       },
       {
         "type": "youTubeVideo",
         "caption": "Full view of the wheel.",
-        "path": "S6_5_JhzCXQ"
+        "source": "S6_5_JhzCXQ"
       },
       {
         "type": "youTubeVideo",
         "caption": "Community Video: Build Photos and Race Gameplay",
-        "path": "R-0pL1AsorE"
+        "source": "R-0pL1AsorE"
       },
       {
         "type": "localImage",
         "caption": "Wheel installed on a Thrustmaster Servo Base.",
-        "path": "thumbnail.webp"
+        "source": "thumbnail.webp"
       },
       {
         "type": "localImage",
         "caption": "Initial Photoshop Concept.",
-        "path": "image_1.webp"
+        "source": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "Fusion 360 CAD Rendering.",
-        "path": "image_2.webp"
+        "source": "image_2.webp"
       },
       {
         "type": "localImage",
         "caption": "Fusion 360 CAD Rendering.",
-        "path": "image_3.webp"
+        "source": "image_3.webp"
       },
       {
         "type": "localImage",
         "caption": "Wheel Layout and Button Mapping.",
-        "path": "image_4.webp"
+        "source": "image_4.webp"
       },
       {
         "type": "localImage",
         "caption": "8-PIN DIN and Paddle Shifter Wiring.",
-        "path": "image_5.webp"
+        "source": "image_5.webp"
       },
       {
         "type": "localImage",
         "caption": "Material Strength and Feel Testing.",
-        "path": "image_6.webp"
+        "source": "image_6.webp"
       },
       {
         "type": "localImage",
         "caption": "Application of Vinyl Wrap and Decals.",
-        "path": "image_7.webp"
+        "source": "image_7.webp"
       },
       {
         "type": "localImage",
         "caption": "Wheel Fully Assembled.",
-        "path": "image_8.webp"
+        "source": "image_8.webp"
       },
       {
         "type": "localImage",
         "caption": "Improved Handle Grip.",
-        "path": "image_9.webp"
+        "source": "image_9.webp"
       },
       {
         "type": "localImage",
         "caption": "Finished wheel mounted on a custom display stand.",
-        "path": "image_10.webp"
+        "source": "image_10.webp"
       },
       {
         "type": "localImage",
         "caption": "The ProtoBoard Circuit design in Progress.",
-        "path": "image_11.webp"
+        "source": "image_11.webp"
       },
       {
         "type": "localImage",
         "caption": "ProtoBoard Design vs. Final Custom Manufactured PCB Board.",
-        "path": "image_12.webp"
+        "source": "image_12.webp"
       },
       {
         "type": "localImage",
         "caption": "PCB Assembled and Installed.",
-        "path": "image_13.webp"
+        "source": "image_13.webp"
       },
       {
         "type": "localImage",
         "caption": "My Sim Racing Rig (at the time) with the AMG GT3 Wheel.",
-        "path": "image_14.webp"
+        "source": "image_14.webp"
       },
       {
         "type": "networkImage",
         "caption": "Community Remake",
-        "path": "https://cdn.thingiverse.com/assets/a9/d5/6e/59/76/IMG_20191001_172428.jpg"
+        "source": "https://cdn.thingiverse.com/assets/a9/d5/6e/59/76/IMG_20191001_172428.jpg"
       },
       {
         "type": "networkImage",
         "caption": "Community Remake",
-        "path": "https://i.redd.it/ib6m4vsja3k21.jpg"
+        "source": "https://i.redd.it/ib6m4vsja3k21.jpg"
       },
       {
         "type": "networkImage",
         "caption": "Community Remake",
-        "path": "https://cdn.thingiverse.com/assets/d4/ad/d6/24/2a/IMG_20201129_163233_HDR.jpg"
+        "source": "https://cdn.thingiverse.com/assets/d4/ad/d6/24/2a/IMG_20201129_163233_HDR.jpg"
       },
       {
         "type": "networkImage",
         "caption": "Community Remake",
-        "path": "https://cdn.thingiverse.com/assets/89/87/88/95/19/1.jpg"
+        "source": "https://cdn.thingiverse.com/assets/89/87/88/95/19/1.jpg"
       },
       {
         "type": "networkImage",
         "caption": "Community Remake",
-        "path": "https://cdn.thingiverse.com/assets/ea/15/cb/eb/60/AMG_Steering_Wheel.jpg"
+        "source": "https://cdn.thingiverse.com/assets/ea/15/cb/eb/60/AMG_Steering_Wheel.jpg"
       },
       {
         "type": "networkImage",
         "caption": "Community Remake",
-        "path": "https://cdn.thingiverse.com/assets/55/1b/f3/7a/3f/volant_face.jpg"
+        "source": "https://cdn.thingiverse.com/assets/55/1b/f3/7a/3f/volant_face.jpg"
       },
       {
         "type": "networkImage",
         "caption": "Community Remake",
-        "path": "https://cdn.thingiverse.com/assets/fe/7a/98/09/29/FDE0EFB6-C784-498E-B386-7E9A9C3C0BA0.jpeg"
+        "source": "https://cdn.thingiverse.com/assets/fe/7a/98/09/29/FDE0EFB6-C784-498E-B386-7E9A9C3C0BA0.jpeg"
       },
       {
         "type": "networkImage",
         "caption": "Community Remake",
-        "path": "https://cdn.thingiverse.com/assets/7e/e1/4a/69/8a/87052509_854879888290366_2111462423008378880_n.jpg"
+        "source": "https://cdn.thingiverse.com/assets/7e/e1/4a/69/8a/87052509_854879888290366_2111462423008378880_n.jpg"
       },
       {
         "type": "networkImage",
         "caption": "Community Remake",
-        "path": "https://cdn.thingiverse.com/renders/88/e5/e8/5b/a0/6ea030e2dbcc1b8c82ef0ef56de93fc9_display_large.jpg"
+        "source": "https://cdn.thingiverse.com/renders/88/e5/e8/5b/a0/6ea030e2dbcc1b8c82ef0ef56de93fc9_display_large.jpg"
       },
       {
         "type": "networkImage",
         "caption": "Community Remake",
-        "path": "https://cdn.thingiverse.com/renders/7e/be/d2/09/ac/86dc5ba0f800cf421ee795145cbdea15_display_large.JPG"
+        "source": "https://cdn.thingiverse.com/renders/7e/be/d2/09/ac/86dc5ba0f800cf421ee795145cbdea15_display_large.JPG"
       },
       {
         "type": "networkImage",
         "caption": "Community Remake",
-        "path": "https://cdn.thingiverse.com/renders/df/17/0f/d5/a6/2723476733c115f2167e5e15e1f090ad_display_large.jpg"
+        "source": "https://cdn.thingiverse.com/renders/df/17/0f/d5/a6/2723476733c115f2167e5e15e1f090ad_display_large.jpg"
       },
       {
         "type": "networkImage",
         "caption": "Community Remake",
-        "path": "https://cdn.thingiverse.com/assets/7f/8e/b0/a6/97/dc90e110-15da-4dca-8109-b9910a4b4e12.jpg"
+        "source": "https://cdn.thingiverse.com/assets/7f/8e/b0/a6/97/dc90e110-15da-4dca-8109-b9910a4b4e12.jpg"
       },
       {
         "type": "youTubeVideo",
         "caption": "Community Video: Build Tutorial Pt. 1 (Spanish)",
-        "path": "qrQnisocpDg"
+        "source": "qrQnisocpDg"
       },
       {
         "type": "youTubeVideo",
         "caption": "Community Video: Build Tutorial Pt. 2 (Spanish)",
-        "path": "KhZN_uf8_Q4"
+        "source": "KhZN_uf8_Q4"
       }
     ],
     "externalLinks": [
@@ -563,42 +563,42 @@
       {
         "type": "localImage",
         "caption": "Apple Charging Station",
-        "path": "thumbnail.webp"
+        "source": "thumbnail.webp"
       },
       {
         "type": "localImage",
         "caption": "Original 2016 Design Concept in SketchUp.",
-        "path": "image_1.webp"
+        "source": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "Original 2016 Design Concept in SketchUp.",
-        "path": "image_2.webp"
+        "source": "image_2.webp"
       },
       {
         "type": "localImage",
         "caption": "Redesigned in 2019 and 3D Printed.",
-        "path": "image_3.webp"
+        "source": "image_3.webp"
       },
       {
         "type": "localImage",
         "caption": "Base with Swappable Charging Module Inserts.",
-        "path": "image_4.webp"
+        "source": "image_4.webp"
       },
       {
         "type": "localImage",
         "caption": "Application of Wood Stain.",
-        "path": "image_5.webp"
+        "source": "image_5.webp"
       },
       {
         "type": "localImage",
         "caption": "After Stain Application.",
-        "path": "image_6.webp"
+        "source": "image_6.webp"
       },
       {
         "type": "localImage",
         "caption": "Charging Station (minus apple watch puck)",
-        "path": "image_7.webp"
+        "source": "image_7.webp"
       }
     ],
     "externalLinks": [],
@@ -625,12 +625,12 @@
       {
         "type": "localImage",
         "caption": "Companion App for Codemaster's F1 2019 Game",
-        "path": "thumbnail.webp"
+        "source": "thumbnail.webp"
       },
       {
         "type": "localVideo",
         "caption": "F1 Sim Engineer Demo",
-        "path": "video_1.mp4"
+        "source": "video_1.mp4"
       }
     ],
     "externalLinks": [
@@ -664,37 +664,37 @@
       {
         "type": "localImage",
         "caption": "Nintendo Switch Speaker Attachment",
-        "path": "thumbnail.webp"
+        "source": "thumbnail.webp"
       },
       {
         "type": "localImage",
         "caption": "CAD Design vs. Final Product",
-        "path": "image_1.webp"
+        "source": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "CAD Design vs. Final Product",
-        "path": "image_2.webp"
+        "source": "image_2.webp"
       },
       {
         "type": "localImage",
         "caption": "Casing Prototypes",
-        "path": "image_3.webp"
+        "source": "image_3.webp"
       },
       {
         "type": "localImage",
         "caption": "Speaker connected to Nintendo Switch (Front View)",
-        "path": "image_4.webp"
+        "source": "image_4.webp"
       },
       {
         "type": "localImage",
         "caption": "Speaker connected to Nintendo Switch (Left Side View)",
-        "path": "image_5.webp"
+        "source": "image_5.webp"
       },
       {
         "type": "localImage",
         "caption": "Speaker connected to Nintendo Switch (Right Side View)",
-        "path": "image_6.webp"
+        "source": "image_6.webp"
       }
     ],
     "externalLinks": [
@@ -739,142 +739,142 @@
       {
         "type": "localImage",
         "caption": "Homemade Sim Racing Rig",
-        "path": "thumbnail.webp"
+        "source": "thumbnail.webp"
       },
       {
         "type": "localVideo",
         "caption": "Project Demo",
-        "path": "video_1.mp4"
+        "source": "video_1.mp4"
       },
       {
         "type": "localImage",
         "caption": "Pedals carved from foam, reinforced in the rear with popsicle sticks",
-        "path": "image_1.webp"
+        "source": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "Applying fiberglass to foam pedals, wrapped in foil and masking tape",
-        "path": "image_2.webp"
+        "source": "image_2.webp"
       },
       {
         "type": "localImage",
         "caption": "Pedal finished with body filler, primed and painted; door hinge used for pedal attachment.",
-        "path": "image_3.webp"
+        "source": "image_3.webp"
       },
       {
         "type": "localImage",
         "caption": "Foam pedal base reinforced with wood and wrapped in foil and masking tape.",
-        "path": "image_4.webp"
+        "source": "image_4.webp"
       },
       {
         "type": "localImage",
         "caption": "Applying fiberglass to pedal base",
-        "path": "image_5.webp"
+        "source": "image_5.webp"
       },
       {
         "type": "localImage",
         "caption": "Spray painting pedal base",
-        "path": "image_6.webp"
+        "source": "image_6.webp"
       },
       {
         "type": "localImage",
         "caption": "Fitment test with pedal springs",
-        "path": "image_7.webp"
+        "source": "image_7.webp"
       },
       {
         "type": "localImage",
         "caption": "Potentiometers added to the pedals for determining their position.",
-        "path": "image_8.webp"
+        "source": "image_8.webp"
       },
       {
         "type": "localImage",
         "caption": "Steering wheel shape outlined on foam",
-        "path": "image_9.webp"
+        "source": "image_9.webp"
       },
       {
         "type": "localImage",
         "caption": "Wheel carved from foam",
-        "path": "image_10.webp"
+        "source": "image_10.webp"
       },
       {
         "type": "localImage",
         "caption": "Foam wheel reinforced with wood and wrapped in foil and masking tape.",
-        "path": "image_11.webp"
+        "source": "image_11.webp"
       },
       {
         "type": "localImage",
         "caption": "Applying fiberglass to the steering wheel",
-        "path": "image_12.webp"
+        "source": "image_12.webp"
       },
       {
         "type": "localImage",
         "caption": "Fiberglass wheel finished with body filler and vinyl spackling.",
-        "path": "image_13.webp"
+        "source": "image_13.webp"
       },
       {
         "type": "localImage",
         "caption": "Wheel sanded smooth, and the buttonholes drilled.",
-        "path": "image_14.webp"
+        "source": "image_14.webp"
       },
       {
         "type": "localImage",
         "caption": "Wheel primed and mounted to wheelbase using PCB pipes.",
-        "path": "image_15.webp"
+        "source": "image_15.webp"
       },
       {
         "type": "localImage",
         "caption": "A potentiometer attached to the wheel shaft mechanism was added to determine wheel position.",
-        "path": "image_16.webp"
+        "source": "image_16.webp"
       },
       {
         "type": "localImage",
         "caption": "Wheelbase painted by a friend",
-        "path": "image_17.webp"
+        "source": "image_17.webp"
       },
       {
         "type": "localImage",
         "caption": "Steering wheel painted",
-        "path": "image_18.webp"
+        "source": "image_18.webp"
       },
       {
         "type": "localImage",
         "caption": "Paddle shifters cut from pieces of acrylic and attached to cabinet door hinges",
-        "path": "image_19.webp"
+        "source": "image_19.webp"
       },
       {
         "type": "localImage",
         "caption": "Paddle shifters mounted to the wheel",
-        "path": "image_20.webp"
+        "source": "image_20.webp"
       },
       {
         "type": "localImage",
         "caption": "Endstop switches added for paddle shifter input",
-        "path": "image_21.webp"
+        "source": "image_21.webp"
       },
       {
         "type": "localImage",
         "caption": "Finished wheel",
-        "path": "image_22.webp"
+        "source": "image_22.webp"
       },
       {
         "type": "localImage",
         "caption": "Custom rig built for the steering wheel and pedal base",
-        "path": "image_23.webp"
+        "source": "image_23.webp"
       },
       {
         "type": "localImage",
         "caption": "Bungee cord added to the steering wheel shaft for auto-centering",
-        "path": "image_24.webp"
+        "source": "image_24.webp"
       },
       {
         "type": "localImage",
         "caption": "Finished pedal base",
-        "path": "image_25.webp"
+        "source": "image_25.webp"
       },
       {
         "type": "localImage",
         "caption": "Rear side view of the rig",
-        "path": "image_26.webp"
+        "source": "image_26.webp"
       }
     ],
     "externalLinks": [],
@@ -897,67 +897,67 @@
       {
         "type": "localImage",
         "caption": "Concept Self Destructing Storage Device",
-        "path": "thumbnail.webp"
+        "source": "thumbnail.webp"
       },
       {
         "type": "localVideo",
         "caption": "Initial Prototype Testing",
-        "path": "video_2.mp4"
+        "source": "video_2.mp4"
       },
       {
         "type": "localVideo",
         "caption": "Successful Connection to Storage",
-        "path": "video_3.mp4"
+        "source": "video_3.mp4"
       },
       {
         "type": "localVideo",
         "caption": "Fingerprint invalid attempts state recovery after power cycle.",
-        "path": "video_4.mp4"
+        "source": "video_4.mp4"
       },
       {
         "type": "localImage",
         "caption": "Initial breadboard prototype",
-        "path": "image_1.webp"
+        "source": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "Fusion 360 CAD Rendering",
-        "path": "image_2.webp"
+        "source": "image_2.webp"
       },
       {
         "type": "localImage",
         "caption": "Fusion 360 CAD Rendering",
-        "path": "image_3.webp"
+        "source": "image_3.webp"
       },
       {
         "type": "localImage",
         "caption": "3D-Printed Case",
-        "path": "image_4.webp"
+        "source": "image_4.webp"
       },
       {
         "type": "localImage",
         "caption": "Wiring and Assembly",
-        "path": "image_5.webp"
+        "source": "image_5.webp"
       },
       {
         "type": "localImage",
         "caption": "Unfinished SafeDrive MK1",
-        "path": "image_6.webp"
+        "source": "image_6.webp"
       },
       {
         "type": "localImage",
         "caption": "Case Sanded, Filled, Primed, and Painted",
-        "path": "image_7.webp"
+        "source": "image_7.webp"
       },
       {
         "type": "localImage",
         "caption": "Warning Labels Added",
-        "path": "image_8.webp"
+        "source": "image_8.webp"
       },
       {
         "type": "youTubeVideo",
         "caption": "Project Demo",
-        "path": "XBJTbQ3lhxo"
+        "source": "XBJTbQ3lhxo"
       }
     ],
     "externalLinks": [
@@ -997,47 +997,47 @@
       {
         "type": "youTubeVideo",
         "caption": "Project Demo",
-        "path": "XxF-zlooXNg"
+        "source": "XxF-zlooXNg"
       },
       {
         "type": "youTubeVideo",
         "caption": "Testing Gyroscope and Accelerometer.",
-        "path": "_smU7T_qflA"
+        "source": "_smU7T_qflA"
       },
       {
         "type": "localVideo",
         "caption": "Using Digital Potentiometers to Control Thumbstick Input.",
-        "path": "video_3.mp4"
+        "source": "video_3.mp4"
       },
       {
         "type": "localImage",
         "caption": "",
-        "path": "thumbnail.webp"
+        "source": "thumbnail.webp"
       },
       {
         "type": "localImage",
         "caption": "Prototype Mounted on a Hat.",
-        "path": "image_1.webp"
+        "source": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "Modded after-market Xbox controller.",
-        "path": "image_2.webp"
+        "source": "image_2.webp"
       },
       {
         "type": "localImage",
         "caption": "Wires soldered inline to thumbstick input (maintaining original functionality).",
-        "path": "image_3.webp"
+        "source": "image_3.webp"
       },
       {
         "type": "localImage",
         "caption": "Initial Head Tracking Circuit.",
-        "path": "image_4.webp"
+        "source": "image_4.webp"
       },
       {
         "type": "localImage",
         "caption": "Top View of the Circuit.",
-        "path": "image_5.webp"
+        "source": "image_5.webp"
       }
     ],
     "videoCount": 3,
@@ -1068,17 +1068,17 @@
       {
         "type": "localImage",
         "caption": "",
-        "path": "thumbnail.webp"
+        "source": "thumbnail.webp"
       },
       {
         "type": "localVideo",
         "caption": "Calculator App Demo",
-        "path": "video_1.mp4"
+        "source": "video_1.mp4"
       },
       {
         "type": "localImage",
         "caption": "Development and Testing using an Emulated Android Device.",
-        "path": "image_1.webp"
+        "source": "image_1.webp"
       }
     ],
     "externalLinks": [
@@ -1105,17 +1105,17 @@
       {
         "type": "localImage",
         "caption": "Programmable Macro Pad (HID)",
-        "path": "thumbnail.webp"
+        "source": "thumbnail.webp"
       },
       {
         "type": "localImage",
         "caption": "Macro Pad - Front view",
-        "path": "image_1.webp"
+        "source": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "Desk setup with Macro Pad.",
-        "path": "image_2.webp"
+        "source": "image_2.webp"
       }
     ],
     "externalLinks": [
@@ -1143,17 +1143,17 @@
       {
         "type": "localImage",
         "caption": "Smart LED Wall Decor",
-        "path": "thumbnail.webp"
+        "source": "thumbnail.webp"
       },
       {
         "type": "localImage",
         "caption": "Interchangeable cover plate using magnets.",
-        "path": "image_1.webp"
+        "source": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "USB Micro Port for Continuous Power",
-        "path": "image_2.webp"
+        "source": "image_2.webp"
       }
     ],
     "externalLinks": [
@@ -1183,72 +1183,72 @@
       {
         "type": "localImage",
         "caption": "Preparing For the Science Fair Presentation",
-        "path": "thumbnail.webp"
+        "source": "thumbnail.webp"
       },
       {
         "type": "localVideo",
         "caption": "3 Years Later... Glove melted in Belize's hot climate.",
-        "path": "video_1.mp4"
+        "source": "video_1.mp4"
       },
       {
         "type": "localImage",
         "caption": "Hand made with foam, rubber tubing, and some fishing line.",
-        "path": "image_1.webp"
+        "source": "image_1.webp"
       },
       {
         "type": "localImage",
         "caption": "Forearm skeleton made using foam and wood.",
-        "path": "image_2.webp"
+        "source": "image_2.webp"
       },
       {
         "type": "localImage",
         "caption": "Hand attached to the forearm",
-        "path": "image_3.webp"
+        "source": "image_3.webp"
       },
       {
         "type": "localImage",
         "caption": "Securing servo motors",
-        "path": "image_4.webp"
+        "source": "image_4.webp"
       },
       {
         "type": "localImage",
         "caption": "Forearm wrapped with bristol board",
-        "path": "image_5.webp"
+        "source": "image_5.webp"
       },
       {
         "type": "localImage",
         "caption": "Cut-out made to access servo motors",
-        "path": "image_6.webp"
+        "source": "image_6.webp"
       },
       {
         "type": "localImage",
         "caption": "Applying fiberglass to the entire arm",
-        "path": "image_7.webp"
+        "source": "image_7.webp"
       },
       {
         "type": "localImage",
         "caption": "Input glove with flex sensors on fingers",
-        "path": "image_8.webp"
+        "source": "image_8.webp"
       },
       {
         "type": "localImage",
         "caption": "Finished hand",
-        "path": "image_9.webp"
+        "source": "image_9.webp"
       },
       {
         "type": "localImage",
         "caption": "Finished hand with Arduino and input glove",
-        "path": "image_10.webp"
+        "source": "image_10.webp"
       },
       {
         "type": "localImage",
         "caption": "School science fair display",
-        "path": "image_11.webp"
+        "source": "image_11.webp"
       },
       {
         "type": "localImage",
         "caption": "Demonstration for local news",
-        "path": "image_12.webp"
+        "source": "image_12.webp"
       }
     ],
     "externalLinks": [],
