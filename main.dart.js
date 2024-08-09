@@ -93864,7 +93864,7 @@ C(a){var s=null
 return A.aJB(B.u,A.dl(B.u,A.a([new A.Bf(this.c,120,120,B.VF,B.Ev,s),A.bo(s,s,B.k,B.v,s,s,s,120,s,s,s,s,120)],t.p),B.w,B.ak),B.et)}}
 A.TO.prototype={
 C(a){var s=null
-return A.dl(B.u,A.a([new A.Ci("https://img.youtube.com/vi/"+this.c+"/hqdefault.jpg",s),A.cO(A.lX("assets/images/icons/YouTube.webp",s,s,s,B.h0,s,48),s,s)],t.p),B.w,B.mg)}}
+return A.dl(B.u,A.a([new A.Ci("https://img.youtube.com/vi/"+this.c+"/hqdefault.jpg",s),A.cO(A.lX("assets/images/icons/"+"YouTube".toLowerCase()+".webp",s,s,s,B.h0,s,48),s,s)],t.p),B.w,B.mg)}}
 A.NG.prototype={
 C(a){var s=this,r=null
 return A.d8(A.a([A.iz(r,A.d5(B.p0,r,r,r),r,s.e,B.M,r,"Previous",r),A.bb(""+(s.c+1)+" / "+s.d,r,r,A.O(a).p2.Q,r),A.iz(r,A.d5(B.p1,r,r,r),r,s.f,B.M,r,"Next",r),B.cf,A.iz(r,A.d5(B.Is,r,r,r),r,s.r,B.M,r,"View all Media",r)],t.p),B.y,B.d6,B.aB)}}
@@ -94221,7 +94221,7 @@ $0(){return A.kq(this.a).j7(0,"/home/personal-projects",null)},
 $S:0}
 A.Sg.prototype={
 yv(a,b,c){var s=null
-return A.iz(s,A.lX("assets/images/icons/"+b+".webp",s,A.O(a).ax.k3,s,s,24,s),s,new A.and(c),s,s,b,s)},
+return A.iz(s,A.lX("assets/images/icons/"+b.toLowerCase()+".webp",s,A.O(a).ax.k3,s,s,24,s),s,new A.and(c),s,s,b,s)},
 C(a){var s=this
 return A.d8(A.a([s.yv(a,"GitHub","https://github.com/PLGuerraDesigns"),s.yv(a,"LinkedIn","https://www.linkedin.com/in/plguerra/"),s.yv(a,"YouTube","https://www.youtube.com/@plguerra"),s.yv(a,"Thingiverse","https://www.thingiverse.com/plg_designs/designs")],t.p),B.y,B.B,B.aB)}}
 A.and.prototype={
