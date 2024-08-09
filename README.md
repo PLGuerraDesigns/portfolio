@@ -1,6 +1,8 @@
-# Pablo L. Guerra's Portfolio Web-App
-
-![Build and Release](https://github.com/plguerradesigns/portfolio/actions/workflows/main.yml/badge.svg)
+<div style="display: flex; align-items: flex-end;">
+    <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/web/icons/Icon-192.png" alt="Icon" width="100" height="100" style="margin-right: 10px;">
+    <h1 style="margin: 0;">Pablo L. Guerra's Portfolio Web-App</h1>
+</div>
+</br>
 
 This web app is a portfolio of my work, projects, and research. </br>
 You can find relevant publications, documents, source code, images, videos, and more here.
@@ -19,7 +21,6 @@ Try Flutter directly in your browser using [DartPad](https://dartpad.dev/?id=5c0
 [![dart-pad.gif](https://i.postimg.cc/brNDxMJQ/dart-pad.gif)](https://dartpad.dev/?id=5c0e154dd50af4a9ac856908061291bc&sample=counter)
 
 </details>
-
 </br>
 <strong>Some notable features include:</strong>
 
@@ -39,8 +40,169 @@ Try Flutter directly in your browser using [DartPad](https://dartpad.dev/?id=5c0
   - relevant institutions/organizations/companies
   - the source code of the web app
   - the project issue tracker
+- A contact button that opens an email client with my email address
+
+## Showcase
+
+<details open>
+<summary><i><strong>v2.5.0</strong></i></summary>
+
+<details open>
+<summary><i><strong>Desktop</strong></i></summary>
+
+<table>
+ <tr>
+    <td style="text-align: center;">Dark Mode</td>
+    <td style="text-align: center;">Light Mode</td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/desktop/dark/home.webp" alt="Home (Dark Mode)" width="300">
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/desktop/light/home.webp" alt="Home (Light Mode)" width="300">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/desktop/dark/professional_experience.webp" alt="Professional Experience (Dark Mode)" width="300">
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/desktop/light/projects.webp" alt="Projects (Light Mode)" width="300">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/desktop/dark/details.webp" alt="Details (Dark Mode)" width="300">
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/desktop/light/details.webp" alt="Details (Light Mode)" width="300">
+    </td>
+
+</table>
+
+</details>
+
+<details>
+<summary><i><strong>Mobile</strong></i></summary>
+
+<table>
+ <tr>
+    <td style="text-align: center;">Dark Mode</td>
+    <td style="text-align: center;">Light Mode</td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/mobile/dark/home_drawer.webp" alt="Home Drawer (Dark Mode)" width="300">
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/mobile/light/home.webp" alt="Home (Light Mode)" width="300">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/mobile/dark/professional_experience.webp" alt="Professional Experience (Dark Mode)" width="300">
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/mobile/light/projects.webp" alt="Projects (Light Mode)" width="300">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/mobile/dark/details.webp" alt="Details (Dark Mode)" width="300">
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/mobile/light/details.webp" alt="Details (Light Mode)" width="300">
+    </td>
+  </tr>
+</table>
+
+</details>
+
+</details>
+
+<details>
+<summary><i><strong>v1.0.8</strong></i></summary>
+
+<table>
+ <tr>
+    <td style="text-align: center;">Desktop</td>
+    <td style="text-align: center;">Mobile</td>
+  </tr>
+  <!-- home, about, professional_experience, details, projects, contact, resume  -->
+
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/desktop/home.webp" alt="Home" width="300">
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/home.webp" alt="Home" width="300">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/desktop/about.webp" alt="About" width="300">
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/about.webp" alt="About" width="300">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/desktop/professional_experience.webp" alt="Professional Experience" width="300">
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/professional_experience.webp" alt="Professional Experience" width="300">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/desktop/professional_experience_details.webp" alt="Professional Experience Details" width="300">
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/details.webp" alt="Professional Experience Details" width="300">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/desktop/projects.webp" alt="Projects" width="300">
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/projects.webp" alt="Projects" width="300">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/desktop/projects_details.webp" alt="Projects Details" width="300">
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/home_drawer.webp" alt="Home Drawer" width="300">
+    </td>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/desktop/contact.webp" alt="Contact" width="300">
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/contact.webp" alt="Contact" width="300">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/desktop/resume.webp" alt="Resume" width="300">
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/resume.webp" alt="Resume" width="300">
+    </td>
+  </tr>
+</table>
+
+</details>
 
 ## Development Notes
+
+![Build and Release](https://github.com/plguerradesigns/portfolio/actions/workflows/main.yml/badge.svg)
+[![Bugs](https://img.shields.io/github/issues/plguerradesigns/portfolio/bug?label=Bugs)](https://github.com/PLGuerraDesigns/portfolio/issues?q=is%3Aissue+is%3Aopen)
+[![Enhancements](https://img.shields.io/github/issues/plguerradesigns/portfolio/enhancement?label=Enhancements)](https://github.com/PLGuerraDesigns/portfolio/issues?q=is%3Aissue+is%3Aopen)
 
 The development of this web app is ongoing and follows an iterative process known as Continuous Integration/Continuous Deployment (CI/CD). </br>
 
@@ -58,7 +220,7 @@ The CI/CD pipeline is implemented using [GitHub Actions](https://github.com/feat
 - Release: The build artifacts are pushed to the `published` branch.
 - Deploy: The `published` branch is deployed to GitHub Pages.
 
-The pipeline is triggered automatically on every commit to the main branch.
+The pipeline is triggered automatically on every commit to the master branch.
 
 ## Getting Started
 
