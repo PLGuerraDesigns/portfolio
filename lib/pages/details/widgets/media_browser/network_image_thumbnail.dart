@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:image_network/image_network.dart';
 
+import '../../../../widgets/spinner.dart';
+
 /// Thumbnail for a network image.
 class NetworkImageThumbnail extends StatelessWidget {
   const NetworkImageThumbnail({
@@ -16,15 +18,14 @@ class NetworkImageThumbnail extends StatelessWidget {
     return FittedBox(
       fit: BoxFit.cover,
       child: Stack(
+        alignment: Alignment.center,
         children: <Widget>[
           ImageNetwork(
             image: url,
             height: 120,
             width: 120,
-            onLoading: const CircularProgressIndicator(
-              valueColor: AlwaysStoppedAnimation<Color>(
-                Colors.white70,
-              ),
+            onLoading: const Spinner(
+              scale: 0.6,
             ),
             onError: const Center(
               child: Icon(

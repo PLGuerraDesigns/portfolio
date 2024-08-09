@@ -96,14 +96,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: AnimatedOpacity(
                       duration: const Duration(milliseconds: 150),
                       opacity: controller.timelineExpanded ? 0.01 : 1,
-                      child: const Column(
+                      child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          Expanded(
+                          const Expanded(
                             child: ProfessionalVsPersonalMenu(),
                           ),
-                          SizedBox(height: 8),
-                          Expanded(child: ActionMenu(compact: false)),
+                          const SizedBox(height: 8),
+                          Expanded(
+                              child: ActionMenu(
+                            compact: false,
+                            versionNumber: controller.appState.versionNumber,
+                          )),
                         ],
                       ),
                     ),
@@ -135,8 +139,11 @@ class _HomeScreenState extends State<HomeScreen> {
             context: context,
             compact: orientation == Orientation.portrait,
           ),
-          drawer:
-              orientation == Orientation.landscape ? null : const HomeDrawer(),
+          drawer: orientation == Orientation.landscape
+              ? null
+              : HomeDrawer(
+                  versionNumber: _controller.appState.versionNumber,
+                ),
           body: ChangeNotifierProvider<HomeController>.value(
             value: _controller,
             builder: (BuildContext context, Widget? child) {

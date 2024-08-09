@@ -55,26 +55,26 @@ class ProfessionalExpMenu extends StatelessWidget {
           builder: (BuildContext context, Orientation orientation) {
             return FrostedContainer(
               padding: EdgeInsets.zero,
-              child: Scrollbar(
-                controller: _scrollController,
-                thumbVisibility: true,
-                child: SingleChildScrollView(
-                  padding: orientation == Orientation.portrait
-                      ? const EdgeInsets.only(right: 8)
-                      : EdgeInsets.zero,
-                  controller: _scrollController,
-                  child: FutureBuilder<void>(
-                    future: appState.loadProfessionalExperiences(),
-                    builder: (BuildContext context,
-                        AsyncSnapshot<dynamic> snapshot) {
-                      if (snapshot.connectionState == ConnectionState.done) {
-                        return _gridView(orientation, appState);
-                      } else {
-                        return const Spinner();
-                      }
-                    },
-                  ),
-                ),
+              child: FutureBuilder<void>(
+                future: appState.loadProfessionalExperiences(),
+                builder:
+                    (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
+                  if (snapshot.connectionState == ConnectionState.done) {
+                    return Scrollbar(
+                      controller: _scrollController,
+                      thumbVisibility: true,
+                      child: SingleChildScrollView(
+                        padding: orientation == Orientation.portrait
+                            ? const EdgeInsets.only(right: 8)
+                            : EdgeInsets.zero,
+                        controller: _scrollController,
+                        child: _gridView(orientation, appState),
+                      ),
+                    );
+                  } else {
+                    return const Spinner();
+                  }
+                },
               ),
             );
           },

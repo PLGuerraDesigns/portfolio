@@ -9,6 +9,7 @@ class AssetPaths {
       'assets/json/professional_experience.json';
   static const String educationJsonData = 'assets/json/education.json';
 
+  static const String monogram = 'assets/images/icons/monogram.webp';
   static const String profilePhoto = 'assets/images/home/profile_dark.webp';
   static const String professionalExperiencePhoto =
       'assets/images/home/professional.webp';

@@ -9,7 +9,10 @@ import 'social_media_buttons.dart';
 
 /// A drawer that provides various action buttons.
 class HomeDrawer extends StatelessWidget {
-  const HomeDrawer({super.key});
+  const HomeDrawer({super.key, required this.versionNumber});
+
+  /// The app version number.
+  final String versionNumber;
 
   @override
   Widget build(BuildContext context) {
@@ -49,8 +52,11 @@ class HomeDrawer extends StatelessWidget {
               ],
             ),
           ),
-          const Flexible(
-            child: ActionMenu(compact: true),
+          Flexible(
+            child: ActionMenu(
+              compact: true,
+              versionNumber: versionNumber,
+            ),
           ),
         ],
       ),

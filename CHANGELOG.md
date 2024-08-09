@@ -1,3 +1,8 @@
+## 2.5.0
+
+- NEW: Added the app version number to the action menu.
+- NEW: Added a custom loading spinner.
+
 ## 2.4.3
 
 - FIX: Fixed issue with pinch to zoom being misaligned.
