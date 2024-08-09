@@ -15,5 +15,5 @@ class AssetPaths {
       'assets/images/home/personal.webp';
 
   static String socialMediaIcon(String socialMedia) =>
-      'assets/images/icons/$socialMedia.webp';
+      'assets/images/icons/${socialMedia.toLowerCase()}.webp';
 }

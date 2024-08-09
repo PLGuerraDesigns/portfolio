@@ -40,6 +40,7 @@ Try Flutter directly in your browser using [DartPad](https://dartpad.dev/?id=5c0
   - relevant institutions/organizations/companies
   - the source code of the web app
   - the project issue tracker
+  - the project change log
 - A contact button that opens an email client with my email address
 
 ## Showcase
@@ -48,19 +49,19 @@ Try Flutter directly in your browser using [DartPad](https://dartpad.dev/?id=5c0
 <summary><i><strong>v2.5.0</strong></i></summary>
 
 <details open>
-<summary><i><strong>Desktop</strong></i></summary>
+<summary><i><strong>Dark Mode</strong></i></summary>
 
 <table>
  <tr>
-    <td style="text-align: center;">Dark Mode</td>
-    <td style="text-align: center;">Light Mode</td>
+    <td style="text-align: center;">Desktop</td>
+    <td style="text-align: center;">Mobile</td>
   </tr>
   <tr>
     <td>
       <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/desktop/dark/home.webp" alt="Home (Dark Mode)" width="300">
     </td>
     <td>
-      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/desktop/light/home.webp" alt="Home (Light Mode)" width="300">
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/mobile/dark/home_drawer.webp" alt="Home Drawer (Dark Mode)" height="300">
     </td>
   </tr>
   <tr>
@@ -68,7 +69,7 @@ Try Flutter directly in your browser using [DartPad](https://dartpad.dev/?id=5c0
       <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/desktop/dark/professional_experience.webp" alt="Professional Experience (Dark Mode)" width="300">
     </td>
     <td>
-      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/desktop/light/projects.webp" alt="Projects (Light Mode)" width="300">
+       <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/mobile/dark/professional_experience.webp" alt="Professional Experience (Dark Mode)" height="300">
     </td>
   </tr>
   <tr>
@@ -76,7 +77,7 @@ Try Flutter directly in your browser using [DartPad](https://dartpad.dev/?id=5c0
       <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/desktop/dark/details.webp" alt="Details (Dark Mode)" width="300">
     </td>
     <td>
-      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/desktop/light/details.webp" alt="Details (Light Mode)" width="300">
+     <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/mobile/dark/details.webp" alt="Details (Dark Mode)" height="300">
     </td>
 
 </table>
@@ -84,35 +85,35 @@ Try Flutter directly in your browser using [DartPad](https://dartpad.dev/?id=5c0
 </details>
 
 <details>
-<summary><i><strong>Mobile</strong></i></summary>
+<summary><i><strong>Light Mode</strong></i></summary>
 
 <table>
  <tr>
-    <td style="text-align: center;">Dark Mode</td>
-    <td style="text-align: center;">Light Mode</td>
+    <td style="text-align: center;">Desktop</td>
+    <td style="text-align: center;">Mobile</td>
   </tr>
   <tr>
     <td>
-      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/mobile/dark/home_drawer.webp" alt="Home Drawer (Dark Mode)" width="300">
+    <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/desktop/light/home.webp" alt="Home (Light Mode)" width="300">
     </td>
     <td>
-      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/mobile/light/home.webp" alt="Home (Light Mode)" width="300">
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/mobile/dark/professional_experience.webp" alt="Professional Experience (Dark Mode)" width="300">
-    </td>
-    <td>
-      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/mobile/light/projects.webp" alt="Projects (Light Mode)" width="300">
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/mobile/light/home.webp" alt="Home (Light Mode)" height="300">
     </td>
   </tr>
   <tr>
     <td>
-      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/mobile/dark/details.webp" alt="Details (Dark Mode)" width="300">
+    <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/desktop/light/projects.webp" alt="Projects (Light Mode)" width="300">
     </td>
     <td>
-      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/mobile/light/details.webp" alt="Details (Light Mode)" width="300">
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/mobile/light/projects.webp" alt="Projects (Light Mode)" height="300">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/desktop/light/details.webp" alt="Details (Light Mode)" width="300">
+    </td>
+    <td>
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/mobile/light/details.webp" alt="Details (Light Mode)" height="300">
     </td>
   </tr>
 </table>
@@ -129,14 +130,13 @@ Try Flutter directly in your browser using [DartPad](https://dartpad.dev/?id=5c0
     <td style="text-align: center;">Desktop</td>
     <td style="text-align: center;">Mobile</td>
   </tr>
-  <!-- home, about, professional_experience, details, projects, contact, resume  -->
 
   <tr>
     <td>
       <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/desktop/home.webp" alt="Home" width="300">
     </td>
     <td>
-      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/home.webp" alt="Home" width="300">
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/home.webp" alt="Home" height="300">
     </td>
   </tr>
   <tr>
@@ -144,7 +144,7 @@ Try Flutter directly in your browser using [DartPad](https://dartpad.dev/?id=5c0
       <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/desktop/about.webp" alt="About" width="300">
     </td>
     <td>
-      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/about.webp" alt="About" width="300">
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/about.webp" alt="About" height="300">
     </td>
   </tr>
   <tr>
@@ -152,7 +152,7 @@ Try Flutter directly in your browser using [DartPad](https://dartpad.dev/?id=5c0
       <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/desktop/professional_experience.webp" alt="Professional Experience" width="300">
     </td>
     <td>
-      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/professional_experience.webp" alt="Professional Experience" width="300">
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/professional_experience.webp" alt="Professional Experience" height="300">
     </td>
   </tr>
   <tr>
@@ -160,7 +160,7 @@ Try Flutter directly in your browser using [DartPad](https://dartpad.dev/?id=5c0
       <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/desktop/professional_experience_details.webp" alt="Professional Experience Details" width="300">
     </td>
     <td>
-      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/details.webp" alt="Professional Experience Details" width="300">
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/details.webp" alt="Professional Experience Details" height="300">
     </td>
   </tr>
   <tr>
@@ -168,7 +168,7 @@ Try Flutter directly in your browser using [DartPad](https://dartpad.dev/?id=5c0
       <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/desktop/projects.webp" alt="Projects" width="300">
     </td>
     <td>
-      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/projects.webp" alt="Projects" width="300">
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/projects.webp" alt="Projects" height="300">
     </td>
   </tr>
   <tr>
@@ -176,14 +176,14 @@ Try Flutter directly in your browser using [DartPad](https://dartpad.dev/?id=5c0
       <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/desktop/project_details.webp" alt="Projects Details" width="300">
     </td>
     <td>
-      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/home_drawer.webp" alt="Home Drawer" width="300">
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/home_drawer.webp" alt="Home Drawer" height="300">
     </td>
   <tr>
     <td>
       <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/desktop/contact.webp" alt="Contact" width="300">
     </td>
     <td>
-      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/contact.webp" alt="Contact" width="300">
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/contact.webp" alt="Contact" height="300">
     </td>
   </tr>
   <tr>
@@ -191,7 +191,7 @@ Try Flutter directly in your browser using [DartPad](https://dartpad.dev/?id=5c0
       <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/desktop/resume.webp" alt="Resume" width="300">
     </td>
     <td>
-      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/resume.webp" alt="Resume" width="300">
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/resume.webp" alt="Resume" height="300">
     </td>
   </tr>
 </table>
@@ -200,7 +200,7 @@ Try Flutter directly in your browser using [DartPad](https://dartpad.dev/?id=5c0
 
 ## Development Notes
 
-![Build and Release](https://github.com/plguerradesigns/portfolio/actions/workflows/main.yml/badge.svg)
+[![Build and Release](https://github.com/plguerradesigns/portfolio/actions/workflows/main.yml/badge.svg)](https://github.com/PLGuerraDesigns/portfolio/actions/workflows/main.yml)
 [![Bugs](https://img.shields.io/github/issues/plguerradesigns/portfolio/bug?label=Bugs)](https://github.com/PLGuerraDesigns/portfolio/issues?q=is%3Aissue+is%3Aopen)
 [![Enhancements](https://img.shields.io/github/issues/plguerradesigns/portfolio/enhancement?label=Enhancements)](https://github.com/PLGuerraDesigns/portfolio/issues?q=is%3Aissue+is%3Aopen)
 
@@ -210,8 +210,8 @@ The development of this web app is ongoing and follows an iterative process know
 
 There are three main branches in this repository:
 
-- `master`: The main branch is the default branch and is protected. It contains the latest stable version of the web app.
-- `dev`: The development branch is where new features are added and tested. It is merged into the main branch after testing.
+- `master`: The master branch is the default branch and is protected. It contains the latest stable version of the web app.
+- `dev`: The development branch is where new features are added and tested. It is merged into the master branch after testing.
 - `published`: The published branch contains the latest build of the web app. This branch is used to host the web app on GitHub Pages.
 
 The CI/CD pipeline is implemented using [GitHub Actions](https://github.com/features/actions). The pipeline consists of the following stages:
