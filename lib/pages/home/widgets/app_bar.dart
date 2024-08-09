@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../common/strings.dart';
-import '../../../common/urls.dart';
-import '../../../services/redirect_handler.dart';
 import 'powered_by_flutter_button.dart';
 import 'theme_mode_button.dart';
 
@@ -35,13 +33,6 @@ class HomeAppBar {
                   color:
                       Theme.of(context).colorScheme.onSurface.withOpacity(0.5),
                 ),
-          ),
-        const SizedBox(width: 12),
-        if (!compact)
-          IconButton(
-            onPressed: () => RedirectHandler.openUrl(Urls.projectSourceCode),
-            icon: const Icon(Icons.code),
-            tooltip: Strings.viewSourceCode,
           ),
         const ThemeModeButton(),
       ],

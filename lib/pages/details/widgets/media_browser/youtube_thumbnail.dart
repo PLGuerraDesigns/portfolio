@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../../common/asset_paths.dart';
+import '../../../../common/strings.dart';
 import '../../../../common/urls.dart';
 import 'network_image_thumbnail.dart';
 
@@ -22,14 +24,11 @@ class YouTubeThumbnail extends StatelessWidget {
         NetworkImageThumbnail(
           url: Urls.youTubeThumbnail(videoId),
         ),
-        ColoredBox(
-          color: Colors.transparent,
-          child: Center(
-            child: Icon(
-              Icons.play_circle,
-              color: Colors.red.withOpacity(0.95),
-              size: 48.0,
-            ),
+        Center(
+          child: Image.asset(
+            AssetPaths.socialMediaIcon(Strings.youtube),
+            fit: BoxFit.scaleDown,
+            width: 48.0,
           ),
         ),
       ],

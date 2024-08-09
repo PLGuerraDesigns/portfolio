@@ -2,8 +2,6 @@
 class AssetPaths {
   AssetPaths._();
 
-  static const String socialIconsBase = 'assets/images/icons';
-
   static const String projectsJsonData = 'assets/json/projects.json';
   static const String professionalExperienceJsonData =
       'assets/json/professional_experience.json';
@@ -15,4 +13,7 @@ class AssetPaths {
       'assets/images/home/professional.webp';
   static const String personalExperiencePhoto =
       'assets/images/home/personal.webp';
+
+  static String socialMediaIcon(String socialMedia) =>
+      'assets/images/icons/$socialMedia.webp';
 }

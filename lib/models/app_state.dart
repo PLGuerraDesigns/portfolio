@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:package_info_plus/package_info_plus.dart';
 
 import '../common/asset_paths.dart';
 import '../common/routing/routes.dart';
@@ -12,16 +11,8 @@ import 'project.dart';
 
 /// The application state.
 class AppState extends ChangeNotifier {
-  AppState() {
-    _loadAppVersion();
-  }
-
   /// The current route.
   String currentRoute = Routes.home;
-
-  /// The app version number.
-  String _versionNumber = '';
-  String get versionNumber => _versionNumber;
 
   /// Whether the media browser is open.
   bool _mediaBrowserOpen = false;
@@ -50,7 +41,8 @@ class AppState extends ChangeNotifier {
   }
 
   /// Whether the professional experience data has been loaded.
-  bool professionalExperiencesLoaded = false;
+  bool _professionalExperiencesLoaded = false;
+  bool get professionalExperiencesLoaded => _professionalExperiencesLoaded;
 
   /// The list of professional experiences.
   List<ProfessionalExperience> get professionalExperiences =>
@@ -80,6 +72,10 @@ class AppState extends ChangeNotifier {
 
   /// Loads the education data from the JSON file.
   Future<void> loadEducation() async {
+    if (_educationLoaded) {
+      return;
+    }
+
     _education = <Education>[];
     await rootBundle.loadString(AssetPaths.educationJsonData).then(
       (String data) {
@@ -118,7 +114,7 @@ class AppState extends ChangeNotifier {
 
   /// Loads the professional experience data from the JSON file.
   Future<void> loadProfessionalExperiences() async {
-    if (professionalExperiencesLoaded) {
+    if (_professionalExperiencesLoaded) {
       return;
     }
 
@@ -139,7 +135,7 @@ class AppState extends ChangeNotifier {
       return b.startDate.compareTo(a.startDate);
     });
 
-    professionalExperiencesLoaded = true;
+    _professionalExperiencesLoaded = true;
   }
 
   /// Toggles the visibility of the media browser.
@@ -211,12 +207,5 @@ class AppState extends ChangeNotifier {
       return _projects[0].titleAsPath;
     }
     return _projects[index + 1].titleAsPath;
-  }
-
-  /// Load the app version information.
-  Future<void> _loadAppVersion() async {
-    final PackageInfo packageInfo = await PackageInfo.fromPlatform();
-    _versionNumber = 'v${packageInfo.version} (${packageInfo.buildNumber})';
-    notifyListeners();
   }
 }

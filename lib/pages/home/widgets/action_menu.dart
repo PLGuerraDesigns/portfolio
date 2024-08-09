@@ -4,21 +4,18 @@ import '../../../common/strings.dart';
 import '../../../common/urls.dart';
 import '../../../services/redirect_handler.dart';
 import '../../../widgets/frosted_container.dart';
-import 'custom_icon_button.dart';
+import 'app_version.dart';
+import 'frosted_action_button.dart';
 
 /// A menu that provides various action buttons.
 class ActionMenu extends StatelessWidget {
   const ActionMenu({
     super.key,
     required this.compact,
-    required this.versionNumber,
   });
 
   /// Whether the menu should be compact.
   final bool compact;
-
-  /// The app version number.
-  final String versionNumber;
 
   Widget _icon({
     required BuildContext context,
@@ -62,20 +59,20 @@ class ActionMenu extends StatelessWidget {
                   title: Strings.reportAnIssue,
                   onTap: () => RedirectHandler.openUrl(Urls.projectIssues),
                 ),
+                FrostedActionButton(
+                  icon: _icon(
+                    context: context,
+                    iconData: Icons.code,
+                  ),
+                  title: Strings.viewSourceCode,
+                  onTap: () => RedirectHandler.openUrl(Urls.projectSourceCode),
+                ),
               ],
             ),
           ),
           Align(
             alignment: compact ? Alignment.bottomCenter : Alignment.bottomRight,
-            child: Text(
-              versionNumber,
-              style: Theme.of(context).textTheme.labelSmall!.copyWith(
-                    color: Theme.of(context)
-                        .colorScheme
-                        .onSurface
-                        .withOpacity(0.5),
-                  ),
-            ),
+            child: const AppVersion(),
           ),
         ],
       ),

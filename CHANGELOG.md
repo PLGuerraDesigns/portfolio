@@ -1,3 +1,10 @@
+## 2.5.1
+
+- NEW: Added YouTube channel to list of social media buttons.
+- FIX: Fixed issue with app version number not displaying after loading while on the home page.
+- REVISED: Relocated View Source Code button to the action menu.
+- REVISED: Updated the media browser thumbnails for YouTube and local videos.
+
 ## 2.5.0
 
 - NEW: Added the app version number to the action menu.

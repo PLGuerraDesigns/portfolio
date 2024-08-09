@@ -10,11 +10,14 @@ class Urls {
       'https://github.com/PLGuerraDesigns/portfolio/issues';
   static const String projectSourceCode =
       'https://github.com/PLGuerraDesigns/portfolio';
+  static const String changelog =
+      'https://github.com/PLGuerraDesigns/portfolio/blob/master/CHANGELOG.md';
 
   static const String github = 'https://github.com/PLGuerraDesigns';
   static const String thingiverse =
       'https://www.thingiverse.com/plg_designs/designs';
   static const String linkedin = 'https://www.linkedin.com/in/plguerra/';
+  static const String youtube = 'https://www.youtube.com/@plguerra';
   static const String contactEmail = 'mailto:plguerra@outlook.com';
 
   static const String googleSearchBase = 'https://www.google.com/search?q=';
