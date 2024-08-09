@@ -173,7 +173,7 @@ Try Flutter directly in your browser using [DartPad](https://dartpad.dev/?id=5c0
   </tr>
   <tr>
     <td>
-      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/desktop/projects_details.webp" alt="Projects Details" width="300">
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/desktop/project_details.webp" alt="Projects Details" width="300">
     </td>
     <td>
       <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/home_drawer.webp" alt="Home Drawer" width="300">
