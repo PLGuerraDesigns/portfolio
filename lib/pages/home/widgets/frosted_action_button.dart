@@ -35,10 +35,13 @@ class FrostedActionButton extends StatelessWidget {
             const SizedBox(height: 4),
             icon,
             const SizedBox(height: 8),
-            Text(
-              title.toUpperCase(),
-              style: Theme.of(context).textTheme.titleSmall,
-              textAlign: TextAlign.center,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: Text(
+                title.toUpperCase(),
+                style: Theme.of(context).textTheme.titleSmall,
+                textAlign: TextAlign.center,
+              ),
             ),
           ],
         ),

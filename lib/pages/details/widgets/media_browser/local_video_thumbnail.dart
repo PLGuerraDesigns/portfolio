@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../common/theming/color_schemes.dart';
 import 'local_image_thumbnail.dart';
 
 /// Thumbnail for a local video.
@@ -18,12 +19,13 @@ class LocalVideoThumbnail extends StatelessWidget {
       fit: StackFit.expand,
       children: <Widget>[
         LocalImageThumbnail(source: source),
-        ColoredBox(
-          color: Colors.transparent,
-          child: Center(
+        Center(
+          child: CircleAvatar(
+            radius: 24.0,
+            backgroundColor: Colors.white54,
             child: Icon(
-              Icons.play_circle_outline,
-              color: Colors.white.withOpacity(0.95),
+              Icons.play_circle_fill,
+              color: PortfolioColorSchemes.dark.tertiaryContainer,
               size: 48.0,
             ),
           ),

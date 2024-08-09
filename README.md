@@ -2,12 +2,12 @@
     <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/web/icons/Icon-192.png" alt="Icon" width="100" height="100" style="margin-right: 10px;">
     <h1 style="margin: 0;">Pablo L. Guerra's Portfolio Web-App</h1>
 </div>
-</br>
+<br />
 
-This web app is a portfolio of my work, projects, and research. </br>
+This web app is a portfolio of my work, projects, and research. <br />
 You can find relevant publications, documents, source code, images, videos, and more here.
 
-It is a static web app built using the [Flutter framework](https://flutter.dev/) and hosted on [GitHub Pages](https://pages.github.com/). </br>
+It is a static web app built using the [Flutter framework](https://flutter.dev/) and hosted on [GitHub Pages](https://pages.github.com/). <br />
 
 You can access the web app here: [https://plguerradesigns.github.io/portfolio](https://plguerradesigns.github.io/portfolio)
 
@@ -21,7 +21,7 @@ Try Flutter directly in your browser using [DartPad](https://dartpad.dev/?id=5c0
 [![dart-pad.gif](https://i.postimg.cc/brNDxMJQ/dart-pad.gif)](https://dartpad.dev/?id=5c0e154dd50af4a9ac856908061291bc&sample=counter)
 
 </details>
-</br>
+<br />
 <strong>Some notable features include:</strong>
 
 - Dark and light mode, with a toggle button
@@ -204,7 +204,7 @@ Try Flutter directly in your browser using [DartPad](https://dartpad.dev/?id=5c0
 [![Bugs](https://img.shields.io/github/issues/plguerradesigns/portfolio/bug?label=Bugs)](https://github.com/PLGuerraDesigns/portfolio/issues?q=is%3Aissue+is%3Aopen)
 [![Enhancements](https://img.shields.io/github/issues/plguerradesigns/portfolio/enhancement?label=Enhancements)](https://github.com/PLGuerraDesigns/portfolio/issues?q=is%3Aissue+is%3Aopen)
 
-The development of this web app is ongoing and follows an iterative process known as Continuous Integration/Continuous Deployment (CI/CD). </br>
+The development of this web app is ongoing and follows an iterative process known as Continuous Integration/Continuous Deployment (CI/CD). <br />
 
 ![CI/CD Pipeline](https://www.synopsys.com/glossary/what-is-cicd/_jcr_content/root/synopsyscontainer/column_1946395452_co/colRight/image_copy.coreimg.svg/1663683682045/cicd.svg)
 

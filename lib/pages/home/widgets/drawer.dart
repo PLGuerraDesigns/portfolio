@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
 
 import '../../../common/strings.dart';
-import '../../../common/urls.dart';
-import '../../../services/redirect_handler.dart';
 import 'action_menu.dart';
 import 'powered_by_flutter_button.dart';
 import 'social_media_buttons.dart';
 
 /// A drawer that provides various action buttons.
 class HomeDrawer extends StatelessWidget {
-  const HomeDrawer({super.key, required this.versionNumber});
-
-  /// The app version number.
-  final String versionNumber;
+  const HomeDrawer({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,18 +21,7 @@ class HomeDrawer extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    IconButton(
-                      onPressed: () =>
-                          RedirectHandler.openUrl(Urls.projectSourceCode),
-                      icon: const Icon(Icons.code),
-                      tooltip: Strings.viewSourceCode,
-                    ),
-                    const SocialMediaButtons(),
-                  ],
-                ),
+                const Center(child: SocialMediaButtons()),
                 const PoweredByFlutterButton(),
                 Text(
                   Strings.lastUpdated,
@@ -52,10 +36,9 @@ class HomeDrawer extends StatelessWidget {
               ],
             ),
           ),
-          Flexible(
+          const Flexible(
             child: ActionMenu(
               compact: true,
-              versionNumber: versionNumber,
             ),
           ),
         ],

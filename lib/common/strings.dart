@@ -16,6 +16,7 @@ class Strings {
   static const String show = 'Show';
   static const String github = 'GitHub';
   static const String thingiverse = 'Thingiverse';
+  static const String youtube = 'YouTube';
   static const String linkedin = 'LinkedIn';
   static const String poweredByFlutter = 'Powered by Flutter';
   static const String professional = 'Professional';
@@ -31,7 +32,7 @@ class Strings {
   static const String prev = 'Prev.';
   static const String next = 'Next';
   static const String viewAllMedia = 'View all Media';
-  static const String viewSourceCode = 'View the Source Code';
+  static const String viewSourceCode = 'View Source Code';
   static const String professionalExperiences = 'Professional Experiences';
   static const String previousProject = 'Previous Project';
   static const String nextProject = 'Next Project';
