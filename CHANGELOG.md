@@ -1,3 +1,7 @@
+## 2.5.2
+
+- FIX: Fixed social media icons not displaying due to case sensitivity in the file path.
+
 ## 2.5.1
 
 - NEW: Added YouTube channel to list of social media buttons.
