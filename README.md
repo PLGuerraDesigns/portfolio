@@ -61,7 +61,7 @@ Try Flutter directly in your browser using [DartPad](https://dartpad.dev/?id=5c0
       <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/desktop/dark/home.webp" alt="Home (Dark Mode)" width="300">
     </td>
     <td>
-      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/mobile/dark/home_drawer.webp" alt="Home Drawer (Dark Mode)" height="300">
+      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v2.5.0/mobile/dark/home.webp" alt="Home Drawer (Dark Mode)" height="300">
     </td>
   </tr>
   <tr>
@@ -171,14 +171,6 @@ Try Flutter directly in your browser using [DartPad](https://dartpad.dev/?id=5c0
       <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/projects.webp" alt="Projects" height="300">
     </td>
   </tr>
-  <tr>
-    <td>
-      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/desktop/project_details.webp" alt="Projects Details" width="300">
-    </td>
-    <td>
-      <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/mobile/home_drawer.webp" alt="Home Drawer" height="300">
-    </td>
-  <tr>
     <td>
       <img src="https://raw.githubusercontent.com/PLGuerraDesigns/portfolio/master/showcase/v1.0.8/desktop/contact.webp" alt="Contact" width="300">
     </td>
