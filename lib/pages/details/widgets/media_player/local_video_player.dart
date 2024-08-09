@@ -2,6 +2,8 @@ import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
+import '../../../../widgets/spinner.dart';
+
 /// A video player that plays a local video.
 class LocalVideoPlayer extends StatelessWidget {
   const LocalVideoPlayer({
@@ -27,11 +29,7 @@ class LocalVideoPlayer extends StatelessWidget {
             ),
           );
         }
-        return Center(
-          child: CircularProgressIndicator(
-            color: Theme.of(context).hintColor,
-          ),
-        );
+        return const Spinner();
       },
     );
   }

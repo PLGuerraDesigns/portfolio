@@ -65,35 +65,29 @@ class ProjectsMenu extends StatelessWidget {
           builder: (BuildContext context, AppState appState, Widget? child) {
             return FrostedContainer(
               padding: EdgeInsets.zero,
-              child: Scrollbar(
-                controller: _scrollController,
-                thumbVisibility: true,
-                child: SingleChildScrollView(
-                  padding: orientation == Orientation.portrait
-                      ? const EdgeInsets.only(right: 8)
-                      : EdgeInsets.zero,
-                  controller: _scrollController,
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      FutureBuilder<void>(
-                        future: appState.loadProjects(),
-                        builder: (BuildContext context,
-                            AsyncSnapshot<dynamic> snapshot) {
-                          if (snapshot.connectionState ==
-                              ConnectionState.done) {
-                            return _gridView(
-                              appState: appState,
-                              orientation: orientation,
-                            );
-                          } else {
-                            return const Spinner();
-                          }
-                        },
+              child: FutureBuilder<void>(
+                future: appState.loadProjects(),
+                builder:
+                    (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
+                  if (snapshot.connectionState == ConnectionState.done) {
+                    return Scrollbar(
+                      controller: _scrollController,
+                      thumbVisibility: true,
+                      child: SingleChildScrollView(
+                        padding: orientation == Orientation.portrait
+                            ? const EdgeInsets.only(right: 8)
+                            : EdgeInsets.zero,
+                        controller: _scrollController,
+                        child: _gridView(
+                          appState: appState,
+                          orientation: orientation,
+                        ),
                       ),
-                    ],
-                  ),
-                ),
+                    );
+                  } else {
+                    return const Spinner();
+                  }
+                },
               ),
             );
           },

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 import '../common/routing/routes.dart';
+import '../widgets/spinner.dart';
 
 /// A screen that displays a loading indicator while loading data.
 class LoadingScreen extends StatefulWidget {
@@ -47,9 +48,7 @@ class LoadingScreenState extends State<LoadingScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Center(
-        child: CircularProgressIndicator.adaptive(),
-      ),
+      body: Spinner(),
     );
   }
 }

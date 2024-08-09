@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 import '../common/asset_paths.dart';
 import '../common/routing/routes.dart';
@@ -11,8 +12,16 @@ import 'project.dart';
 
 /// The application state.
 class AppState extends ChangeNotifier {
+  AppState() {
+    _loadAppVersion();
+  }
+
   /// The current route.
   String currentRoute = Routes.home;
+
+  /// The app version number.
+  String _versionNumber = '';
+  String get versionNumber => _versionNumber;
 
   /// Whether the media browser is open.
   bool _mediaBrowserOpen = false;
@@ -202,5 +211,12 @@ class AppState extends ChangeNotifier {
       return _projects[0].titleAsPath;
     }
     return _projects[index + 1].titleAsPath;
+  }
+
+  /// Load the app version information.
+  Future<void> _loadAppVersion() async {
+    final PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    _versionNumber = 'v${packageInfo.version} (${packageInfo.buildNumber})';
+    notifyListeners();
   }
 }
