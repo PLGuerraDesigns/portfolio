@@ -628,9 +628,9 @@
         "source": "thumbnail.webp"
       },
       {
-        "type": "localVideo",
+        "type": "youTubeVideo",
         "caption": "F1 Sim Engineer Demo",
-        "source": "video_1.mp4"
+        "source": "4ROWmlwLq6M"
       }
     ],
     "externalLinks": [
