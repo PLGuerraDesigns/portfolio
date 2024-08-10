@@ -101,6 +101,8 @@ class AppRouter {
         final String location = state.uri.toString();
         final String goto = location.split('/').last;
 
+        appState.currentRoute = location;
+
         final bool isAtProfessionalDetails =
             location.contains(Routes.professional) &&
                 location.contains(Routes.details);

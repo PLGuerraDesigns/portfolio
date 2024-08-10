@@ -63,6 +63,12 @@ class ProjectsMenu extends StatelessWidget {
       builder: (BuildContext context, Orientation orientation) {
         return Consumer<AppState>(
           builder: (BuildContext context, AppState appState, Widget? child) {
+            // ! This should be handled in AppRouter but redirect isn't being called
+            // ! on pop, so we're handling it here until it's fixed in GoRouter.
+            if (appState.currentRoute != Routes.personalProjects) {
+              appState.currentRoute = Routes.personalProjects;
+            }
+
             return FrostedContainer(
               padding: EdgeInsets.zero,
               child: FutureBuilder<void>(
