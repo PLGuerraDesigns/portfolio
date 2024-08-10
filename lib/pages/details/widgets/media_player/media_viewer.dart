@@ -17,6 +17,7 @@ class MediaViewer extends StatelessWidget {
     required this.mediaItems,
     required this.totalMediaCount,
     required this.imagePageController,
+    required this.videoPlayerController,
   });
 
   /// The axis of the media player and browser.
@@ -31,6 +32,9 @@ class MediaViewer extends StatelessWidget {
   /// The controller for the image gallery.
   final PageController imagePageController;
 
+  /// The controller for the video player.
+  final VideoPlayerController? videoPlayerController;
+
   /// Returns the media widget based on the media type.
   Widget _media(MediaItem mediaItem) {
     final MediaType mediaType = mediaItem.type;
@@ -38,9 +42,7 @@ class MediaViewer extends StatelessWidget {
       case MediaType.youTubeVideo:
         return CustomYouTubePlayer(videoId: mediaItem.source);
       case MediaType.localVideo:
-        return LocalVideoPlayer(
-          videoPlayerController: VideoPlayerController.asset(mediaItem.source),
-        );
+        return LocalVideoPlayer(videoPlayerController: videoPlayerController);
       case MediaType.localImage:
         return ImageViewer(
           imageProvider: AssetImage(mediaItem.source),

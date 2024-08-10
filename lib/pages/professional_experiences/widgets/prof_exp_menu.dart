@@ -49,10 +49,16 @@ class ProfessionalExpMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<AppState>(
-      builder: (BuildContext context, AppState appState, Widget? child) {
-        return OrientationBuilder(
-          builder: (BuildContext context, Orientation orientation) {
+    return OrientationBuilder(
+      builder: (BuildContext context, Orientation orientation) {
+        return Consumer<AppState>(
+          builder: (BuildContext context, AppState appState, Widget? child) {
+            // ! This should be handled in AppRouter but redirect isn't being called
+            // ! on pop, so we're handling it here until it's fixed in GoRouter.
+            if (appState.currentRoute != Routes.professionalExperiences) {
+              appState.currentRoute = Routes.professionalExperiences;
+            }
+
             return FrostedContainer(
               padding: EdgeInsets.zero,
               child: FutureBuilder<void>(

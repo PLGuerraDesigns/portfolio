@@ -5,11 +5,14 @@ class Strings {
   static const String currentLocation = 'VA, USA';
   static const String lastUpdated = 'Updated AUG 2024';
 
+  static const List<String> headerSubtitles = <String>[
+    'Software Engineer  •  Innovator  •  Technologist',
+    'Give me a lever long enough and a fulcrum on which to place it, and I shall move the world. ~Archimedes',
+    'Men for Others'
+  ];
+
   static const String appName = 'PLG Portfolio';
   static const String name = 'Pablo L. Guerra';
-  static const String subtitle =
-      'Software Engineer  •  Innovator  •  Technologist';
-  static const String motto = 'Men for Others';
   static const String explore = 'Explore';
   static const String expand = 'Expand';
   static const String collapse = 'Collapse';
