@@ -187,6 +187,12 @@ class DetailsScreenState extends State<DetailsScreen> {
   }
 
   @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: <ChangeNotifierProvider<ChangeNotifier>>[

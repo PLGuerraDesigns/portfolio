@@ -92,6 +92,7 @@ class MultiMediaPlayerState extends State<MultiMediaPlayer> {
                         mediaItems: controller.mediaItems,
                         totalMediaCount: controller.totalMediaCount,
                         imagePageController: controller.imagePageController,
+                        videoPlayerController: controller.videoPlayerController,
                       ),
                     ),
                     PlayerBanner(

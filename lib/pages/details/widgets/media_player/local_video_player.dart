@@ -12,25 +12,28 @@ class LocalVideoPlayer extends StatelessWidget {
   });
 
   /// The controller for the video player.
-  final VideoPlayerController videoPlayerController;
+  final VideoPlayerController? videoPlayerController;
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<void>(
-      future: videoPlayerController.initialize(),
-      builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
-        if (snapshot.connectionState == ConnectionState.done) {
-          return Chewie(
-            controller: ChewieController(
-              autoPlay: true,
-              aspectRatio: 16 / 9,
-              autoInitialize: true,
-              videoPlayerController: videoPlayerController,
-            ),
-          );
-        }
-        return const Spinner();
-      },
+    if (videoPlayerController == null) {
+      return const Spinner();
+    }
+    return Chewie(
+      controller: ChewieController(
+        videoPlayerController: videoPlayerController!,
+        autoPlay: true,
+        aspectRatio: 16 / 9,
+        autoInitialize: true,
+        zoomAndPan: true,
+        showControlsOnInitialize: false,
+        hideControlsTimer: const Duration(milliseconds: 1500),
+        materialProgressColors: ChewieProgressColors(
+          backgroundColor: Colors.white10,
+          bufferedColor: Colors.white24,
+          playedColor: Colors.white38,
+        ),
+      ),
     );
   }
 }

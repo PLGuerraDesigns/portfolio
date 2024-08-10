@@ -1,3 +1,7 @@
+## 2.5.4
+
+- FIX: Fixed issue with the local video player restarting when the media browser is opened or closed.
+
 ## 2.5.3
 
 - FIX: Fixed issue with current route not being updated when navigating to a new route. (Added a temporary fix for when the route is popped.)

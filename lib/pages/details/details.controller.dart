@@ -87,4 +87,11 @@ class DetailsController extends ChangeNotifier {
 
     context.go(route);
   }
+
+  @override
+  void dispose() {
+    screenScrollController.dispose();
+    mediaController.dispose();
+    super.dispose();
+  }
 }

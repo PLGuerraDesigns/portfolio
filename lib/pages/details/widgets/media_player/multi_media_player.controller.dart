@@ -40,10 +40,29 @@ class MultiMediaPlayerController extends ChangeNotifier {
   late PageController imagePageController;
 
   /// The controller for the video player.
-  VideoPlayerController? videoPlayerController;
+  VideoPlayerController? _videoPlayerController;
 
   /// The function to call to toggle the media browser.
   late Function() _updateMediaBrowserVisibilityState;
+
+  /// The video player controller.
+  VideoPlayerController? get videoPlayerController {
+    if (_videoPlayerController?.dataSource != currentMediaItem.source) {
+      _disposeVideoPlayerController();
+    }
+
+    if (currentMediaItem.type == MediaType.localVideo &&
+        _videoPlayerController != null) {
+      return _videoPlayerController;
+    } else if (currentMediaItem.type == MediaType.localVideo &&
+        _videoPlayerController == null) {
+      _videoPlayerController = VideoPlayerController.asset(
+        currentMediaItem.source,
+      );
+      return _videoPlayerController;
+    }
+    return _videoPlayerController;
+  }
 
   /// Toggle the media browser.
   void toggleMediaBrowser() {
@@ -59,7 +78,8 @@ class MultiMediaPlayerController extends ChangeNotifier {
       previousIndex = totalMediaCount - 1;
       imagePageController.jumpToPage(previousIndex);
     } else {
-      if (mediaItems[currentIndex].type == MediaType.youTubeVideo) {
+      if (<MediaType>[MediaType.youTubeVideo, MediaType.localVideo]
+          .contains(mediaItems[currentIndex].type)) {
         imagePageController.jumpToPage(previousIndex);
       } else {
         await imagePageController.animateToPage(
@@ -80,7 +100,8 @@ class MultiMediaPlayerController extends ChangeNotifier {
       nextIndex = 0;
       imagePageController.jumpToPage(nextIndex);
     } else {
-      if (mediaItems[currentIndex].type == MediaType.youTubeVideo) {
+      if (<MediaType>[MediaType.youTubeVideo, MediaType.localVideo]
+          .contains(mediaItems[currentIndex].type)) {
         imagePageController.jumpToPage(nextIndex);
       } else {
         await imagePageController.animateToPage(
@@ -101,12 +122,16 @@ class MultiMediaPlayerController extends ChangeNotifier {
     notifyListeners();
   }
 
+  /// Dispose of the video player controller.
+  void _disposeVideoPlayerController() {
+    _videoPlayerController?.dispose();
+    _videoPlayerController = null;
+  }
+
   @override
   void dispose() {
     imagePageController.dispose();
-    if (videoPlayerController != null) {
-      videoPlayerController!.dispose();
-    }
+    _disposeVideoPlayerController();
     super.dispose();
   }
 }
