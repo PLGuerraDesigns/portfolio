@@ -1,3 +1,9 @@
+## 2.5.5
+
+- FIX: Fixed issue with router routing to the wrong page when the theme is toggled when navigating back from a different page. (Temporary fix for when the route is popped.)
+- FIX: Fixed spacing issue in the home header banner.
+- REVISED: Updated the home header banner subtitle to cycle through a list rather than just two.
+
 ## 2.5.4
 
 - FIX: Fixed issue with the local video player restarting when the media browser is opened or closed.

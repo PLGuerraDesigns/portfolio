@@ -51,24 +51,25 @@ class Header extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
-        DefaultTextStyle(
-          style: compact
-              ? Theme.of(context).textTheme.labelSmall!
-              : Theme.of(context).textTheme.titleMedium!,
-          textAlign: TextAlign.left,
-          child: AnimatedTextKit(
-            repeatForever: true,
-            pause: const Duration(milliseconds: 250),
-            animatedTexts: <AnimatedText>[
-              RotateAnimatedText(
-                Strings.subtitle,
-                duration: const Duration(seconds: 7),
-              ),
-              RotateAnimatedText(
-                Strings.motto,
-                duration: const Duration(seconds: 7),
-              ),
-            ],
+        Flexible(
+          child: DefaultTextStyle(
+            style: compact
+                ? Theme.of(context).textTheme.labelSmall!
+                : Theme.of(context).textTheme.titleMedium!,
+            maxLines: 2,
+            child: AnimatedTextKit(
+              repeatForever: true,
+              pause: const Duration(milliseconds: 250),
+              animatedTexts: Strings.headerSubtitles.map<AnimatedText>(
+                (String text) {
+                  return RotateAnimatedText(
+                    text,
+                    alignment: Alignment.centerLeft,
+                    duration: const Duration(seconds: 7),
+                  );
+                },
+              ).toList(),
+            ),
           ),
         ),
         SizedBox(
@@ -107,6 +108,7 @@ class Header extends StatelessWidget {
       child: Row(
         children: <Widget>[
           _profilePicture(context),
+          const SizedBox(width: 12.0),
           Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

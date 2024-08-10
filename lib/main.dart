@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'common/routing/app_router.dart';
+import 'common/routing/routes.dart';
 import 'common/strings.dart';
 import 'common/theming/theme_notifier.dart';
 import 'models/app_state.dart';
@@ -31,6 +32,10 @@ class _PortfolioAppState extends State<PortfolioApp> {
 
     // Listen to theme changes and rebuild the application.
     themeNotifier.addListener(() {
+      // ! This should be handled in AppRouter but redirect isn't being called
+      // ! on pop, so we're handling it here until it's fixed in GoRouter.
+      _appState.currentRoute = Routes.home;
+
       setState(() {});
     });
   }
