@@ -6,7 +6,7 @@ import '../../../common/routing/routes.dart';
 import '../../../models/app_state.dart';
 import '../../../widgets/frosted_container.dart';
 import '../../../widgets/spinner.dart';
-import 'thumbnail_item.dart';
+import 'project_thumbnail.dart';
 
 class ProjectsMenu extends StatelessWidget {
   const ProjectsMenu({

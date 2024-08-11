@@ -1,3 +1,8 @@
+## 2.6.0
+
+- NEW: Added a tilt effect `TiltHandler` to the floating thumbnail and project thumbnail.
+- REVISED: Added an additional quote to the home header banner.
+
 ## 2.5.5
 
 - FIX: Fixed issue with router routing to the wrong page when the theme is toggled when navigating back from a different page. (Temporary fix for when the route is popped.)
