@@ -4,6 +4,7 @@ import 'package:shimmer/shimmer.dart';
 import '../common/theming/color_schemes.dart';
 import 'frosted_container.dart';
 import 'hover_scale_handler.dart';
+import 'tilt_handler.dart';
 
 /// A thumbnail that displays an image, a title, and an optional subtitle and
 /// logo. The thumbnail can be tapped to perform an action and can be on a
@@ -18,6 +19,8 @@ class FloatingThumbnail extends StatefulWidget {
     this.subtitle,
     this.frosted = false,
     this.shimmer = false,
+    this.selfTilt = false,
+    this.reducedMotion = false,
   });
 
   /// The logo to display in the thumbnail.
@@ -40,6 +43,12 @@ class FloatingThumbnail extends StatefulWidget {
 
   /// Whether the thumbnail should shimmer.
   final bool shimmer;
+
+  /// Whether the thumbnail should continuously tilt when not hovered.
+  final bool selfTilt;
+
+  /// Whether the tilt motion should be reduced.
+  final bool reducedMotion;
 
   @override
   State<FloatingThumbnail> createState() => _FloatingThumbnailState();
@@ -74,25 +83,29 @@ class _FloatingThumbnailState extends State<FloatingThumbnail> {
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
             Expanded(
-              child: Stack(
-                fit: StackFit.expand,
-                alignment: Alignment.center,
-                children: <Widget>[
-                  Image.asset(
-                    widget.image,
-                    fit: BoxFit.contain,
-                  ),
-                  if (widget.shimmer)
-                    Shimmer.fromColors(
-                      period: const Duration(milliseconds: 5000),
-                      baseColor: Colors.transparent,
-                      highlightColor: Colors.white24,
-                      child: Image.asset(
-                        widget.image,
-                        fit: BoxFit.contain,
-                      ),
+              child: TiltHandler(
+                selfTilt: widget.selfTilt,
+                reducedMotion: widget.reducedMotion,
+                child: Stack(
+                  fit: StackFit.expand,
+                  alignment: Alignment.center,
+                  children: <Widget>[
+                    Image.asset(
+                      widget.image,
+                      fit: BoxFit.contain,
                     ),
-                ],
+                    if (widget.shimmer)
+                      Shimmer.fromColors(
+                        period: const Duration(milliseconds: 5000),
+                        baseColor: Colors.transparent,
+                        highlightColor: Colors.white24,
+                        child: Image.asset(
+                          widget.image,
+                          fit: BoxFit.contain,
+                        ),
+                      ),
+                  ],
+                ),
               ),
             ),
             const SizedBox(height: 16),

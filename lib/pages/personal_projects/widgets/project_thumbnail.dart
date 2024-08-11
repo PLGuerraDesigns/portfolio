@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../widgets/hover_scale_handler.dart';
+import '../../../widgets/tilt_handler.dart';
 
 /// A project thumbnail widget containing an image, title, and subtitle. Can be
 /// tapped to perform an action.
@@ -43,24 +44,27 @@ class _ProjectThumbnailState extends State<ProjectThumbnail> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            AspectRatio(
-              aspectRatio: 1.5,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(12),
-                child: Image.asset(
-                  widget.imagePath,
-                  fit: BoxFit.cover,
-                  errorBuilder: (BuildContext context, Object error,
-                      StackTrace? stackTrace) {
-                    return Icon(
-                      Icons.broken_image_outlined,
-                      size: 50,
-                      color: Theme.of(context)
-                          .colorScheme
-                          .surfaceVariant
-                          .withOpacity(0.5),
-                    );
-                  },
+            TiltHandler(
+              reducedMotion: true,
+              child: AspectRatio(
+                aspectRatio: 1.5,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Image.asset(
+                    widget.imagePath,
+                    fit: BoxFit.cover,
+                    errorBuilder: (BuildContext context, Object error,
+                        StackTrace? stackTrace) {
+                      return Icon(
+                        Icons.broken_image_outlined,
+                        size: 50,
+                        color: Theme.of(context)
+                            .colorScheme
+                            .surfaceVariant
+                            .withOpacity(0.5),
+                      );
+                    },
+                  ),
                 ),
               ),
             ),

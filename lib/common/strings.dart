@@ -8,7 +8,8 @@ class Strings {
   static const List<String> headerSubtitles = <String>[
     'Software Engineer  •  Innovator  •  Technologist',
     'Give me a lever long enough and a fulcrum on which to place it, and I shall move the world. ~Archimedes',
-    'Men for Others'
+    'Men for Others',
+    'Observe, Orient, Decide, Act ~John Boyd (Military Strategist)',
   ];
 
   static const String appName = 'PLG Portfolio';
