@@ -4,6 +4,7 @@ class Strings {
 
   static const String currentLocation = 'VA, USA';
   static const String lastUpdated = 'Updated AUG 2024';
+  static const String contactEmail = 'plguerra@outlook.com';
 
   static const List<String> headerSubtitles = <String>[
     'Software Engineer  •  Innovator  •  Technologist',
@@ -36,6 +37,7 @@ class Strings {
   static const String prev = 'Prev.';
   static const String next = 'Next';
   static const String viewAllMedia = 'View all Media';
+  static const String about = 'About';
   static const String viewSourceCode = 'View Source Code';
   static const String professionalExperiences = 'Professional Experiences';
   static const String previousProject = 'Previous Project';
@@ -55,4 +57,10 @@ class Strings {
   static const String selectACategoryToViewTheEntries =
       'Select a category to view the entries.';
   static const String expected = 'Expected';
+  static const String contactMeMessage =
+      'Thank you for your interest in contacting me, please feel free to reach out to me via email at:';
+  static const String copyToClipboard = 'Copy to Clipboard';
+  static const String emailCopied = 'Email copied to clipboard';
+  static const String openEmailApp = 'Open Email App';
+  static const String close = 'Close';
 }

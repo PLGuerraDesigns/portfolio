@@ -1,3 +1,8 @@
+## 2.6.2
+
+- REVISED: Added a confirmation dialog to the `Contact Me` button in the action menu.
+- REVISED: Added an `About` button to the action menu.
+
 ## 2.6.1
 
 - REVISED: Disabled the tilt effect on mobile devices.

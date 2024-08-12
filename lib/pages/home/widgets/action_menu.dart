@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../../../common/strings.dart';
 import '../../../common/urls.dart';
@@ -17,14 +18,82 @@ class ActionMenu extends StatelessWidget {
   /// Whether the menu should be compact.
   final bool compact;
 
-  Widget _icon({
+  /// The icon for the action button.
+  Widget _action({
     required BuildContext context,
+    required String title,
     required IconData iconData,
+    required Function() onTap,
   }) {
-    return Icon(
-      iconData,
-      size: 46,
-      color: Theme.of(context).colorScheme.onSurface,
+    return FrostedActionButton(
+      icon: Icon(
+        iconData,
+        size: 46,
+        color: Theme.of(context).colorScheme.onSurface,
+      ),
+      title: title,
+      onTap: () {
+        // Close drawer if in compact mode
+        if (compact) {
+          Navigator.of(context).pop();
+        }
+        onTap();
+      },
+    );
+  }
+
+  /// Shows a dialog prompting the user to confirm
+  /// how they would like to proceed.
+  Future<void> _contactMeConfirmationDialog({
+    required BuildContext context,
+  }) async {
+    await showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text(Strings.contactMe),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              const Text(Strings.contactMeMessage),
+              Tooltip(
+                message: Strings.copyToClipboard,
+                child: TextButton(
+                  onPressed: () {
+                    Clipboard.setData(
+                        const ClipboardData(text: Strings.contactEmail));
+                    Navigator.of(context).pop();
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(
+                        content: Text(Strings.emailCopied),
+                      ),
+                    );
+                  },
+                  child: const Text(
+                    Strings.contactEmail,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          actions: <Widget>[
+            SimpleDialogOption(
+              onPressed: () {
+                Navigator.of(context).pop();
+                RedirectHandler.openUrl(Urls.openEmail);
+              },
+              child: Text(Strings.openEmailApp.toUpperCase()),
+            ),
+            SimpleDialogOption(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: Text(Strings.close.toUpperCase()),
+            ),
+          ],
+        );
+      },
     );
   }
 
@@ -43,29 +112,29 @@ class ActionMenu extends StatelessWidget {
             ),
             childrenDelegate: SliverChildListDelegate(
               <Widget>[
-                FrostedActionButton(
-                  icon: _icon(
-                    context: context,
-                    iconData: Icons.quick_contacts_mail_rounded,
-                  ),
+                _action(
+                  context: context,
+                  title: Strings.about,
+                  iconData: Icons.help,
+                  onTap: () => RedirectHandler.openUrl(Urls.projectReadme),
+                ),
+                _action(
+                  context: context,
+                  iconData: Icons.quick_contacts_mail_rounded,
                   title: Strings.contactMe,
-                  onTap: () => RedirectHandler.openUrl(Urls.contactEmail),
+                  onTap: () => _contactMeConfirmationDialog(context: context),
                 ),
-                FrostedActionButton(
-                  icon: _icon(
-                    context: context,
-                    iconData: Icons.bug_report_rounded,
-                  ),
-                  title: Strings.reportAnIssue,
-                  onTap: () => RedirectHandler.openUrl(Urls.projectIssues),
-                ),
-                FrostedActionButton(
-                  icon: _icon(
-                    context: context,
-                    iconData: Icons.code,
-                  ),
+                _action(
+                  context: context,
+                  iconData: Icons.code,
                   title: Strings.viewSourceCode,
                   onTap: () => RedirectHandler.openUrl(Urls.projectSourceCode),
+                ),
+                _action(
+                  context: context,
+                  iconData: Icons.bug_report_rounded,
+                  title: Strings.reportAnIssue,
+                  onTap: () => RedirectHandler.openUrl(Urls.projectIssues),
                 ),
               ],
             ),
