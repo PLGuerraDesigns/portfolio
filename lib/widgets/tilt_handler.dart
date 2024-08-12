@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:math' as math;
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_tilt/flutter_tilt.dart';
 
@@ -86,6 +87,12 @@ class _TiltHandlerState extends State<TiltHandler>
 
   @override
   Widget build(BuildContext context) {
+    // Omit the tilt effect on mobile platforms.
+    if (defaultTargetPlatform == TargetPlatform.android ||
+        defaultTargetPlatform == TargetPlatform.iOS) {
+      return widget.child;
+    }
+
     return Tilt(
       tiltStreamController: tiltStreamController,
       tiltConfig: TiltConfig(

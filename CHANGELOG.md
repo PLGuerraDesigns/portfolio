@@ -1,3 +1,7 @@
+## 2.6.1
+
+- REVISED: Disabled the tilt effect on mobile devices.
+
 ## 2.6.0
 
 - NEW: Added a tilt effect `TiltHandler` to the floating thumbnail and project thumbnail.
