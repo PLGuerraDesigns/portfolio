@@ -1,3 +1,7 @@
+## 2.6.3
+
+- REVISED: Added a description to the Professional Experience and Personal Projects menu sections.
+
 ## 2.6.2
 
 - REVISED: Added a confirmation dialog to the `Contact Me` button in the action menu.

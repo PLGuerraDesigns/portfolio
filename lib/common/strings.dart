@@ -40,9 +40,11 @@ class Strings {
   static const String about = 'About';
   static const String viewSourceCode = 'View Source Code';
   static const String professionalExperiences = 'Professional Experiences';
-  static const String previousProject = 'Previous Project';
-  static const String nextProject = 'Next Project';
+  static const String professionalExperiencesExplained =
+      'These are projects I have undertaken professionally, whether as a full-time, part-time employee, or contractor.';
   static const String personalProjects = 'Personal Projects';
+  static const String personalProjectsExplained =
+      'These are projects I’ve undertaken both in my free time and during my studies to explore new technologies, engineering principles, and artistic expressions.';
   static const String contactMe = 'Contact Me';
   static const String reportAnIssue = 'Report an Issue';
   static const String moreInfo = 'More Info';

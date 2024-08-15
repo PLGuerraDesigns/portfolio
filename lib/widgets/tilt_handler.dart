@@ -56,14 +56,6 @@ class _TiltHandlerState extends State<TiltHandler>
     aroundAnimationController.repeat();
   }
 
-  /// Stop all animations.
-  void stopAllAnimation() {
-    aroundAnimationController.stop();
-    tiltStreamController.add(
-      const TiltStreamModel(position: Offset.zero, gestureUse: false),
-    );
-  }
-
   @override
   void initState() {
     super.initState();
@@ -80,8 +72,10 @@ class _TiltHandlerState extends State<TiltHandler>
 
   @override
   void dispose() {
+    if (widget.selfTilt) {
+      aroundAnimationController.dispose();
+    }
     tiltStreamController.close();
-    aroundAnimationController.dispose();
     super.dispose();
   }
 
