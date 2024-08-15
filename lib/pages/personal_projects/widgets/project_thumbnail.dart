@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../../common/routing/routes.dart';
+import '../../../models/project.dart';
 import '../../../widgets/hover_scale_handler.dart';
 import '../../../widgets/tilt_handler.dart';
 
@@ -8,39 +11,30 @@ import '../../../widgets/tilt_handler.dart';
 class ProjectThumbnail extends StatefulWidget {
   const ProjectThumbnail({
     super.key,
-    required this.title,
-    required this.subtitle,
-    required this.imagePath,
-    required this.onTap,
-    this.compact = false,
+    required this.project,
   });
 
-  /// the title of the project.
-  final String title;
-
-  /// The subtitle of the project.
-  final String subtitle;
-
-  /// The path to the image.
-  final String imagePath;
-
-  /// The action to perform when the thumbnail is tapped.
-  final Function()? onTap;
-
-  /// Whether the thumbnail should be compact.
-  final bool compact;
+  /// The project to display.
+  final Project project;
 
   @override
   State<ProjectThumbnail> createState() => _ProjectThumbnailState();
 }
 
 class _ProjectThumbnailState extends State<ProjectThumbnail> {
+  /// The project to display.
+  Project get project => widget.project;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: HoverScaleHandler(
-        onTap: widget.onTap,
+        onTap: () => context.go(
+          Routes.projectDetails(
+            titleAsPath: project.titleAsPath,
+          ),
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
@@ -51,7 +45,7 @@ class _ProjectThumbnailState extends State<ProjectThumbnail> {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12),
                   child: Image.asset(
-                    widget.imagePath,
+                    project.thumbnailPath,
                     fit: BoxFit.cover,
                     errorBuilder: (BuildContext context, Object error,
                         StackTrace? stackTrace) {
@@ -70,18 +64,14 @@ class _ProjectThumbnailState extends State<ProjectThumbnail> {
             ),
             const SizedBox(height: 8.0),
             Text(
-              widget.title,
-              style: widget.compact
-                  ? Theme.of(context).textTheme.bodyMedium
-                  : Theme.of(context).textTheme.titleMedium,
+              project.title,
+              style: Theme.of(context).textTheme.titleMedium,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),
             Text(
-              widget.subtitle,
-              style: widget.compact
-                  ? Theme.of(context).textTheme.labelMedium
-                  : Theme.of(context).textTheme.bodyMedium,
+              project.subtitle,
+              style: Theme.of(context).textTheme.bodyMedium,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
             ),

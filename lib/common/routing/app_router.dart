@@ -8,8 +8,8 @@ import '../../pages/details/details.screen.dart';
 import '../../pages/error.dart';
 import '../../pages/home/home.screen.dart';
 import '../../pages/loading.dart';
-import '../../pages/personal_projects/projects_menu.screen.dart';
-import '../../pages/professional_experiences/prof_exp_menu.screen.dart';
+import '../../pages/personal_projects/projects_menu.dart';
+import '../../pages/professional_exp_menu.dart';
 import 'routes.dart';
 
 /// A class that configures the app's routing.
@@ -61,7 +61,7 @@ class AppRouter {
             GoRoute(
               path: Routes.professional,
               builder: (BuildContext context, GoRouterState state) =>
-                  const ProfessionalExpMenuScreen(),
+                  const ProfessionalExperienceMenuScreen(),
               routes: <GoRoute>[
                 GoRoute(
                     path: '${Routes.details}/:title',

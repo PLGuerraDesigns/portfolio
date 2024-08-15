@@ -22,7 +22,7 @@ class AppVersion extends StatelessWidget {
       builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
           return TextButton(
-            onPressed: () => RedirectHandler.openUrl(Urls.changelog),
+            onPressed: () => RedirectHandler.openUrl(Urls.projectChangelog),
             child: Text(
               snapshot.data!,
               style: Theme.of(context).textTheme.labelSmall!.copyWith(

@@ -4,6 +4,7 @@ class Strings {
 
   static const String currentLocation = 'VA, USA';
   static const String lastUpdated = 'Updated AUG 2024';
+  static const String contactEmail = 'plguerra@outlook.com';
 
   static const List<String> headerSubtitles = <String>[
     'Software Engineer  •  Innovator  •  Technologist',
@@ -36,11 +37,14 @@ class Strings {
   static const String prev = 'Prev.';
   static const String next = 'Next';
   static const String viewAllMedia = 'View all Media';
+  static const String about = 'About';
   static const String viewSourceCode = 'View Source Code';
   static const String professionalExperiences = 'Professional Experiences';
-  static const String previousProject = 'Previous Project';
-  static const String nextProject = 'Next Project';
+  static const String professionalExperiencesExplained =
+      'These are projects I have undertaken professionally, whether as a full-time, part-time employee, or contractor.';
   static const String personalProjects = 'Personal Projects';
+  static const String personalProjectsExplained =
+      'These are projects I’ve undertaken both in my free time and during my studies to explore new technologies, engineering principles, and artistic expressions.';
   static const String contactMe = 'Contact Me';
   static const String reportAnIssue = 'Report an Issue';
   static const String moreInfo = 'More Info';
@@ -55,4 +59,15 @@ class Strings {
   static const String selectACategoryToViewTheEntries =
       'Select a category to view the entries.';
   static const String expected = 'Expected';
+  static const String contactMeMessage =
+      'Thank you for your interest in contacting me, please feel free to reach out to me via email at:';
+  static const String copyToClipboard = 'Copy to Clipboard';
+  static const String emailCopied = 'Email copied to clipboard';
+  static const String openEmailApp = 'Open Email App';
+  static const String close = 'Close';
+
+  static const String software = 'Software';
+  static const String electronics = 'Electronics';
+  static const String threeDPrinting = '3D Printing';
+  static const String academic = 'Academic';
 }
