@@ -1,3 +1,7 @@
+## 2.7.0
+
+- NEW: Added a filter menu to the Personal Projects section.
+
 ## 2.6.3
 
 - REVISED: Added a description to the Professional Experience and Personal Projects menu sections.

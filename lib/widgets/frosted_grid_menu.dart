@@ -16,6 +16,7 @@ class FrostedGridMenu extends StatelessWidget {
     this.mainAxisSpacing = 0.0,
     this.crossAxisCount = 3,
     this.aspectRatio = 1.0,
+    this.subtitle,
   });
 
   /// The title of the grid menu.
@@ -38,6 +39,9 @@ class FrostedGridMenu extends StatelessWidget {
 
   /// The aspect ratio.
   final double aspectRatio;
+
+  /// The subtitle widget of the grid menu.
+  final Widget? subtitle;
 
   /// Returns the header of the grid menu.
   Widget _header({
@@ -112,7 +116,21 @@ class FrostedGridMenu extends StatelessWidget {
                         ? const EdgeInsets.only(right: 8)
                         : EdgeInsets.zero,
                     controller: scrollController,
-                    child: _gridView(),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        if (subtitle != null)
+                          Padding(
+                            padding: const EdgeInsets.only(
+                              left: 16,
+                              right: 16,
+                              top: 8,
+                            ),
+                            child: subtitle,
+                          ),
+                        _gridView(),
+                      ],
+                    ),
                   ),
                 ),
               )

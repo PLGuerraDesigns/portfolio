@@ -7,6 +7,7 @@ import '../../models/app_state.dart';
 import '../../models/project.dart';
 import '../../widgets/frosted_grid_menu.dart';
 import '../../widgets/generic_app_bar.dart';
+import 'widgets/filter_menu.dart';
 import 'widgets/project_thumbnail.dart';
 
 /// A screen that displays a collection of personal projects.
@@ -19,7 +20,41 @@ class ProjectsMenuScreen extends StatefulWidget {
 
 class _ProjectsMenuScreenState extends State<ProjectsMenuScreen> {
   /// The controller for the scroll view.
-  static final ScrollController _scrollController = ScrollController();
+  static final ScrollController _pageScrollController = ScrollController();
+
+  /// The controller for the filter menu.
+  static final ScrollController _filterScrollController = ScrollController();
+
+  /// Returns the filter menu.
+  Widget _filterMenu({
+    required List<String> filterOptions,
+    required List<String> selectedFilters,
+    required Function(String filter) onToggleFilter,
+    required int itemCount,
+    required int totalItemCount,
+  }) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        FilterMenu(
+          filterOptions: filterOptions,
+          selectedFilters: selectedFilters,
+          onToggleFilter: onToggleFilter,
+          scrollController: _filterScrollController,
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 8.0),
+          child: Text(
+            '$itemCount of $totalItemCount',
+            style: Theme.of(context).textTheme.labelSmall!.copyWith(
+                  color:
+                      Theme.of(context).colorScheme.onSurface.withOpacity(0.5),
+                ),
+          ),
+        ),
+      ],
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +80,7 @@ class _ProjectsMenuScreenState extends State<ProjectsMenuScreen> {
                     (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
                   List<Widget>? children;
                   if (snapshot.connectionState == ConnectionState.done) {
-                    children = appState.projects
+                    children = appState.filteredProjects
                         .map(
                           (Project project) => ProjectThumbnail(
                             project: project,
@@ -56,7 +91,7 @@ class _ProjectsMenuScreenState extends State<ProjectsMenuScreen> {
 
                   return FrostedGridMenu(
                     title: Strings.personalProjectsExplained,
-                    scrollController: _scrollController,
+                    scrollController: _pageScrollController,
                     crossAxisCount: MediaQuery.of(context).orientation ==
                             Orientation.portrait
                         ? 1
@@ -65,6 +100,13 @@ class _ProjectsMenuScreenState extends State<ProjectsMenuScreen> {
                             Orientation.portrait
                         ? 1.175
                         : 1.0,
+                    subtitle: _filterMenu(
+                      filterOptions: appState.projectFilterOptions,
+                      selectedFilters: appState.selectedProjectFilters,
+                      onToggleFilter: appState.toggleSelectedProjectFilter,
+                      itemCount: appState.filteredProjects.length,
+                      totalItemCount: appState.projects.length,
+                    ),
                     children: children,
                   );
                 },

@@ -65,4 +65,9 @@ class Strings {
   static const String emailCopied = 'Email copied to clipboard';
   static const String openEmailApp = 'Open Email App';
   static const String close = 'Close';
+
+  static const String software = 'Software';
+  static const String electronics = 'Electronics';
+  static const String threeDPrinting = '3D Printing';
+  static const String academic = 'Academic';
 }

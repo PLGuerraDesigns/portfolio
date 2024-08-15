@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 
 import '../common/asset_paths.dart';
 import '../common/routing/routes.dart';
+import '../common/strings.dart';
 import 'education.dart';
 import 'professional_experience.dart';
 import 'project.dart';
@@ -22,6 +23,37 @@ class AppState extends ChangeNotifier {
   final GlobalKey<NavigatorState> _navigatorKey = GlobalKey<NavigatorState>();
   GlobalKey<NavigatorState> get navigatorKey => _navigatorKey;
 
+  /// The list of project filter options.
+  final List<String> projectFilterOptions = <String>[
+    Strings.software,
+    Strings.electronics,
+    Strings.threeDPrinting,
+    Strings.academic,
+  ];
+
+  /// The list of selected project filters.
+  List<String> get selectedProjectFilters => _selectedProjectFilters;
+  final List<String> _selectedProjectFilters = <String>[
+    Strings.software,
+    Strings.electronics,
+    Strings.threeDPrinting,
+    Strings.academic,
+  ];
+
+  /// Toggles the selected project filter.
+  void toggleSelectedProjectFilter(String filter) {
+    if (selectedProjectFilters.length == projectFilterOptions.length) {
+      _selectedProjectFilters.clear();
+    }
+
+    if (_selectedProjectFilters.contains(filter)) {
+      _selectedProjectFilters.remove(filter);
+    } else {
+      _selectedProjectFilters.add(filter);
+    }
+    notifyListeners();
+  }
+
   /// Whether the project data has been loaded.
   bool _projectsLoaded = false;
   bool get projectsLoaded => _projectsLoaded;
@@ -29,6 +61,20 @@ class AppState extends ChangeNotifier {
   /// The list of projects.
   List<Project> get projects => _projects;
   List<Project> _projects = <Project>[];
+
+  /// The list of filtered projects.
+  List<Project> get filteredProjects {
+    final List<Project> filteredProjects = <Project>[];
+    for (final Project project in _projects) {
+      for (final String filter in selectedProjectFilters) {
+        if (project.tags.contains(filter)) {
+          filteredProjects.add(project);
+          break;
+        }
+      }
+    }
+    return filteredProjects;
+  }
 
   /// Returns the project for the given title in path format.
   Project getProjectByTitlePath(String titleAsPath) {
@@ -101,14 +147,16 @@ class AppState extends ChangeNotifier {
     await rootBundle.loadString(AssetPaths.projectsJsonData).then(
       (String data) {
         final dynamic jsonResult = json.decode(data);
-        for (final dynamic project in jsonResult as List<dynamic>) {
-          _projects.add(Project.fromJson(project as Map<String, dynamic>));
+        for (final dynamic projectAsJson in jsonResult as List<dynamic>) {
+          _projects
+              .add(Project.fromJson(projectAsJson as Map<String, dynamic>));
         }
       },
     );
     _projects.sort((Project a, Project b) {
       return b.startDate.compareTo(a.startDate);
     });
+
     _projectsLoaded = true;
   }
 
