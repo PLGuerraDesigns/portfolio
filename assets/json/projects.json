@@ -4,7 +4,6 @@
     "subtitle": "For on-the-go Sim Racing",
     "startDate": "2024-04-14T00:00:00Z",
     "finalDate": "2024-04-26T00:00:00Z",
-    "description": "Designed for mobile sim racing, the AMG GT3/GT4 Mobile Sim Wheel kit is a completely 3D-printable steering wheel. It is a remix of one of my earlier and highly popular projects, the AMG GT3 Wheel Kit for Thrustmaster, now optimized for mobile use. The AMG inspired wheel has been shrunk down to 230mm x 130mm, with built in grip handles and slots for attaching a phone mount. The wheel supports mobile games using tilt to steer and tap to accelerate or break.\n\nThe kit itself contains all STL files for the wheel, phone mount, and an assembly manual. Total print time can be completed in under 15 hours (varies based on print settings and materials), while assembly time takes approximately 30 minutes.\n\nVersion 2 of the wheel was designed to more closely resemble the AMG GT3 wheel. The handles were updated to match the actual style and 'fidget' buttons were added for a more realistic look and feel. Several spring mechanisms were tested with different materials to allow for fully 3D-printable parts that can be assembled without the need for additional hardware. The phone clamp was also updated to included thumb cutouts for easier access to the screen during gameplay.",
     "media": [
       {
         "type": "youTubeVideo",
@@ -114,7 +113,6 @@
     "subtitle": "A GMU-Themed Lottery Web App",
     "startDate": "2023-09-03T00:00:00Z",
     "finalDate": "2023-11-30T00:00:00Z",
-    "description": "The SWE 632 Lottery Web App, developed for GMU's User Interface Design and Development course, offers an immersive gaming experience with Wheel of Fortune and Scratch Cards, allowing players to earn virtual currency and unlock GMU merchandise. Created in collaboration with Afrina Sharmin and Suzzana Rafi, this project highlights our ability to implement the latest technologies and best practices in user interface design. While it's primarily an academic project, the app is fully functional, exemplifying our team's expertise in developing engaging and user-friendly web applications. We invite you to explore and engage with the app, experiencing our dedication to quality design firsthand.",
     "media": [
       {
         "type": "localImage",
@@ -229,7 +227,6 @@
     "subtitle": "Resume Builder Progressive Web App",
     "startDate": "2022-10-06T00:00:00Z",
     "finalDate": "2023-10-13T00:00:00Z",
-    "description": "The Flutter Resume Builder is a user-friendly, open-source progressive web application designed to simplify creating professional resumes. This innovative tool enables users to effortlessly build, edit, and customize their resumes, ensuring they are polished and impactful. With the ability to create, edit, download in both PDF and JSON formats, and import existing resumes, the Flutter Resume Builder offers a comprehensive solution for individuals seeking to craft and maintain their professional documents with ease. Whether you are a job seeker looking to streamline your resume-building process or a developer interested in the project, this platform provides an intuitive and accessible tool for crafting compelling resumes.",
     "media": [
       {
         "type": "localImage",
@@ -294,7 +291,6 @@
     "subtitle": "Blokus Multiplayer Web Game",
     "startDate": "2023-04-15T00:00:00Z",
     "finalDate": "2023-05-13T00:00:00Z",
-    "description": "Introducing a real-time multiplayer Blokus game project by Charles Tucker and Pablo L. Guerra, designed using Flutter and Supabase. It offers players the opportunity to engage in multiplayer gaming action with a prototype that utilizes Supabase as the backend and Flame as the game engine. This project was developed as the final project for GMU's ISA 681 class and is not a completed product. Nevertheless, it's entirely usable and serves as a promising foundation for a future real-time multiplayer gaming experience. Explore and play the game to get a firsthand look at its potential. While this project is not currently under active development, it stands as a proof of concept and learning resource, welcoming other developers to build upon its foundation.",
     "media": [
       {
         "type": "localImage",
@@ -366,7 +362,6 @@
     "subtitle": "A 3D-Printable Wheel Kit",
     "startDate": "2018-10-01T00:00:00Z",
     "finalDate": "2018-10-01T00:00:00Z",
-    "description": "The goal of the AMG GT3 Wheel project was to design and build a functional, 3D-printed replica of the Mercedes Benz AMG GT3 steering wheel for use in Sim Racing.\n\nAn Arduino Nano powers the wheel and features a thumb-slide joystick, eight pushbuttons, and a pair of paddle shifters. The wheel is directly compatible with the Thrustmaster ecosystem.\n\nYou can find the 3D-printable files on Thingiverse along with an assembly manual, circuit files, and Arduino code.",
     "media": [
       {
         "type": "youTubeVideo",
@@ -565,7 +560,6 @@
     "subtitle": "3-in-1 Charging Station",
     "startDate": "2019-01-01T00:00:00Z",
     "finalDate": "2019-01-01T00:00:00Z",
-    "description": "The Apple Charging Station, initially sketched in 2016, was later revived and given as a gift to a friend.\n\nRedesigned in Autodesk Fusion 360, printed using wood-infused PLA, and finished with a wood stain. Supports charging of an iPhone, Apple Watch, and the original AirPods. The charging modules are interchangeable to support different product dimensions.",
     "media": [
       {
         "type": "localImage",
@@ -627,7 +621,6 @@
     "subtitle": "Codemaster's F1 2019 Companion App",
     "startDate": "2019-10-01T00:00:00Z",
     "finalDate": "2019-12-01T00:00:00Z",
-    "description": "F1 Sim Engineer, co-developed with Viktor Soendergaard for a mobile programming class at the University of Arkansas, is a companion app for the F1 2019 sim racing game.\n\nThe app is written in Java and uses the UDP protocol to communicate with the gaming device to receive and display live telemetry data sent from the F1 2019 game. The app obtains various data from the game, including event information, race details, number of laps, number of participants, weather conditions, vehicle setup, vehicle status, and telemetry. This information is displayed live during the race is saved to the local database for later review.",
     "media": [
       {
         "type": "localImage",
@@ -668,7 +661,6 @@
     "subtitle": "Nintendo Switch Speaker Attachment",
     "startDate": "2019-02-01T00:00:00Z",
     "finalDate": "2019-02-01T00:00:00Z",
-    "description": "The goal of the Nintendo Switch speaker project was to design and build a speaker attachment that would be louder than the Switch's built-in speakers.\n\nThe attachment features a 3.5mm audio plug, dual mini oval speakers, a rechargeable LiPo battery, a micro USB charging port, sliding power switch, power LED, and charging status LED.",
     "media": [
       {
         "type": "localImage",
@@ -744,7 +736,6 @@
     "subtitle": "Homemade Sim Racing Rig",
     "startDate": "2015-06-01T00:00:00Z",
     "finalDate": "2018-01-01T00:00:00Z",
-    "description": "The goal of Project LeMans was to build a relatively low-budget sim racing rig out of easy-to-access parts and materials. It needed to have the basic functionality of a sim racing wheel and pedal set.\n\nIt features a Teensy for the brains, emulating a gaming controller and supporting input from the steering wheel's rotation, its two buttons, pair of paddle shifters, as well as the throttle, brakes, and clutch located on the pedal base.",
     "media": [
       {
         "type": "localImage",
@@ -904,7 +895,6 @@
     "subtitle": "Concept Self Destructing Storage Device",
     "startDate": "2018-04-01T00:00:00Z",
     "finalDate": "2018-05-01T00:00:00Z",
-    "description": "The goal of the SafeDrive MK1 project was to design a secure storage device that unlocked using biometric authentication and is capable of self-destructing.\n\nIt features an Arduino micro-controller, an RGB backlight LCD Panel, a TTL fingerprint scanner, an interchangeable USB flash drive slot, and a USBKill device. If the device recognizes a fingerprint, it will provide access to the internal USB flash drive. However, after ten failed attempts, the Arduino enables the USBKill device, releasing close to 200 negative volts (in the reverse direction), destroying the internal drive's data lines and any unprotected connected devices.",
     "media": [
       {
         "type": "localImage",
@@ -1006,7 +996,6 @@
     "subtitle": "Gyroscopic Head Tracking Device",
     "startDate": "2018-02-01T00:00:00Z",
     "finalDate": "2018-04-01T00:00:00Z",
-    "description": "The goal of the Xbox Head Tracking project was to design an Xbox compatible head tracking device to track the user's head movements and move the in-game camera.\n\nThe circuit comprises an Arduino microcontroller that reads incoming data from an MPU-6050 (three-axis accelerometer) to track the user's head movements and then controls a digital potentiometer. The output of the digital potentiometer connects to wires added on a modified after-market Xbox controller. The added wires lead directly to the game controller's internal circuit board input for the analog thumbsticks.\n\nYou can find the build guide on Instructables.com.",
     "media": [
       {
         "type": "youTubeVideo",
@@ -1079,7 +1068,6 @@
     "subtitle": "Calculator App for Android",
     "startDate": "2019-09-01T00:00:00Z",
     "finalDate": "2019-09-01T00:00:00Z",
-    "description": "Android Calculator is a calculator app developed for a mobile programming class assignment at the University of Arkansas.\n\nThe app was designed in Photoshop using popular calculator apps for design reference, then programmed in Java using Android Studio.",
     "media": [
       {
         "type": "localImage",
@@ -1118,7 +1106,6 @@
     "subtitle": "Programmable Macro Pad (HID)",
     "startDate": "2019-04-01T00:00:00Z",
     "finalDate": "2019-04-01T00:00:00Z",
-    "description": "Macro Pad is a programmable interface used for executing custom macros (button combinations or input sequences). It allows for extended control and execution of complex commands with a single button press.\n\nThe device features an Arduino Micro, 16 Cherry MX switches, a rotatable and pressable knob, and a micro USB port for connecting.",
     "media": [
       {
         "type": "localImage",
@@ -1158,7 +1145,6 @@
     "subtitle": "Smart LED Wall Decor",
     "startDate": "2019-02-01T00:00:00Z",
     "finalDate": "2019-02-01T00:00:00Z",
-    "description": "The LED wall decor was made as an art piece for a friend. The signs' colors and patterns are controllable using the Blynk app.\n\nIt features an Arduino MKR1000 controlling eight RGB LEDs and connects to the internet using its onboard WiFi module. The LED cover plate is interchangeable using magnets. A USB micro cable is used for continuous power, but the device can also be powered using a 3.7V LiPo battery and charged with the MKR's onboard charging circuit. One of the LEDs was not working at the time the photos were taken.",
     "media": [
       {
         "type": "localImage",
@@ -1200,7 +1186,6 @@
     "subtitle": "Bionic Arm and Input Glove",
     "startDate": "2012-09-01T00:00:00Z",
     "finalDate": "2013-01-01T00:00:00Z",
-    "description": "The Handroid project was a science fair submission for my junior year of high school. The idea was inspired by arms developed in medical fields, where mechanical arms can mimic finger movements.\n\nThe shape of the arm was made using foam, cardboard, pieces of wood, and fiberglass. Rubber tubes are used for the fingers with incisions made at the bending points. The fingertips are each connected to a fishing line, which routes internally through the finger and arm, then attaches to the horn of a servo motor. An Arduino microcontroller controls the servo motors and receives input from a modified glove with flex sensors attached to each finger. When the input glove is worn, the flex sensors record the amount of bending of each finger which the Arduino uses to determine the degree of rotation for each servo motor to replicate the users' finger movements.",
     "media": [
       {
         "type": "localImage",

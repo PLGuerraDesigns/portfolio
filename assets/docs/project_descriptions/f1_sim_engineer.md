@@ -1,0 +1,3 @@
+F1 Sim Engineer, co-developed with Viktor Soendergaard for a mobile programming class at the University of Arkansas, is a companion app for the F1 2019 sim racing game.
+
+The app is written in Java and uses the UDP protocol to communicate with the gaming device to receive and display live telemetry data sent from the F1 2019 game. The app obtains various data from the game, including event information, race details, number of laps, number of participants, weather conditions, vehicle setup, vehicle status, and telemetry. This information is displayed live during the race is saved to the local database for later review.

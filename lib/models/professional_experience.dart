@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 import 'package:unorm_dart/unorm_dart.dart' as unorm;
 
@@ -13,15 +14,14 @@ import 'media_item.dart';
 class ProfessionalExperience {
   ProfessionalExperience({
     required this.company,
-    required this.folderName,
+    required String source,
     required this.role,
     required this.location,
     required this.startDate,
     required this.finalDate,
     required this.mediaItems,
-    required this.description,
     required this.externalLinks,
-  });
+  }) : _source = source;
 
   /// Creates a [ProfessionalExperience] from a JSON object.
   factory ProfessionalExperience.fromJson(Map<String, dynamic> json) {
@@ -36,16 +36,15 @@ class ProfessionalExperience {
       if (mediaItem.type == MediaType.localImage ||
           mediaItem.type == MediaType.localVideo) {
         mediaItems[i].source =
-            'assets/images/professional/${json['folderName'].toString().toLowerCase().replaceAll(' ', '_')}/${mediaItem.source}';
+            'assets/images/professional/${json['source'].toString().toLowerCase().replaceAll(' ', '_')}/${mediaItem.source}';
       }
     }
 
     return ProfessionalExperience(
       company: json['company'].toString(),
-      folderName: json['folderName'].toString(),
+      source: json['source'].toString(),
       role: json['role'].toString(),
       location: json['location'].toString(),
-      description: json['description'].toString(),
       startDate: DateTime.parse(json['startDate'].toString()),
       mediaItems: mediaItems,
       finalDate: json['endDate'] == null
@@ -63,8 +62,8 @@ class ProfessionalExperience {
   /// The name of the company.
   final String company;
 
-  /// The name of the folder.
-  final String folderName;
+  /// The source of the professional experience.
+  final String _source;
 
   /// The name of the company and role as a path
   String get titleAsPath => unorm.nfkc(
@@ -83,7 +82,8 @@ class ProfessionalExperience {
   final DateTime? finalDate;
 
   /// The description of the experience.
-  final String description;
+  String get descriptionSource =>
+      'assets/docs/professional_descriptions/${_source.toLowerCase().replaceAll(' ', '_')}.md';
 
   /// Relevant external links.
   final List<Map<String, String>> externalLinks;
@@ -95,7 +95,7 @@ class ProfessionalExperience {
   int get totalMediaCount => mediaItems.length;
 
   /// The base path for the media.
-  String get baseMediaPath => 'assets/images/professional/$folderName/';
+  String get baseMediaPath => 'assets/images/professional/$_source/';
 
   /// The path for the thumbnail.
   String get thumbnailPath => '${baseMediaPath}thumbnail.webp';
@@ -138,7 +138,7 @@ class ProfessionalExperience {
         subtitle: role,
         appBarTitle: Strings.professionalExperiences,
         logoPath: logoPath,
-        description: description,
+        descriptionSource: descriptionSource,
         externalLinks: externalLinks,
         startDate: startDateString,
         endDate: finalDateString,

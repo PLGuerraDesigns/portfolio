@@ -8,6 +8,7 @@ import 'details.controller.dart';
 import 'details.model.dart';
 import 'widgets/app_bar_actions.dart';
 import 'widgets/info_header.dart';
+import 'widgets/markdown_view.dart';
 import 'widgets/media_player/multi_media_player.controller.dart';
 import 'widgets/media_player/multi_media_player.dart';
 import 'widgets/more_info.dart';
@@ -71,10 +72,8 @@ class DetailsScreenState extends State<DetailsScreen> {
                               compact: true,
                             ),
                             const Divider(height: 32),
-                            SelectableText(
-                              controller.description,
-                              style: Theme.of(context).textTheme.bodyMedium,
-                              textAlign: TextAlign.justify,
+                            MarkdownView(
+                              markdownData: controller.description,
                             ),
                             if (controller.externalLinks.isNotEmpty)
                               MoreInfo(externalLinks: controller.externalLinks),
@@ -153,9 +152,8 @@ class DetailsScreenState extends State<DetailsScreen> {
                         compact: false,
                       ),
                       const Divider(height: 32),
-                      SelectableText(
-                        controller.description,
-                        style: Theme.of(context).textTheme.bodyMedium,
+                      MarkdownView(
+                        markdownData: controller.description,
                       ),
                       if (controller.externalLinks.isNotEmpty)
                         MoreInfo(externalLinks: controller.externalLinks),
