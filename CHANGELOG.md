@@ -1,3 +1,7 @@
+## 2.8.0
+
+- NEW: The `Details` page now supports Markdown rendering for the body text.
+
 ## 2.7.0
 
 - NEW: Added a filter menu to the Personal Projects section.

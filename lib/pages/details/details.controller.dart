@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../common/routing/routes.dart';
@@ -20,6 +21,7 @@ class DetailsController extends ChangeNotifier {
       isMediaBrowserOpen: _appState.mediaBrowserOpen,
       updateMediaBrowserVisibilityState: _appState.toggleMediaBrowserVisibility,
     );
+    _loadMarkdownData();
   }
 
   /// The application state.
@@ -41,7 +43,7 @@ class DetailsController extends ChangeNotifier {
   String get title => _details.title;
 
   /// The description of the project/experience.
-  String get description => _details.description;
+  String description = '';
 
   /// The external links to display.
   List<Map<String, String>> get externalLinks => _details.externalLinks;
@@ -54,6 +56,16 @@ class DetailsController extends ChangeNotifier {
 
   /// Whether the media browser is open.
   bool get mediaBrowserOpen => _appState.mediaBrowserOpen;
+
+  Future<void> _loadMarkdownData() async {
+    try {
+      description = await rootBundle.loadString(_details.descriptionSource);
+    } catch (e) {
+      debugPrint(e.toString());
+      description = 'Description not available.';
+    }
+    notifyListeners();
+  }
 
   /// The callback for navigating to the previous project/experience.
   void onPreviousPressed(BuildContext context) {

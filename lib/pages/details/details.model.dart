@@ -6,7 +6,7 @@ class Details {
     required this.title,
     required this.titleAsPath,
     required this.subtitle,
-    required this.description,
+    required this.descriptionSource,
     required this.mediaItems,
     required this.tags,
     required this.externalLinks,
@@ -36,8 +36,8 @@ class Details {
   /// The end date of the project/experience.
   final String? endDate;
 
-  /// The description of the project/experience.
-  final String description;
+  /// The source of the description.
+  final String descriptionSource;
 
   /// The list of media items to display.
   final List<MediaItem> mediaItems;

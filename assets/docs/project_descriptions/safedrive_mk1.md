@@ -1,0 +1,3 @@
+The goal of the SafeDrive MK1 project was to design a secure storage device that unlocked using biometric authentication and is capable of self-destructing.
+
+It features an Arduino micro-controller, an RGB backlight LCD Panel, a TTL fingerprint scanner, an interchangeable USB flash drive slot, and a USBKill device. If the device recognizes a fingerprint, it will provide access to the internal USB flash drive. However, after ten failed attempts, the Arduino enables the USBKill device, releasing close to 200 negative volts (in the reverse direction), destroying the internal drive's data lines and any unprotected connected devices.

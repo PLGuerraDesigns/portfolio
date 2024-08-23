@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 
 import '../common/enums.dart';
@@ -13,7 +14,6 @@ class Project {
   Project({
     required this.title,
     required this.subtitle,
-    required this.description,
     required this.startDate,
     required this.finalDate,
     required this.externalLinks,
@@ -41,7 +41,6 @@ class Project {
     return Project(
       title: json['title'].toString(),
       subtitle: json['subtitle'].toString(),
-      description: json['description'].toString(),
       startDate: DateTime.parse(json['startDate'].toString()),
       finalDate: DateTime.parse(json['finalDate'].toString()),
       mediaItems: mediaItems,
@@ -61,6 +60,13 @@ class Project {
   /// The subtitle of the project.
   final String subtitle;
 
+  /// The source of the professional experience.
+  String get _source => title.toLowerCase().replaceAll(' ', '_');
+
+  /// The source of the project.
+  String get descriptionSource =>
+      'assets/docs/project_descriptions/$_source.md';
+
   /// The title of the project as a path.
   String get titleAsPath => title.toLowerCase().replaceAll(' ', '-');
 
@@ -69,9 +75,6 @@ class Project {
 
   /// The final date of the project.
   final DateTime finalDate;
-
-  /// The description of the project.
-  final String description;
 
   /// Relevant external links.
   final List<Map<String, String>> externalLinks;
@@ -86,8 +89,7 @@ class Project {
   int get totalMediaCount => mediaItems.length;
 
   /// The base path for the media.
-  String get baseMediaPath =>
-      'assets/images/personal/${title.toLowerCase().replaceAll(' ', '_')}/';
+  String get baseMediaPath => 'assets/images/personal/$_source/';
 
   /// The path for the thumbnail.
   String get thumbnailPath => '${baseMediaPath}thumbnail.webp';
@@ -121,7 +123,7 @@ class Project {
         titleAsPath: titleAsPath,
         appBarTitle: Strings.personalProjects,
         subtitle: subtitle,
-        description: description,
+        descriptionSource: descriptionSource,
         externalLinks: externalLinks,
         startDate: startDateString,
         endDate: finalDateString,
