@@ -86,16 +86,7 @@
         "source": "image_8.webp"
       }
     ],
-    "externalLinks": [
-      {
-        "title": "Download, assemble, and race today!",
-        "url": "https://www.thingiverse.com/thing:6581521/zip"
-      },
-      {
-        "title": "View on Thingiverse",
-        "url": "https://www.thingiverse.com/thing:6581521"
-      }
-    ],
+    "externalLinks": [],
     "tags": [
       "3D Printing",
       "Ender 3",
@@ -118,6 +109,36 @@
         "type": "localImage",
         "caption": "",
         "source": "thumbnail.webp"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Spin the Wheel",
+        "source": "https://i.postimg.cc/xjGdYnKJ/spin-the-wheel.gif"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Shuffle Prizes",
+        "source": "https://i.postimg.cc/7h4Y7WyZ/shuffle-prizes.gif"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Scratch the Card",
+        "source": "https://i.postimg.cc/RVMZZyRP/scratch-the-card.gif"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Swipe to Dismiss Card",
+        "source": "https://i.postimg.cc/52y9wzDL/swipe-to-dismiss-card.gif"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Pay to Unlock Reward",
+        "source": "https://i.postimg.cc/prBVBJ2Y/pay-to-unlock-reward.gif"
+      },
+      {
+        "type": "networkImage",
+        "caption": "Toggle Theme Mode",
+        "source": "https://i.postimg.cc/L8W9vXM7/toggle-theme-mode.gif"
       },
       {
         "type": "localImage",
@@ -153,36 +174,6 @@
         "type": "localImage",
         "caption": "Presentation Slide 7/7",
         "source": "image_7.webp"
-      },
-      {
-        "type": "networkImage",
-        "caption": "Spin the Wheel",
-        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/spin_the_wheel.gif"
-      },
-      {
-        "type": "networkImage",
-        "caption": "Shuffle Prizes",
-        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/shuffle_prizes.gif"
-      },
-      {
-        "type": "networkImage",
-        "caption": "Scratch the Card",
-        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/scratch_the_card.gif"
-      },
-      {
-        "type": "networkImage",
-        "caption": "Swipe to Dismiss Card",
-        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/swipe_to_dismiss_card.gif"
-      },
-      {
-        "type": "networkImage",
-        "caption": "Pay to Unlock Reward",
-        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/pay_to_unlock_reward.gif"
-      },
-      {
-        "type": "networkImage",
-        "caption": "Toggle Theme Mode",
-        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/swe_632_lottery/main/showcase/toggle_theme_mode.gif"
       }
     ],
     "externalLinks": [
@@ -236,32 +227,32 @@
       {
         "type": "networkImage",
         "caption": "Overview",
-        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/overview.gif"
+        "source": "https://i.postimg.cc/L8Xn4wTt/overview.gif"
       },
       {
         "type": "networkImage",
         "caption": "Edit Contact Information",
-        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/edit_contact.gif"
+        "source": "https://i.postimg.cc/bYxGmQrt/edit-contact-fields.gif"
       },
       {
         "type": "networkImage",
         "caption": "Edit Experiences",
-        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/edit_experiences.gif"
+        "source": "https://i.postimg.cc/Wzvd24Wz/edit-experiences.gif"
       },
       {
         "type": "networkImage",
         "caption": "Toggle Visibility",
-        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/visibility.gif"
+        "source": "https://i.postimg.cc/vHX4sbW8/visibility.gif"
       },
       {
         "type": "networkImage",
         "caption": "Download Resume",
-        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/download.gif"
+        "source": "https://i.postimg.cc/RVvWyNJb/download.gif"
       },
       {
         "type": "networkImage",
         "caption": "Import Resume",
-        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/flutter_resume_builder/main/showcase/import.gif"
+        "source": "https://i.postimg.cc/1Xrf4Z2H/import-mobile.gif"
       }
     ],
     "externalLinks": [
@@ -300,7 +291,7 @@
       {
         "type": "networkImage",
         "caption": "Splash Screen",
-        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/game_play.gif"
+        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/splash_screen.png"
       },
       {
         "type": "networkImage",
@@ -325,17 +316,17 @@
       {
         "type": "networkImage",
         "caption": "Playing a Piece",
-        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/play_piece.gif"
+        "source": "https://i.postimg.cc/Fzz0tz7S/play-piece.gif"
       },
       {
         "type": "networkImage",
         "caption": "Game Play",
-        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/game_play.gif"
+        "source": "https://i.postimg.cc/ydgSn55h/game-play.gif"
       },
       {
         "type": "networkImage",
         "caption": "Game Over",
-        "source": "https://raw.githubusercontent.com/PLGuerraDesigns/isa681_blokus/main/product_showcase/game_over.gif"
+        "source": "https://i.postimg.cc/BvwKTshQ/game-over.gif"
       }
     ],
     "externalLinks": [
@@ -374,34 +365,24 @@
         "source": "S6_5_JhzCXQ"
       },
       {
-        "type": "youTubeVideo",
-        "caption": "Community Video: Build Photos and Race Gameplay",
-        "source": "R-0pL1AsorE"
-      },
-      {
-        "type": "localImage",
-        "caption": "Wheel installed on a Thrustmaster Servo Base.",
-        "source": "thumbnail.webp"
-      },
-      {
         "type": "localImage",
         "caption": "Initial Photoshop Concept.",
         "source": "image_1.webp"
       },
       {
         "type": "localImage",
-        "caption": "Fusion 360 CAD Rendering.",
+        "caption": "CAD Rendering",
+        "source": "image_16.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "CAD Rendering",
         "source": "image_2.webp"
       },
       {
         "type": "localImage",
-        "caption": "Fusion 360 CAD Rendering.",
+        "caption": "CAD Rendering",
         "source": "image_3.webp"
-      },
-      {
-        "type": "localImage",
-        "caption": "Wheel Layout and Button Mapping.",
-        "source": "image_4.webp"
       },
       {
         "type": "localImage",
@@ -410,7 +391,7 @@
       },
       {
         "type": "localImage",
-        "caption": "Material Strength and Feel Testing.",
+        "caption": "",
         "source": "image_6.webp"
       },
       {
@@ -435,12 +416,27 @@
       },
       {
         "type": "localImage",
-        "caption": "The ProtoBoard Circuit design in Progress.",
+        "caption": "Protoboard Circuit design in Progress.",
         "source": "image_11.webp"
       },
       {
         "type": "localImage",
-        "caption": "ProtoBoard Design vs. Final Custom Manufactured PCB Board.",
+        "caption": "Protoboard Wiring",
+        "source": "image_17.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Wiring Diagram",
+        "source": "image_18.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "PCB Design in EasyEDA.",
+        "source": "image_19.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Protoboard vs. Final Custom PCB Board.",
         "source": "image_12.webp"
       },
       {
@@ -450,7 +446,12 @@
       },
       {
         "type": "localImage",
-        "caption": "My Sim Racing Rig (at the time) with the AMG GT3 Wheel.",
+        "caption": "Xbox Button Mapping",
+        "source": "image_15.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Sim Rig with the AMG GT3 Wheel.",
         "source": "image_14.webp"
       },
       {
@@ -515,6 +516,11 @@
       },
       {
         "type": "youTubeVideo",
+        "caption": "Community Video: Build Photos and Race Gameplay",
+        "source": "R-0pL1AsorE"
+      },
+      {
+        "type": "youTubeVideo",
         "caption": "Community Video: Build Tutorial Pt. 1 (Spanish)",
         "source": "qrQnisocpDg"
       },
@@ -525,10 +531,6 @@
       }
     ],
     "externalLinks": [
-      {
-        "title": "Download and Build the Wheel Yourself",
-        "url": "https://www.thingiverse.com/thing:3182414/zip"
-      },
       {
         "title": "View on Thingiverse",
         "url": "https://www.thingiverse.com/thing:3182414"
@@ -544,6 +546,7 @@
       "Graphic Design",
       "CAD Design",
       "PCB Design",
+      "EasyEDA",
       "PCB Assembly",
       "3D Printing",
       "Wiring and Soldering",
@@ -568,37 +571,42 @@
       },
       {
         "type": "localImage",
-        "caption": "Original 2016 Design Concept in SketchUp.",
+        "caption": "Original 2016 design - created in SketchUp",
         "source": "image_1.webp"
       },
       {
         "type": "localImage",
-        "caption": "Original 2016 Design Concept in SketchUp.",
+        "caption": "Original 2016 design - created in SketchUp",
         "source": "image_2.webp"
       },
       {
         "type": "localImage",
-        "caption": "Redesigned in 2019 and 3D Printed.",
-        "source": "image_3.webp"
+        "caption": "Remodeled in 2019 - Fusion 360 render",
+        "source": "image_8.webp"
       },
       {
         "type": "localImage",
-        "caption": "Base with Swappable Charging Module Inserts.",
+        "caption": "Remodeled in 2019 - Fusion 360 render",
+        "source": "image_9.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "3D Printed with wood-infused PLA",
         "source": "image_4.webp"
       },
       {
         "type": "localImage",
-        "caption": "Application of Wood Stain.",
+        "caption": "Application of wood stain",
         "source": "image_5.webp"
       },
       {
         "type": "localImage",
-        "caption": "After Stain Application.",
+        "caption": "After stain application",
         "source": "image_6.webp"
       },
       {
         "type": "localImage",
-        "caption": "Charging Station (minus apple watch puck)",
+        "caption": "Completed Charging Station (minus apple watch puck)",
         "source": "image_7.webp"
       }
     ],
@@ -618,19 +626,19 @@
   },
   {
     "title": "F1 Sim Engineer",
-    "subtitle": "Codemaster's F1 2019 Companion App",
+    "subtitle": "Codemasters' F1 2019 Companion App",
     "startDate": "2019-10-01T00:00:00Z",
     "finalDate": "2019-12-01T00:00:00Z",
     "media": [
       {
-        "type": "localImage",
-        "caption": "Companion App for Codemaster's F1 2019 Game",
-        "source": "thumbnail.webp"
-      },
-      {
         "type": "youTubeVideo",
         "caption": "F1 Sim Engineer Demo",
         "source": "4ROWmlwLq6M"
+      },
+      {
+        "type": "localImage",
+        "caption": "Companion App for Codemasters' F1 2019 Game",
+        "source": "thumbnail.webp"
       }
     ],
     "externalLinks": [
@@ -666,6 +674,16 @@
         "type": "localImage",
         "caption": "Nintendo Switch Speaker Attachment",
         "source": "thumbnail.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "CAD Rendering",
+        "source": "image_7.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "CAD Rendering",
+        "source": "image_8.webp"
       },
       {
         "type": "localImage",
@@ -776,11 +794,6 @@
         "type": "localImage",
         "caption": "Spray painting pedal base",
         "source": "image_6.webp"
-      },
-      {
-        "type": "localImage",
-        "caption": "Fitment test with pedal springs",
-        "source": "image_7.webp"
       },
       {
         "type": "localImage",
@@ -902,33 +915,33 @@
         "source": "thumbnail.webp"
       },
       {
-        "type": "localVideo",
-        "caption": "Initial Prototype Testing",
-        "source": "video_2.mp4"
-      },
-      {
-        "type": "localVideo",
-        "caption": "Successful Connection to Storage",
-        "source": "video_3.mp4"
-      },
-      {
-        "type": "localVideo",
-        "caption": "Fingerprint invalid attempts state recovery after power cycle.",
-        "source": "video_4.mp4"
+        "type": "localImage",
+        "caption": "Original Concept Sketch",
+        "source": "image_11.webp"
       },
       {
         "type": "localImage",
-        "caption": "Initial breadboard prototype",
+        "caption": "Breadboard prototype",
         "source": "image_1.webp"
       },
       {
+        "type": "localVideo",
+        "caption": "Prototype Testing",
+        "source": "video_2.mp4"
+      },
+      {
         "type": "localImage",
-        "caption": "Fusion 360 CAD Rendering",
+        "caption": "Photoshop Design Concept",
+        "source": "image_10.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "CAD Rendering",
         "source": "image_2.webp"
       },
       {
         "type": "localImage",
-        "caption": "Fusion 360 CAD Rendering",
+        "caption": "CAD Rendering",
         "source": "image_3.webp"
       },
       {
@@ -945,6 +958,16 @@
         "type": "localImage",
         "caption": "Unfinished SafeDrive MK1",
         "source": "image_6.webp"
+      },
+      {
+        "type": "localVideo",
+        "caption": "Successful Connection to Storage",
+        "source": "video_3.mp4"
+      },
+      {
+        "type": "localVideo",
+        "caption": "Fingerprint invalid attempts state recovery after power cycle.",
+        "source": "video_4.mp4"
       },
       {
         "type": "localImage",
@@ -1009,44 +1032,48 @@
       },
       {
         "type": "localVideo",
-        "caption": "Using Digital Potentiometers to Control Thumbstick Input.",
+        "caption": "Using digital potentiometers to control thumbstick input.",
         "source": "video_3.mp4"
       },
       {
         "type": "localImage",
-        "caption": "",
-        "source": "thumbnail.webp"
-      },
-      {
-        "type": "localImage",
-        "caption": "Prototype Mounted on a Hat.",
+        "caption": "Modded after-market Xbox controller.",
         "source": "image_1.webp"
       },
       {
         "type": "localImage",
-        "caption": "Modded after-market Xbox controller.",
+        "caption": "Wires soldered inline to thumbstick input (maintaining original functionality).",
         "source": "image_2.webp"
       },
       {
         "type": "localImage",
-        "caption": "Wires soldered inline to thumbstick input (maintaining original functionality).",
+        "caption": "Wiring Schematic",
+        "source": "image_7.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Wiring Diagram",
+        "source": "image_6.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Breadboard Prototype",
         "source": "image_3.webp"
       },
       {
         "type": "localImage",
-        "caption": "Initial Head Tracking Circuit.",
-        "source": "image_4.webp"
+        "caption": "Prototype mounted on a hat",
+        "source": "thumbnail.webp"
       },
       {
         "type": "localImage",
-        "caption": "Top View of the Circuit.",
+        "caption": "Top view of the circuit",
         "source": "image_5.webp"
       }
     ],
-    "videoCount": 3,
     "externalLinks": [
       {
-        "title": "Published step-by-step guide",
+        "title": "Instructables Build Guide",
         "url": "https://www.instructables.com/Xbox-Head-Tracking/"
       }
     ],
@@ -1114,6 +1141,16 @@
       },
       {
         "type": "localImage",
+        "caption": "CAD Rendering",
+        "source": "image_3.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "CAD Rendering",
+        "source": "image_4.webp"
+      },
+      {
+        "type": "localImage",
         "caption": "Macro Pad - Front view",
         "source": "image_1.webp"
       },
@@ -1153,13 +1190,28 @@
       },
       {
         "type": "localImage",
+        "caption": "CAD Rendering",
+        "source": "image_3.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "CAD Rendering",
+        "source": "image_4.webp"
+      },
+      {
+        "type": "localImage",
         "caption": "Interchangeable cover plate using magnets.",
         "source": "image_1.webp"
       },
       {
         "type": "localImage",
-        "caption": "USB Micro Port for Continuous Power",
+        "caption": "USB Micro Port for Charging/Continuous Power",
         "source": "image_2.webp"
+      },
+      {
+        "type": "localVideo",
+        "caption": "Color Cycle Demo",
+        "source": "video_1.m4v"
       }
     ],
     "externalLinks": [
@@ -1189,13 +1241,18 @@
     "media": [
       {
         "type": "localImage",
-        "caption": "Preparing For the Science Fair Presentation",
+        "caption": "Science Fair Display",
         "source": "thumbnail.webp"
       },
       {
-        "type": "localVideo",
-        "caption": "3 Years Later... Glove melted in Belize's hot climate.",
-        "source": "video_1.mp4"
+        "type": "localImage",
+        "caption": "SketchUp Concept",
+        "source": "image_13.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "SketchUp Wireframe",
+        "source": "image_14.webp"
       },
       {
         "type": "localImage",
@@ -1204,12 +1261,7 @@
       },
       {
         "type": "localImage",
-        "caption": "Forearm skeleton made using foam and wood.",
-        "source": "image_2.webp"
-      },
-      {
-        "type": "localImage",
-        "caption": "Hand attached to the forearm",
+        "caption": "Hand attached to the forearm skeleton.",
         "source": "image_3.webp"
       },
       {
@@ -1220,11 +1272,6 @@
       {
         "type": "localImage",
         "caption": "Forearm wrapped with bristol board",
-        "source": "image_5.webp"
-      },
-      {
-        "type": "localImage",
-        "caption": "Cut-out made to access servo motors",
         "source": "image_6.webp"
       },
       {
@@ -1234,13 +1281,13 @@
       },
       {
         "type": "localImage",
-        "caption": "Input glove with flex sensors on fingers",
-        "source": "image_8.webp"
+        "caption": "Completed hand",
+        "source": "image_9.webp"
       },
       {
         "type": "localImage",
-        "caption": "Finished hand",
-        "source": "image_9.webp"
+        "caption": "Input glove with flex sensors",
+        "source": "image_8.webp"
       },
       {
         "type": "localImage",
@@ -1249,16 +1296,31 @@
       },
       {
         "type": "localImage",
-        "caption": "School science fair display",
+        "caption": "Wiring Diagram",
+        "source": "image_15.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "School science fair demonstration",
         "source": "image_11.webp"
       },
       {
         "type": "localImage",
         "caption": "Demonstration for local news",
         "source": "image_12.webp"
+      },
+      {
+        "type": "localVideo",
+        "caption": "3 Years Later... Glove melted in Belize's hot climate. (The only video I have of the project in action)",
+        "source": "video_1.mp4"
       }
     ],
-    "externalLinks": [],
+    "externalLinks": [
+      {
+        "title": "Instructables Build Guide",
+        "url": "https://www.instructables.com/Handroid/"
+      }
+    ],
     "tags": [
       "Academic",
       "Software",

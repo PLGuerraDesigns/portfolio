@@ -31,6 +31,11 @@
         "type": "localImage",
         "caption": "UI Design",
         "source": "image_2.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "",
+        "source": "image_3.webp"
       }
     ],
     "externalLinks": [
@@ -167,7 +172,7 @@
       },
       {
         "type": "localImage",
-        "caption": "Preparing for UARK's 150th anniversary demo.",
+        "caption": "Prints for UARK's 150th anniversary demo.",
         "source": "image_5.webp"
       },
       {
@@ -177,12 +182,17 @@
       },
       {
         "type": "localImage",
-        "caption": "Rendering of the AMBOTS Swarm 3D-Printing Development Platform.",
+        "caption": "Rendering of the AMBOTS Swarm 3D-Printing Development Kit.",
+        "source": "image_19.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "Rendering of a mid-size swarm 3D-printing platform.",
         "source": "thumbnail.webp"
       },
       {
         "type": "localImage",
-        "caption": "Rendering of an Extended AMBOTS Development Kit",
+        "caption": "Rendering of an extended swarm 3D-printing platform",
         "source": "image_12.webp"
       },
       {
@@ -233,14 +243,6 @@
     ],
     "externalLinks": [
       {
-        "title": "AMBOTS Inc.",
-        "url": "https://ambots.net/"
-      },
-      {
-        "title": "Research Paper (Architecting the Cooperative 3D Printing System)",
-        "url": "https://www.researchgate.net/publication/341651995_Architecting_the_Cooperative_3D_Printing_System"
-      },
-      {
         "title": "United States Patent (Swarm Manufacturing for Smart Factory - US11975486B2)",
         "url": "https://image-ppubs.uspto.gov/dirsearch-public/print/downloadPdf/11975486"
       },
@@ -255,6 +257,10 @@
       {
         "title": "GE Reports: The 5 Coolest Things On Earth This Week",
         "url": "https://www.ge.com/news/reports/the-5-coolest-things-on-earth-this-week-4"
+      },
+      {
+        "title": "AMBOTS Inc.",
+        "url": "https://ambots.net/"
       }
     ]
   },
@@ -327,6 +333,11 @@
         "source": "JhLCmqpONOc"
       },
       {
+        "type": "youTubeVideo",
+        "caption": "Printer Movement Repeatability Test (Sped-up)",
+        "source": "uGr0DlDeQBk"
+      },
+      {
         "type": "localImage",
         "caption": "Chunk Angle and Bond Test with off-the-shelf nozzles",
         "source": "image_5.webp"
@@ -363,6 +374,10 @@
       }
     ],
     "externalLinks": [
+      {
+        "title": "Research Paper (Architecting the Cooperative 3D Printing System)",
+        "url": "https://www.researchgate.net/publication/341651995_Architecting_the_Cooperative_3D_Printing_System"
+      },
       {
         "title": "AM³ Lab",
         "url": "https://wordpressua.uark.edu/am3/"
