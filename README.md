@@ -12,9 +12,7 @@ I created this application to highlight my professional experiences, personal pr
 You can find relevant publications, documents, source code, images, videos, and more here.
 
 It is a static web app built using the [Flutter framework](https://flutter.dev/), written in [Dart](https://dart.dev/), and hosted on [GitHub Pages](https://pages.github.com/). <br />
-
-You can access the web app here: [https://plguerradesigns.github.io/portfolio](https://plguerradesigns.github.io/portfolio)
-
+ 
 <details>
 <summary><i><strong> Expand to learn more about Flutter</strong></i></summary>
 
@@ -25,6 +23,11 @@ Try Flutter directly in your browser using [DartPad](https://dartpad.dev/?id=5c0
 [![dart-pad.gif](https://i.postimg.cc/brNDxMJQ/dart-pad.gif)](https://dartpad.dev/?id=5c0e154dd50af4a9ac856908061291bc&sample=counter)
 
 </details>
+<br />
+
+<strong>You can access the web app here: <br />
+[https://plguerradesigns.github.io/portfolio](https://plguerradesigns.github.io/portfolio)</strong> <br />
+
 <br />
 <strong>Some notable features include:</strong>
 
