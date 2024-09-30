@@ -5,6 +5,10 @@
 <br />
 
 This web app is a portfolio of my work, projects, and research. <br />
+
+### About
+
+I created this application to highlight my professional experiences, personal projects, and other relevant details related to my technical and career growth.
 You can find relevant publications, documents, source code, images, videos, and more here.
 
 It is a static web app built using the [Flutter framework](https://flutter.dev/), written in [Dart](https://dart.dev/), and hosted on [GitHub Pages](https://pages.github.com/). <br />
