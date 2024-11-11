@@ -78,8 +78,7 @@ class _ProfessionalExperienceMenuScreenState
                     return FrostedGridMenu(
                       title: Strings.professionalExperiencesExplained,
                       scrollController: _scrollController,
-                      mainAxisSpacing:
-                          orientation == Orientation.portrait ? 16 : 0,
+                      mainAxisSpacing: 16.0,
                       crossAxisSpacing: 16.0,
                       crossAxisCount:
                           orientation == Orientation.portrait ? 1 : 3,

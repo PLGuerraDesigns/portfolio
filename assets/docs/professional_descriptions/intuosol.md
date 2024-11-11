@@ -1,0 +1,1 @@
+At IntuoSol, we're crafting digital solutions that bridge software and physical products. From custom applications to 3D-printable designs, we're developing versatile technologies that shape tomorrow's possibilities. Currently in development, we're preparing to launch services that will help businesses and communities thrive in the digital age.
