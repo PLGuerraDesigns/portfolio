@@ -3,7 +3,7 @@ class Strings {
   Strings._();
 
   static const String currentLocation = 'VA, USA';
-  static const String lastUpdated = 'Updated AUG 2024';
+  static const String lastUpdated = 'Updated NOV 2024';
   static const String contactEmail = 'plguerra@outlook.com';
 
   static const List<String> headerSubtitles = <String>[

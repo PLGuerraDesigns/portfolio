@@ -1,3 +1,7 @@
+## 2.8.1
+
+- REVISED: Updated the Professional Experience grid menu spacing.
+
 ## 2.8.0
 
 - NEW: The `Details` page now supports Markdown rendering for the body text.

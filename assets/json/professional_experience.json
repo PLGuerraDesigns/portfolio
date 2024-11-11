@@ -1,5 +1,36 @@
 [
   {
+    "company": "IntuoSol",
+    "source": "intuosol",
+    "role": "Founder & Software Engineer",
+    "location": "Richmond, VA",
+    "startDate": "2024-06-27T00:00:00Z",
+    "endDate": null,
+    "media": [
+      {
+        "type": "localImage",
+        "caption": "",
+        "source": "image_1.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "",
+        "source": "image_2.webp"
+      },
+      {
+        "type": "localImage",
+        "caption": "",
+        "source": "thumbnail.webp"
+      }
+    ],
+    "externalLinks": [
+      {
+        "title": "IntuoSol",
+        "url": "https://intuosol.com/"
+      }
+    ]
+  },
+  {
     "company": "Atlantic Insurance Company Ltd.",
     "source": "atlantic_insurance",
     "role": "Contract Software Engineer",
