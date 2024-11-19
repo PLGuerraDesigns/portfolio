@@ -30,7 +30,7 @@ const RESOURCES = {"flutter.js": "f31737fb005cd3a3c6bd9355efd33061",
 "assets/assets/docs/project_descriptions/f1_sim_engineer.md": "f17f71a075a93797bad717eaf1b00613",
 "assets/assets/docs/project_descriptions/apple_charging_station.md": "38af129f44e204fdfc105b26b7fe4e60",
 "assets/assets/docs/project_descriptions/flutter_resume_builder.md": "4b0aabe6eedcefa1f39391119c6d9858",
-"assets/assets/json/professional_experience.json": "093550b63cd9736f68d0ea825daab687",
+"assets/assets/json/professional_experience.json": "ce660573fe6be880174d9564a64677f8",
 "assets/assets/json/education.json": "d8504491f24c4cb530d033911928a5d5",
 "assets/assets/json/projects.json": "aba89457da0e184b4c00ea3f14c1ca08",
 "assets/assets/images/professional/atlantic_insurance/image_2.webp": "f94aa55d7c4bdd52fb82e08e44a9e774",
@@ -265,8 +265,8 @@ const RESOURCES = {"flutter.js": "f31737fb005cd3a3c6bd9355efd33061",
 "icons/Icon-512.png": "f36784eff5543ff42bbb1deef86fcfdf",
 "icons/Icon-maskable-512.png": "f36784eff5543ff42bbb1deef86fcfdf",
 "favicon.png": "96ac6ad69daa95a323b0fe73c3c8dcce",
-"version.json": "3202f0b273b4a771694a549babfb44b5",
-"flutter_bootstrap.js": "c2555923d77e4f1d4ccb40681ecc5919"};
+"version.json": "60bc8314deefdfd3bb1501a7227d524e",
+"flutter_bootstrap.js": "fd67ad80cae4526cdf3778bb40d3e1e8"};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",

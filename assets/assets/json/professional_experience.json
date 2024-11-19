@@ -8,6 +8,11 @@
     "endDate": null,
     "media": [
       {
+        "type": "youTubeVideo",
+        "caption": "",
+        "source": "gSmmUBN_tF4"
+      },
+      {
         "type": "localImage",
         "caption": "",
         "source": "image_1.webp"
